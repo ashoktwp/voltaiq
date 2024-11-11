@@ -1,14 +1,22 @@
-.intro-content {
-  @include bodyContent;
-  .content-section {
-    margin-bottom: 40rem;
-  }
+// Intro Content
+@mixin bodyContent {
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  font-family: $font2;
+}
 
-  h2 {
-    @include h2;
+@mixin introContent {
+  .module_basic {
+    @include bodyContent;
   }
-
-  p {
-    @include b1;
+  .intro-content {
+    text-align: center;
+    .eyebrow {
+      @include eyebrow;
+    }
+    .content-section {
+      margin-bottom: 40rem;
+      @include b1;
+    }
   }
 }

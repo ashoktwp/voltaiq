@@ -18,11 +18,6 @@ body {
   background-color: $backgroundColor;
 }
 
-@mixin bodyContent {
-  font-size: $baseFontSize;
-  line-height: $baseLineHeight;
-}
-
 /* Set default text size */
 h1,
 h2,
@@ -401,20 +396,43 @@ section[class*="u4m-"] {
   @include arrowBtn;
 }
 
-.button-wrap {
-  @include flex;
-  gap: 20rem;
-  align-items: center;
-
-  button {
-    margin: 0;
-  }
-}
-
 .flex_row {
   @include flex;
 }
 
-.eyebrow {
-  @include eyebrow;
+.transparent_bg {
+  background-color: transparent;
+}
+.green_bg {
+  background-color: $highlightColor;
+}
+.white_bg {
+  background-color: $white;
+}
+.gray_bg {
+  background-color: $bodyColor;
+}
+.black_bg {
+  background-color: $backgroundColor;
+}
+.blue_bg {
+  background-color: $themeColor;
+}
+.dark_gray_bg {
+  background-color: $cardBgColor;
+}
+
+.button-wrap {
+  @include flex;
+  gap: 20rem;
+  align-items: center;
+  a.hs-button,
+  a.hs-sec-btn,
+  a.hs-arrow-btn {
+    margin: 0;
+  }
+}
+
+.intro-content .button-wrap {
+  justify-content: center;
 }

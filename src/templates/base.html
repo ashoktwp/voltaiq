@@ -18,14 +18,14 @@
 <body class="{{ builtin_body_classes }} {% if request.full_url is string_containing "/author/" %} author-listing {% endif %}">
     
 	{% block header %}
-	{% global_partial path='././partials/header.html' %}
+	{% global_partial path='././partials/u4m-header.html' %}
 	{% endblock header %}
 
 	{% block body %}
 	{% endblock body %}
 
 	{% block footer %}
-	{% global_partial path='././partials/footer.html' %}
+	{% global_partial path='././partials/u4m-footer.html' %}
 	{% endblock footer %}
     
     {{ require_js(get_asset_url('../js/main.js')) }}
