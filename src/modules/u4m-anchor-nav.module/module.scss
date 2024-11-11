@@ -2,7 +2,7 @@
 .u4m-anchor-nav {
   position: relative;
   z-index: 100;
-  background-color: $black;
+  background-color: $backgroundColor;
   .wrapper {
     @include centerSmall;
     padding: 25rem 0;
@@ -22,7 +22,7 @@
       background-image: none;
       letter-spacing: 1rem;
       a {
-        color: $white;
+        color: $headingColor;
         padding: 0 25rem;
         height: 100%;
         font-weight: bold;
@@ -36,12 +36,12 @@
   &.sticky {
     .wrapper {
       .anchor-nav {
-        background-color: $black;
+        background-color: $backgroundColor;
         position: fixed;
         a {
           &.active-anchor {
-            color: $white;
-            background-color: $action1;
+            color: $headingColor;
+            background-color: $themeColor;
           }
         }
       }
@@ -61,7 +61,7 @@
     .wrapper {
       .anchor-nav {
         a {
-          color: $white;
+          color: $headingColor;
         }
       }
     }

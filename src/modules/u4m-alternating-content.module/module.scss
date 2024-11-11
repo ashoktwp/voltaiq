@@ -4,7 +4,7 @@ section.u4m-alternating-content {
   margin-bottom: 100rem;
   &.reverse-text {
     .inner .content {
-      color: $white;
+      color: $headingColor;
     }
   }
   div.inner {
@@ -76,7 +76,7 @@ section.u4m-alternating-content {
           margin-bottom: 0;
         }
         @include phone {
-          @include b4;
+          @include b1;
         }
       }
       a {

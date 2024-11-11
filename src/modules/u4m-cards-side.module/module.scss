@@ -5,7 +5,7 @@ section.u4m-cards-side {
   &.reverse-text {
     h2.heading,
     h3.subheading {
-      color: $white;
+      color: $headingColor;
     }
   }
   .outer-wrap {
@@ -31,7 +31,7 @@ section.u4m-cards-side {
       .link {
         text-align: center;
         a {
-          @include button;
+          @include primaryBtn;
         }
       }
       @include phone {

@@ -7,7 +7,7 @@ section.u4m-jump-grid {
   background-size: cover;
   background-position: 50% 50%;
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   @include tablet {
     min-height: 0;
@@ -20,17 +20,17 @@ section.u4m-jump-grid {
       text-align: center;
       position: relative;
       &.white-text {
-        color: $white;
+        color: $headingColor;
       }
       &:before {
-        background-color: $action1;
+        background-color: $themeColor;
       }
     }
     .subheading {
       @include h5;
       text-align: center;
       &.white-text {
-        color: $white;
+        color: $headingColor;
       }
     }
     div.group {
@@ -63,21 +63,21 @@ section.u4m-jump-grid {
         }
         .title {
           display: block;
-          color: $action1;
+          color: $themeColor;
           font-weight: bold;
         }
         .caption {
-          @include b4;
+          @include b1;
           display: block;
-          color: $black;
+          color: $backgroundColor;
         }
         &:not(.no-link) {
           &:hover {
             transition: $animation1;
-            background-color: $action1;
+            background-color: $themeColor;
             .caption,
             .title {
-              color: $white;
+              color: $headingColor;
             }
           }
         }

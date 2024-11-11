@@ -1,7 +1,7 @@
 @import "../../css/_module-imports";
 section.u4m-subscribe {
-  background-color: $black;
-  color: $white;
+  background-color: $backgroundColor;
+  color: $headingColor;
   padding: 50px 0;
   margin: 0 20px 20px;
   border-radius: 5px;
@@ -26,25 +26,25 @@ section.u4m-subscribe {
         .hs-email {
           flex: 1;
           position: relative;
-          >label {
+          > label {
             position: absolute;
             z-index: 2;
             top: -20px;
           }
-          input[type='email'].hs-input {
+          input[type="email"].hs-input {
             margin-bottom: 0;
             margin-top: 0;
             line-height: 1;
           }
         }
         // Submit Button
-        input[type='submit'].hs-button {
+        input[type="submit"].hs-button {
           flex: auto;
           margin: 0 0 0 5px;
           line-height: 1.65;
           &:hover {
-            opacity: .95;
-            background-color: $action1;
+            opacity: 0.95;
+            background-color: $themeColor;
           }
           @include tablet {
             width: 100%;

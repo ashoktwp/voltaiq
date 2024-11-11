@@ -4,7 +4,7 @@
   "smart_type" : "NOT_SMART",
   "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
-  "module_id" : 174319873324,
+  "module_id" : 182654873399,
   "js_assets" : [ {
     "url" : "https://f.hubspotusercontent30.net/hubfs/302335/scripts/jquery-3.5.1.min.js",
     "autoload" : true,

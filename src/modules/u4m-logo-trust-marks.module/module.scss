@@ -2,7 +2,7 @@
 section.u4m-logo-trust-marks {
   margin: 100rem 0;
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   .container {
     @include center;
@@ -51,15 +51,15 @@ section.u4m-logo-trust-marks {
       }
       .splide__arrows {
         .splide__arrow {
-          background: $white;
+          background: $headingColor;
           opacity: 1;
           &:hover {
             svg {
-              fill: $action2;
+              fill: $highlightColor;
             }
           }
           svg {
-            fill: $black;
+            fill: $backgroundColor;
           }
           &.splide__arrow--prev {
             left: -20rem;
@@ -84,7 +84,7 @@ section.u4m-logo-trust-marks {
             display: flex;
             justify-content: center;
             align-items: center;
-            background: $white;
+            background: $headingColor;
             box-shadow: $shadow2;
             padding: 20rem;
             margin: 10rem;

@@ -5,7 +5,7 @@ section.u4m-slider-simple {
   background-color: $gray1;
   padding-bottom: 110rem;
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   div.content {
     @include center;
@@ -34,7 +34,7 @@ section.u4m-slider-simple {
       }
       div.slide {
         width: 100%;
-        transition: .3s ease;
+        transition: 0.3s ease;
         z-index: 1;
         margin: 50rem auto 50rem;
         text-align: center;
@@ -53,7 +53,7 @@ section.u4m-slider-simple {
         img.large {
           margin: 0 auto 30rem auto;
         }
-        &>span {
+        & > span {
           text-align: left;
         }
         p {
@@ -64,7 +64,7 @@ section.u4m-slider-simple {
             margin-top: 0;
             text-align: center;
             span {
-              color: $action2;
+              color: $highlightColor;
               font-weight: bold;
             }
           }
@@ -72,7 +72,7 @@ section.u4m-slider-simple {
             text-transform: uppercase;
             font-weight: bold;
             text-align: center;
-            @include b4;
+            @include b1;
             margin-bottom: 20rem;
             span {
               text-transform: none;
@@ -83,7 +83,7 @@ section.u4m-slider-simple {
           @include buttonSmall;
           &:hover {
             background-color: white;
-            color: $action1;
+            color: $themeColor;
           }
         }
         &.active {

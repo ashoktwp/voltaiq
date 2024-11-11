@@ -3,10 +3,10 @@ section.u4m-accordion {
   padding: 100rem 20rem;
   &.reverse-text {
     h2.heading {
-      color: $white;
+      color: $headingColor;
     }
     .bottom-content {
-      color: $white;
+      color: $headingColor;
     }
   }
   @include phone {
@@ -37,7 +37,7 @@ section.u4m-accordion {
           text-align: left;
           margin: 0;
           @include phone {
-            @include b4;
+            @include b1;
             margin-bottom: 0;
           }
         }
@@ -52,13 +52,13 @@ section.u4m-accordion {
             align-items: flex-start;
             position: relative;
             background-color: $gray1;
-            &:hover{
+            &:hover {
               p.title {
-                color: $action1;
+                color: $themeColor;
               }
-              .fa-plus{
+              .fa-plus {
                 transform: rotate(180deg);
-                transition: .3s ease all;
+                transition: 0.3s ease all;
               }
             }
             cursor: pointer;
@@ -68,7 +68,7 @@ section.u4m-accordion {
             .fa-plus {
               display: block;
               margin: auto 0;
-              transition: .3s ease all;
+              transition: 0.3s ease all;
             }
             &.active {
               .fa-plus {
@@ -91,9 +91,9 @@ section.u4m-accordion {
               position: absolute;
               top: -10rem;
               right: -10rem;
-              transition: .2s ease-out;
+              transition: 0.2s ease-out;
               &:hover {
-                opacity: .93;
+                opacity: 0.93;
               }
               @include phone {
                 right: -40rem;
@@ -108,9 +108,9 @@ section.u4m-accordion {
             max-width: 100%;
             padding: 0 20rem 40rem 20rem;
             background-color: $gray1;
-            @include b4;
+            @include b1;
             @include phone {
-              @include b5;
+              @include b2;
             }
             &.accordion-content {
               a {
@@ -137,7 +137,7 @@ section.u4m-accordion {
         @include h5;
       }
       .hs-cta-wrapper a {
-        @include button;
+        @include primaryBtn;
       }
     }
   }

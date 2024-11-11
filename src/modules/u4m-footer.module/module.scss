@@ -1,8 +1,8 @@
 @import "../../css/_module-imports";
 
 footer.u4m-footer {
-  background-color: $black;
-  color: $white;
+  background-color: $backgroundColor;
+  color: $headingColor;
   padding-top: 100rem;
   padding-bottom: 80rem;
 
@@ -28,14 +28,14 @@ footer.u4m-footer {
           a {
             img {
               max-width: 187rem;
-              width: 100%
+              width: 100%;
             }
           }
         }
 
         div.location {
           p {
-            @include b4;
+            @include b1;
             font-weight: 400;
           }
         }
@@ -58,14 +58,17 @@ footer.u4m-footer {
               }
 
               a {
-                color: $white;
+                color: $headingColor;
 
                 img.social-icon {
-                  &.twitter {}
+                  &.twitter {
+                  }
 
-                  &.linkedin {}
+                  &.linkedin {
+                  }
 
-                  &.youtube {}
+                  &.youtube {
+                  }
                 }
               }
             }
@@ -88,7 +91,7 @@ footer.u4m-footer {
       }
 
       p {
-        @include b4;
+        @include b1;
         font-weight: 400;
         margin: 0;
 

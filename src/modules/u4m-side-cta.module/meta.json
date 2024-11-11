@@ -3,7 +3,7 @@
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE", "BLOG_POST" ],
   "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "host_template_types" : [ "PAGE", "BLOG_POST" ],
-  "module_id" : 174320148393,
+  "module_id" : 182653882685,
   "label" : "Side CTA",
   "is_available_for_new_content" : false
 }

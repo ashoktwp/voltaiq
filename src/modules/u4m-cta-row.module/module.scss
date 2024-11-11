@@ -2,7 +2,7 @@
 section.u4m-cta-row {
   margin-bottom: 100rem;
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   div.inner {
     @include center;
@@ -30,7 +30,7 @@ section.u4m-cta-row {
       }
       div.cta {
         a {
-          @include button;
+          @include primaryBtn;
         }
       }
       @include phone {

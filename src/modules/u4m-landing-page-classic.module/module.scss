@@ -35,7 +35,7 @@ section.u4m-landing-page-classic {
         }
       }
       .quotation-mark {
-        color: $action1;
+        color: $themeColor;
         @include b1;
         font-weight: bold;
       }
@@ -76,7 +76,7 @@ section.u4m-landing-page-classic {
           line-height: 1;
           margin-left: 5rem;
           &:hover {
-            color: $black;
+            color: $backgroundColor;
           }
         }
       }
@@ -87,7 +87,8 @@ section.u4m-landing-page-classic {
       h2.heading {
         @include h5;
       }
-      form {}
+      form {
+      }
     }
   }
 }

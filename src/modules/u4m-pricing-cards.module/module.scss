@@ -8,7 +8,7 @@ section.u4m-pricing-cards {
   &.reverse-text {
     h2.heading,
     h3.subheading {
-      color: $white;
+      color: $headingColor;
     }
   }
   div.intro {
@@ -70,8 +70,8 @@ section.u4m-pricing-cards {
           font-size: 28rem;
         }
         &.popular-label {
-          background-color: $action2;
-          color: $white;
+          background-color: $highlightColor;
+          color: $headingColor;
         }
       }
       div.content {
@@ -99,10 +99,10 @@ section.u4m-pricing-cards {
             }
           }
           .teaser {
-            @include b4;
+            @include b1;
             margin-bottom: 20rem;
           }
-          // First Button 
+          // First Button
           div.top-link {
             width: 100%;
             margin-top: auto;
@@ -115,24 +115,24 @@ section.u4m-pricing-cards {
               text-align: center;
               font-weight: normal;
               margin-bottom: 40rem;
-              background-color: $action1;
+              background-color: $themeColor;
               @include phone {
                 margin-bottom: 20rem;
               }
               &:hover {
-                background-color: $action2;
-                color: $white;
+                background-color: $highlightColor;
+                color: $headingColor;
               }
               a {
                 text-transform: uppercase;
-                color: $white;
+                color: $headingColor;
                 padding: 20rem;
                 display: block;
               }
             }
           }
         }
-        // Bulleted Lists 
+        // Bulleted Lists
         .list-title {
           @include h6;
           font-size: 25rem;
@@ -166,15 +166,15 @@ section.u4m-pricing-cards {
             }
           }
           .excluded-reports {
-            color: rgba($black, 0.5);
+            color: rgba($backgroundColor, 0.5);
             span {
               svg {
-                fill: rgba($black, 0.5);
+                fill: rgba($backgroundColor, 0.5);
               }
             }
           }
         }
-        // Learn More Link text 
+        // Learn More Link text
         div.features-list-link {
           margin-bottom: 30rem;
           span.features-url,
@@ -182,12 +182,12 @@ section.u4m-pricing-cards {
             a {
               @include buttonText;
               &:hover {
-                color: $action2;
+                color: $highlightColor;
               }
             }
             // &:hover {
-            //   background-color: $action2;
-            //   color: $white;
+            //   background-color: $highlightColor;
+            //   color: $headingColor;
             // }
             // @include h6;
             // display: block;
@@ -197,13 +197,13 @@ section.u4m-pricing-cards {
             // font-weight: normal;
             // margin-bottom: 0rem;
             // padding: 20rem;
-            // background-color: $action1;
+            // background-color: $themeColor;
             // @include phone {
             //   margin-bottom: 0rem;
             // }
             // a {
             //   text-transform: uppercase;
-            //   color: $white;
+            //   color: $headingColor;
             // }
           }
         }
@@ -219,17 +219,17 @@ section.u4m-pricing-cards {
           text-align: center;
           font-weight: normal;
           margin-bottom: 0rem;
-          background-color: $action1;
+          background-color: $themeColor;
           @include phone {
             margin-bottom: 0rem;
           }
           &:hover {
-            background-color: $action2;
-            color: $white;
+            background-color: $highlightColor;
+            color: $headingColor;
           }
           a {
             text-transform: uppercase;
-            color: $white;
+            color: $headingColor;
             padding: 20rem;
             display: block;
           }

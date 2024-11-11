@@ -3,7 +3,7 @@ section.u4m-animated-stats {
   margin-top: 100rem;
   margin-bottom: 100rem;
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   .heading {
     @include center;

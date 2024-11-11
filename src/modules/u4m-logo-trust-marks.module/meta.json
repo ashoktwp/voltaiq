@@ -3,7 +3,7 @@
   "content_types" : [ "LANDING_PAGE", "SITE_PAGE" ],
   "icon" : "https://8292614.fs1.hubspotusercontent-na1.net/hubfs/8292614/4.svg",
   "host_template_types" : [ "PAGE" ],
-  "module_id" : 174320148384,
+  "module_id" : 182653878305,
   "css_assets" : [ {
     "url" : "https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css",
     "autoload" : true,

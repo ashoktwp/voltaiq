@@ -5,6 +5,9 @@
   screenshotPath: images/u4-landing-page.jpg
 -->
 {% extends './base.html' %}
+{% block header %}
+{% global_partial path='./partials/header-no-navigation.html' %}
+{% endblock header %}
 
 {% block body %}
 <main id="main-content" class="body-container-wrapper">
@@ -13,3 +16,7 @@
     {% end_widget_container %} 
 </main>
 {% endblock body %}
+
+{% block footer %}
+{% global_partial path='./partials/footer-no-navigation.html' %}
+{% endblock footer %}

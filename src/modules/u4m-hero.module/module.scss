@@ -6,7 +6,7 @@ section.u4m-hero {
   padding: 100px 0;
   &.reverse-text {
     .content-wrap {
-      color: $white;
+      color: $headingColor;
     }
   }
   .inner {
@@ -50,9 +50,10 @@ section.u4m-hero {
           @include b2;
         }
         a {
-          @include button;
+          @include primaryBtn;
         }
-        .cta {}
+        .cta {
+        }
         svg {
           max-width: 100rem;
           cursor: pointer;

@@ -15,7 +15,7 @@ section.u4m-blog-post {
         font-size: 26rem;
         margin: 5rem;
         &:hover {
-          color: $black;
+          color: $backgroundColor;
         }
       }
       @include tablet {
@@ -28,7 +28,8 @@ section.u4m-blog-post {
       padding: 50rem 20rem 40rem 20rem;
       max-width: 1000rem;
       //margin: 50rem auto 50rem auto;
-      span.date {}
+      span.date {
+      }
       h1.title {
         @include h1;
         margin: 0;
@@ -44,13 +45,13 @@ section.u4m-blog-post {
           background-size: cover;
           background-position: 50%;
           margin: 5rem 10rem 0 0;
-          background-image: url('https://f.hubspotusercontent30.net/hubfs/302335/default-avatar.png');
+          background-image: url("https://f.hubspotusercontent30.net/hubfs/302335/default-avatar.png");
         }
         div.author-link {
           a {
             font-weight: bold;
             &:hover {
-              color: $black;
+              color: $backgroundColor;
             }
           }
         }
@@ -96,11 +97,12 @@ section.u4m-blog-post {
       a {
         font-weight: bold;
         &:hover {
-          color: $black;
+          color: $backgroundColor;
         }
       }
     }
-    div.topics {}
+    div.topics {
+    }
   }
   /*****************************************/
   /* .author                               */
@@ -120,7 +122,7 @@ section.u4m-blog-post {
       div.avatar {
         width: 100rem;
         height: 100rem;
-        background-image: url('https://f.hubspotusercontent30.net/hubfs/302335/default-avatar.png');
+        background-image: url("https://f.hubspotusercontent30.net/hubfs/302335/default-avatar.png");
         background-size: cover;
         background-position: 50%;
         border-radius: 50%;
@@ -136,14 +138,14 @@ section.u4m-blog-post {
         margin: 0;
       }
       p {
-        @include b5;
+        @include b2;
         margin-top: 20px;
       }
       .social {
         .label {
-          @include b4;
+          @include b1;
           @include phone {
-            @include b6;
+            @include b3;
           }
         }
         a {
@@ -175,7 +177,7 @@ section.u4m-blog-post {
       form {
         @include form;
         .hs-button {
-          @include button;
+          @include primaryBtn;
         }
       }
     }

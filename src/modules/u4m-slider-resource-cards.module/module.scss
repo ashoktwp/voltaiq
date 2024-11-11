@@ -3,7 +3,7 @@ section.u4m-slider-resource-cards {
   margin: 100px 0;
   &.reverse-text {
     h2.heading {
-      color: $white;
+      color: $headingColor;
     }
   }
   .top-wrapper {
@@ -73,7 +73,7 @@ section.u4m-slider-resource-cards {
     .slick-active {
       button {
         &:before {
-          color: $action1;
+          color: $themeColor;
           opacity: 1;
         }
       }

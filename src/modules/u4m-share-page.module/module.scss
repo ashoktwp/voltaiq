@@ -1,7 +1,7 @@
 @import "../../css/_module-imports";
 section.u4m-share-page {
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   margin-top: 50rem;
   margin-bottom: 100rem;
@@ -15,7 +15,7 @@ section.u4m-share-page {
     @include center;
     max-width: 720rem;
     a.download-button {
-      @include button;
+      @include primaryBtn;
     }
     div.share {
       span {
