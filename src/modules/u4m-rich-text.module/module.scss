@@ -3,7 +3,7 @@ section.u4m-rich-text {
   background-size: cover;
   background-position: 50% 50%;
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   div.content {
     @include center;
@@ -23,7 +23,7 @@ section.u4m-rich-text {
       @include b3;
     }
     .b4 {
-      @include b4;
+      @include b1;
     }
     h1,
     .h1 {
@@ -68,35 +68,35 @@ section.u4m-rich-text {
       font-size: 40rem;
     }
     .action1 {
-      background-color: $action1;
-      color: $white;
+      background-color: $themeColor;
+      color: $headingColor;
     }
     .action2 {
-      background-color: $action2;
-      color: $white;
+      background-color: $highlightColor;
+      color: $headingColor;
     }
     .black {
-      background-color: $black;
-      color: $white;
+      background-color: $backgroundColor;
+      color: $headingColor;
     }
     .gray1 {
       background-color: $gray1;
-      color: $black;
+      color: $backgroundColor;
     }
     .gray2 {
       background-color: $gray2;
     }
     .gray3 {
       background-color: $gray3;
-      color: $white;
+      color: $headingColor;
     }
     .white {
-      background-color: $white;
-      color: $black;
+      background-color: $headingColor;
+      color: $backgroundColor;
       border: 1rem solid $gray2;
     }
     .button {
-      @include button;
+      @include primaryBtn;
     }
     .button-small {
       @include buttonSmall;
@@ -108,15 +108,15 @@ section.u4m-rich-text {
       @include buttonText;
     }
     .hs-cta-wrapper a {
-      @include button;
+      @include primaryBtn;
     }
     .animation-sample-short,
     .animation-sample-medium,
     .animation-sample-long {
       cursor: pointer;
-      background-color: $action1;
+      background-color: $themeColor;
       padding: 60rem 20rem;
-      color: $white;
+      color: $headingColor;
       margin: 10rem auto;
       text-align: center;
       text-transform: uppercase;

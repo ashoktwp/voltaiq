@@ -1,6 +1,6 @@
 @import "../../css/_module-imports";
 section.u4m-banner {
-  background-color: $black;
+  background-color: $backgroundColor;
   padding: 8rem 0 7rem 0;
   &.offscreen {
     opacity: 0;
@@ -28,7 +28,7 @@ section.u4m-banner {
     }
     div.text {
       font-size: 16rem;
-      color: $white;
+      color: $headingColor;
       line-height: 1;
       letter-spacing: 1rem;
       span.bar {
@@ -45,14 +45,14 @@ section.u4m-banner {
     }
     div.cta {
       margin-left: 15rem;
-      color: $action1;
+      color: $themeColor;
       text-transform: uppercase;
       line-height: 1;
       letter-spacing: 1rem;
       a {
-        color: $white;
+        color: $headingColor;
         &:hover {
-          color: $action2;
+          color: $highlightColor;
         }
         @include tabletvert {
           font-size: 12rem;
@@ -64,11 +64,11 @@ section.u4m-banner {
     }
     div.close {
       span {
-        color: $white;
+        color: $headingColor;
         cursor: pointer;
         margin-left: 15rem;
         &:hover {
-          color: $action2;
+          color: $highlightColor;
         }
       }
     }

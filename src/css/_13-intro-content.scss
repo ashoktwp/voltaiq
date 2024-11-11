@@ -1,0 +1,14 @@
+.intro-content {
+  @include bodyContent;
+  .content-section {
+    margin-bottom: 40rem;
+  }
+
+  h2 {
+    @include h2;
+  }
+
+  p {
+    @include b1;
+  }
+}

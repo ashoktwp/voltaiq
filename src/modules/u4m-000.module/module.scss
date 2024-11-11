@@ -1,7 +1,7 @@
 @import "../../css/_module-imports";
 section.u4m-000 {
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   @include center;
   text-align: center;

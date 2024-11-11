@@ -13,9 +13,16 @@ body {
   font-family: $font1;
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
-  color: $black;
+  color: $bodyColor;
   font-weight: normal;
+  background-color: $backgroundColor;
 }
+
+@mixin bodyContent {
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+}
+
 /* Set default text size */
 h1,
 h2,
@@ -53,6 +60,17 @@ h5:first-child,
 h6:first-child {
   margin-top: 0;
 }
+
+p:last-child,
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0;
+}
+
 /* 0 top margin on 1st header */
 // default anchor link offset
 div.hs_cos_wrapper_widget section.top-margin-none {
@@ -100,10 +118,10 @@ div.hs_cos_wrapper_widget section.bottom-margin-small {
 div.hs_cos_wrapper_widget section.bottom-margin-medium {
   margin-bottom: 100rem;
   @include tabletvert {
-    margin-bottom: 75rem
+    margin-bottom: 75rem;
   }
   @include phone {
-    margin-bottom: 50rem
+    margin-bottom: 50rem;
   }
 }
 div.hs_cos_wrapper_widget section.bottom-margin-large {
@@ -160,10 +178,10 @@ div.hs_cos_wrapper_widget section.bottom-padding-small {
 div.hs_cos_wrapper_widget section.bottom-padding-medium {
   padding-bottom: 100rem;
   @include tabletvert {
-    padding-bottom: 75rem
+    padding-bottom: 75rem;
   }
   @include phone {
-    padding-bottom: 50rem
+    padding-bottom: 50rem;
   }
 }
 div.hs_cos_wrapper_widget section.bottom-padding-large {
@@ -191,7 +209,7 @@ div.video-popup {
   max-width: 960rem;
   margin: 0 auto;
   button.mfp-close {
-    color: $white;
+    color: $headingColor;
     font-size: 40rem;
   }
 }
@@ -199,13 +217,13 @@ div.video-popup {
 div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gradients {
   box-shadow: 2rem -1rem 5rem 0rem rgba(0, 0, 0, 0.05);
   border: 0;
-  background-color: rgba($white, .9);
+  background-color: rgba($headingColor, 0.9);
   div#hs-eu-cookie-confirmation-inner {
-    background-color: rgba($white, 0);
+    background-color: rgba($headingColor, 0);
     padding: 15rem 20rem 10rem 20rem;
     max-width: 1240rem;
     p {
-      @include b4;
+      @include b1;
       margin-bottom: 0;
     }
     div#hs-en-cookie-confirmation-buttons-area {
@@ -216,7 +234,7 @@ div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gra
         font-weight: bold !important;
         margin: 10rem 0;
         &:hover {
-          background-color: $black !important;
+          background-color: $backgroundColor !important;
         }
       }
     }
@@ -224,10 +242,10 @@ div#hs-eu-cookie-confirmation.hs-cookie-notification-position-bottom.can-use-gra
 }
 // default p size
 p {
-  @include b3;
+  @include b1;
 }
 a {
-  @include link
+  @include link;
 }
 blockquote,
 blockquote p {
@@ -240,14 +258,12 @@ strong {
   font-weight: bold;
 }
 ul {
-  @include b3;
   list-style: disc;
   padding-left: 40rem;
   margin-top: 0;
   margin-bottom: 30rem;
 }
 ol {
-  @include b3;
   list-style: decimal;
   padding-left: 40rem;
   margin-top: 0;
@@ -255,7 +271,7 @@ ol {
 }
 li {
   margin-bottom: 5rem;
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 ul ul,
 ul ol,
@@ -272,7 +288,7 @@ button {
 }
 /* Forms */
 form {
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 ::-webkit-input-placeholder {
   color: $gray3;
@@ -326,11 +342,11 @@ code {
   border: 1rem solid $gray1;
   border-radius: 0;
 }
-pre>code {
+pre > code {
   display: block;
   padding: 1rem 15rem;
   white-space: pre;
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 pre {
   overflow-x: auto;
@@ -356,7 +372,7 @@ td:last-child {
   padding-right: 0;
 }
 table {
-  margin-bottom: 30rem
+  margin-bottom: 30rem;
 }
 table th {
   text-transform: uppercase;
@@ -365,10 +381,36 @@ table td {
   border-bottom: 1rem solid $gray2;
   font-size: 14rem;
 }
-a[href='javascript:;'] {
+a[href="javascript:;"] {
   cursor: default;
 }
 //
-section[class*='u4m-'] {
+section[class*="u4m-"] {
   scroll-margin-top: 150px;
+}
+
+.hs-button {
+  @include primaryBtn;
+}
+
+.hs-sec-btn {
+  @include secondaryBtn;
+}
+
+.hs-arrow-btn {
+  @include arrowBtn;
+}
+
+.button-wrap {
+  @include flex;
+  gap: 20rem;
+  align-items: center;
+
+  button {
+    margin: 0;
+  }
+}
+
+.flex_row {
+  @include flex;
 }

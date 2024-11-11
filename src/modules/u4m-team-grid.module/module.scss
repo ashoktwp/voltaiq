@@ -51,42 +51,43 @@ section.u4m-team-grid {
         padding: 20rem 0 0;
       }
       &.no-bio {
-        >.inner {
+        > .inner {
           cursor: default;
           .inner__inner .view-bio {
             display: none;
           }
         }
       }
-      >.inner {
+      > .inner {
         padding: 0;
         border-radius: 0rem;
         text-align: center;
-        background-color: $white;
+        background-color: $headingColor;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: .2s ease;
+        transition: 0.2s ease;
         position: relative;
         &:hover {
-          @include phone {}
+          @include phone {
+          }
         }
         .inner__inner {
           padding: 25rem 20rem;
-          transition: .2s ease-out;
-          color: $white;
+          transition: 0.2s ease-out;
+          color: $headingColor;
           border-bottom: 0rem;
           @include tabletvert {
             padding: 15rem 20rem 35rem;
           }
           h4,
           p {
-            color: $black;
+            color: $backgroundColor;
           }
           h4 {
-            @include b6;
+            @include b3;
             font-size: 24rem;
             margin-bottom: 0;
             @include tabletvert {
@@ -98,25 +99,25 @@ section.u4m-team-grid {
             all: unset;
             @include link;
             margin-bottom: 5rem;
-            color: $action2;
+            color: $highlightColor;
             &:hover {
-              color: $action1;
+              color: $themeColor;
               text-decoration: underline;
             }
             &:after {
               font-family: "Font Awesome 5 Pro";
               font-weight: 900;
               content: "\f061";
-              color: $action2;
+              color: $highlightColor;
               font-size: 12rem;
               margin-left: 5rem;
               transform: translate(0rem, 0rem);
               display: inline-block;
-              transition: .3s ease all;
+              transition: 0.3s ease all;
             }
             &:hover {
               &:after {
-                color: $action1;
+                color: $themeColor;
                 transform: translate(3rem, 0rem);
               }
             }
@@ -128,9 +129,9 @@ section.u4m-team-grid {
             align-items: center;
             a {
               i {
-                color: $action2;
+                color: $highlightColor;
                 &:hover {
-                  color: $action1;
+                  color: $themeColor;
                 }
                 font-size: 18rem;
                 margin-right: 15rem;
@@ -168,12 +169,12 @@ section.u4m-team-grid {
       h4 {
         margin-top: 10rem;
         margin-bottom: 5rem;
-        color: $black;
+        color: $backgroundColor;
       }
       p {
         margin: 0;
         margin-bottom: 10rem;
-        color: $black;
+        color: $backgroundColor;
       }
       .headshot {
         height: 150rem;
@@ -190,7 +191,8 @@ section.u4m-team-grid {
       @include phone {
         height: auto;
       }
-      a.cta_button {}
+      a.cta_button {
+      }
     }
     .full-screen {
       height: 100vh;
@@ -218,7 +220,8 @@ section.u4m-team-grid {
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        .exit-wrap {}
+        .exit-wrap {
+        }
       }
       &.bio-active {
         display: flex;
@@ -261,22 +264,24 @@ section.u4m-team-grid {
           transition: none;
         }
         .circle-inner {
-          background-color: $white;
+          background-color: $headingColor;
           text-align: left;
           padding: 50rem 40rem;
-          box-shadow: 0 10rem 35rem rgba($black, 0.15), 0 0 15rem rgba($black, 0.12);
+          box-shadow: 0 10rem 35rem rgba($backgroundColor, 0.15),
+            0 0 15rem rgba($backgroundColor, 0.12);
           max-height: 700rem;
           overflow: auto;
-          @include tablet {}
+          @include tablet {
+          }
           @include phone {
             box-shadow: none;
             max-height: none;
             overflow: auto;
           }
           .inner {
-            background-color: $white;
+            background-color: $headingColor;
             text-align: left;
-            color: $black;
+            color: $backgroundColor;
             h3 {
               font-size: 40rem;
               margin-bottom: 0;
@@ -302,7 +307,7 @@ section.u4m-team-grid {
             h3,
             h4,
             p {
-              color: $black;
+              color: $backgroundColor;
             }
             .social-links {
               margin-top: 5rem;
@@ -316,9 +321,9 @@ section.u4m-team-grid {
                 cursor: pointer;
                 text-align: center;
                 i {
-                  color: $action2;
+                  color: $highlightColor;
                   &:hover {
-                    color: $black;
+                    color: $backgroundColor;
                   }
                 }
                 @include phone {
@@ -327,7 +332,7 @@ section.u4m-team-grid {
               }
             }
             .fab {
-              color: $white;
+              color: $headingColor;
               margin-top: 5rem;
               font-size: 20rem;
               &.fa-twitter {
@@ -395,7 +400,7 @@ section.u4m-team-grid {
         }
         &:hover {
           span {
-            background: $action2 !important;
+            background: $highlightColor !important;
             &:first-of-type {
               height: 140% !important;
               transform: translateY(-15%) rotate(-90deg);
@@ -414,7 +419,7 @@ section.u4m-team-grid {
         span:first-of-type {
           height: 100%;
           width: 4rem;
-          background: $action2;
+          background: $highlightColor;
           position: absolute;
           left: 0;
           right: 0;
@@ -426,7 +431,7 @@ section.u4m-team-grid {
         span:last-of-type {
           width: 100%;
           height: 4rem;
-          background: $action2;
+          background: $highlightColor;
           position: absolute;
           top: 0;
           bottom: 0;
@@ -440,7 +445,7 @@ section.u4m-team-grid {
           color: #fff;
           font-style: normal;
           font-size: 28rem;
-          opacity: .65;
+          opacity: 0.65;
           line-height: 44rem;
           height: 20rem;
           width: 20rem;
@@ -457,7 +462,7 @@ section.u4m-team-grid {
             opacity: 1;
           }
           @include phone {
-            color: $action2;
+            color: $highlightColor;
             align-items: center;
             justify-content: center;
             width: 30rem;

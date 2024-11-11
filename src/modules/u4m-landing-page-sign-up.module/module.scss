@@ -1,8 +1,8 @@
 @import "../../css/_module-imports";
 section.u4m-landing-page-sign-up {
-  color: $black;
+  color: $backgroundColor;
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
     .logo {
       img {
         filter: brightness(0) invert(1);
@@ -10,12 +10,12 @@ section.u4m-landing-page-sign-up {
     }
     .footer-links {
       a {
-        color: $white;
+        color: $headingColor;
       }
     }
     .input input.hs-input[type="email"] {
       &::placeholder {
-        color: $white;
+        color: $headingColor;
       }
     }
   }
@@ -24,7 +24,7 @@ section.u4m-landing-page-sign-up {
     justify-content: center;
     flex-flow: row wrap;
     min-height: 100vh;
-    &>* {
+    & > * {
       width: 100%;
     }
   }
@@ -87,7 +87,7 @@ section.u4m-landing-page-sign-up {
     .input .hs-input[type="email"] {
       margin-top: 0;
       border-radius: 0;
-      border: 1rem solid $action1;
+      border: 1rem solid $themeColor;
     }
     .input input.hs-input[type="email"] {
       color: inherit;
@@ -97,7 +97,7 @@ section.u4m-landing-page-sign-up {
       font-size: 15rem;
     }
     input.hs-button[type="submit"] {
-      background-color: $action1;
+      background-color: $themeColor;
       border-top-right-radius: $border1;
       border-bottom-right-radius: $border1;
       padding: 16rem 30rem 15rem 30rem;
@@ -106,13 +106,13 @@ section.u4m-landing-page-sign-up {
   .hs-submit {
     input.hs-button {
       padding: 10rem 16rem;
-      border: 2rem solid $action1;
-      background-color: $action1;
+      border: 2rem solid $themeColor;
+      background-color: $themeColor;
       border-top-right-radius: $border1;
       border-bottom-right-radius: $border1;
-      color: $white;
+      color: $headingColor;
       &:hover {
-        color: $black;
+        color: $backgroundColor;
       }
     }
   }
@@ -140,7 +140,7 @@ section.u4m-landing-page-sign-up {
     a {
       color: inherit;
       &:hover {
-        color: $action1;
+        color: $themeColor;
       }
     }
     @include tablet {
@@ -197,7 +197,7 @@ section.u4m-landing-page-sign-up {
         }
       }
       .quotation-mark {
-        color: $action1;
+        color: $themeColor;
         font-weight: bold;
       }
       .author-name,
@@ -221,10 +221,10 @@ section.u4m-landing-page-sign-up {
     font-size: 14rem;
     margin-bottom: 40rem;
     a {
-      color: $black;
+      color: $backgroundColor;
       margin-left: 10rem;
       &:hover {
-        color: $action1;
+        color: $themeColor;
       }
     }
   }

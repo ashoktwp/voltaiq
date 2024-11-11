@@ -3,10 +3,10 @@ section.u4m-slider-logo-nav {
   margin: 100rem 0;
   position: relative;
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
     div.content div.quotes div.slide p.quote,
     div.content div.quotes div.slide p.title {
-      color: $white;
+      color: $headingColor;
     }
   }
   .heading {
@@ -31,8 +31,8 @@ section.u4m-slider-logo-nav {
         .box {
           margin: 10rem;
           img.slider-nav-image {
-            opacity: .1;
-            transition: .3s ease;
+            opacity: 0.1;
+            transition: 0.3s ease;
             max-width: 100rem;
             height: auto;
             cursor: pointer;
@@ -43,7 +43,7 @@ section.u4m-slider-logo-nav {
           }
           &:hover {
             img.slider-nav-image {
-              opacity: .5;
+              opacity: 0.5;
             }
           }
         }
@@ -65,7 +65,7 @@ section.u4m-slider-logo-nav {
       text-align: center;
       div.slide {
         width: 100%;
-        transition: .3s ease;
+        transition: 0.3s ease;
         opacity: 0;
         z-index: 1;
         margin: 10rem auto 30rem;
@@ -81,11 +81,11 @@ section.u4m-slider-logo-nav {
           }
           &.author {
             text-transform: uppercase;
-            color: $action2;
+            color: $highlightColor;
             font-weight: bold;
             margin-top: 0;
             margin-bottom: 5rem;
-            letter-spacing: .075em
+            letter-spacing: 0.075em;
           }
           &.title {
             color: $gray2;
@@ -103,7 +103,7 @@ section.u4m-slider-logo-nav {
         &.exit {
           z-index: 1;
           transform: translateY(-10rem);
-          transition: .3s ease;
+          transition: 0.3s ease;
           opacity: 0;
         }
       }

@@ -1,12 +1,12 @@
 // Viewports & Browsers
 @mixin phone {
-  @media (max-width: 580px) {
+  @media (max-width: 767px) {
     @content;
   }
 }
 
 @mixin tabletvert {
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     @content;
   }
 }
@@ -18,7 +18,7 @@
 }
 
 @mixin tabletMin {
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     @content;
   }
 }
@@ -48,15 +48,13 @@
 }
 
 @mixin ie {
-
-  @media all and (-ms-high-contrast: none),
-  (-ms-high-contrast: active) {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @content;
   }
 }
 
 @mixin safari {
-  @media not all and (min-resolution:.001dpcm) {
+  @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) {
       @content;
     }
@@ -104,25 +102,35 @@
   float: none;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1240rem;
+  max-width: 1353rem;
   padding-left: 20rem;
   padding-right: 20rem;
 }
 
+@mixin centerMd {
+  @include center;
+  max-width: 1254rem;
+}
+
 @mixin centerSmall {
   @include center;
-  max-width: 900rem;
+  max-width: 1152rem;
+}
+
+@mixin centerXs {
+  @include center;
+  max-width: 767rem;
 }
 
 // Links
 @mixin link {
   text-decoration: none;
   /* Remove default underline */
-  color: $action1;
+  color: $bodyColor;
   transition: $animation1;
   display: inline-block;
 
   &:hover {
-    color: $action1;
+    color: $white;
   }
 }

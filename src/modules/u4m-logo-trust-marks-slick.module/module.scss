@@ -2,7 +2,7 @@
 section.u4m-logo-trust-marks {
   margin: 100rem 0;
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   .heading {
     @include center;

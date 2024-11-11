@@ -1,7 +1,7 @@
 @import "../../css/_module-imports";
 section.u4m-section-intro {
   &.reverse-text {
-    color: $white;
+    color: $headingColor;
   }
   margin-top: 100rem;
   margin-bottom: 100rem;
@@ -21,10 +21,11 @@ section.u4m-section-intro {
     .heading {
       @include h2;
     }
-    p.content {}
+    p.content {
+    }
     div.link {
       a {
-        @include button;
+        @include primaryBtn;
       }
     }
   }

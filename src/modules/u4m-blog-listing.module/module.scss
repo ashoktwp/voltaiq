@@ -37,7 +37,7 @@ section.u4m-blog-listing {
           }
           div.read-time,
           span.date {
-            @include b5;
+            @include b2;
             text-transform: uppercase;
           }
         }
@@ -66,7 +66,8 @@ section.u4m-blog-listing {
           font-size: 16rem; // Note anything below 16rem will trigger the zoom feature on iOS
           -webkit-appearance: none;
           -moz-appearance: none;
-          background: url('//cdn2.hubspot.net/hubfs/302335/select-arrow.png') no-repeat;
+          background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png")
+            no-repeat;
           background-size: 13rem 8rem;
           background-position: 97% 51%;
           border: 0;
@@ -111,19 +112,19 @@ section.u4m-blog-listing {
             }
           }
           &:hover {
-            background-color: $black;
+            background-color: $backgroundColor;
           }
         }
         ul li.active a {
-          background-color: $black;
+          background-color: $backgroundColor;
         }
         ul li:first-child.active a {
           background-color: $gray3;
-          color: $white;
+          color: $headingColor;
         }
         body:not(.topic) & ul li.active a {
-          background-color: $black;
-          color: $white;
+          background-color: $backgroundColor;
+          color: $headingColor;
         }
         ul {
           padding: 0;
@@ -139,35 +140,35 @@ section.u4m-blog-listing {
             text-align: center;
           }
           a {
-            @include b4;
+            @include b1;
             margin: 0 15rem 20rem 15rem;
           }
         }
         ul.hs-menu-children-wrapper {
           padding-top: 20rem;
-          background-color: $white;
+          background-color: $headingColor;
         }
         li.hs-menu-depth-2 .hs-menu-children-wrapper {
           padding-top: 0;
         }
       }
       /* Carret after Menu items with dropdown */
-      li.hs-menu-depth-1.hs-item-has-children>a:after {
+      li.hs-menu-depth-1.hs-item-has-children > a:after {
         position: relative;
         top: -2rem;
         content: "\f0d7";
         display: inline-block;
-        font-family: 'Font Awesome 5 Pro';
+        font-family: "Font Awesome 5 Pro";
         margin-left: 7rem;
         font-size: 15rem;
         font-weight: bold;
       }
-      li.hs-menu-depth-2.hs-item-has-children>a:after {
+      li.hs-menu-depth-2.hs-item-has-children > a:after {
         position: relative;
         top: 0;
         content: "\f105";
         display: inline-block;
-        font-family: 'Font Awesome 5 Pro';
+        font-family: "Font Awesome 5 Pro";
         margin-left: 7rem;
         font-size: 15rem;
       }
@@ -205,7 +206,8 @@ section.u4m-blog-listing {
       @include phone {
         display: block;
       }
-      h2.name {}
+      h2.name {
+      }
       div.avatar {
         background-size: cover;
         width: 300rem;
@@ -229,7 +231,7 @@ section.u4m-blog-listing {
         @include h5;
       }
       p.bio {
-        @include b4;
+        @include b1;
       }
       div.social {
         a {
@@ -266,7 +268,7 @@ section.u4m-blog-listing {
         padding: 30rem 0;
       }
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         height: 100%;
         width: 1920rem;
@@ -301,7 +303,7 @@ section.u4m-blog-listing {
           h2,
           span,
           p {
-            color: $black;
+            color: $backgroundColor;
           }
           span.type {
             display: block;
@@ -340,7 +342,7 @@ section.u4m-blog-listing {
         list-style: none;
         background-image: none;
         a {
-          color: $black;
+          color: $backgroundColor;
           min-height: 55rem;
           min-width: 55rem;
           display: flex;
@@ -355,8 +357,8 @@ section.u4m-blog-listing {
             min-width: 35rem;
           }
           &:hover {
-            color: $white;
-            background-color: $action1;
+            color: $headingColor;
+            background-color: $themeColor;
           }
         }
         &.disabled {
@@ -366,8 +368,8 @@ section.u4m-blog-listing {
         }
         &.active {
           a {
-            color: $white;
-            background-color: $action1;
+            color: $headingColor;
+            background-color: $themeColor;
           }
         }
       }
@@ -380,7 +382,7 @@ section.u4m-blog-listing {
     text-align: center;
     a.pagination-infinite_button {
       @include center;
-      @include button;
+      @include primaryBtn;
       .hide-next & {
         display: none;
       }

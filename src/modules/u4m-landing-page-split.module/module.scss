@@ -58,7 +58,7 @@ section.u4m-landing-page-split {
           }
         }
         .quotation-mark {
-          color: $action1;
+          color: $themeColor;
           @include b1;
         }
         .quote-text {
@@ -114,15 +114,15 @@ section.u4m-landing-page-split {
           div {
             text-align: right;
             span.label {
-              color: $white;
+              color: $headingColor;
             }
             a {
-              color: $white;
+              color: $headingColor;
               font-size: 24rem;
               line-height: 1;
               margin-left: 5rem;
               &:hover {
-                color: $action1;
+                color: $themeColor;
               }
             }
           }
@@ -135,16 +135,16 @@ section.u4m-landing-page-split {
           padding-right: 0;
           h2.heading {
             @include h6;
-            color: $white;
+            color: $headingColor;
           }
           form {
             margin-bottom: 0;
             label {
-              color: $white;
+              color: $headingColor;
             }
           }
           div.submitted-message {
-            color: $white;
+            color: $headingColor;
           }
         }
       }
