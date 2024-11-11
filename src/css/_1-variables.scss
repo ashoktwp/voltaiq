@@ -1,27 +1,38 @@
 // Colors - For transparency use rgba($action1, 0.5) = 50% opaque
-$action1: #0066FF;
-$action2: #00E9BA;
-$error: #E54A38;
+$action1: #0066ff;
+$action2: #00e9ba;
+$error: #e54a38;
 $black: #000;
 $white: #fff;
-$gray1: #DBE2E9;
+$gray1: #dbe2e9;
 $gray2: #ebeff3;
 $gray3: #cacaca;
 
+$gradientObsidian: linear-gradient(87.43deg, #001b44 -14.67%, #000000 58.26%);
+$gradientMidnight: linear-gradient(
+  106.42deg,
+  #000000 7.89%,
+  #003788 69.38%,
+  #0066ff 101.3%
+);
+$gradientDeepSea: linear-gradient(
+  107.56deg,
+  #000000 -28.56%,
+  #0066ff 38.12%,
+  #00e9ba 112.85%
+);
+$gradientTropicalSea: linear-gradient(
+  93.03deg,
+  #0066ff -44.88%,
+  #00e9ba 109.68%
+);
+$gradientSky: linear-gradient(102.98deg, #0066ff -12.29%, #dbe2e9 124.42%);
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap");
 
-$gradientObsidian: linear-gradient(87.43deg, #001B44 -14.67%, #000000 58.26%);
-$gradientMidnight: linear-gradient(106.42deg, #000000 7.89%, #003788 69.38%, #0066FF 101.3%);
-$gradientDeepSea: linear-gradient(107.56deg, #000000 -28.56%, #0066FF 38.12%, #00E9BA 112.85%);
-$gradientTropicalSea: linear-gradient(93.03deg, #0066FF -44.88%, #00E9BA 109.68%);
-$gradientSky: linear-gradient(102.98deg, #0066FF -12.29%, #DBE2E9 124.42%);
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap');
-
-$font1: 'Space Grotesk', sans-serif;
-$font2: 'Poppins', sans-serif;
-$fontAwesome: 'Font Awesome 5 Pro';
+$font1: "Space Grotesk", sans-serif;
+$font2: "Poppins", sans-serif;
+$fontAwesome: "Font Awesome 5 Pro";
 $baseFontSize: 16rem;
 $baseLineHeight: 1.61803398875; // Golden ratio
 // Border Radius
@@ -34,6 +45,6 @@ $shadow2: 0 5rem 25rem 0 rgba($black, 0.2);
 $shadow3: 0 10rem 50rem 0 rgba($black, 0.3);
 $textShadow1: 0 0 4rem rgba($black, 0.3);
 // Animation
-$animation1: .1s ease-in;
-$animation2: .25s ease-in;
+$animation1: 0.1s ease-in;
+$animation2: 0.25s ease-in;
 $animation3: 1s ease-in;
