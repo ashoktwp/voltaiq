@@ -1,0 +1,110 @@
+@import "../../css/_module-imports";
+
+footer.u4m-footer {
+  background-color: $black;
+  color: $white;
+  padding-top: 100rem;
+  padding-bottom: 80rem;
+
+  @include phone {
+    padding-top: 80rem;
+    padding-bottom: 50rem;
+  }
+
+  div.inner {
+    @include center;
+
+    div.footer-upper {
+      padding-bottom: 40rem;
+
+      @include phone {
+        padding-bottom: 30rem;
+      }
+
+      div.company-info {
+        div.logo {
+          margin-bottom: 30rem;
+
+          a {
+            img {
+              max-width: 187rem;
+              width: 100%
+            }
+          }
+        }
+
+        div.location {
+          p {
+            @include b4;
+            font-weight: 400;
+          }
+        }
+
+        div.social {
+          ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-left: 0;
+            padding-left: 0;
+
+            li {
+              list-style: none;
+              padding: 0;
+              margin: 0 15rem 0 0;
+
+              &:last-of-type {
+                margin-right: auto;
+              }
+
+              a {
+                color: $white;
+
+                img.social-icon {
+                  &.twitter {}
+
+                  &.linkedin {}
+
+                  &.youtube {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    div.footer-lower {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24rem;
+
+      @include phone {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 0;
+      }
+
+      p {
+        @include b4;
+        font-weight: 400;
+        margin: 0;
+
+        &.copyright {
+          text-align: left;
+        }
+
+        &.contact {
+          text-align: right;
+
+          @include phone {
+            text-align: left;
+            margin-top: 8rem;
+          }
+        }
+      }
+    }
+  }
+}

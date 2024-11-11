@@ -1,0 +1,68 @@
+[ {
+  "id" : "main_menu",
+  "name" : "main_menu",
+  "display_width" : null,
+  "label" : "Main Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu",
+  "default" : 42948017489
+}, {
+  "id" : "language",
+  "name" : "language",
+  "display_width" : null,
+  "label" : "Include Language Switcher?",
+  "help_text" : "",
+  "inline_help_text" : "This will add a language switcher to the header",
+  "required" : false,
+  "locked" : true,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "header_cta",
+  "name" : "header_cta",
+  "display_width" : null,
+  "label" : "CTA field",
+  "required" : false,
+  "locked" : true,
+  "type" : "cta",
+  "default" : ""
+}, {
+  "id" : "header_logo",
+  "name" : "header_logo",
+  "display_width" : null,
+  "label" : "Header Logo",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/2024%20-%20Voltaiq%20Hubspot%20Theme%20Assets/Logos/Voltaiq%20Logo.svg",
+    "alt" : "Voltaiq Logo",
+    "width" : 218,
+    "height" : 35,
+    "max_width" : 218,
+    "max_height" : 35
+  }
+}, {
+  "id" : "mobile_menu",
+  "name" : "mobile_menu",
+  "display_width" : null,
+  "label" : "Mobile Menu",
+  "required" : false,
+  "locked" : true,
+  "type" : "menu"
+}, {
+  "id" : "0d0c3af2-963a-89e0-056a-83ec4b527d00",
+  "name" : "mobile_menu_cta",
+  "display_width" : null,
+  "label" : "Mobile Menu CTA",
+  "required" : false,
+  "locked" : true,
+  "type" : "cta",
+  "default" : ""
+} ]

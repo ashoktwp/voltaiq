@@ -1,0 +1,423 @@
+@import "../../css/_module-imports";
+
+section.u4m-landing-page-overlap {
+  .landing-page-columns {
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 50rem;
+
+    // Hero, Image & Additional Copy
+    .left-column {
+      flex: 0 1 50%;
+      margin-bottom: 50rem;
+
+      .hero {
+        position: relative;
+        z-index: 1;
+        display: block;
+
+        .column-inner {
+          max-width: 620rem;
+          width: 100%;
+          margin: 0 0 0 auto;
+          position: relative;
+          z-index: 2;
+          padding-left: 20px;
+
+          .text {
+            padding: 150rem 0 50rem 0;
+
+            &.has-media {
+              padding-bottom: 80rem;
+            }
+
+            &:not(.black-text) {
+
+              .eyebrow,
+              h1,
+              h2 {
+                color: $white;
+              }
+            }
+
+            &.black-text {
+
+              .eyebrow,
+              h1,
+              h2 {
+                color: $black;
+              }
+            }
+
+
+            @include tablet {
+              flex: 0 0 100%;
+              padding: 200rem 20px 50rem;
+            }
+
+            img.eyebrow-image {
+              margin-bottom: 20rem;
+              max-width: 240rem !important;
+              max-height: 60rem;
+              width: auto;
+            }
+
+            .eyebrow {
+              @include eyebrow;
+              margin-bottom: 20rem;
+
+              .black-text & {
+                color: $black;
+              }
+            }
+
+            h1 {
+              @include h3;
+
+              .black-text & {
+                color: $black;
+              }
+            }
+
+            h2 {
+              @include b1;
+              font-weight: normal;
+
+              .black-text & {
+                color: $black;
+              }
+            }
+
+            &.true {
+
+              h1,
+              h2 {
+                color: $white;
+              }
+            }
+
+            .anchor-link-button {
+              @include button;
+              display: none;
+
+              @include tablet {
+                display: inline-block;
+                margin-bottom: 50rem;
+              }
+            }
+
+            div.media-container {
+              margin-top: 50rem;
+
+              img {}
+
+              video {}
+            }
+          }
+
+          @include tablet {
+            margin: 0 auto;
+            padding: 0;
+          }
+
+          @include tabletvert {
+            max-width: unset;
+          }
+        }
+
+        .bg-image-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100%;
+
+          &.gradientObsidian {
+            background-image: $gradientObsidian;
+          }
+
+          &.gradientMidnight {
+            background-image: $gradientMidnight;
+          }
+
+          &.gradientDeepSea {
+            background-image: $gradientDeepSea;
+          }
+
+          &.gradientTropicalSea {
+            background-image: $gradientTropicalSea;
+          }
+
+          &.gradientSky {
+            background-image: $gradientSky;
+          }
+
+          .bg-image-container__image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+            opacity: .34;
+          }
+        }
+      }
+
+      .additional-copy {
+        margin-top: 50rem;
+        position: relative;
+
+
+
+        .column-inner {
+          max-width: 600rem;
+          width: 100%;
+          margin: 0 0 0 auto;
+
+          div.media-container {
+            margin-bottom: 50rem;
+            margin-top: -100rem;
+            position: relative;
+            z-index: 2;
+
+            @include tablet {
+              margin-top: -140rem;
+            }
+
+            img {}
+
+            video {}
+          }
+
+          p {
+            @include b3;
+
+            &:first-of-type {
+              @include b2;
+            }
+          }
+
+          h2 {
+            @include h4;
+          }
+
+          h3 {
+            @include h5;
+            font-weight: 700;
+          }
+
+          @include navbreak {
+            padding-left: 20px;
+          }
+
+          @include tablet {
+            flex: 0 0 100%;
+            margin-top: 50rem;
+            padding: 0 20px;
+          }
+
+          @include tabletvert {
+            max-width: unset;
+          }
+
+          ul {
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            li {
+              &::marker {
+                color: $action1;
+              }
+            }
+          }
+
+          @include tablet {
+            margin: 0 auto;
+          }
+        }
+
+        @include tablet {
+          margin-top: 75rem;
+        }
+      }
+
+      @include tablet {
+        flex: 0 0 100%;
+      }
+    }
+
+    // Share, Form, Disclaimwer & Quote
+    .right-column {
+      flex: 0 1 50%;
+      padding: 150rem 20rem 0 100rem;
+      align-self: flex-start;
+
+      .column-inner {
+        width: 100%;
+        max-width: 600rem;
+        margin: 0 auto 0 0;
+        position: relative;
+        z-index: 2;
+
+        .custom-share {
+          @include tablet {
+            display: none;
+          }
+
+          div {
+            text-align: right;
+
+            span.label {
+              color: $white;
+              position: relative;
+              top: 5rem;
+            }
+
+            a {
+              margin-left: 5rem;
+
+              img {
+                transition: .4s ease-in-out all;
+              }
+
+              &:hover {
+                img {
+                  opacity: .7;
+                }
+              }
+
+
+            }
+          }
+
+          &.reverse-text {
+            span.label {
+              color: $black;
+            }
+
+            img {
+              filter: brightness(0);
+            }
+          }
+        }
+
+        .form-wrap {
+          @include form;
+          min-height: 400px;
+          margin-top: 10rem;
+          box-shadow: $shadow1;
+          border: 1px solid $gray2;
+
+          form {
+            margin: 0;
+          }
+
+          @include tablet {
+            min-height: unset;
+            margin-top: 0;
+          }
+
+          &.has-thankyou {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            fieldset,
+            .hs-submit,
+            .heading {
+              display: none;
+            }
+
+            .submitted-message {
+              @include b1;
+            }
+          }
+
+          h2.heading {
+            @include h6;
+            margin-bottom: 10rem;
+          }
+        }
+
+        .disclaimer {
+          color: $gray3;
+          font-size: 14rem;
+          text-align: center;
+          max-width: 380rem;
+          margin: 0 auto;
+
+          @include tabletvert {
+            max-width: unset;
+          }
+        }
+
+        .quote {
+          margin-top: 50rem;
+          text-align: center;
+          padding: 30rem;
+          border-radius: $border2;
+          background-color: $white;
+
+          .author-image {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20rem;
+            border-radius: 50%;
+            background-size: cover;
+          }
+
+          .quotation-mark {
+            @include h6;
+            color: $action2;
+            font-weight: bold;
+          }
+
+          .quote-text {
+            @include b1;
+            font-family: $font1;
+            color: rgba($black, .7);
+            font-style: italic;
+          }
+
+          .quote-author {
+            @include b3;
+
+            span.author-name {
+              letter-spacing: 1rem;
+              font-family: $font2;
+              font-weight: bold;
+              display: block;
+              margin-top: 30rem;
+            }
+
+            span.author-title {
+              display: block;
+            }
+          }
+        }
+
+        @include tablet {
+          margin: 0 auto;
+        }
+
+        @include tabletvert {
+          max-width: unset;
+        }
+      }
+
+      @include tablet {
+        margin-top: 0;
+        flex: 0 0 100%;
+        padding: 20px;
+      }
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+}
