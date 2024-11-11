@@ -414,3 +414,7 @@ section[class*="u4m-"] {
 .flex_row {
   @include flex;
 }
+
+.eyebrow {
+  @include eyebrow;
+}
