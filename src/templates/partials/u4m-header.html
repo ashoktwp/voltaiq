@@ -1,0 +1,25 @@
+<!--
+templateType: global_partial
+label: Website Header
+-->
+
+<header class="header">
+	<div class="page-center">
+		<div class="flex_row">
+			<div class="logoSec">
+				{% module "header_logo" path="@hubspot/logo",no_wrapper="true", label="Header Logo", link="#" img={src= "{{ get_asset_url('./../images/logo.png') }}", width= 180,alt="Voltaiq", override_inherited_src= true} %}
+			</div>
+			<div class="mobileTrigger deskHide"><i></i></div>
+			<div class="rightSec flex_row">
+				<div class="rightSec-in flex_row">
+					<div class="headerMenu">
+						{% module "mega_menu" path="../../modules/u4m-mega-menu", label="u4m-mega-menu" %}
+					</div>
+					<div class="headerbtn">
+						{% module "button" path="@hubspot/button",no_wrapper="true", link={ "url": { "type": "EXTERNAL", "href": "#", "content_id": null }, "open_in_new_tab": false, "no_follow": false }, button_text="Request A Demo",label="Button" %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

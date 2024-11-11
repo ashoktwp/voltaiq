@@ -1,0 +1,75 @@
+<div class="mega-menu">
+	<ul>
+		{% for item in module.mega_menu %}
+		<li class="menuItem {% if item.enable_child_menu %}hs-subMenu{% endif %}">
+			{% set href = item.menu_link.url.href %}
+			{% if item.menu_link.url.type is equalto "EMAIL_ADDRESS" %}
+			{% set href = "mailto:" + href %}
+			{% endif %}
+			<a
+				 {% if item.menu_link.url.type is equalto "CALL_TO_ACTION"  %}
+				 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+				 {% else %}
+				 href="{{ href|escape_url }}"
+				 {% endif %}
+				 {% if item.menu_link.open_in_new_tab %}
+				 target="_blank"
+				 {% endif %}
+				 {% if item.menu_link.rel %}
+				 rel="{{ item.menu_link.rel|escape_attr }}"
+				 {% endif %}
+				 >
+				{{ item.menu_text }}
+				{% if item.enable_child_menu %}
+				<svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
+					<path d="M5 5.9319L0 0.931904L0.931903 0L5 4.0681L9.0681 0L10 0.931904L5 5.9319Z" fill="white"/>
+				</svg>
+				{% endif %}
+			</a>
+			{% if item.enable_child_menu %}
+			<ul class="subMenu flex_row">
+				{% for item2 in item.child_menu %}
+				<li class="childMenuItem">
+					{% set href = item2.link.url.href %}
+					{% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
+					{% set href = "mailto:" + href %}
+					{% endif %}
+					<a
+						 {% if item2.link.url.type is equalto "CALL_TO_ACTION"  %}
+						 href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+						 {% else %}
+						 href="{{ href|escape_url }}"
+						 {% endif %}
+						 {% if item2.link.open_in_new_tab %}
+						 target="_blank"
+						 {% endif %}
+						 {% if item2.link.rel %}
+						 rel="{{ item2.link.rel|escape_attr }}"
+						 {% endif %}
+						 >
+						<div class="flex_row">
+							{% if item2.image.src %}
+							<div class="menuimg">
+								<img src="{{ item2.image.src|escape_url }}" alt="{{ item2.image.alt|escape_attr }}">
+							</div>
+							{% endif %}
+							{% if item2.menu_text || item2.description  %}
+							<div class="menuContent">
+								{% if item2.menu_text %}
+								<h6>{{ item2.menu_text }}</h6>
+								{% endif %}
+								{% if item2.description  %}
+								<p>{{ item2.description }}</p>
+								{% endif %}
+							</div>
+							{% endif %}
+						</div>
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+</div>
