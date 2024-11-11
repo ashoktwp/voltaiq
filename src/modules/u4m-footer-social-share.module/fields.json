@@ -1,0 +1,41 @@
+[ {
+  "id" : "7f94dd15-0164-e7d5-034e-2fed77b6bfed",
+  "name" : "social_share_items_group",
+  "display_width" : null,
+  "label" : "Social Share Items Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "7a12745b-d0e8-dffd-820f-1cfc50721067",
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "7a12745b-d0e8-dffd-820f-1cfc50721067",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Vector.png",
+      "alt" : "Vector",
+      "loading" : "lazy",
+      "width" : 47,
+      "height" : 42,
+      "max_width" : 47,
+      "max_height" : 42
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ ]
+} ]
