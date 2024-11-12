@@ -28,7 +28,9 @@
 	{% global_partial path='././partials/u4m-footer.html' %}
 	{% endblock footer %}
     
-    {{ require_js(get_asset_url('../js/main.js')) }}
+  {{ require_js(get_asset_url('../js/jquery.js')) }} 
+  {{ require_js(get_asset_url('../js/aos.js')) }} 
+  {{ require_js(get_asset_url('../js/main.js')) }} 
     {{ standard_footer_includes }}
 </body>
 </html>
