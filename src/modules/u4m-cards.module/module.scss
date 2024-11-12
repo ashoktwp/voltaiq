@@ -1,82 +1,125 @@
 @import "../../css/_module-imports";
-section.u4m-cards {
-  margin-top: 100rem;
-  margin-bottom: 100rem;
-  &.reverse-text {
-    h2.heading,
-    h3.subheading {
-      color: $headingColor;
+
+@include introContent;
+
+
+
+.u4m-cards {
+  .intro-content {
+    .page-center-intro {
+      @include center;
+      text-align: left;
+      margin-bottom: 81px;
+
+      @include phone {
+        margin-bottom: 50px;
+      }
     }
   }
-  .heading {
-    @include center;
-    @include h2;
-    text-align: center;
-  }
-  .subheading {
-    @include center;
-    max-width: 1000rem;
-    @include b2;
-    font-weight: normal;
-    text-align: center;
-  }
-  .link {
-    text-align: center;
-    a {
-      @include primaryBtn;
-    }
-  }
-  .wrapper {
-    @include center;
-    max-width: 1280rem;
+
+  .inner_cnt {
     display: flex;
+    column-gap: 76px;
     flex-wrap: wrap;
-    justify-content: center;
-    @include phone {
-      display: block;
+
+    .pd {
+      .top_icon {
+        margin-bottom: 20px;
+
+        img {
+          width: 56px;
+          height: 56px;
+          object-fit: cover;
+        }
+      }
+
+      h1 {
+        margin: 0;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      h4 {
+        margin: 0;
+      }
+
+      h5 {
+        margin: 0;
+      }
+
+      h6 {
+        margin: 0;
+      }
+
+      .content-section {
+        margin-top: 5px;
+      }
+
+      .button-wrap {
+        margin-top: auto;
+        padding-top: 20px;
+      }
     }
-    &.landscape {
-      div.card {
-        flex-direction: row;
-        @include tabletvert {
+
+    .items {
+      .pd {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .cnt {
+          height: 100%;
+          display: flex;
           flex-direction: column;
         }
-        div.image.filled {
-          min-width: 200rem;
-        }
-        div.content {
-          @include phone {
-            margin-bottom: 0;
-            span.teaser {
-              margin-bottom: 0;
-            }
-          }
-        }
       }
     }
-    div.card {
-      @include card;
-    }
-    &.two {
-      div.card {
-        flex-basis: calc(50% - 40rem);
+
+  }
+
+  .inner_cnt.three_col {
+    .items {
+      @include tabletMin {
+        width: calc(33.3% - 51px);
+      }
+
+      @include tablet {
+        width: calc(50% - 20px);
+      }
+
+      @include phone {
+        width: 100%;
       }
     }
-    &.three {
-      div.card {
-        flex-basis: calc(33.333% - 40rem);
-        @include tablet {
-          flex-basis: calc(50% - 40rem);
-        }
+
+    @include tablet {
+      gap: 40px;
+    }
+  }
+
+  .inner_cnt.four_col {
+    .items {
+      @include laptopMin {
+        width: calc(25% - 57px);
+      }
+
+      @include laptop {
+        width: calc(50% - 20px);
+      }
+
+      @include phone {
+        width: 100%;
       }
     }
-    &.four {
-      div.card {
-        flex-basis: calc(25% - 40rem);
-        @include tablet {
-          flex-basis: calc(50% - 40rem);
-        }
-      }
+
+    @include laptop {
+      gap: 40px;
     }
   }
 }
