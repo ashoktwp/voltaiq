@@ -152,6 +152,11 @@
   max-width: 1152rem;
 }
 
+@mixin center811 {
+  @include center;
+  max-width: 811rem;
+}
+
 @mixin centerXs {
   @include center;
   max-width: 767rem;

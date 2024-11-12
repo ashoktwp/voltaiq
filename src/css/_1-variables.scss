@@ -30,6 +30,7 @@ $gradientObsidian: linear-gradient(
   #001b44 -14.67%,
   $backgroundColor 58.26%
 );
+
 $gradientMidnight: linear-gradient(
   106.42deg,
   $backgroundColor 7.89%,
@@ -69,3 +70,5 @@ $textShadow1: 0 0 4rem rgba($backgroundColor, 0.3);
 $animation1: 0.1s ease-in;
 $animation2: 0.25s ease-in;
 $animation3: 1s ease-in;
+
+$font16: 16rem;

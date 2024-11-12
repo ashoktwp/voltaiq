@@ -23,6 +23,7 @@ section.u4m-drag-and-drop-area {
   }
 }
 
+.dnd-section[class*="full-width"],
 .dnd-section.dnd_padding {
   padding: 0rem 0;
 }
@@ -51,6 +52,10 @@ section.u4m-drag-and-drop-area {
 
 .page-center-lg {
   @include centerlg;
+  margin: 0 auto;
+}
+.page-center-intro {
+  @include center811;
   margin: 0 auto;
 }
 

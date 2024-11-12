@@ -11,6 +11,7 @@
 {% set posts = blog_recent_tag_posts(module.blog_feed.select_blog, module.blog_feed.select_tag, module.blog_feed.number_of_posts ) %}  
 {% endif %}
 
+{{macros.contentGroup(module.intro_content  )}}
 
 <div class="page-center">
 	<div class="blogFeedList">

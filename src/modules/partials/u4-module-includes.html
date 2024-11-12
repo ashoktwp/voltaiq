@@ -2,6 +2,9 @@
   templateType: "none"
   isAvailableForNewContent: false
 -->
+{% import "../../macros/macros.html" as macros %}    
+ 
+
 <section id="{% if module.module_overrides.enable_overrides and module.module_overrides.section_id %}{{ module.module_overrides.section_id }}{% else %}{{name}}{% endif %}"
 class="{{ moduleName }} {{ name }} module_basic dnd_padding
        {{ ' lazy' if module.module_overrides.background_image.src && module.module_overrides.background_lazy  }}
@@ -37,66 +40,7 @@ data-bg="{{ resize_image_url(module.module_overrides.background_image.src, 0,0,b
 {% endif %}
 style="{% if module.background_color.color %} background-color:rgba({{ module.background_color.color|convert_rgb }},{{ module.background_color.opacity }});{% endif %}{% if module.module_overrides.background_image.src && !module.module_overrides.background_lazy %} background-image: url({{ resize_image_url(module.module_overrides.background_image.src, 0,0,bgImageMax) }}); {% endif %}"
 >
-
-<div class="intro-content">
-<div class="page-center-xs">
-{% if module.intro_content.include_eyebrow_text %}
-<div class="eyebrow">
-{{ module.intro_content.eyebrow_text }}
-</div>
-{% endif %}
-
-{% if module.intro_content.include_heading %}
-<{{ module.intro_content.heading_tag }}>{{ module.intro_content.heading }}</{{ module.intro_content.heading_tag }}>
-{% endif %}
-
-{% if module.intro_content.include_content %}
-<div class="content-section">
-{{ module.intro_content.content }}
-</div>
-{% endif %}
-
-{% if module.intro_content.include_buttons %}
-<div class="button-wrap">
-{% for item in module.intro_content.buttons %}
-
-  {% if item.type == "std"  %}
-  {% set href = item.link.url.href %}
-  {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
-  {% set href = "mailto:" + href %}
-  {% endif %}
-  <a
-  class="{{ item.theme }}"
-  {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
-  href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
-  {% else %}
-  href="{{ href }}"
-  {% endif %}
-  {% if item.link.open_in_new_tab %}
-  target="_blank"
-  {% endif %}
-  {% if item.link.rel %}
-  rel="{{ item.link.rel }}"
-  {% endif %}
-  >
-  {{ item.text }}
-
-  {% if item.theme == "hs-arrow-btn" %}
-  <span class="arrow-icon">></span>
-  {% endif %}
-  </a>
-  
-  {% elif item.type == "cta"  %}
-  {% cta guid="{{ item.cta_button }}" %}
-  {% endif %}
-  
-  {% endfor %}
-  </div>
-{% endif %}
-
-
-</div>  
-</div>
+ 
 
 {% if module.module_overrides.enable_overrides %}
 {% require_css %}

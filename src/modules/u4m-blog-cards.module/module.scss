@@ -1,6 +1,5 @@
 @import "../../css/_module-imports";
 
-@include introContent;
 .u4m-blog-cards {
     .intro-content {
         @include phoneMin {
@@ -81,12 +80,46 @@
                 }
             }
         }
-        row-gap: 30px;
-        @include phoneMin {
-            margin: 0 -20px;
+        .cardCont {
+          .topicTagwrap {
+            @include eyebrow;
+            line-height: 1;
+            margin-bottom: 13px;
+            * {
+              color: $highlightColor;
+            }
+          }
+          .restitle {
+            margin-bottom: 10px;
+            a {
+              color: inherit;
+            }
+          }
+          .desc {
+            margin-bottom: 18px;
+          }
+          .readMore {
+            margin-top: auto;
+            .hs-arrow-btn {
+              margin: 0;
+              svg * {
+                fill: currentColor;
+              }
+            }
+          }
+          display: flex;
+          flex-direction: column;
+          height: calc(100% - 231px);
         }
-        @include laptopMin {
-            margin: 0 -26.5px;
-        }
+        height: 100%;
+      }
     }
+    row-gap: 30px;
+    @include phoneMin {
+      margin: 0 -20px;
+    }
+    @include laptopMin {
+      margin: 0 -26.5px;
+    }
+  }
 }

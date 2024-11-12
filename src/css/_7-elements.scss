@@ -460,3 +460,24 @@ section[class*="u4m-"] {
 .intro-content .button-wrap {
   justify-content: center;
 }
+
+@mixin bodyContent {
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  font-family: $font2;
+}
+
+.module_basic {
+  @include bodyContent;
+  .intro-content {
+    text-align: center;
+    margin-bottom: 47rem;
+    .eyebrow {
+      @include eyebrow;
+    }
+    .content-section {
+      margin-bottom: 40rem;
+      @include b1;
+    }
+  }
+}
