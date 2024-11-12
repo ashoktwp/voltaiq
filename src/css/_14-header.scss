@@ -1,5 +1,7 @@
 header.header {
     padding: 20px 0;
+    position: relative;
+    z-index: 4;
     .page-center {
         > .flex_row {
             .logoSec {
@@ -259,5 +261,13 @@ header.header {
         .mobileHide {
             display: none !important;
         }
+    }
+}
+
+body:not(.no-banner) {
+    header.header {
+        position: absolute;
+        left: 0;
+        right: 0;
     }
 }

@@ -30,3 +30,15 @@ window.addEventListener('scroll', function() {
     document.body.classList.remove('page-scrolled');
   }
 });
+
+
+
+
+var banner = document.querySelector('.u4m-hero');
+
+if (banner) {
+  document.body.classList.remove("no-banner");
+}
+else{
+  document.body.classList.add("no-banner");
+}

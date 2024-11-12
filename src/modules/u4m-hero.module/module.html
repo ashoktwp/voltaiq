@@ -4,11 +4,55 @@
 
 {% include "../partials/u4-module-includes.html" %}
 
-
 <div class="page-center">
-{# Module content goes here #}
- 
+	<div class="flex_row {% if module.media_section.image.src %}{% else %}noImg{% endif %}">
+		<div class="left_sec">
+			{{macros.contentGroup(module.intro_content  )}}
+		</div>
+		{% if module.media_section.image.src %}
+		<div class="right_sec">
+			<img src="{{ module.media_section.image.src|escape_url }}" alt="{{ module.media_section.image.alt|escape_attr }}">
+		</div>
+		{% endif %}
+	</div>
 </div>
 
- 
+{% if module.module_settings.enable_shape_image %}
+<div class="shape_img" style="background-image:url({{ module.module_settings.shape_image.src }})"></div>
+{% endif %}
+
 </section>
+{% if module.module_overrides.background.image_top || module.module_overrides.background.image_bottom  %}
+{% require_css %}
+<style>
+	{% scope_css %}
+	.u4m-hero{
+		position:relative;
+	}
+	.u4m-hero:before,
+	.u4m-hero:after{
+		content:"";
+		position:absolute;
+		background: #01255C;
+		filter: blur(196.21px);
+		transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+		width: 1369.16px;
+		height: 609.76px;
+		right: -110px;
+		border-radius: 100%;
+	}
+
+	{% if module.module_overrides.background.image_top %}
+	.u4m-hero:before{
+    bottom: 0;
+	}
+	{% endif %}
+	{% if module.module_overrides.background.image_bottom %}
+	.u4m-hero:after{
+    top: 0;
+	}
+	{% endif %}
+	{% end_scope_css %}
+</style>
+{% end_require_css %}
+{% endif %}
