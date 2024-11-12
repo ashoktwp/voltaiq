@@ -422,6 +422,30 @@ section[class*="u4m-"] {
   background-color: $cardBgColor;
 }
 
+.primaryGradientColor,
+.gradient1 {
+  background-image: $primaryGradientColor;
+}
+.secondaryGradientColor,
+.gradient2 {
+  background-image: $secondaryGradientColor;
+}
+.gradientObsidian {
+  background-image: $gradientObsidian;
+}
+.gradientMidnight {
+  background-image: $gradientMidnight;
+}
+.gradientDeepSea {
+  background-image: $gradientDeepSea;
+}
+.gradientTropicalSea {
+  background-image: $gradientTropicalSea;
+}
+.gradientSky {
+  background-image: $gradientSky;
+}
+
 .button-wrap {
   @include flex;
   gap: 20rem;

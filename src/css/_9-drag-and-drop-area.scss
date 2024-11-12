@@ -49,6 +49,11 @@ section.u4m-drag-and-drop-area {
   margin: 0 auto;
 }
 
+.page-center-lg {
+  @include centerlg;
+  margin: 0 auto;
+}
+
 .full-width,
 .dnd-section[class*="full-width"] > .row-fluid {
   max-width: 100%;

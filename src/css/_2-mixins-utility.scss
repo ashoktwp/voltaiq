@@ -120,6 +120,11 @@
   padding-right: 20rem;
 }
 
+@mixin centerlg {
+  @include center;
+  max-width: 1050rem;
+}
+
 @mixin centerMd {
   @include center;
   max-width: 1254rem;
