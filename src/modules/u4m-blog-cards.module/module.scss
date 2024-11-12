@@ -1,0 +1,65 @@
+@import "../../css/_module-imports";
+
+@include introContent;
+.u4m-blog-cards {
+    .intro-content {
+        margin-bottom: 63px;
+    }
+    .CardItems {
+        .CardItem {
+            width: 33.33%;
+            padding: 0 26.5px;
+            .CardItemIn {
+                .bIItmimg {
+                    height: 200px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    position: relative;
+                    background-size: cover;
+                    background-position: center;
+                    margin-bottom: 31px;
+                    .absLink {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .cardCont {
+                    .topicTagwrap {
+                        @include eyebrow;
+                        line-height: 1;
+                        margin-bottom: 13px;
+                        * {
+                            color: $highlightColor;
+                        }
+                    }
+                    .restitle {
+                        margin-bottom: 10px;
+                        a {
+                            color: inherit;
+                        }
+                    }
+                    .desc {
+                        margin-bottom: 18px;
+                    }
+                    .readMore {
+                        margin-top: auto;
+                        .hs-arrow-btn {
+                            margin: 0;
+                            svg * {
+                                fill: currentColor;
+                            }
+                        }
+                    }
+                    display: flex;
+                    flex-direction: column;
+                    height: calc(100% - 231px);
+                }
+                height: 100%;
+            }
+        }
+        margin: 0 -26.5px;
+    }
+}

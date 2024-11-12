@@ -55,7 +55,7 @@ section.u4m-drag-and-drop-area {
 }
 
 .full-width,
-.dnd-section[class*="full-width"] > .row-fluid {
+[class*="full-width-section"].dnd-section > .row-fluid {
   max-width: 100%;
   padding: 0;
 }

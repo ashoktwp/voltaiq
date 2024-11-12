@@ -42,8 +42,20 @@
   }
 }
 
+@mixin navbreakMin {
+  @media (min-width: 1281px) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin laptopMin {
+  @media (min-width: 1441px) {
     @content;
   }
 }
