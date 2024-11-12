@@ -3,7 +3,10 @@
 @include introContent;
 .u4m-blog-cards {
     .intro-content {
-        margin-bottom: 63px;
+        @include phoneMin {
+            margin-bottom: 63px;
+        }
+        margin-bottom: 40px;
     }
     .CardItems {
         .CardItem {
@@ -67,11 +70,15 @@
                             }
                         }
                     }
-                    display: flex;
-                    flex-direction: column;
-                    height: calc(100% - 231px);
+                    @include phoneMin {
+                        display: flex;
+                        flex-direction: column;
+                        height: calc(100% - 231px);
+                    }
                 }
-                height: 100%;
+                @include phoneMin {
+                    height: 100%;
+                }
             }
         }
         row-gap: 30px;
