@@ -11,6 +11,11 @@
     @content;
   }
 }
+@mixin phoneMin {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
 
 @mixin tabletvert {
   @media (max-width: 991px) {

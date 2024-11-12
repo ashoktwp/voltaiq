@@ -7,17 +7,31 @@
     }
     .CardItems {
         .CardItem {
-            width: 33.33%;
-            padding: 0 26.5px;
+            width: 100%;
+            @include phoneMin {
+                padding: 0 20px;
+                width: 50%;
+            }
+            @include tabletvertMin {
+                width: 33.33%;
+            }
+
+            @include laptopMin {
+                padding: 0 26.5px;
+            }
+
             .CardItemIn {
                 .bIItmimg {
-                    height: 200px;
+                    padding-bottom: 200px;
                     border-radius: 5px;
                     overflow: hidden;
                     position: relative;
                     background-size: cover;
                     background-position: center;
                     margin-bottom: 31px;
+                    @include phone {
+                        padding-bottom: 56.66%;
+                    }
                     .absLink {
                         position: absolute;
                         left: 0;
@@ -60,6 +74,12 @@
                 height: 100%;
             }
         }
-        margin: 0 -26.5px;
+        row-gap: 30px;
+        @include phoneMin {
+            margin: 0 -20px;
+        }
+        @include laptopMin {
+            margin: 0 -26.5px;
+        }
     }
 }
