@@ -522,7 +522,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
-    "title" : "Automated Data Input",
+    "title" : "Feature, KPI, and Insight Extraction",
     "subtitle" : "Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor.",
     "icon" : {
       "size_type" : "auto",
@@ -534,7 +534,7 @@
       "max_width" : 60,
       "max_height" : 61
     },
-    "content" : "<h3>Automated Data Input</h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
+    "content" : "<h3>Feature, KPI, and Insight Extraction</h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-arrow-btn",
@@ -550,7 +550,7 @@
       }
     } ]
   }, {
-    "title" : "Automated Data Input",
+    "title" : "Traceability ",
     "subtitle" : "Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor.",
     "icon" : {
       "size_type" : "auto",
@@ -562,7 +562,7 @@
       "max_width" : 60,
       "max_height" : 61
     },
-    "content" : "<h3>Automated Data Input</h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
+    "content" : "<h3>Traceability </h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-arrow-btn",
@@ -578,7 +578,7 @@
       }
     } ]
   }, {
-    "title" : "Automated Data Input",
+    "title" : "Shareable Dashboards & Actionable Insights",
     "subtitle" : "Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor.",
     "icon" : {
       "size_type" : "auto",
@@ -590,7 +590,7 @@
       "max_width" : 60,
       "max_height" : 61
     },
-    "content" : "<h3>Automated Data Input</h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
+    "content" : "<h3>Shareable Dashboards & Actionable Insights</h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-arrow-btn",
@@ -940,7 +940,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
       "name" : "background_color",
@@ -1008,7 +1008,8 @@
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
-      "type" : "choice"
+      "type" : "choice",
+      "default" : "gradient1"
     }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",
@@ -1018,7 +1019,7 @@
       "locked" : false,
       "display" : "checkbox",
       "type" : "boolean",
-      "default" : false
+      "default" : true
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
