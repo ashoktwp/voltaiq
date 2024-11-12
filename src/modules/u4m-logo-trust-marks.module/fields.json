@@ -339,11 +339,11 @@
     "required" : false,
     "locked" : false,
     "responsive" : true,
-    "resizable" : false,
+    "resizable" : true,
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "size_type" : "auto",
+      "size_type" : "exact",
       "src" : "",
       "alt" : null,
       "loading" : "lazy"
@@ -373,13 +373,28 @@
     "step" : 1,
     "type" : "number",
     "default" : 4
+  }, {
+    "id" : "4ad8fe9d-add4-efa6-04b9-6463b26b1380",
+    "name" : "page_center_group",
+    "display_width" : null,
+    "label" : "Container Group",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "center", "Normal" ], [ "full_width", "Full Width" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "center"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "number_of_logos" : 4
+    "number_of_logos" : 4,
+    "page_center_group" : "center"
   }
 }, {
   "id" : "module_overrides",
