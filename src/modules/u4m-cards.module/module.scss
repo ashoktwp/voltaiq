@@ -16,6 +16,7 @@
   .inner_cnt {
     display: flex;
     column-gap: 76px;
+    row-gap: 50px;
     flex-wrap: wrap;
 
     .pd {
@@ -117,4 +118,29 @@
       gap: 40px;
     }
   }
+
+  .inner_cnt.five_col {
+    .items {
+      @include laptopMin {
+        width: calc(20% - 61px);
+      }
+
+      @include laptop {
+        width: calc(33.33% - 27px);
+      }
+
+      @include tablet {
+        width: calc(50% - 20px);
+      }
+
+      @include phone {
+        width: 100%;
+      }
+    }
+
+    @include laptop {
+      gap: 40px;
+    }
+  }
+
 }
