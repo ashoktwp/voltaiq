@@ -3,7 +3,7 @@
 {% set bgImageMax = 1920 %}
 
 {% include "../partials/u4-module-includes.html" %}
-
+	{{macros.contentGroup(module.intro_content)}}
 <div class="page-center">
 	{# Module content goes here #}
 
@@ -31,10 +31,10 @@
 
 
 							{# button #}
-							{% if item2.tab_content.buttons %}
+							{% if item.tab_content.buttons %}
 							<div class="button-wrap">
-								{% for item2 in item2.tab_content.buttons %}
-
+								{% for item2 in item.tab_content.buttons %}
+ 
 								{% if item2.type == "std"  %}
 								{% set href = item2.link.url.href %}
 								{% if item2.link.url.type is equalto "EMAIL_ADDRESS" %}
@@ -108,9 +108,9 @@
 
 
 										{# button #}
-										{% if item2.tab_content.buttons %}
+										{% if item.tab_content.buttons %}
 										<div class="button-wrap">
-											{% for item2 in item2.tab_content.buttons %}
+											{% for item2 in item.tab_content.buttons %}
 
 											{% if item2.type == "std"  %}
 											{% set href = item2.link.url.href %}

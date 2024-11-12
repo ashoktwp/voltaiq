@@ -282,12 +282,12 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "include_eyebrow_text" : true,
+    "include_eyebrow_text" : false,
     "eyebrow_text" : "Optional Eyebrow Text",
     "include_heading" : true,
-    "heading" : "Highlighted <span>Heading</span>",
+    "heading" : "Voltaiq helps you <span>identify issues faster</span> and decrease your battery scrap rate.",
     "heading_tag" : "h2",
-    "include_content" : true,
+    "include_content" : false,
     "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
     "include_buttons" : true,
     "buttons" : [ {
@@ -945,7 +945,7 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ] ],
+      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ], [ "gradientObsidian", "gradientObsidian " ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
