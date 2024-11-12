@@ -56,6 +56,11 @@
 
       .content-section {
         margin-top: 5px;
+
+        p {
+          @include b2;
+          color: $white;
+        }
       }
 
       .button-wrap {

@@ -935,7 +935,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
       "name" : "background_color",
@@ -1003,7 +1003,8 @@
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
-      "type" : "choice"
+      "type" : "choice",
+      "default" : "gradient1"
     }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",
@@ -1020,7 +1021,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -1028,6 +1029,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "background_gradient" : "gradient1",
       "include_overlay" : false
     }
   } ],
@@ -1050,7 +1052,7 @@
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "background" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -1058,6 +1060,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "background_gradient" : "gradient1",
       "include_overlay" : false
     }
   }
