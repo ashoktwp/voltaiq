@@ -1,6 +1,5 @@
 $('.mobileTrigger').click(function() {
 	$(this).next('.rightSec').slideToggle(250);
-	$('html').toggleClass('menu-open');
 	$('.deskHide .subMenu').slideUp(250);
 	$('.deskHide .hs-subMenu').removeClass('child-open');
 	return false;
