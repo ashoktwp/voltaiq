@@ -31,12 +31,16 @@
                                 background-size: cover;
                                 background-position: right;
 
-                                @include navbreak {
-                                    min-height: 300px;
+                                @include xs-phone {
+                                    padding-bottom: 56%;
                                 }
                             }
 
                             @include navbreak {
+                                width: 50%;
+                            }
+
+                            @include xs-phone {
                                 width: 100%;
                             }
                         }
@@ -90,12 +94,20 @@
                             }
 
                             @include navbreak {
+                                width: 50%;
+                            }
+
+                            @include xs-phone {
                                 width: 100%;
                             }
                         }
                     }
 
                     @include phone {
+                        width: 50%;
+                    }
+
+                    @include tablet {
                         width: 100%;
                     }
                 }
