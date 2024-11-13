@@ -1,0 +1,30 @@
+{% set moduleName = 'u4m-bottom-pane' %}
+  {% set imageMax = 1000 %}
+  {% set bgImageMax = 1920 %}
+  
+  {% include "../partials/u4-module-includes.html" %}
+  
+  <div class="page-center">
+    <div class="bp_wrap {% if  module.module_overrides.card_background_settings.background_type == "color" %}{{ module.module_overrides.card_background_settings.background_color  == "custom" ? "custom_bg_color" : module.module_overrides.card_background_settings.background_color  }}{% endif %} {% if  module.module_overrides.card_background_settings.background_type == "gradient" %} {{ module.module_overrides.card_background_settings.background_gradient }}{% endif %}" 		   
+         {% if module.module_overrides.card_background_settings.background_type == "image" %} style="background-image:url({{module.module_overrides.card_background_settings.background_image.src }})"{% endif %} >
+      {% if module.intro_content.include_image %}
+      {% set loadingAttr = module.intro_content.image.loading != 'disabled' ? 'loading="{{ module.intro_content.image.loading|escape_attr }}"' : '' %}
+      <div class="page-center-intro">
+      <div class="image">
+        <img src="{{ module.intro_content.image.src }}" alt="{{ module.intro_content.image.alt }}" {{ loadingAttr }} />
+      </div>
+      </div>
+      {% endif %}
+      {% endif %}
+  
+      {{macros.contentGroup(module.intro_content )}}
+  
+    </div>
+  </div>
+  
+  
+  </section>
+  
+  
+  
+  
