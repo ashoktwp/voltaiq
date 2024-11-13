@@ -141,6 +141,17 @@
         h3 {
           @include h3;
         }
+
+        .hs_error_rollup {
+          ul.hs-error-msgs {
+            li {
+              label.hs-main-font-element {
+                padding: 0;
+                margin: 0;
+              }
+            }
+          }
+        }
       }
     }
   }

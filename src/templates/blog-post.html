@@ -1,72 +1,124 @@
 <!--
-  templateType: blog_post
-  isAvailableForNewContent: true
-  label: Unified 4 - Blog Post
+templateType: blog_post
+isAvailableForNewContent: true
+label: Unified 4 - Blog Post
 -->
 {% extends './base.html' %}
 
 {% block body %}
 <main id="main-content" class="body-container-wrapper">
 
-  {% set imageMax = 100 %}
-  <section class="u4m-blog-post">
-    <!-- Blog Post Hero -->
-    <div class="hero">
-      <div class="share" id="share">
-        <a href="https://twitter.com/intent/tweet?original_referer={{ content.absolute_url }}&amp;url={{ content.absolute_url }}&amp;source=tweetbutton" target="_blank" aria-label="Twitter"><span class="fab fa-twitter" aria-hidden="true"></span></a>
-        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ content.absolute_url }}" target="_blank" aria-label="LinkedIn"><span class="fab fa-linkedin" aria-hidden="true"></span></a>
-        <a href="http://www.facebook.com/share.php?u={{ content.absolute_url }}" target="_blank" aria-label="Facebook"><span class="fab fa-facebook" aria-hidden="true"></span></a>
-        <a href="mailto:?subject=Check out {{ content.absolute_url }}" aria-label="email"><span class="fa fa-envelope" aria-hidden="true"></span></a>
-      </div>
-      <div class="content">
-        <span class="date">{{ content.publish_date|datetimeformat('%B %e, %Y') }}</span>
-        <h1 class="title">{{ content.name }}</h1>
-        <div class="author-wrap">
-          <div class="avatar {% if content.blog_post_author.avatar %}lazy{% endif %}" {% if content.blog_post_author.avatar %} data-bg="{{ resize_image_url(content.blog_post_author.avatar, 0,0,imageMax) }}"{% endif %}></div>
-          <div class="author-link">Written by: <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">{{ content.blog_post_author.display_name }}</a></div>        
-        </div>
-      </div>
-    </div>
-    <!-- End Blog Post Hero -->
-  
-    <!-- Blog Post Body -->
-    <div class="body" id="body">
-      <div class="content">{{ content.post_body }}</div>
-      <div class="topics">
-        <span class="label">Tag(s):</span> 
-        {% for topic in content.topic_list %} 
-        <a class="link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a> 
-        {% if not loop.last %}, {% endif %} 
-        {% endfor %}
-      </div>
-    </div>
-    {{ html }}
-    <!-- End Blog Post Body -->
-  
-    <!-- Blog Post Author -->
-    <div class="author">
-        <div class="meta">
-          <div class="avatar {% if content.blog_post_author.avatar %}lazy{% endif %}" {% if content.blog_post_author.avatar %} data-bg="{{ resize_image_url(content.blog_post_author.avatar, 0,0,imageMax) }}"{% endif %}></div>
-        </div>
-        <div class="bio">
-          <h2 class="name"><a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">{{ content.blog_post_author.full_name }}</a></h2>    
-          {% if content.blog_post_author.bio %}<p>{{ content.blog_post_author.bio|safe|truncatehtml(320)|striptags }}</p>{% endif %}
+	{% set imageMax = 100 %}
+	<section class="u4m-blog-post">
+		<!-- Blog Post Hero -->
 
-          {% if content.blog_post_author.linkedin or content.blog_post_author.twitter or content.blog_post_author.facebook or content.blog_post_author.website %}
-          <div class="social">
-            <span class="label">Connect with the author</span>
-            {% if content.blog_post_author.linkedin %}<a class="linkedin" href="{{ content.blog_post_author.linkedin }}" target="_blank" aria-label="LinkedIn"><span class="fab fa-linkedin-in" aria-hidden="true"></span></a>{% endif %}
-            {% if content.blog_post_author.twitter %}<a class="twitter" href="{{ content.blog_post_author.twitter }}" target="_blank" aria-label="Twitter"><span class="fab fa-twitter" aria-hidden="true"></span></a>{% endif %}
-            {% if content.blog_post_author.facebook %}<a class="facebook" href="{{ content.blog_post_author.facebook }}" target="_blank" aria-label="Facebook"><span class="fab fa-facebook" aria-hidden="true"></span></a>{% endif %}
-            {% if content.blog_post_author.website %}<a class="website" href="{{ content.blog_post_author.website }}?rel=author" target="_blank" aria-label="Website"><span class="fas fa-globe" aria-hidden="true"></span></a>{% endif %}
-          </div>
-          {% endif %}
-  
-      </div>
-    </div>
-    <!-- End Blog Post Author -->  
-  
-    {#
+
+		<div class="blog_post_hero gradient1">
+			<div class="page-center">
+
+				<div class="flex_row">
+
+					<div class="hero_content">
+						<div class="post_herotag">
+
+							{% for topic in content.topic_list %}
+							<a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+							{% endfor %}
+
+						</div>
+						<h1 class="post_hero_titlw">
+							{{content.name}}
+						</h1>
+
+						<div class="post_hero_meta">
+							<div class="author-link">by <a href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">{{ content.blog_post_author.display_name }}</a></div>   
+							<span class="date">{{ content.publish_date|datetimeformat('%B %e, %Y') }}</span>
+						</div>
+					</div>
+
+					<div class="post_hero_image" style="background-image: url({{ content.post_list_summary_featured_image }})">
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!-- End Blog Post Hero -->
+
+		<!-- Blog Post Body -->
+		<div class="blog_post_body_wrap">
+
+		
+
+
+			<div class="blog_post_body_inner_wrap">
+				<div class="page-center">
+						<div class="social_share_wrap">
+				<div class="share" id="share">
+					<span class="text">SHARE</span>
+					<div class="share_icon">
+						<a href="https://twitter.com/intent/tweet?original_referer={{ content.absolute_url }}&amp;url={{ content.absolute_url }}&amp;source=tweetbutton" target="_blank" aria-label="Twitter">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path d="M18.2434 2.25H21.5527L14.3246 10.5094L22.8277 21.75H16.1715L10.9543 14.9344L4.9918 21.75H1.67773L9.40742 12.9141L1.25586 2.25H8.08086L12.7918 8.47969L18.2434 2.25ZM17.0809 19.7719H18.9137L7.08242 4.125H5.11367L17.0809 19.7719Z" fill="white"/>
+							</svg>
+						</a>
+
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ content.absolute_url }}" target="_blank" aria-label="LinkedIn">
+							<svg xmlns="http://www.w3.org/2000/svg" width="21" height="24" viewBox="0 0 21 24" fill="none">
+								<path d="M4.70156 21H0.346875V6.97969H4.70156V21ZM2.52187 5.06719C1.12969 5.06719 0 3.91406 0 2.52187C0 1.85303 0.265697 1.21158 0.73864 0.73864C1.21158 0.265697 1.85303 0 2.52187 0C3.19072 0 3.83217 0.265697 4.30511 0.73864C4.77805 1.21158 5.04375 1.85303 5.04375 2.52187C5.04375 3.91406 3.91406 5.06719 2.52187 5.06719ZM20.9953 21H16.65V14.175C16.65 12.5484 16.6172 10.4625 14.3859 10.4625C12.1219 10.4625 11.775 12.2297 11.775 14.0578V21H7.425V6.97969H11.6016V8.89219H11.6625C12.2438 7.79062 13.6641 6.62812 15.7828 6.62812C20.1891 6.62812 21 9.52969 21 13.2984V21H20.9953Z" fill="white"/>
+							</svg>
+						</a>
+
+						<a href="http://www.facebook.com/share.php?u={{ content.absolute_url }}" target="_blank" aria-label="Facebook">
+							<svg xmlns="http://www.w3.org/2000/svg" width="13" height="21" viewBox="0 0 13 21" fill="none">
+								<g clip-path="url(#clip0_202_5363)">
+									<path d="M3.24961 12.276V21H7.96211V12.276H11.4762L12.2074 8.26465H7.96211V6.84551C7.96211 4.725 8.7868 3.91289 10.9155 3.91289C11.5777 3.91289 12.1099 3.9293 12.4187 3.96211V0.324023C11.8377 0.164062 10.4159 0 9.59523 0C5.25242 0 3.24961 2.07129 3.24961 6.53789V8.26465H0.568359V12.276H3.24961Z" fill="white"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_202_5363">
+										<rect width="13" height="21" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+
+						<a href="mailto:?subject=Check out {{ content.absolute_url }}" aria-label="email">
+							<svg xmlns="http://www.w3.org/2000/svg" width="29" height="23" viewBox="0 0 29 23" fill="none">
+								<g clip-path="url(#clip0_202_5365)">
+									<path d="M26.2722 12.0255C28.8324 9.48739 28.8324 5.37704 26.2722 2.83895C24.0066 0.592859 20.436 0.300867 17.8305 2.14716L17.758 2.19657C17.1055 2.65927 16.956 3.5577 17.4227 4.20009C17.8894 4.84247 18.7957 4.9952 19.4436 4.53251L19.5161 4.48309C20.9707 3.45438 22.9599 3.6161 24.2196 4.86942C25.6469 6.28446 25.6469 8.57548 24.2196 9.99052L19.1355 15.0397C17.7082 16.4548 15.3972 16.4548 13.9699 15.0397C12.7057 13.7864 12.5425 11.8143 13.5802 10.3768L13.63 10.305C14.0968 9.65809 13.9427 8.75966 13.2947 8.30145C12.6468 7.84325 11.736 7.99149 11.2738 8.63388L11.224 8.70575C9.35708 11.2843 9.65161 14.8241 11.9172 17.0702C14.4774 19.6083 18.6235 19.6083 21.1836 17.0702L26.2722 12.0255ZM2.72786 10.9743C0.1677 13.5124 0.1677 17.6227 2.72786 20.1608C4.99348 22.4069 8.56411 22.6989 11.1696 20.8526L11.2421 20.8032C11.8946 20.3405 12.0441 19.4421 11.5774 18.7997C11.1107 18.1573 10.2044 18.0046 9.55645 18.4673L9.48395 18.5167C8.02942 19.5454 6.0402 19.3837 4.78051 18.1304C3.35317 16.7108 3.35317 14.4198 4.78051 13.0048L9.86458 7.96005C11.2919 6.54501 13.6029 6.54501 15.0302 7.96005C16.2944 9.21337 16.4575 11.1854 15.4199 12.6274L15.37 12.6993C14.9033 13.3462 15.0574 14.2446 15.7054 14.7028C16.3533 15.161 17.2641 15.0128 17.7263 14.3704L17.7761 14.2985C19.643 11.7155 19.3485 8.17567 17.0829 5.92958C14.5227 3.39149 10.3766 3.39149 7.81645 5.92958L2.72786 10.9743Z" fill="white"/>
+								</g>
+								<defs>
+									<clipPath id="clip0_202_5365">
+										<rect width="29" height="23" fill="white"/>
+									</clipPath>
+								</defs>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+					<div class="body" id="body">
+						<div class="content">{{ content.post_body }}</div>
+						<div class="topics">
+							<span class="label">Tag(s):</span>
+							{% for topic in content.topic_list %}
+							<a class="link" href="{{ blog_tag_url(group.id, topic.slug) }}"
+								 >{{ topic.name }}</a
+								>
+							{% if not loop.last %}, {% endif %} {% endfor %}
+						</div>
+					</div>
+					{{ html }}
+				</div>
+
+			</div>
+		</div>
+
+		<!-- End Blog Post Body -->
+
+
+		{#
     <!-- Blog Post Comments -->
     <div class="comments">
       <h2 class="heading">Comments on this post</h2>
@@ -76,25 +128,94 @@
     </div>
     <!-- End Blog Post Comments -->
     #}
-  
-  </section>
 
-  {% module 'u4m-blog-post-primary-tag' path='../modules/u4m-blog-post-primary-tag', label='Blog Post Primary Tag' %}
-  {% module 'u4m-blog-post-cards' path='../modules/u4m-blog-post-cards', label='Blog Post Cards' %}
-  {% module 'u4m-subscribe' path='../modules/u4m-subscribe', label='Blog Subscribe' %}
+	</section>
+
+
+	<div class="post_quote_card">
+
+		{% module "u4m-quote-cards"
+        path="../modules/u4m-quote-cards",  label="Quote Cards" 
+        cards=[ {
+          "author_image" : {
+            "alt" : "Author",
+            "height" : 301,
+            "loading" : "lazy",
+            "max_height" : 301,
+            "max_width" : 300,
+            "size_type" : "auto",
+            "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Author.png",
+            "width" : 300
+          },
+          "author_name" : "Robert Kaminski",
+          "content" : "<p>“Voltaiq completely changed our battery defect detection process, allowing us to catch defects within hours of production and quickly pinpoint the upstream issue. <span>This saved us months in scaling up production.</span> I can’t believe how many weeks wasted and batteries we had to scrap before.”</p>",
+          "designation" : "Co-Founder & Partner, Fletch PMM",
+          "logo_image" : {
+            "alt" : "logo-img",
+            "height" : 29,
+            "loading" : "lazy",
+            "max_height" : 29,
+            "max_width" : 120,
+            "size_type" : "auto",
+            "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/logo-img.png",
+            "width" : 120
+          }
+        } ],
+        intro_content={
+          "buttons" : [ ],
+          "include_buttons" : false,
+          "include_content" : false,
+          "include_eyebrow_text" : false,
+          "include_heading" : false
+        },
+        module_settings={
+          "shape_image" : {
+            "alt" : "ShapeImageNew",
+            "height" : 218,
+            "loading" : "lazy",
+            "max_height" : 144.17989417989418,
+            "max_width" : 2000,
+            "size_type" : "auto_custom_max",
+            "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/ShapeImageNew.png",
+            "width" : 3024
+          }
+        },
+        module_overrides={
+          "background" : {
+            "background_gradient" : "gradient1",
+            "background_type" : "gradient"
+          },
+          "enable_overrides" : true
+        }
+      %}
+	</div>
+
+	<div class="post_related_posts">
+		{% module "u4m-blog-cards" path="../modules/u4m-blog-cards", label="Related Posts" intro_content={
+	"heading" : "Related Posts"
+	} 
+	blog_feed={
+	"feed_type" : "ralated"
+	}
+	%}
+	</div>
+	<div class="post_cta_row">
+		{% module "cta_row" path="../modules/u4m-cta-row", label="CTA Row"  %}
+	</div>
+
 </main>
 {% endblock body %}
 
 {% require_js %}
 <script>
-// Stick sharing
-document.addEventListener('DOMContentLoaded', function() {
+	// Stick sharing
+	document.addEventListener('DOMContentLoaded', function() {
 
-    var Sticky = new hcSticky('#share', {
-      stickTo: '.u4m-blog-post',
-      top: 150
-    });
-  
-});
+		var Sticky = new hcSticky('#share', {
+			stickTo: '.u4m-blog-post',
+			top: 150
+		});
+
+	});
 </script>
 {% end_require_js %}
