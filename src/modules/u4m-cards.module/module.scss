@@ -1,82 +1,157 @@
 @import "../../css/_module-imports";
-section.u4m-cards {
-  margin-top: 100rem;
-  margin-bottom: 100rem;
-  &.reverse-text {
-    h2.heading,
-    h3.subheading {
-      color: $headingColor;
+
+.u4m-cards {
+  overflow: hidden;
+
+  &:before {
+    background: $darkBluemd;
+    filter: blur(196.21px);
+    height: 382px;
+    left: auto;
+    position: absolute;
+    top: auto;
+    transform: matrix(-.64, -.77, .72, -.69, 0, 0);
+    width: 858px;
+    right: 0%;
+  }
+
+  .intro-content {
+    .page-center-intro {
+      @include center;
+      text-align: left;
+      margin-bottom: 81px;
+      position: relative;
+      z-index: 22;
+
+      @include phone {
+        margin-bottom: 50px;
+      }
+
+      .button-wrap {
+        justify-content: flex-start;
+      }
     }
   }
-  .heading {
-    @include center;
-    @include h2;
-    text-align: center;
-  }
-  .subheading {
-    @include center;
-    max-width: 1000rem;
-    @include b2;
-    font-weight: normal;
-    text-align: center;
-  }
-  .link {
-    text-align: center;
-    a {
-      @include primaryBtn;
-    }
-  }
-  .wrapper {
-    @include center;
-    max-width: 1280rem;
+
+  .inner_cnt {
     display: flex;
+    column-gap: 76px;
+    row-gap: 50px;
     flex-wrap: wrap;
-    justify-content: center;
-    @include phone {
-      display: block;
+    position: relative;
+    z-index: 22;
+
+    .pd {
+      .top_icon {
+        margin-bottom: 20px;
+
+        img {
+          width: 56px;
+          height: 56px;
+          object-fit: cover;
+        }
+      }
+
+      h4 {
+        margin: 0;
+      }
+
+      .content-section {
+        margin-top: 5px;
+
+        p {
+          @include b2;
+          color: $white;
+        }
+      }
+
+      .button-wrap {
+        margin-top: auto;
+        padding-top: 20px;
+      }
     }
-    &.landscape {
-      div.card {
-        flex-direction: row;
-        @include tabletvert {
+
+    .items {
+      .pd {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .cnt {
+          height: 100%;
+          display: flex;
           flex-direction: column;
-        }
-        div.image.filled {
-          min-width: 200rem;
-        }
-        div.content {
-          @include phone {
-            margin-bottom: 0;
-            span.teaser {
-              margin-bottom: 0;
-            }
+
+          .eyebrow {
+            margin-bottom: 10px;
           }
         }
       }
     }
-    div.card {
-      @include card;
-    }
-    &.two {
-      div.card {
-        flex-basis: calc(50% - 40rem);
+  }
+
+  .inner_cnt.three_col {
+    .items {
+      @include tabletMin {
+        width: calc(33.3% - 51px);
+      }
+
+      @include tablet {
+        width: calc(50% - 20px);
+      }
+
+      @include phone {
+        width: 100%;
       }
     }
-    &.three {
-      div.card {
-        flex-basis: calc(33.333% - 40rem);
-        @include tablet {
-          flex-basis: calc(50% - 40rem);
-        }
-      }
-    }
-    &.four {
-      div.card {
-        flex-basis: calc(25% - 40rem);
-        @include tablet {
-          flex-basis: calc(50% - 40rem);
-        }
-      }
+
+    @include tablet {
+      gap: 40px;
     }
   }
+
+  .inner_cnt.four_col {
+    .items {
+      @include laptopMin {
+        width: calc(25% - 57px);
+      }
+
+      @include laptop {
+        width: calc(50% - 20px);
+      }
+
+      @include phone {
+        width: 100%;
+      }
+    }
+
+    @include laptop {
+      gap: 40px;
+    }
+  }
+
+  .inner_cnt.five_col {
+    .items {
+      @include laptopMin {
+        width: calc(20% - 61px);
+      }
+
+      @include laptop {
+        width: calc(33.33% - 27px);
+      }
+
+      @include tablet {
+        width: calc(50% - 20px);
+      }
+
+      @include phone {
+        width: 100%;
+      }
+    }
+
+    @include laptop {
+      gap: 40px;
+    }
+  }
+
 }

@@ -1,150 +1,101 @@
 @import "../../css/_module-imports";
-section.u4m-hero {
-  margin-bottom: 100rem;
-  background-size: cover;
-  background-position: 50% 50%;
-  padding: 100px 0;
-  &.reverse-text {
-    .content-wrap {
-      color: $headingColor;
+
+.u4m-hero {
+  position: relative;
+  overflow: hidden;
+  .page-center {
+    position: relative;
+    z-index: 3;
+    > .flex_row {
+      .left_sec {
+        max-width: 100%;
+        .intro-content {
+          margin: 0;
+          .page-center-intro {
+            .content-section {
+              margin-bottom: 48rem;
+            }
+            h2 {
+              margin-bottom: 9px;
+            }
+          }
+        }
+      }
+      .right_sec {
+        max-width: 100%;
+      }
+    }
+
+    > .flex_row.noImg {
+      justify-content: center;
+      .page-center-intro {
+        max-width: 714rem;
+      }
+    }
+    > .flex_row:not(.noImg) {
+      @include tabletvertMin {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      @include navbreakMin {
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      @include laptopMin {
+        gap: 126px;
+      }
+
+      @include tabletvert {
+        row-gap: 40px;
+      }
+      .left_sec {
+        @include tabletvertMin {
+          max-width: 50%;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        @include navbreakMin {
+          max-width: 617px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        max-width: 100%;
+        .intro-content {
+          margin: 0;
+          text-align: left;
+          .page-center-intro {
+            .button-wrap {
+              justify-content: start;
+            }
+          }
+        }
+      }
+      .right_sec {
+        @include tabletvertMin {
+          max-width: 50%;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        @include navbreakMin {
+          max-width: 570px;
+          padding-top: 21px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
     }
   }
-  .inner {
-    .content-wrap {
-      @include center;
-      padding: 20rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row;
-      .image {
-        flex: 0 0 0;
-        body.hs-landing-page & {
-          flex: 0 0 0;
-        }
-      }
-      .copy {
-        flex: 0 0 80%;
-        text-align: center;
-        padding: 55rem 0 30rem 0;
-        padding-left: 100px;
-        body.hs-landing-page & {
-          flex: 0 0 100%;
-        }
-        .eyebrow {
-          @include eyebrow;
-        }
-        .heading {
-          @include h1;
-          &.small {
-            @include h2;
-            @include tablet {
-              @include h3;
-            }
-          }
-          @include tablet {
-            @include h2;
-          }
-        }
-        .subtext {
-          @include b2;
-        }
-        a {
-          @include primaryBtn;
-        }
-        .cta {
-        }
-        svg {
-          max-width: 100rem;
-          cursor: pointer;
-          circle {
-            transition: $animation1;
-          }
-          &:hover {
-            circle {
-              fill: $gray3;
-            }
-          }
-        }
-        @include tabletvert {
-          padding-right: 0;
-          padding-left: 0;
-          padding: 20rem 0 0 0;
-        }
-      }
-      &.has-image {
-        .image {
-          flex: 0 0 40%;
-          body.hs-landing-page & {
-            flex: 0 0 40%;
-          }
-          @include phone {
-            padding: 0;
-          }
-        }
-        .copy {
-          flex: 0 0 60%;
-          text-align: left;
-          body.hs-landing-page & {
-            flex: 0 0 60%;
-          }
-          @include tabletvert {
-            padding-right: 0;
-            padding-left: 0;
-            padding: 20rem 0 0 0;
-          }
-        }
-      }
-      &.has-video {
-        .video {
-          flex: 0 0 40%;
-          body.hs-landing-page & {
-            flex: 0 0 40%;
-          }
-          @include tabletvert {
-            padding: 0;
-            width: 100%;
-          }
-        }
-        .copy {
-          flex: 0 0 60%;
-          text-align: left;
-          body.hs-landing-page & {
-            flex: 0 0 60%;
-          }
-          @include tabletvert {
-            padding-right: 0;
-            padding-left: 0;
-            padding: 20rem 0 0 0;
-          }
-        }
-      }
-      &.text-left {
-        flex-direction: row-reverse;
-        .copy {
-          flex: 0 0 60%;
-          text-align: left;
-          margin-right: auto;
-          padding-right: 100px;
-          padding-left: 0;
-          @include tabletvert {
-            padding-right: 0;
-            padding-left: 0;
-            padding: 20rem 0 0 0;
-          }
-        }
-        @include tabletvert {
-          flex-direction: column;
-        }
-      }
-      &.has-none {
-        .copy {
-          padding-left: 0;
-        }
-      }
-      @include tabletvert {
-        flex-direction: column;
-      }
+  .shape_img {
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    position: absolute;
+    z-index: 3;
+    background-position: center;
+    background-size: cover;
+    @include tabletvert {
+      display: none;
     }
   }
 }

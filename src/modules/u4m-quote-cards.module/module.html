@@ -1,49 +1,75 @@
 {% set moduleName = 'u4m-quote-cards' %}
-{% set thumbMax = 100 %}
+{% set imageMax = 1000 %}
 {% set bgImageMax = 1920 %}
- 
 
 {% include "../partials/u4-module-includes.html" %}
-
-  {% if module.include_heading %}<h2 class="heading">{{ module.quote_card_heading }}</h2>{% endif %}
-
-  <div class="dialog-bubbles">    
-    {# Use Specific Quotes #}
-    {% if module.override_default_quotes %}
-        {% for quote in module.quote_row %}
-          <div class="item">
-            <p><span>“</span> {{ quote.columns.quote }} <span>”</span></p>
-            <p><strong>{{ quote.columns.name }}</strong> | {{ quote.columns.company }}</p>
-            {% if quote.columns.thumbnail.url %}
-              <div class="thumbnail lazy" data-bg="{{ resize_image_url(quote.columns.thumbnail.url, 0,0,thumbMax) }}"></div>
-            {% endif %}
-          </div>
-        {% endfor %}
-    {% else %}
-    {# Use Default Quotes #}
-    {% set table = hubdb_table_rows( module.quote_table ) %}  
-      {% for row in table %}
-        {% if row.show_by_default %}
-        <div class="item">
-          <p class="quote"><span>“</span> {{ row.quote }} <span>”</span></p>
-          <p class="author"><strong>{{ row.name }}</strong> | {{ row.company }}</p>
-          {% if row.thumbnail.url %}
-              <div class="thumbnail lazy" data-bg="{{ resize_image_url(row.thumbnail.url, 0,0,thumbMax) }}"></div>
-          {% endif %}
-        </div>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  </div>
-
-  <div class="centered-button">
-    {% if module.link_type == "cta" %}
-    <span class="cta">{% cta guid="{{ module.call_to_action }}" %}</span>
-    {% elif module.link_type == "url" %}
-    <span class="url"><a href="{{ module.link.href }}" {% if module.open_in_new_window %}target="_blank"{% endif %}>{{ module.link_text }}</a></span>
-    {% else %}
-    <!-- No link -->
-    {% endif %} 
-  </div> 
-
+{{macros.contentGroup(module.intro_content)}}
+<div class="page-center">
+	{# Module content goes here #}
+	<div class="quote_card_wrap">
+		<div class="quote_slides ">
+			{% for item in module.cards %}
+			<div class="quote_slide ">
+				<div class="quote_flex">
+					<div class="quote_img">
+						{% if item.author_image.src %}
+						<img src="{{ item.author_image.src }}" alt="{{ item.author_image.alt }}">
+						{% endif %}
+						{% if item.logo_image.src %}
+						<div class="logo_wrap">
+							<img src="{{ item.logo_image.src }}" alt="{{ item.logo_image.alt }}">
+						</div>
+						{% endif %}
+					</div>
+					<div class="quote_cnt">
+						<div class="quote_cnt_inr">
+							{{ item.content }}
+						</div>
+						<div class="quote_bio">
+							<div class="quote_ath">
+								{{ item.author_name }}
+							</div>
+							<div class="quote_deg">
+								{{ item.designation }}
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% if module.module_settings.shape_image.src %} 
+<div class="shape_img" style="background-image:url({{ module.module_settings.shape_image.src }})"></div>
+{% endif %}
 </section>
+
+{% require_css %} 
+<style>
+.u4m-quote-cards .slick-next.slick-arrow { 
+        background-image: url({{ get_asset_url('../../templates/images/right_arrow.png') }}); 
+        
+      }
+	  .u4m-quote-cards .slick-prev.slick-arrow { 
+        background-image: url({{ get_asset_url('../../templates/images/left_arrow.png') }}); 
+        
+      }
+</style>
+{% end_require_css %}
+
+{% require_js %}
+<script>
+
+	$(".{{name}} .quote_slides").slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,  
+		autoplay: true,
+		autoplaySpeed: 5000
+		});
+	 
+
+
+</script>
+{% end_require_js %}

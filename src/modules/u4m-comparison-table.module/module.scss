@@ -1,0 +1,189 @@
+@import "../../css/_module-imports";
+
+.u4m-comparison-table {
+  @include phone {
+    .desktop_only {
+      display: none;
+    }
+  }
+
+  .mobile_only {
+    display: none;
+    @include phone {
+      display: block;
+    }
+  }
+
+  .hide {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+  .intro-content {
+    @include phone {
+      margin-bottom: 40px;
+    }
+  }
+  .cp_row {
+    @include flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    border-bottom: 1px solid $borderDark;
+
+    &:last-child {
+      border-bottom: none;
+    }
+    @include tabletvert {
+      flex-wrap: no-wrap;
+      gap: 10px;
+    }
+
+    @include phone {
+      flex-wrap: wrap;
+      gap: 0;
+      margin-bottom: 30px;
+      border: 0;
+    }
+    .cp_col {
+      width: 25%;
+      @include tablet {
+        width: 33.3%;
+      }
+      @include tabletvert {
+        width: 33.3%;
+      }
+
+      @include phone {
+        width: 100%;
+      }
+
+      &:first-child {
+        @include tablet {
+          display: none;
+        }
+        @include phone {
+          display: block;
+        }
+      }
+
+      &.featured_plan {
+        margin-top: -50px;
+        @include tabletvert {
+          margin-top: 0;
+        }
+      }
+
+      .cp_ft {
+        padding: 25px 40px;
+      }
+
+      .cp_desc {
+        padding: 25px 40px;
+        gap: 0;
+        background-color: $cardBgColor;
+        height: 100%;
+
+        @include laptop {
+          padding: 20px 30px;
+        }
+        .cp_card_title {
+          width: 100%;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          padding-left: 10px;
+          @include b3;
+          li {
+            margin: 0;
+            letter-spacing: 0;
+            margin-bottom: 10px;
+          }
+        }
+        @include phone {
+          padding: 20px;
+          border-bottom: 1px solid $borderDark;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+        p {
+          @include b2;
+        }
+      }
+
+      .cp_inr {
+        border-radius: $border2;
+        overflow: hidden;
+        box-shadow: 2px 4px 15px rgba($backgroundColor, 0.1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        @include phone {
+          border-bottom-left-radius: $border2;
+          border-bottom-right-radius: $border2;
+        }
+        .cp_top {
+          @include flex;
+          background-color: $cardHighlightColor;
+          padding: 35px;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          min-height: 100%;
+          align-content: center;
+          @include laptop {
+            padding: 20px;
+          }
+          @include phone {
+            padding: 20px;
+            min-height: auto;
+          }
+          &.featured_plan_top {
+            min-height: 180px;
+            padding: 57px 35px;
+            @include phone {
+              padding: 30px 20px;
+              min-height: auto;
+            }
+          }
+
+          h4 {
+            margin-bottom: 7px;
+          }
+
+          p {
+            margin-top: 0;
+            @include b3;
+            font-weight: bold;
+          }
+          * {
+            width: 100%;
+          }
+        }
+
+        .button-wrap {
+          justify-content: center;
+          margin-top: auto;
+          padding: 33px 45px;
+          padding-top: 0;
+          @include phone {
+            padding: 20px;
+            padding-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cp_row.sctn_row:last-child .cp_col {
+  border: 0;
+  border-bottom-left-radius: $border2;
+  overflow: hidden;
+  border-bottom-right-radius: $border2;
+}

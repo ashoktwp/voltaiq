@@ -3,7 +3,7 @@
   isAvailableForNewContent: false
 -->
 <div class="pagination-infinite">
-    {% if not simple_list_page %}<a class="button">Load More Posts</a>{% endif %}  
+  {% if not simple_list_page %}<a class="button">Load More Posts</a>{% endif %}
 </div>
 
 {% require_js %}
@@ -18,11 +18,11 @@
   var postContainer = $(".u4m-blog-listing__posts");
 
   $( ".pagination-infinite a.button" ).click(function() {
-    
+
     console.log('clicked');
 
     // Set fetching to true to ensure that we pause the ajax
-    fetching = true;    
+    fetching = true;
 
     if (window.location.href.indexOf("/topic/") > -1) {
       var ajaxUrl = "{{ group.absolute_url }}/topic/{{ topic }}/page/"+currentPage;

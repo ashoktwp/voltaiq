@@ -4,6 +4,7 @@ $gray1: #dbe2e9;
 $gray2: #ebeff3;
 $gray3: #cacaca;
 $white: #ffffff;
+$black: #000;
 
 // New brand colors
 $highlightColor: #00e9ba;
@@ -12,6 +13,8 @@ $bodyColor: #dbe2e9;
 $backgroundColor: #000000;
 $themeColor: #0066ff;
 $cardBgColor: rgba(183, 186, 188, 0.1);
+$cardHighlightColor: #011432;
+$borderDark: rgba(183, 186, 188, 0.3);
 
 $primaryGradientColor: linear-gradient(
   87.43deg,
@@ -30,6 +33,7 @@ $gradientObsidian: linear-gradient(
   #001b44 -14.67%,
   $backgroundColor 58.26%
 );
+
 $gradientMidnight: linear-gradient(
   106.42deg,
   $backgroundColor 7.89%,
@@ -69,3 +73,13 @@ $textShadow1: 0 0 4rem rgba($backgroundColor, 0.3);
 $animation1: 0.1s ease-in;
 $animation2: 0.25s ease-in;
 $animation3: 1s ease-in;
+
+$font16: 16rem;
+
+$blackLight: #131822;
+$DarkBlue: #00255d;
+$lightBlue: #001b44;
+$darkBluemd: #01255c;
+
+$grey4: #c1c7cb;
+$grey5: #b7babc;

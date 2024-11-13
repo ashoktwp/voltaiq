@@ -1,76 +1,89 @@
 @import "../../css/_module-imports";
+
 section.u4m-animated-stats {
-  margin-top: 100rem;
-  margin-bottom: 100rem;
-  &.reverse-text {
-    color: $headingColor;
-  }
-  .heading {
-    @include center;
-    @include h2;
-    text-align: center;
-  }
-  .intro {
-    @include center;
-  }
-  div.statistics {
-    @include center;
+  position: relative;
+  z-index: 4;
+
+  .statistics {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    row-gap: 30rem;
     &.items-four {
-      div.statistics__item {
-        flex-basis: calc(25% - 40rem);
+      .statistics__item {
+        flex-basis: 25%;
         @include tablet {
-          flex-basis: calc(50% - 40rem);
+          flex-basis: 50%;
         }
-        @include phone {
+        @include tabletvert {
           flex: 0 0 100%;
         }
       }
     }
-    div.statistics__item {
+    .statistics__item {
       text-align: center;
-      margin: 20rem;
-      flex-basis: calc(33.333% - 40rem);
+      flex-basis: 33.333%;
+      padding: 0 15px;
       flex-grow: 0;
       flex-shrink: 0;
       @include tablet {
-        flex-basis: calc(50% - 40rem);
+        flex-basis: 50%;
       }
-      @include phone {
+      @include tabletvert {
         flex: 0 0 100%;
       }
-      .image {
-        min-height: 70rem;
-        img {
-          max-width: 80rem;
-          text-align: center;
-          margin: 0 auto;
+      .item_inr {
+        background-color: $cardBgColor;
+        padding: 63rem 25rem;
+        .currency {
+          padding-right: 5rem;
+        }
+        .unit {
+          padding-left: 5rem;
+        }
+        .caption.top {
           display: block;
+          @include b3;
+          line-height: 1;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 14px;
+        }
+
+        .caption.bodySize4 {
+          @include h4;
+          display: block;
+          margin-bottom: 2rem;
+        }
+        .stats_wrap {
+          @include h1;
+          display: inline-flex;
+          align-items: center;
+          margin-bottom: 2px;
+          font-weight: bold;
+        }
+        .bt_cnt {
+          display: block;
+          color: $bodyColor;
+          font-size: $font16;
+          line-height: 1.37;
+          font-family: $font1;
+          max-width: 180px;
+          margin: 0 auto;
         }
       }
-      .count,
-      .number {
-        font-size: 50rem;
-        font-weight: bold;
-      }
-      .currency {
-        padding-right: 5rem;
-        //vertical-align: text-bottom;
-        font-size: 50rem;
-        font-weight: bold;
-      }
-      .unit {
-        padding-left: 5rem;
-        //vertical-align: text-bottom;
-        font-size: 50rem;
-        font-weight: bold;
-      }
-      .caption {
-        display: block;
-        font-weight: bold;
+    }
+  }
+
+  &.reverse-text {
+    .statistics {
+      .statistics__item {
+        .stats_wrap,
+        * {
+          color: inherit;
+        }
       }
     }
   }

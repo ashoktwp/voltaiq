@@ -1,36 +1,51 @@
 {% set moduleName = 'u4m-accordion' %}
 {% set imageMax = 1000 %}
 {% set bgImageMax = 1920 %}
- 
+
 {% include "../partials/u4-module-includes.html" %}
 
-  <div class="accordion-container">
-    {% if module.include_heading %}
-    <h2 class="heading">{{ module.heading }}</h2>
-    {% endif %}
-    {% if module.include_subheading %}
-      <h3 class="subheading">{{ module.cards_subheading }}</h3>
-    {% endif %}
-    <div class="accordion-repeater-section">
-      <div class="repeater-block">
-        {% for item in module.accordion %}
-        <div class="accordion-repeater accordion">
-          <div class="accordion-top accordion-header">
-            <p class="title">{{ item.accordion_title }}</p>
-            <i class="far fa-plus" aria-hidden="true"></i>
-            <i class="far fa-minus" aria-hidden="true"></i>
-          </div>
-          {% if item.use_richtext_instead_of_plain_text %}
-          <div class="textarea accordion-content richtext">{{ item.accordion_richtext }}</div>	
-          {% else %}
-          <div class="textarea accordion-content textfield">{{ item.accordion_textarea }}</div>
-          {% endif %}
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-    {% if module.include_bottom_content %}
-    <div class="bottom-content">{{ module.bottom_content }}</div>
-    {% endif %}
-  </div>
+{{macros.contentGroup(module.intro_content  )}}
+<div class="page-center">
+	{# Module content goes here #}
+	<div class="accordion_group">
+		{% for item in module.accordion %}
+		<div class="accordion_item">
+			<h6 class="accordion_title">
+				<span class="text">{{ item.title }}</span>
+				<span class="icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none">
+						<path d="M5 6.4319L0 1.4319L0.931903 0.5L5 4.5681L9.0681 0.5L10 1.4319L5 6.4319Z" fill="white"/>
+					</svg>
+				</span>
+			</h6>
+			<div class="accorion_text">
+				<div class="inner_spacing">
+					{{ item.content }}
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+
+	</div>
+</div>
+
+
 </section>
+
+
+{% require_js %}
+
+<script>
+	$(".{{ moduleName }} .accordion_item").click(function () {
+		$(this).siblings().removeClass("active");
+	$(this).siblings().find(".accorion_text").slideUp();
+	$(this).children(".accorion_text").slideToggle();
+	$(this).toggleClass("active");
+	});
+
+	$(".{{ moduleName }} .accordion_item .accorion_text").click(function (e) {
+		e.stopPropagation();
+	});
+
+</script>
+{% end_require_js %}

@@ -1,0 +1,215 @@
+.ftr_wrpp {
+  padding-top: 103px;
+  padding-bottom: 145px;
+
+  .page-center {
+    max-width: 1143px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    .btm_sec {
+      .flex_row {
+        justify-content: space-between;
+        gap: 20px;
+
+        .social_share {
+          .icons {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+
+            .items {
+              width: auto;
+              height: 21px;
+            }
+
+            img {
+              height: inherit !important;
+              width: auto;
+              vertical-align: baseline;
+            }
+
+            @include phone {
+              justify-content: center;
+            }
+          }
+        }
+
+        p {
+          line-height: 2;
+
+          @include phone {
+            flex-direction: column;
+            text-align: center;
+          }
+        }
+
+        @include phone {
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+
+    .top_sec {
+      .flex_row {
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .menus_wrpp {
+          .hs-menu-wrapper {
+            > ul {
+              margin: 0;
+              display: flex;
+              column-gap: 100px;
+              justify-content: end;
+
+              > li {
+                margin: 0;
+                float: none;
+
+                > a {
+                  padding: 0;
+                  max-width: unset;
+                  display: block;
+                  margin-bottom: 8px;
+                  font-size: 16px;
+                  font-weight: bold;
+                  line-height: 1.5;
+                  color: $white;
+                  cursor: pointer;
+
+                  @include xs-phone {
+                    text-align: center;
+                  }
+                }
+
+                @include tabletvert {
+                  width: calc(50% - 20px);
+                }
+
+                @include xs-phone {
+                  width: 100%;
+                }
+              }
+
+              &:before {
+                display: none;
+              }
+
+              &:after {
+                display: none;
+              }
+
+              @include navbreak {
+                column-gap: 70px;
+                justify-content: space-between;
+              }
+
+              @include tabletvert {
+                column-gap: 37px;
+              }
+
+              @include tabletvert {
+                flex-wrap: wrap;
+                column-gap: 20px;
+                justify-content: space-between;
+                row-gap: 40px;
+              }
+
+              @include xs-phone {
+                column-gap: 0;
+                row-gap: 20px;
+              }
+            }
+
+            ul {
+              ul {
+                display: flex;
+                margin: 0;
+                flex-direction: column;
+                position: unset;
+
+                li {
+                  margin: 0;
+
+                  a {
+                    padding: 0;
+                    max-width: max-content;
+                    width: auto;
+                    font-size: 15px;
+                    line-height: 28px;
+                    cursor: pointer;
+
+                    @include xs-phone {
+                      text-align: center;
+                      max-width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .right_logo {
+          width: 64%;
+
+          @include navbreak {
+            width: 70%;
+          }
+
+          @include tabletvert {
+            width: 100%;
+          }
+        }
+
+        .left_logo {
+          width: 36%;
+
+          @include navbreak {
+            width: 30%;
+          }
+
+          @include tabletvert {
+            width: 100%;
+            margin-bottom: 30px;
+          }
+
+          @include xs-phone {
+            margin-bottom: 50px;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+
+      padding-bottom: 86px;
+
+      @include xs-phone {
+        padding-bottom: 50px;
+      }
+    }
+
+    .cnt {
+      p {
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  @include navbreak {
+    padding: 100px 0;
+  }
+}
+
+.ftr_wrpp.lp_hdr {
+  padding: 20px 0;
+
+  .page-center {
+    .top_sec {
+      padding-bottom: 10px;
+    }
+  }
+}

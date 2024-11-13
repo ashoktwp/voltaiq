@@ -1,0 +1,171 @@
+@import "../../css/module-imports";
+
+.u4m-split-form-wrapper {
+  display: block;
+  position: relative;
+
+  .u4m-splitFormWrap {
+    padding-top: 112px;
+    padding-bottom: 105px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+  }
+
+  .intro-content {
+    text-align: left;
+    .page-center-intro {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  .flex_row {
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .left_column {
+    @include tabletMin {
+      width: 47.7%;
+    }
+  }
+
+  .form_column {
+    @include tabletMin {
+      width: 46.2%;
+    }
+  }
+
+  //
+
+  .splitFormTop {
+    .page-center {
+      position: relative;
+    }
+
+    .logo_wrap {
+      @include tabletMin {
+        position: absolute;
+        top: calc(-29px - 17px);
+        left: 20px;
+        z-index: 3;
+      }
+    }
+
+    .top_content_column_inner {
+      padding-top: 67px;
+    }
+  }
+
+  //  botom
+  .splitFormbotom {
+    .page-center {
+      &.bottom-shape-add {
+        margin-bottom: 73px;
+      }
+    }
+    overflow: hidden;
+    position: relative;
+    @include tabletMin {
+      padding-bottom: 73px;
+      padding-top: 96px;
+    }
+
+    @include tablet {
+      padding-bottom: 60px;
+      padding-top: 60px;
+    }
+
+    @include tabletvert {
+      padding: 50rem 0;
+    }
+
+    @include phone {
+      padding: 40rem 0;
+    }
+
+    .bottom_content_inner {
+      padding-bottom: 117px;
+      @include tabletvert {
+        padding-bottom: 50rem;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      background: #01255c;
+      filter: blur(196.21px);
+      transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0) rotate(90deg);
+      width: 609px;
+      height: 1300px;
+      right: -3%;
+      top: -46px;
+      z-index: 1;
+    }
+  }
+
+  .logo_row,
+  .bottom_content_inner .left_column {
+    position: relative;
+    z-index: 3;
+  }
+
+  // logo slider
+
+  .logo_slide_item {
+    background: $white;
+    border-radius: 5px;
+    padding: 14.64px;
+    text-align: center;
+  }
+
+  // form
+
+  .splitFormTop {
+    .form_column {
+      position: relative;
+      .form_column_inner {
+        @include tabletMin {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        max-width: 100%;
+        width: 100%;
+        @include form;
+        max-width: 100%;
+        margin-bottom: 0;
+        h3 {
+          @include h3;
+        }
+
+        .hs_error_rollup {
+          ul.hs-error-msgs {
+            li {
+              label.hs-main-font-element {
+                padding: 0;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // shape image
+
+  .shape_img {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+}

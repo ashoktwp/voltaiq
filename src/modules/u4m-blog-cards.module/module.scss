@@ -1,0 +1,11 @@
+@import "../../css/_module-imports";
+
+.u4m-blog-cards {
+  .intro-content {
+    @include phoneMin {
+      margin-bottom: 63px;
+    }
+    margin-bottom: 40px;
+  }
+  @include blogCardItem;
+}

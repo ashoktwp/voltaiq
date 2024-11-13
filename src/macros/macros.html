@@ -1,0 +1,81 @@
+<!--
+ templateType: page
+ isAvailableForNewContent: false
+-->  
+ 
+
+{% macro buttonGroup(items) %}  
+  
+    {% if items %}
+        <div class="button-wrap">
+        {% for item in items %}
+
+        {% if item.type == "std"  %}
+        {% set href = item.link.url.href %}
+        {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a
+           class="{{ item.theme }}"
+           {% if item.link.url.type is equalto "CALL_TO_ACTION"  %}
+           href="{{ href }}"
+           {% else %}
+           href="{{ href }}"
+           {% endif %}
+           {% if item.link.open_in_new_tab %}
+           target="_blank"
+           {% endif %}
+           {% if item.link.rel %}
+           rel="{{ item.link.rel }}"
+           {% endif %}
+           >
+          {{ item.text }}
+
+          {% if item.theme == "hs-arrow-btn" %}
+          <span class="arrow-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="currentColor">
+          <path d="M0 1.07901V0.000234218L7.11964 2.5911C7.36037 2.67837 7.52286 2.91007 7.52286 3.16736V4.07311C7.52286 4.33039 7.36037 4.5621 7.11964 4.64937L0 7.24023V6.16146L6.50878 3.79176V3.4472L0 1.07901Z" fill="currentColor"/>
+          </svg>
+          </span>
+          {% endif %}
+        </a>
+
+        {% elif item.type == "cta"  %}
+        {% cta guid="{{ item.cta_button }}" %}
+        {% endif %}
+
+        {% endfor %}
+      </div> 
+    {% endif %} 
+    {% endmacro %}
+
+ 
+
+
+  {% macro contentGroup(group) %}
+    <div class="intro-content">
+    <div class="page-center-intro">
+    {% if group.include_eyebrow_text %}
+    <div class="eyebrow">
+    {{ group.eyebrow_text }}
+    </div>
+    {% endif %}
+    
+    {% if group.include_heading %}
+    <{{ group.heading_tag }}>{{ group.heading }}</{{ group.heading_tag }}>
+    {% endif %}
+    
+    {% if group.include_content %}
+    <div class="content-section">
+    {{ group.content }}
+    </div>
+    {% endif %}
+    
+    {% if group.include_buttons %}
+    {{ macros.buttonGroup(group.buttons) }}  
+    {% endif %}
+    
+    
+    </div>  
+    </div>
+  {% endmacro %}

@@ -11,9 +11,20 @@
     @content;
   }
 }
+@mixin phoneMin {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
 
 @mixin tabletvert {
   @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin tabletvertMin {
+  @media (min-width: 992px) {
     @content;
   }
 }
@@ -36,8 +47,31 @@
   }
 }
 
+@mixin navbreakMin {
+  @media (min-width: 1281px) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin laptopMin {
+  @media (min-width: 1441px) {
+    @content;
+  }
+}
+@mixin largelaptop {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin largelaptopMin {
+  @media (min-width: 1601px) {
     @content;
   }
 }
@@ -114,6 +148,11 @@
   padding-right: 20rem;
 }
 
+@mixin centerlg {
+  @include center;
+  max-width: 1050rem;
+}
+
 @mixin centerMd {
   @include center;
   max-width: 1254rem;
@@ -122,6 +161,11 @@
 @mixin centerSmall {
   @include center;
   max-width: 1152rem;
+}
+
+@mixin center811 {
+  @include center;
+  max-width: 811rem;
 }
 
 @mixin centerXs {
@@ -139,5 +183,15 @@
 
   &:hover {
     color: $white;
+  }
+}
+
+@mixin maxHeight900 {
+  max-height: 900px;
+}
+
+@mixin maxHeight900 {
+  @media (max-height: 900px) {
+    @content;
   }
 }

@@ -1,105 +1,359 @@
 [ {
-  "id" : "22ea157e-aa5a-06e3-df76-b78f4f1ce94e",
-  "name" : "include_heading",
+  "id" : "75b3a912-91be-45f1-e76f-bbb283bb3c38",
+  "name" : "intro_content",
   "display_width" : null,
-  "label" : "Include Heading",
+  "label" : "Intro Content",
   "required" : false,
   "locked" : false,
-  "display" : "checkbox",
-  "type" : "boolean",
-  "default" : true
-}, {
-  "id" : "9905f5ff-7880-57de-f150-0508567addb3",
-  "name" : "heading",
-  "display_width" : null,
-  "label" : "Heading",
-  "required" : false,
-  "locked" : false,
-  "validation_regex" : "",
-  "visibility" : {
-    "controlling_field" : "22ea157e-aa5a-06e3-df76-b78f4f1ce94e",
-    "controlling_field_path" : null,
-    "controlling_value_regex" : "true",
-    "property" : null,
-    "operator" : "EQUAL",
-    "access" : null
-  },
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
-  "type" : "text",
-  "default" : "Heading Text Here"
-}, {
-  "id" : "18a91992-6ec3-ed61-76e0-ac4b96fd83ba",
-  "name" : "include_sub_heading",
-  "display_width" : null,
-  "label" : "Include Sub Heading",
-  "required" : false,
-  "locked" : false,
-  "display" : "checkbox",
-  "type" : "boolean",
-  "default" : true
-}, {
-  "id" : "e324c31c-2b23-7e41-fb55-8a78d7b4fe4b",
-  "name" : "sub_heading",
-  "display_width" : null,
-  "label" : "Sub Heading",
-  "required" : false,
-  "locked" : false,
-  "validation_regex" : "",
-  "visibility" : {
-    "controlling_field" : "18a91992-6ec3-ed61-76e0-ac4b96fd83ba",
-    "controlling_field_path" : null,
-    "controlling_value_regex" : "true",
-    "property" : null,
-    "operator" : "EQUAL",
-    "access" : null
-  },
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
-  "type" : "text",
-  "default" : "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation."
-}, {
-  "id" : "4d0869ff-0acb-c3fd-cda8-06889f89f651",
-  "name" : "member_group",
-  "display_width" : null,
-  "label" : "Member Group",
-  "required" : false,
-  "locked" : false,
-  "occurrence" : {
-    "min" : 1,
-    "max" : null,
-    "sorting_label_field" : "051db38d-f122-b792-cba2-5a80a230dbba",
-    "default" : 3
-  },
   "children" : [ {
-    "id" : "5aad1e05-fe24-703e-7d00-b6cdc7796865",
-    "name" : "hide_from_listing_",
+    "id" : "7e94b2a5-c6f6-dd0f-85b9-4b37adb12585",
+    "name" : "include_eyebrow_text",
     "display_width" : null,
-    "label" : "Hide from Listing?",
-    "help_text" : "Check this to hide this item from the current page. ",
+    "label" : "Include Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "25bb3695-1c5f-d1b7-577f-665c4ea33639",
+    "name" : "eyebrow_text",
+    "display_width" : null,
+    "label" : "Eyebrow Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_eyebrow_text",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Optional Eyebrow Text"
+  }, {
+    "id" : "1ed514ea-88d5-8aa0-8db8-e6c29f121fc6",
+    "name" : "include_heading",
+    "display_width" : null,
+    "label" : "Include Heading",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "287456c6-4f51-8cb9-5005-d6312fcbd502",
+    "name" : "heading",
+    "display_width" : null,
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_heading",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "<span>Voltaiq’s</span> Values"
+  }, {
+    "id" : "27cb7f6e-c34f-6a3b-f25d-c31c304f0546",
+    "name" : "heading_tag",
+    "display_width" : null,
+    "label" : "Heading Tag",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.heading",
+      "controlling_value_regex" : null,
+      "property" : null,
+      "operator" : null,
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "h1", "H1" ], [ "h2", "H2" ], [ "h3", "H3" ], [ "h4", "H4" ], [ "h5", "H5" ], [ "h6", "H6" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "h2"
+  }, {
+    "id" : "66c14e53-d47e-ce5d-2d0a-084df2b9351d",
+    "name" : "include_content",
+    "display_width" : null,
+    "label" : "Include Content",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "9e7002c2-314b-3767-5c39-ec4c3a65a0ec",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_content",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
+  }, {
+    "id" : "b5913995-90dc-cb05-6c8f-c30bd8b193c6",
+    "name" : "include_buttons",
+    "display_width" : null,
+    "label" : "Include Buttons",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
     "default" : false
   }, {
-    "id" : "7aef3045-fbf1-dae1-77b0-8f0b660f6eae",
-    "name" : "headshot",
+    "id" : "90d855d4-f75a-6b74-e08c-fb1a8f8b66c3",
+    "name" : "buttons",
     "display_width" : null,
-    "label" : "Headshot",
-    "help_text" : "",
+    "label" : "Buttons",
     "required" : false,
     "locked" : false,
-    "responsive" : false,
-    "resizable" : true,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "a15621f0-befc-a350-d1dc-4074c000c2eb",
+      "default" : 2
+    },
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "intro_content.include_buttons",
+      "controlling_value_regex" : "true",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null
+    },
+    "children" : [ {
+      "id" : "a15621f0-befc-a350-d1dc-4074c000c2eb",
+      "name" : "type",
+      "display_width" : null,
+      "label" : "Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "std", "Standard" ], [ "cta", "CTA" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "std"
+    }, {
+      "id" : "61868e82-8b9e-6478-2da3-9281041af439",
+      "name" : "theme",
+      "display_width" : null,
+      "label" : "Theme",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.buttons.type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "hs-button"
+    }, {
+      "id" : "8541d293-8eb8-5549-23de-b050386645ba",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.buttons.type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Button"
+    }, {
+      "id" : "b07a7966-9b4c-cd3b-5281-0190dd93bb99",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.buttons.type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "a53ab3c5-b62a-7449-3e2b-2dee7d83bc10",
+      "name" : "cta_button",
+      "display_width" : null,
+      "label" : "CTA Button",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "intro_content.buttons.type",
+        "controlling_value_regex" : "cta",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "cta"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ {
+      "type" : "std",
+      "theme" : "hs-button",
+      "text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "type" : "std",
+      "theme" : "hs-sec-btn",
+      "text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "include_eyebrow_text" : true,
+    "eyebrow_text" : "Optional Eyebrow Text",
+    "include_heading" : true,
+    "heading" : "<span>Voltaiq’s</span> Values",
+    "heading_tag" : "h2",
+    "include_content" : true,
+    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+    "include_buttons" : false,
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-button",
+      "text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "type" : "std",
+      "theme" : "hs-sec-btn",
+      "text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }
+}, {
+  "id" : "51ed85b3-3073-e0f3-fe83-ac7204839995",
+  "name" : "card_items",
+  "display_width" : null,
+  "label" : "Card Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 7
+  },
+  "children" : [ {
+    "id" : "2e1dfd6b-d281-72d5-11fe-1de349e5d035",
+    "name" : "team_image",
+    "display_width" : null,
+    "label" : "Team Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "src" : "https://f.hubspotusercontent30.net/hubfs/302335/patrick-headshot.jpg",
-      "alt" : "Patrick"
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "alt" : "Blake Hawley",
+      "loading" : "lazy",
+      "width" : 362,
+      "height" : 364,
+      "max_width" : 362,
+      "max_height" : 364
     }
   }, {
-    "id" : "051db38d-f122-b792-cba2-5a80a230dbba",
+    "id" : "e041aeed-047f-0ac7-e4af-65e3b14b2431",
     "name" : "member_name",
     "display_width" : null,
     "label" : "Member Name",
@@ -109,93 +363,432 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Firstname Lastname"
+    "default" : "Blake Hawley"
   }, {
-    "id" : "f0d3b5d3-e1d4-0190-b485-069861a4486f",
-    "name" : "member_position",
+    "id" : "d708b387-d00a-af7b-b741-e4618faa7c06",
+    "name" : "designation",
     "display_width" : null,
-    "label" : "Member Position",
+    "label" : "Designation",
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Director of Marketing, Title Division"
+    "default" : "Senior Battery Engineer"
   }, {
-    "id" : "1be46cfa-d852-1f4e-7b55-2f7a7e0ac9df",
-    "name" : "pop_up_content",
+    "id" : "10179a60-3500-c8bc-aa0d-a97added8784",
+    "name" : "button_text",
     "display_width" : null,
-    "label" : "Pop Up Content",
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Read Bio"
+  }, {
+    "id" : "9d332bc2-b37e-ab7a-27e5-b2bbd2f0cfaa",
+    "name" : "member_bio",
+    "display_width" : null,
+    "label" : "Member Bio",
     "required" : false,
     "locked" : false,
     "type" : "richtext",
-    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+    "default" : "<p>Blake holds a PhD in Energy Science and Engineering from the University of Tennessee, with dissertation research conducted at Oak Ridge National Laboratory. His research focused on innovative electrode processing methods for next-generation batteries, including water-processed cathodes, freeze-tape casting, and dual-layered electrode designs. Beyond these specific methods, Blake’s research experience encompassed analyzing the stability of cathode materials with polymer electrolytes, developing methods for recycling and upcycling spent cathode materials, and exploring silicon-graphite anode processing techniques.</p>\n<p>Following his PhD, Blake transitioned to the industry, working for Sparkz, Inc., a startup dedicated to commercializing American-made, cobalt-free lithium-ion batteries. He began his tenure at Sparkz as a Test Engineer and later progressed to R&amp;D Manager. In this role, Blake played a key role in establishing the company’s material validation and electrode development capabilities. His leadership included designing, sourcing, and installing the laboratory equipment, as well as spearheading the overall effort.</p>"
   }, {
-    "id" : "76191295-e74a-675b-c62d-4ce88be4bb93",
-    "name" : "member_twitter_link",
+    "id" : "5319c378-7cfd-b712-06e9-fd5f3fc7514b",
+    "name" : "social_icons",
     "display_width" : null,
-    "label" : "Member Twitter Link",
+    "label" : "Social Icons",
     "required" : false,
     "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "https://twitter.com/NewBreedRevenue"
-  }, {
-    "id" : "71b386fd-dbeb-6c95-fa08-d4bf08c6da6a",
-    "name" : "member_linkedin_link",
-    "display_width" : null,
-    "label" : "Member Linkedin Link",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "https://www.linkedin.com/company/new-breed-revenue/"
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 1
+    },
+    "children" : [ {
+      "id" : "29a75237-f23e-f13d-e90b-fd93d8857502",
+      "name" : "icon_type",
+      "display_width" : null,
+      "label" : "Icon Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "icon", "Icon" ], [ "image", "Image" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "icon"
+    }, {
+      "id" : "610b0865-c006-1c3a-508e-4370a8cd6bbc",
+      "name" : "icon_field",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "card_items.social_icons.icon_type",
+        "controlling_value_regex" : "icon",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "icon_set" : "fontawesome-6.4.2",
+      "type" : "icon",
+      "default" : {
+        "name" : "LinkedIn",
+        "unicode" : "f08c",
+        "type" : "REGULAR"
+      }
+    }, {
+      "id" : "8bf2f304-f5a6-587f-9f5c-091fb7762f03",
+      "name" : "icon_image",
+      "display_width" : null,
+      "label" : "Icon Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "card_items.social_icons.icon_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    }, {
+      "id" : "789e7f9b-2266-8313-a75d-7610973c3d4f",
+      "name" : "link_field",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ {
+      "icon_type" : "icon",
+      "icon_field" : {
+        "name" : "LinkedIn",
+        "unicode" : "f08c",
+        "type" : "REGULAR"
+      },
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
-    "hide_from_listing_" : false,
-    "headshot" : {
-      "src" : "https://f.hubspotusercontent30.net/hubfs/302335/patrick-headshot.jpg",
-      "alt" : "Patrick"
+    "team_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "alt" : "Blake Hawley",
+      "loading" : "lazy",
+      "width" : 362,
+      "height" : 364,
+      "max_width" : 362,
+      "max_height" : 364
     },
-    "member_name" : "Firstname Lastname",
-    "member_position" : "Director of Marketing, Title Division",
-    "pop_up_content" : "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "member_twitter_link" : "https://twitter.com/NewBreedRevenue",
-    "member_linkedin_link" : "https://www.linkedin.com/company/new-breed-revenue/",
-    "boolean_field" : false
+    "member_name" : "Blake Hawley",
+    "designation" : "Senior Battery Engineer",
+    "button_text" : "Read Bio",
+    "member_bio" : "<p>Blake holds a PhD in Energy Science and Engineering from the University of Tennessee, with dissertation research conducted at Oak Ridge National Laboratory. His research focused on innovative electrode processing methods for next-generation batteries, including water-processed cathodes, freeze-tape casting, and dual-layered electrode designs. Beyond these specific methods, Blake’s research experience encompassed analyzing the stability of cathode materials with polymer electrolytes, developing methods for recycling and upcycling spent cathode materials, and exploring silicon-graphite anode processing techniques.</p>\n<p>Following his PhD, Blake transitioned to the industry, working for Sparkz, Inc., a startup dedicated to commercializing American-made, cobalt-free lithium-ion batteries. He began his tenure at Sparkz as a Test Engineer and later progressed to R&amp;D Manager. In this role, Blake played a key role in establishing the company’s material validation and electrode development capabilities. His leadership included designing, sourcing, and installing the laboratory equipment, as well as spearheading the overall effort.</p>",
+    "social_icons" : [ {
+      "icon_type" : "icon",
+      "icon_field" : {
+        "name" : "LinkedIn",
+        "unicode" : "f08c",
+        "type" : "REGULAR"
+      },
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
   }, {
-    "hide_from_listing_" : false,
-    "headshot" : {
-      "src" : "https://f.hubspotusercontent30.net/hubfs/302335/patrick-headshot.jpg",
-      "alt" : "Patrick"
+    "team_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "alt" : "Blake Hawley",
+      "loading" : "lazy",
+      "width" : 362,
+      "height" : 364,
+      "max_width" : 362,
+      "max_height" : 364
     },
-    "member_name" : "Firstname Lastname",
-    "member_position" : "Director of Marketing, Title Division",
-    "pop_up_content" : "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "member_twitter_link" : "https://twitter.com/NewBreedRevenue",
-    "member_linkedin_link" : "https://www.linkedin.com/company/new-breed-revenue/",
-    "boolean_field" : false
+    "member_name" : "Blake Hawley",
+    "designation" : "Senior Battery Engineer",
+    "button_text" : "Read Bio",
+    "member_bio" : "<p>Blake holds a PhD in Energy Science and Engineering from the University of Tennessee, with dissertation research conducted at Oak Ridge National Laboratory. His research focused on innovative electrode processing methods for next-generation batteries, including water-processed cathodes, freeze-tape casting, and dual-layered electrode designs. Beyond these specific methods, Blake’s research experience encompassed analyzing the stability of cathode materials with polymer electrolytes, developing methods for recycling and upcycling spent cathode materials, and exploring silicon-graphite anode processing techniques.</p>\n<p>Following his PhD, Blake transitioned to the industry, working for Sparkz, Inc., a startup dedicated to commercializing American-made, cobalt-free lithium-ion batteries. He began his tenure at Sparkz as a Test Engineer and later progressed to R&amp;D Manager. In this role, Blake played a key role in establishing the company’s material validation and electrode development capabilities. His leadership included designing, sourcing, and installing the laboratory equipment, as well as spearheading the overall effort.</p>",
+    "social_icons" : [ {
+      "icon_type" : "icon",
+      "icon_field" : {
+        "name" : "LinkedIn",
+        "unicode" : "f08c",
+        "type" : "REGULAR"
+      },
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
   }, {
-    "hide_from_listing_" : false,
-    "headshot" : {
-      "src" : "https://f.hubspotusercontent30.net/hubfs/302335/patrick-headshot.jpg",
-      "alt" : "Patrick"
+    "team_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "alt" : "Blake Hawley",
+      "loading" : "lazy",
+      "width" : 362,
+      "height" : 364,
+      "max_width" : 362,
+      "max_height" : 364
     },
-    "member_name" : "Firstname Lastname",
-    "member_position" : "Director of Marketing, Title Division",
-    "pop_up_content" : "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-    "member_twitter_link" : "https://twitter.com/NewBreedRevenue",
-    "member_linkedin_link" : "https://www.linkedin.com/company/new-breed-revenue/",
-    "boolean_field" : false
+    "member_name" : "Blake Hawley",
+    "designation" : "Senior Battery Engineer",
+    "button_text" : "Read Bio",
+    "member_bio" : "<p>Blake holds a PhD in Energy Science and Engineering from the University of Tennessee, with dissertation research conducted at Oak Ridge National Laboratory. His research focused on innovative electrode processing methods for next-generation batteries, including water-processed cathodes, freeze-tape casting, and dual-layered electrode designs. Beyond these specific methods, Blake’s research experience encompassed analyzing the stability of cathode materials with polymer electrolytes, developing methods for recycling and upcycling spent cathode materials, and exploring silicon-graphite anode processing techniques.</p>\n<p>Following his PhD, Blake transitioned to the industry, working for Sparkz, Inc., a startup dedicated to commercializing American-made, cobalt-free lithium-ion batteries. He began his tenure at Sparkz as a Test Engineer and later progressed to R&amp;D Manager. In this role, Blake played a key role in establishing the company’s material validation and electrode development capabilities. His leadership included designing, sourcing, and installing the laboratory equipment, as well as spearheading the overall effort.</p>",
+    "social_icons" : [ {
+      "icon_type" : "icon",
+      "icon_field" : {
+        "name" : "LinkedIn",
+        "unicode" : "f08c",
+        "type" : "REGULAR"
+      },
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "team_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "alt" : "Blake Hawley",
+      "loading" : "lazy",
+      "width" : 362,
+      "height" : 364,
+      "max_width" : 362,
+      "max_height" : 364
+    },
+    "member_name" : "Blake Hawley",
+    "designation" : "Senior Battery Engineer",
+    "button_text" : "Read Bio",
+    "member_bio" : "<p>Blake holds a PhD in Energy Science and Engineering from the University of Tennessee, with dissertation research conducted at Oak Ridge National Laboratory. His research focused on innovative electrode processing methods for next-generation batteries, including water-processed cathodes, freeze-tape casting, and dual-layered electrode designs. Beyond these specific methods, Blake’s research experience encompassed analyzing the stability of cathode materials with polymer electrolytes, developing methods for recycling and upcycling spent cathode materials, and exploring silicon-graphite anode processing techniques.</p>\n<p>Following his PhD, Blake transitioned to the industry, working for Sparkz, Inc., a startup dedicated to commercializing American-made, cobalt-free lithium-ion batteries. He began his tenure at Sparkz as a Test Engineer and later progressed to R&amp;D Manager. In this role, Blake played a key role in establishing the company’s material validation and electrode development capabilities. His leadership included designing, sourcing, and installing the laboratory equipment, as well as spearheading the overall effort.</p>",
+    "social_icons" : [ {
+      "icon_type" : "icon",
+      "icon_field" : {
+        "name" : "LinkedIn",
+        "unicode" : "f08c",
+        "type" : "REGULAR"
+      },
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "team_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "alt" : "Blake Hawley",
+      "loading" : "lazy",
+      "width" : 362,
+      "height" : 364,
+      "max_width" : 362,
+      "max_height" : 364
+    },
+    "member_name" : "Blake Hawley",
+    "designation" : "Senior Battery Engineer",
+    "button_text" : "Read Bio",
+    "member_bio" : "<p>Blake holds a PhD in Energy Science and Engineering from the University of Tennessee, with dissertation research conducted at Oak Ridge National Laboratory. His research focused on innovative electrode processing methods for next-generation batteries, including water-processed cathodes, freeze-tape casting, and dual-layered electrode designs. Beyond these specific methods, Blake’s research experience encompassed analyzing the stability of cathode materials with polymer electrolytes, developing methods for recycling and upcycling spent cathode materials, and exploring silicon-graphite anode processing techniques.</p>\n<p>Following his PhD, Blake transitioned to the industry, working for Sparkz, Inc., a startup dedicated to commercializing American-made, cobalt-free lithium-ion batteries. He began his tenure at Sparkz as a Test Engineer and later progressed to R&amp;D Manager. In this role, Blake played a key role in establishing the company’s material validation and electrode development capabilities. His leadership included designing, sourcing, and installing the laboratory equipment, as well as spearheading the overall effort.</p>",
+    "social_icons" : [ {
+      "icon_type" : "icon",
+      "icon_field" : {
+        "name" : "LinkedIn",
+        "unicode" : "f08c",
+        "type" : "REGULAR"
+      },
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "team_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "alt" : "Blake Hawley",
+      "loading" : "lazy",
+      "width" : 362,
+      "height" : 364,
+      "max_width" : 362,
+      "max_height" : 364
+    },
+    "member_name" : "Blake Hawley",
+    "designation" : "Senior Battery Engineer",
+    "button_text" : "Read Bio",
+    "member_bio" : "<p>Blake holds a PhD in Energy Science and Engineering from the University of Tennessee, with dissertation research conducted at Oak Ridge National Laboratory. His research focused on innovative electrode processing methods for next-generation batteries, including water-processed cathodes, freeze-tape casting, and dual-layered electrode designs. Beyond these specific methods, Blake’s research experience encompassed analyzing the stability of cathode materials with polymer electrolytes, developing methods for recycling and upcycling spent cathode materials, and exploring silicon-graphite anode processing techniques.</p>\n<p>Following his PhD, Blake transitioned to the industry, working for Sparkz, Inc., a startup dedicated to commercializing American-made, cobalt-free lithium-ion batteries. He began his tenure at Sparkz as a Test Engineer and later progressed to R&amp;D Manager. In this role, Blake played a key role in establishing the company’s material validation and electrode development capabilities. His leadership included designing, sourcing, and installing the laboratory equipment, as well as spearheading the overall effort.</p>",
+    "social_icons" : [ {
+      "icon_type" : "icon",
+      "icon_field" : {
+        "name" : "LinkedIn",
+        "unicode" : "f08c",
+        "type" : "REGULAR"
+      },
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "team_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "alt" : "Blake Hawley",
+      "loading" : "lazy",
+      "width" : 362,
+      "height" : 364,
+      "max_width" : 362,
+      "max_height" : 364
+    },
+    "member_name" : "Blake Hawley",
+    "designation" : "Senior Battery Engineer",
+    "button_text" : "Read Bio",
+    "member_bio" : "<p>Blake holds a PhD in Energy Science and Engineering from the University of Tennessee, with dissertation research conducted at Oak Ridge National Laboratory. His research focused on innovative electrode processing methods for next-generation batteries, including water-processed cathodes, freeze-tape casting, and dual-layered electrode designs. Beyond these specific methods, Blake’s research experience encompassed analyzing the stability of cathode materials with polymer electrolytes, developing methods for recycling and upcycling spent cathode materials, and exploring silicon-graphite anode processing techniques.</p>\n<p>Following his PhD, Blake transitioned to the industry, working for Sparkz, Inc., a startup dedicated to commercializing American-made, cobalt-free lithium-ion batteries. He began his tenure at Sparkz as a Test Engineer and later progressed to R&amp;D Manager. In this role, Blake played a key role in establishing the company’s material validation and electrode development capabilities. His leadership included designing, sourcing, and installing the laboratory equipment, as well as spearheading the overall effort.</p>",
+    "social_icons" : [ {
+      "icon_type" : "icon",
+      "icon_field" : {
+        "name" : "LinkedIn",
+        "unicode" : "f08c",
+        "type" : "REGULAR"
+      },
+      "icon_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
   } ]
 }, {
   "id" : "module_overrides",
@@ -476,71 +1069,128 @@
     "type" : "number",
     "default" : 50
   }, {
-    "id" : "6c8bfd0e-1629-1268-e01c-17b4047ecfce",
-    "name" : "background_color",
+    "id" : "1d3329ad-f0c8-2c35-ded0-768b7a744f0f",
+    "name" : "background",
     "display_width" : null,
-    "label" : "Background Color",
-    "help_text" : "If a module has formal settings for a background color they will take priority over this value.",
-    "inline_help_text" : "",
+    "label" : "Background Settings",
     "required" : false,
     "locked" : false,
     "visibility" : {
-      "controlling_field" : "enable_overrides",
-      "controlling_field_path" : null,
+      "controlling_field" : null,
+      "controlling_field_path" : "module_overrides.enable_overrides",
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",
       "access" : null
     },
-    "type" : "color",
+    "children" : [ {
+      "id" : "95e1b7ef-2f40-3433-8aad-58e3e685c0b4",
+      "name" : "background_type",
+      "display_width" : null,
+      "label" : "Background Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "color", "Color" ], [ "image", "Image" ], [ "gradient", "Gradient" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "color"
+    }, {
+      "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
+      "name" : "background_color",
+      "display_width" : null,
+      "label" : "Background Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "green_bg", "Green" ], [ "gray_bg", "Gray" ], [ "black_bg", "Black" ], [ "blue_bg", "Blue" ], [ "dark_gray_bg", "Dark Gray" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "black_bg"
+    }, {
+      "id" : "a96b6109-163c-0c4f-bb47-3f26b3a886df",
+      "name" : "background_image",
+      "display_width" : null,
+      "label" : "Background Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "image",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    }, {
+      "id" : "eb880212-1e0c-d91e-9ce6-54d0c6645638",
+      "name" : "background_gradient",
+      "display_width" : null,
+      "label" : "Background Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice"
+    }, {
+      "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
+      "name" : "include_overlay",
+      "display_width" : null,
+      "label" : "Include Overlay",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
     "default" : {
-      "color" : null,
-      "opacity" : null
+      "background_type" : "color",
+      "background_color" : "black_bg",
+      "background_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "include_overlay" : false
     }
-  }, {
-    "id" : "878364f4-31ac-6917-e76f-65307d7d36e5",
-    "name" : "background_image",
-    "display_width" : null,
-    "label" : "Background Image",
-    "help_text" : "If a module has formal settings for a background image they will take priority over this value.",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : "enable_overrides",
-      "controlling_field_path" : null,
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "responsive" : true,
-    "resizable" : false,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "disabled"
-    }
-  }, {
-    "id" : "3eccf45d-b0dc-4bac-42a0-f923e4405158",
-    "name" : "reverse_text",
-    "display_width" : null,
-    "label" : "Reverse Text",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : "enable_overrides",
-      "controlling_field_path" : null,
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "display" : "checkbox",
-    "type" : "boolean",
-    "default" : false
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -560,16 +1210,16 @@
     "bottom_padding" : "bottom-padding-default",
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
-    "background_color" : {
-      "color" : null,
-      "opacity" : null
-    },
-    "background_image" : {
-      "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "disabled"
-    },
-    "reverse_text" : false
+    "background" : {
+      "background_type" : "color",
+      "background_color" : "black_bg",
+      "background_image" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "include_overlay" : false
+    }
   }
 } ]

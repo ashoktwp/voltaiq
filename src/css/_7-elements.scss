@@ -422,6 +422,30 @@ section[class*="u4m-"] {
   background-color: $cardBgColor;
 }
 
+.primaryGradientColor,
+.gradient1 {
+  background-image: $primaryGradientColor;
+}
+.secondaryGradientColor,
+.gradient2 {
+  background-image: $secondaryGradientColor;
+}
+.gradientObsidian {
+  background-image: $gradientObsidian;
+}
+.gradientMidnight {
+  background-image: $gradientMidnight;
+}
+.gradientDeepSea {
+  background-image: $gradientDeepSea;
+}
+.gradientTropicalSea {
+  background-image: $gradientTropicalSea;
+}
+.gradientSky {
+  background-image: $gradientSky;
+}
+
 .button-wrap {
   @include flex;
   gap: 20rem;
@@ -435,4 +459,25 @@ section[class*="u4m-"] {
 
 .intro-content .button-wrap {
   justify-content: center;
+}
+
+@mixin bodyContent {
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  font-family: $font2;
+}
+
+.module_basic {
+  @include bodyContent;
+}
+.intro-content {
+  text-align: center;
+  margin-bottom: 47rem;
+  .eyebrow {
+    @include eyebrow;
+  }
+  .content-section {
+    margin-bottom: 40rem;
+    @include b1;
+  }
 }

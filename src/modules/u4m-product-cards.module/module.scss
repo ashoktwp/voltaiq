@@ -1,0 +1,119 @@
+@import "../../css/_module-imports";
+
+
+.u4m-product-cards {
+    &::before {
+        /* Ellipse 31 */
+
+        background: #01255c;
+        filter: blur(196.21px);
+        height: 382px;
+        left: 30%;
+        position: absolute;
+        top: auto;
+        transform: matrix(-.64, -.77, .72, -.69, 0, 0);
+        width: 858px;
+    }
+
+    .intro-content {
+        margin-bottom: 63px;
+        position: relative;
+    }
+
+    .page-center {
+        .product-cards_wrpp {
+            .inner_cnt {
+                .items {
+                    background: hsla(204, 4%, 73%, .1);
+                    border-radius: 3px;
+                    box-shadow: 2px 4px 15px rgba(0, 0, 0, .1);
+                    width: calc(50% - 27px);
+
+                    .pd {
+                        display: flex;
+                        flex-wrap: wrap;
+                        height: auto;
+                        height: 100%;
+
+                        .top_icon {
+                            width: 34.5%;
+
+                            .bg {
+                                height: 100%;
+                                width: 100%;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: right;
+
+                                @include xs-phone {
+                                    padding-bottom: 56%;
+                                }
+                            }
+
+                            @include navbreak {
+                                width: 50%;
+                            }
+
+                            @include xs-phone {
+                                width: 100%;
+                            }
+                        }
+
+                        .cnt {
+                            width: 65.5%;
+
+                            .inner_cntt {
+                                padding: 49px 40px;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+
+                                h5 {
+                                    margin: 0;
+                                }
+
+                                p {
+                                    @include b2;
+                                    margin: 0;
+                                    color: $white;
+                                }
+
+                                .content-section {
+                                    margin-bottom: 19px;
+                                }
+
+                                .button-wrap {
+                                    margin-top: auto;
+                                }
+                            }
+
+                            @include navbreak {
+                                width: 50%;
+                            }
+
+                            @include xs-phone {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    @include phone {
+                        width: 50%;
+                    }
+
+                    @include tablet {
+                        width: 100%;
+                    }
+                }
+
+                display: flex;
+                column-gap: 54px;
+                row-gap: 50px;
+                flex-wrap: wrap;
+            }
+        }
+
+        @include centerMd;
+        position: relative;
+    }
+}

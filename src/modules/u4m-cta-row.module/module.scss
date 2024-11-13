@@ -1,54 +1,222 @@
 @import "../../css/_module-imports";
-section.u4m-cta-row {
-  margin-bottom: 100rem;
-  &.reverse-text {
-    color: $headingColor;
-  }
-  div.inner {
-    @include center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include phone {
-      display: block;
-    }
-    &.centered {
-      display: block;
-      div.copy,
-      div.image {
-        width: 100%;
-        text-align: center;
-      }
-      div.image {
-        margin-top: 50rem;
-      }
-    }
-    div.copy {
-      width: 50%;
-      .heading {
-        @include h2;
-      }
-      div.cta {
-        a {
-          @include primaryBtn;
+
+
+
+.u4m-cta-row {
+  .page-center {
+    .main_cta {
+      border-radius: 10px;
+      padding: 0;
+      overflow: hidden;
+
+      .inner_wrpp {
+        .flex_row {
+          .left_sec {
+            .intro-content {
+              .page-center-intro {
+                max-width: 100%;
+                padding: 0;
+
+                >h2 {
+                  margin-bottom: 8px;
+                  line-height: 1.12500;
+                }
+
+                .content-section {
+                  margin-bottom: 0px;
+
+                  p {
+                    @include b2;
+                    color: $white;
+                    line-height: 1.66666667;
+                  }
+                }
+
+                .button-wrap {
+                  margin-top: 20px;
+                }
+              }
+            }
+
+            max-width: calc(100% - 578px);
+            padding: 0;
+            padding: 73px 35px 85px 100px;
+
+            form {
+              margin: 0;
+              padding-bottom: 0px;
+              display: flex;
+              gap: 20px;
+              align-items: center;
+              flex-wrap: wrap;
+              max-width: 543px;
+              width: 100%;
+
+              .hs-fieldtype-text {
+                >label {
+                  font-size: 12px;
+                  line-height: 15px;
+                  margin-bottom: 9px;
+                  display: block;
+                }
+              }
+
+              @include phone {
+                .hs_submit.hs-submit {
+                  width: 100%;
+                }
+              }
+
+              input {
+                min-height: 48px;
+                border-radius: 5px;
+                border: 0;
+              }
+
+              input.hs-button.primary.large {
+                margin: 0;
+                margin-top: 28px;
+                min-width: auto;
+
+                @include phone {
+                  margin: 0;
+                }
+              }
+
+              .hs-form-field {
+                max-width: calc(100% - 183px);
+                width: 100%;
+
+                @include phone {
+                  max-width: 100%;
+                }
+              }
+
+              ul.hs-error-msgs {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                width: 100%;
+
+                li:before {
+                  border-color: transparent transparent red;
+                  border-style: solid;
+                  border-width: 0 8rem 8rem;
+                  bottom: 100%;
+                  content: "";
+                  height: 8rem;
+                  left: 0;
+                  left: 20px;
+                  margin: auto;
+                  position: absolute;
+                  right: 0;
+                  right: auto;
+                  width: 0;
+                }
+
+                li {
+                  background: red;
+                  border-radius: 5rem;
+                  color: #fff;
+                  display: inline-block;
+                  left: 0;
+                  line-height: 1.2;
+                  padding: 5rem 8rem;
+                  position: relative;
+                  position: absolute;
+                  text-align: center;
+                  top: 0;
+                  top: calc(100% + 7px);
+                  z-index: 2;
+                }
+              }
+
+              .hs_error_rollup {
+                display: none;
+              }
+
+              @include tabletvert {
+                width: 100%;
+                max-width: 100%;
+              }
+
+              @include phone {
+                flex-direction: column;
+              }
+            }
+
+            @include navbreak {
+              padding-left: 40px;
+            }
+
+            @include tablet {
+              max-width: calc(100% - 530px);
+            }
+
+            @include tabletvert {
+              width: 100%;
+              max-width: 100%;
+              padding: 50px 30px;
+            }
+          }
+
+          .right_sec {
+            .bg {
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              right: -75px;
+              top: 75px;
+              background-repeat: no-repeat;
+
+              @include tabletvert {
+                position: unset;
+                height: 500px;
+                background-position: center;
+                width: 100%;
+                max-width: 100%;
+              }
+
+              @include phone {
+                height: auto;
+                padding-bottom: 85%;
+                background-size: contain;
+              }
+            }
+
+            width: 100%;
+            max-width: 578px;
+            position: relative;
+
+            @include tablet {
+              max-width: 530px;
+            }
+
+            @include tabletvert {
+              width: 100%;
+              max-width: 100%;
+              padding-bottom: 50px;
+              padding-left: 10px;
+              padding-right: 10px;
+            }
+          }
+
+          position: relative;
+
+
+          .intro-content {
+            margin-bottom: 20px;
+            text-align: left;
+            padding-top: 0;
+
+            .page-center-intro {
+              .button-wrap {
+                justify-content: flex-start;
+              }
+            }
+          }
         }
-      }
-      @include phone {
-        width: 100%;
-        text-align: center;
-      }
-    }
-    div.image {
-      width: 50%;
-      text-align: right;
-      img {
-        max-width: 400rem;
-        @include tabletvert {
-          max-width: 100%;
-        }
-      }
-      @include phone {
-        margin: 20rem auto 0 auto;
       }
     }
   }

@@ -1,0 +1,160 @@
+{% set moduleName = 'u4m-side-tabber' %}
+{% set imageMax = 1000 %}
+{% set bgImageMax = 1920 %}
+
+{% set getName = name|replace('-','') %}
+
+{% include "../partials/u4-module-includes.html" %}
+
+  {{macros.contentGroup(module.intro_content  )}}
+  
+<div class="page-center-sm">
+  <div class="tabber_wrap">
+
+    <div class="tabs_nav_list">
+      <ul>
+        {% for item in module.tabber %}
+        <li>
+          <button class="tabber_nav desktop_tabber_nav {{loop.first ? "active" : ""}}" data-index="tab{{getName}}_{{loop.index}}">
+              <div class="tabber_nav_inner">
+              <h6>{{ item.title }}</h6> 
+              {% if item.subtitle %}
+              <p>
+                {{ item.subtitle }}
+              </p>
+              {% endif %} 
+              </div>
+              <span class="material-symbols-outlined">
+              keyboard_arrow_down
+            </span>
+          </button>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="tabber_paner_list">
+      {% for item in module.tabber %}
+      <div class="tabber_nav mobile_nav {{loop.first ? "active" : ""}}" data-index="tab{{getName}}_{{loop.index}}">
+      <div class="tabber_nav_inner">
+      <h6>{{ item.title }}</h6> 
+      {% if item.subtitle %}
+      <p>
+        {{ item.subtitle }}
+      </p>
+      {% endif %} 
+      </div>
+        <span class="acc_icon">
+          <span class="material-symbols-outlined add">add</span>
+          <span class="material-symbols-outlined remove">remove</span>
+        </span>
+
+      </div>
+      <div class="tabber_pane pane{{loop.index}} {{loop.first ? "active" : ""}}" id="tab{{getName}}_{{loop.index}}" data-tab="tab{{getName}}_{{loop.index}}">
+        <div class="tabber_pane_inner">
+          <div class="flex_row ">
+            <div class="content_col">
+              <div class="content-spacing">
+                {% if item.icon.src %}
+                {% set sizeAttrs = 'width="{{ item.icon.width|escape_attr }}" height="{{ item.icon.height|escape_attr }}"' %}
+                {% if item.icon.size_type == 'auto' %}
+                {% set sizeAttrs = 'width="{{ item.icon.width|escape_attr }}" height="{{ item.icon.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                {% elif item.icon.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.icon.max_width|escape_attr }}" height="{{ item.icon.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                {% set loadingAttr = item.icon.loading != 'disabled' ? 'loading="{{ item.icon.loading|escape_attr }}"' : '' %}
+                <img src="{{ item.icon.src|escape_url }}" alt="{{ item.icon.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                {% endif %}
+
+                {% if item.content %}
+                <div class="text_box ">
+                  {{ item.content }}
+                </div>
+                {% endif %}
+
+                {{ macros.buttonGroup(item.buttons) }}
+              
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+
+
+
+{% require_js %}
+<script>
+  document.querySelectorAll('.{{name}} .desktop_tabber_nav').forEach(function(tab) {
+                            tab.addEventListener('click', function() {
+    var tab_id = this.getAttribute('data-index');
+
+    document.querySelectorAll('.{{name}} .desktop_tabber_nav').forEach(function(tabs) {
+                              tabs.classList.remove('active');
+  });
+
+  document.querySelectorAll('.{{name}}  .tabber_pane').forEach(function(content) {
+                            content.classList.remove('active');
+  }); 
+  document.querySelectorAll('.{{name}}  .mobile_nav').forEach(function(content) {
+                            content.classList.remove('active');
+  }); 
+
+
+  this.classList.add('active');
+  document.getElementById(tab_id).classList.add('active'); 
+  document.querySelector('div[data-index='+tab_id+']').classList.add('active'); 
+  document.querySelector('div[data-tab='+tab_id+']').classList.add('active'); 
+
+  });
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const tabTitles = document.querySelectorAll(".{{name}} .mobile_nav");
+                                                const tabContents = document.querySelectorAll(".{{name}} .tabber_pane");
+
+                                                function handleResize() {
+      if (window.innerWidth < 992) {
+        // Enable accordion functionality
+        tabTitles.forEach(title => {
+          title.addEventListener("click", handleTabClick);
+        });
+
+      }
+    }
+
+    function handleTabClick(event) {
+      const isActive = this.classList.contains("active");
+
+      tabTitles.forEach(t => t.classList.remove("active"));
+      tabContents.forEach(c => c.classList.remove("active"));
+      tabContents.forEach(content => content.style.display = "none");
+
+      if (!isActive) {
+        this.classList.add("active");
+        const tabId = this.getAttribute("data-index");
+        document.getElementById(tabId).style.display = "block";
+        document.getElementById(tabId).classList.add("active");
+      }
+    }
+
+    // Initial check and setup
+    handleResize();
+
+    // Attach resize event listener
+    window.addEventListener("resize", handleResize);
+  });
+
+</script>
+{% end_require_js %}
+
+
+
+</section>

@@ -1,177 +1,251 @@
-{% set featuredImageMax = 580 %}
-{% set avatarImageMax = 300 %}
-{% set listingImageMax = 360 %}
-{% set resourceImageMax = 300 %}
-  
-<section class="u4m-blog-listing {% if simple_list_page %}--simple{% endif %}">
-<div class="hero"> 
-    <h1 class="heading">
-    {% if topic %}
-    <span class="topic-name">
-        {% for content_topic in contents_topics %}      
-        {% if topic == content_topic.name|lower|replace(' ','-') %}
-        {{ content_topic.name }}
-        {% endif %}
-        {% endfor %}
-    </span>     
-    {% elif blog_author %}
-    <span class="author-name">Posts by {{ blog_author.display_name }}</span>
-    {% else %}
-    <span class="blog-title">{{ content_group.name }}</span>
-    {% endif %}
-    </h1>
-    <div class="wrapper {% if (request.full_url is string_containing "/tag/") or (request.full_url is string_containing "/topic/") or (request.full_url is string_containing "/author/") %} none {% endif %}">
-    <!-- set blog -->
-    {% set blogID = blog_recent_posts('{{ group.id }}', limit=1)  %}
-    <!-- set featured category -->
-    {% set featured_post = blog_recent_tag_posts('{{ group.id }}', 'featured', 1 ) %}
-    {% for post in featured_post %}       
-    {% unless (request.full_url is string_containing "/page/") %} 
-        <div class="card">          
-            <div class="image-wrap">
-            <a href="{{ post.absolute_url }}">
+{% set featrows = blog_recent_tag_posts(group.id,module.featured_posts.select_tag,1) %} 
 
-                <div class="image">
-                    <img src="{{resize_image_url(post.featured_image, 0,0,featuredImageMax)}}" alt="{{post.featured_image_alt_text}}">
-                </div>
 
-            </a>
-            </div>
-            <div class="content">
-            <h2 class="heading"><a href="{{ post.absolute_url }}">{{ post.name }}</a></h2>
-            <div class="read-time">
-            {% set finishedPostWords = (((post.post_body|wordcount/100) * 100)|divide(200)|round(2)) %}
-            {% if finishedPostWord < 0 %}
-              {% set finishedPostWord = 1 %}
-            {% endif %}
-            {% if finishedPostWords|round >= 1 %}
-              <i class="far fa-clock" aria-hidden="true"></i> {{ finishedPostWords|round }} min read
-                <span class="date"> | {{ post.publish_date|datetimeformat('%B %e, %Y') }}</span>
-            {% endif %}
-          </div>
-            <p>{{ post.post_list_content|safe|truncatehtml(175)|striptags }}</p>
-            <a class="link" href="{{ post.absolute_url }}"><span class="learn-more">Read More</span></a>
-            </div>          
-        </div>
-    {% endunless %}
-    {% endfor %}
-    </div>
-</div>
-{% unless is_listing_view && topic %}
-<div class="filter" id='blog-filters'>
-    {% unless module.blog_menu %}
-    <div class="menu">
-    {% menu id="{{ module.blog_menu }}" %}
-    </div>
-    {% set default_node = menu(module.blog_menu) %}
-    <div class="mobile-menu">
-    <h3 class="title">Filter by Topic</h3>
-    <select class="menu-wrap" onchange="document.location.href=this.value">
-        {% for child in default_node.children %}
-        <option value="{{ child.url }}" {% if child.url == content.absolute_url %}selected{% endif %} >{{ child.label }}</option>
-        {% endfor %}
-    </select>
-    </div>
-    {% else %}
-    <div class='menu dynamic'>
-        <ul class="menu-list">
-            <li class="menu-item">
-            <a class='button' href="/blog">All</a>
-            </li>
-            {% for content_topic in contents_topics %}
-            <li class="menu-item">
-            <a href="/blog/topic/{{ content_topic.name|lower|replace(' ','-') }}">{{ content_topic.name }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    {% endunless %}
-</div>
-{% endunless %}
-<!-- Blog Author Listing -->
-{% if blog_author %}
-<div class="author">
-    <div class="inner">
-    {% if blog_author.avatar %}
-    <div class="avatar lazy" data-bg="{{ resize_image_url(blog_author.avatar, 0,0,avatarImageMax) }}"></div>
-    {% endif %}
-    <div class="blog-author-text">
-        {% if blog_author.bio %}<h2 class="header">About the Author</h2>{% endif %}
-        {% if blog_author.bio %}<p class="bio">{{ blog_author.bio }}</p>{% endif %}
-        {% if blog_author.has_social_profiles %}
-            <div class="social">
-            {% if blog_author.linkedin %}<a class="linkedin" href="{{ blog_author.linkedin }}" target="_blank" aria-label="LinkedIn"><span class="fab fa-linkedin" aria-hidden="true"></span></a>{% endif %}
-            {% if blog_author.twitter %}<a class="twitter" href="{{ blog_author.twitter }}" target="_blank" aria-label="Twitter"><span class="fab fa-twitter" aria-hidden="true"></span></a>{% endif %}
-            {% if blog_author.facebook %}<a class="facebook" href="{{ blog_author.facebook }}" target="_blank" aria-label="Facebook"><span class="fab fa-facebook" aria-hidden="true"></span></a>{% endif %}
-            {% if blog_author.website %}<a class="website" href="{{ blog_author.website }}?rel=author" target="_blank" aria-label="Website"><span class="fas fa-globe" aria-hidden="true"></span></a>{% endif %}
-            </div>
-        {% endif %}
+<section class="{{ name }} blogListing  {% if blog_author %}authorPage{% endif %}">
 
-    </div>
-    </div>
+	<div class="topBnr banner_is_here">
+		<div class="page-center">  
+			<div class="topttl {% if current_page_num  == 1 %}{% else %}noftrmg{% endif %}"  {% if blog_author || topic %} style="margin-bottom: 0;" {% endif %}>
+				{% if blog_author %}
+				<h2>{{ blog_author.display_name }}</h2>
+				{% elif topic %}
+				<h2>{{ topic|replace('-',' ')|capitalize }}</h2>
+				{% else %}
+				<h2>{{ group.public_title }}</h2>
+				{% endif %}	
 
-</div>
-{% endif %}  
-<!-- Main Post Listing -->
-<div class="posts">
-    {% for post in contents %}
-    {% include "/voltaiq/modules/partials/u4-blog-cards.html" %}
-    {% if loop.index==6 && current_page_num==1  %}
-    {% set blogResourceTable = hubdb_table_rows( module.blog_resources_by_topic , "&orderBy=name") %}
-    {% for row in blogResourceTable %}
-    <!-- Checks to see if the topic of the page matches any of the rows in HubDB with -->
-    {% if row.topic == topic or row.topic == blog_author.slug  %}
-    {% set counter = 1 %}
-    {% for resource in row.resource %}
-    <div class="resource-card {% if resource.demand_generation %} demand-generation{% endif %}{% if resource.sales_conversion %} sales-conversion{% endif %}{% if resource.growth_acquisition %} growth-acquisition{% endif %}{% if resource.insight_analytics1 %} insight-analytics{% endif %}">
-    <a href="{{ resource.landing_page_url }}">
-        <div class="image lazy" data-bg="{{ resize_image_url(resource.cover_image.url, 0,0,resourceImageMax) }}"></div>
-        <div class="content">
-        <span class="type {{ resource.medium.name|lower }}">{{ resource.medium.name }}</span>
-        <h2 class="title">{{ resource.name }}</h2>
-        <p>{{ resource.description|truncate(200) }}</p>
-        <span class="link {{ resource.medium.name|lower }}">{{ resource.link_text }}</span>
-        </div>
-    </a>
-    </div>
-    {% endfor %}
-    {% endif %} 
-    <!-- If there is not a row in hubDB that matches the current topic, the loop will be run again the the rows marked "DEFAULT" in HubDB will be printed -->
-    {% if loop.last && counter != 1 %}
-    {% for row in blogResourceTable %}
-    {% if row.topic == "DEFAULT"  %}
-    {% for resource in row.resource %}
-    <div class="resource-card {% if resource.demand_generation %} demand-generation{% endif %}{% if resource.sales_conversion %} sales-conversion{% endif %}{% if resource.growth_acquisition %} growth-acquisition{% endif %}{% if resource.insight_analytics1 %} insight-analytics{% endif %}">
-    <a href="{{ resource.landing_page_url }}">
-        <div class="image lazy" data-bg="{{ resize_image_url(resource.cover_image.url, 0,0,resourceImageMax) }}"></div>
-        <div class="content">
-        <span class="type {{ resource.medium.name|lower }}">{{ resource.medium.name }}</span>
-        <h2 class="title">{{ resource.name }}</h2>
-        <p>{{ resource.description|truncate(200) }}</p>
-        <span class="link {{ resource.medium.name|lower }}">{{ resource.link_text }}</span>
-        </div>
-    </a>
-    </div>
-    {% endfor %}
-    {% endif %}
-    {% endfor %} 
-    {% endif %}
-    {% endfor %}
-    {% endif %}
-    {% endfor %}
-</div>
+			</div> 
+			{% if not blog_author && not topic %}
+			{% if current_page_num  == 1 %}
+			<div class="featCardsOuter {% if current_page_num  > 1 or (request.full_url is string_containing "/tag/") or (request.full_url is string_containing "/topic/") or (request.full_url is string_containing "/author/") or (request.full_url is string_containing "/page/") %} hide{% endif %}">
+				{% for row in featrows %} 
+				<div class="featCards flex_row {% if not row.featured_image %}noImage{% endif%}">  
+					{% if row.featured_image %}
+					<div class="featleft">  
+						<div class="cardImg">
+							<a href="{{ row.absolute_url }}" style="background-image:url({{ row.featured_image }});"></a>
+						</div>
+					</div>
+					{% endif %}
+					<div class="featright">  
+						<div class="cardCont">
+							<div class="topicTagwrap"> 
+								{% if row.tag_list %}
+								{% for tag in row.tag_list %}
+								{% if tag.name=="Featured" %}
+								{% else %}
+								{% if loop.first %}
+								<a class="topicTag" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
+								{% endif %}
+								{% endif %}
+								{% endfor %}{% endif %}
+							</div>
+							<h3 class="h3 restitle"><a href="{{ row.absolute_url }}">{{ row.name|striptags}}</a></h3>  
+							<div class="desc">{{ row.post_list_content|striptags|safe|truncatehtml(100, '...' , false) }}</div>  
+							<div class="readMore"><a href="{{ row.absolute_url }}" class="hs-button">Continue Reading</a></div>  
+						</div> 
+						
+						
+					</div>
+				</div> 
+				{% endfor %} 
+			</div> 
+			{% endif %}
+			{% endif %}	
+		</div>
 
-{# include "/voltaiq/modules/partials/u4-blog-infinite-pagination.html" #}
-{% include "/voltaiq/modules/partials/u4-blog-standard-pagination.html" %}
+	</div>
+	<div class="filterWrap">
+		<div class="page-center"> 
+			<div class="flex_row">  
+				<div class="col SearchBtn">
+					<div class="srchSection">
+						{# Search input - version 1 #}
+						{% set hide_search_label = module.search.input.field_label is truthy ? false : true %}
+						{% set button_position_class = "hs-search-field__bar--button-" ~  module.search.styles.button.position.button_position %}
+						{% set button_alignment_class = module.search.styles.button.position.button_position == "beneath" ? "hs-search-field__bar--button-align-" ~ module.search.styles.button.position.button_alignment : "" %}
+						{% set has_search_icon = module.search.button.icon.name is truthy ? true : false %}
+						{% set show_suggest_in_editor_class = is_in_editor ? "hs-search-field--open": "" %}
 
+						{% set button_label_class = module.search.button.button_label is truthy ? "hs-search-field__button--labelled" : "" %}
+						{% set search_page = module.search.results.use_custom_search_results_template is truthy and module.search.results.path_id ? content_by_id(module.search.results.path_id).absolute_url : site_settings.content_search_results_page_path %}
+
+						{% unless (search_page is string_containing "//") %}
+						{% set search_page = "/" ~ search_page %}
+						{% endunless %}
+
+						{% set search_page = search_page|regex_replace("http:", "") %}
+
+						{# Add a checker here so any new border object keys don't get included in CSS loop. #}
+						{% set valid_border_sides = [ "top", "right", "left", "bottom" ] %}
+
+
+						<div class="hs-search-field">
+							<div class="hs-search-field__bar {{ button_position_class }} {{ button_alignment_class }} {{ show_suggest_in_editor_class }}">
+								<form data-hs-do-not-collect="true" class="hs-search-field__form" action="{{ search_page }}">
+
+									<input
+												 role="combobox"
+												 aria-expanded="false"
+												 aria-controls="autocomplete-results"
+												 aria-label="{{ module.search.default_text.sr_search_field_aria_label }}"
+												 type="search"
+												 class="hs-search-field__input resourceInput"
+												 id="{{ name ~ "-input" }}"
+												 name="q"
+												 autocomplete="off"
+												 aria-autocomplete="list"
+												 placeholder="{{ module.search.input.placeholder }}">
+
+									{% if module.search.results.content_types.website_pages %}
+									<input type="hidden" name="type" value="SITE_PAGE">
+									{% endif %}
+									{% if module.search.results.content_types.landing_pages %}
+									<input type="hidden" name="type" value="LANDING_PAGE">
+									{% endif %}
+									{% if module.search.results.content_types.blog_posts %}
+									<input type="hidden" name="type" value="BLOG_POST">
+									<input type="hidden" name="type" value="LISTING_PAGE">
+									{% endif %}
+									{% if module.search.results.content_types.knowledge_articles %}
+									<input type="hidden" name="type" value="KNOWLEDGE_ARTICLE">
+									{% endif %}
+									{% if module.search.results.group_id %}
+									<input type="hidden" name="groupId" value="{{ module.search.results.group_id }}">
+									{% endif %}
+									<div class="hs-search-field__suggestions-container {% if is_in_editor %} hs-editor-hide-until-active {% endif %}">
+										<ul
+												id="autocomplete-results"
+												role="listbox"
+												aria-label="term"
+												class="hs-search-field__suggestions">
+											{% if is_in_editor %}
+											<li role="option" tabindex="-1" aria-posinset="1" aria-setsize="3" class="results-for">{{ module.search.default_text.as_example_search_results }}</li>
+											<li role="option" aria-posinset="2" tabindex="1"><a href="#">{{ module.search.default_text.as_example_line_1 }}</a></li>
+											<li role="option" aria-posinset="3" tabindex="2"><a href="#">{{ module.search.default_text.as_example_line_2 }}</a></li>
+											<li role="option" aria-posinset="4" tabindex="3"><a href="#">{{ module.search.default_text.as_example_line_3 }}</a></li>
+											{% else %}
+											<li role="option" tabindex="-1" aria-posinset="1" aria-setsize="0" class="results-for show-for-sr">{{ module.search.default_text.sr_empty_search_field_message }}</li>
+											{% endif %}
+										</ul>
+									</div>
+								</form>
+							</div>
+							<div id="sr-messenger" class="hs-search-sr-message-container show-for-sr"
+									 role="status"
+									 aria-live="polite"
+									 aria-atomic="true">
+							</div>
+						</div>
+
+						{% require_js position="head" %}
+						<script data-search_input-config="config_{{ name }}" type="application/json">
+        {
+          "autosuggest_results_message": "{{ module.search.default_text.autosuggest_results_message|escapejson }}",
+          "autosuggest_no_results_message": "{{ module.search.default_text.autosuggest_no_results_message|escapejson }}",
+          "sr_empty_search_field_message": "{{ module.search.default_text.sr_empty_search_field_message|escapejson }}",
+          "sr_autosuggest_results_message": "{{ module.search.default_text.sr_autosuggest_results_message|escapejson }}",
+          "sr_search_field_aria_label": "{{ module.search.default_text.sr_search_field_aria_label|escapejson }}",
+          "sr_search_button_aria_label": "{{ module.search.default_text.sr_search_button_aria_label|escapejson }}"
+        }
+						</script>
+						{% end_require_js %}
+
+					</div>
+				</div> 
+				<div class="col blogTags">
+					{% set my_topics = blog_topics(group.id, 10) %}
+					<select id="tinynav1" class="tinynav tinynav1" style="background-image: url({{ get_asset_url('../../templates/images/selectArrow.png') }});">
+						<option value="{{ group.absolute_url }}">Filter by Topic</option>
+						{% for item in my_topics %}
+						{% if item=="Featured"%}
+						{% else %}
+						<option value="{{ blog_tag_url(group.id, item.slug) }}" {% if content.absolute_url == blog_tag_url(group.id, item.slug) %} selected{% endif %}>{{ item }}</option>
+						{% endif %}
+						{% endfor %}
+					</select>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="featCardsListWrap">
+		<div class="page-center">
+			<div class="cardSctn blogFeedList">
+				<div class="blogFeedListRow CardItems flex_row">
+					{% set show_featured_image = false %}
+					{% if row.featured_image %}
+					{% if blog.listing_page_id %}
+					{% if module.blog_listing.featured_image %}
+					{% set show_featured_image = true %}
+					{% endif %}
+					{% else %}
+					{% if group.use_featured_image_in_summary %}
+					{% set show_featured_image = true %}
+					{% endif %}
+					{% endif %}
+					{% endif %}
+
+					{% for content in contents %}
+					<div class="blogItem CardItem"> 
+						<div class="CardItemIn"> 
+							{% if module.blog_listing.featured_image %}
+							{% if content.featured_image %}
+							<div class="bIItmimg" style="background-image:url({{ content.featured_image  }});">
+								<a href="{{ content.absolute_url }}" class="absLink"></a>
+							</div>
+							{% endif %}
+							{% endif %}
+							<div class="cardCont">
+								{% if module.blog_listing.tags %}
+								<div class="topicTagwrap"> 
+									{% if content.tag_list %}
+									{% for tag in content.tag_list %}
+									{% if tag.name=="Featured" %}
+									{% else %}
+									{% if loop.first %}
+									<a class="topicTag" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
+									{% endif %}
+									{% endif %}
+									{% endfor %}{% endif %}
+								</div>
+
+								{% endif %}
+								{% if module.blog_listing.title %}
+								<h4 class="h4 restitle"><a href="{{ content.absolute_url }}">{{ content.name|striptags}}</a></h4>  
+								{% endif %}
+								{% if module.blog_listing.description %}
+								<div class="desc">{{ content.post_list_content|striptags|safe|truncatehtml(100, '...' , false) }}</div>  
+								{% endif %}
+								{% if module.blog_listing.read_more %}
+								<div class="readMore"><a href="{{ content.absolute_url }}" class="hs-arrow-btn">{{  module.blog_listing.read_more_text }} <span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+									<path d="M0 1.07901V0.000234218L7.11964 2.5911C7.36037 2.67837 7.52286 2.91007 7.52286 3.16736V4.07311C7.52286 4.33039 7.36037 4.5621 7.11964 4.64937L0 7.24023V6.16146L6.50878 3.79176V3.4472L0 1.07901Z" fill="white"/>
+									</svg></span></a></div>  
+								{% endif %}
+							</div> 
+						</div> 
+					</div>
+					{% endfor %} 
+				</div> 
+			</div>  
+			{% if contents.total_page_count > 1 %}
+			<ul  class="pagination">
+				{% set page_list = [-2, -1, 0, 1, 2] %}
+				{% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+				{% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+				{% elif current_page_num == 2 %}{% set offset = 1 %}
+				{% elif current_page_num == 1 %}{% set offset = 2 %}
+				{% else %}{% set offset = 0 %}{% endif %}
+
+				{% for page in page_list %}
+				{% set this_page = current_page_num + page + offset %}
+				{% if this_page > 0 and this_page <= contents.total_page_count %}
+				<li><a class="blogPgLink {{ 'blogPgactive' if this_page == current_page_num }}" aria-label="Go to Page {{ this_page }}" {{ 'aria-current="true"' if this_page == current_page_num }} href="{% if this_page == 1 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(this_page) }}{% endif %}">{{ this_page }}</a></li>
+				{% endif %}
+				{% endfor %}
+			</ul> 
+			{% endif %}
+		</div>
+	</div>
 </section>
-
-{% require_js %}
-
-{% if (absolute_url is string_containing "/topic/") or (absolute_url is string_containing "/tag/")  %}
-    <script>
-    $( "body" ).addClass( "topic" );
-    </script>
-{% endif %}
-
-{% end_require_js%}
