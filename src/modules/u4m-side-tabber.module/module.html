@@ -88,24 +88,6 @@
 </div>
 
 
-{% for item in module.tabber_group %}
-{% if item.select_media_type == "video" %}
-<div id="videopop-{{ name }}{{loop.index}}" class="cardVideoPopup light_gray_bg">
-  <div class="cardVideoPopupInr small_container">
-    <div class="cardpopVideo page-center">
-      <div class="close white_color">
-        <i class="fa-regular fa-xmark"></i>
-      </div>
-      <div class="video_box">
-        <video id="video-videopop-{{ name }}{{loop.index}}" poster="{{ item.image.src }}" src="{{ item.select_video }}" controls></video>
-      </div>
-    </div>
-  </div>
-</div>
-{% endif %} 
-{% endfor %}
-
-
 
 
 {% require_js %}

@@ -14,7 +14,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "25bb3695-1c5f-d1b7-577f-665c4ea33639",
     "name" : "eyebrow_text",
@@ -64,7 +64,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Highlighted <span>Heading</span>"
+    "default" : "How <span>Voltaiq</span> Works"
   }, {
     "id" : "27cb7f6e-c34f-6a3b-f25d-c31c304f0546",
     "name" : "heading_tag",
@@ -113,7 +113,7 @@
       "access" : null
     },
     "type" : "richtext",
-    "default" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
   }, {
     "id" : "b5913995-90dc-cb05-6c8f-c30bd8b193c6",
     "name" : "include_buttons",
@@ -123,7 +123,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "90d855d4-f75a-6b74-e08c-fb1a8f8b66c3",
     "name" : "buttons",
@@ -135,7 +135,7 @@
       "min" : null,
       "max" : null,
       "sorting_label_field" : "a15621f0-befc-a350-d1dc-4074c000c2eb",
-      "default" : 2
+      "default" : 0
     },
     "visibility" : {
       "controlling_field" : null,
@@ -305,7 +305,7 @@
       }
     }, {
       "type" : "std",
-      "theme" : "hs-button",
+      "theme" : "hs-sec-btn",
       "text" : "Button",
       "link" : {
         "url" : {
@@ -318,6 +318,322 @@
       }
     } ]
   }
+}, {
+  "id" : "ef48c019-147e-ef01-fa70-5197061eec53",
+  "name" : "tabber",
+  "display_width" : null,
+  "label" : "Tabber",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "de00769c-5a00-1516-c27e-688037f3bb21",
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "de00769c-5a00-1516-c27e-688037f3bb21",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Automated Data Input"
+  }, {
+    "id" : "d18fc2f4-9835-dfe6-be1d-da2d839e6d1f",
+    "name" : "subtitle",
+    "display_width" : null,
+    "label" : "Subtitle",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor."
+  }, {
+    "id" : "474a6a74-90fb-e153-82e4-fcea584425f0",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/tabber-icons.svg",
+      "alt" : "Icon",
+      "loading" : "lazy",
+      "width" : 60,
+      "height" : 61,
+      "max_width" : 60,
+      "max_height" : 61
+    }
+  }, {
+    "id" : "744f7b5b-65a6-22d3-1087-0d1b2ee6ac33",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3>Automated Data Input</h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>"
+  }, {
+    "id" : "70ed1141-33be-19ac-fefc-f4d9f89c7646",
+    "name" : "buttons",
+    "display_width" : null,
+    "label" : "Buttons",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "b0080062-da5d-2947-2757-cc2a49763438",
+      "default" : 1
+    },
+    "children" : [ {
+      "id" : "b0080062-da5d-2947-2757-cc2a49763438",
+      "name" : "type",
+      "display_width" : null,
+      "label" : "Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "std", "Standard" ], [ "cta", "CTA" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "std"
+    }, {
+      "id" : "0b6f2893-d9bb-147f-65e8-994b3f439e9c",
+      "name" : "theme",
+      "display_width" : null,
+      "label" : "Theme",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tabber.buttons.type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "hs-arrow-btn"
+    }, {
+      "id" : "cab2b6d0-a3f5-634d-cbe6-fb52d1e2e6b3",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tabber.buttons.type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Button"
+    }, {
+      "id" : "14fa3b70-f490-86b9-8f9a-e44a281c00e8",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tabber.buttons.type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "b1b8ba12-e316-e1f6-3edd-40a41470321a",
+      "name" : "cta_button",
+      "display_width" : null,
+      "label" : "CTA Button",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "tabber.buttons.type",
+        "controlling_value_regex" : "cta",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "cta"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Feature, KPI, and Insight Extraction",
+    "subtitle" : "Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor.",
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/tabber-icons.svg",
+      "alt" : "Icon",
+      "loading" : "lazy",
+      "width" : 60,
+      "height" : 61,
+      "max_width" : 60,
+      "max_height" : 61
+    },
+    "content" : "<h3>Feature, KPI, and Insight Extraction</h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "title" : "Traceability ",
+    "subtitle" : "Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor.",
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/tabber-icons.svg",
+      "alt" : "Icon",
+      "loading" : "lazy",
+      "width" : 60,
+      "height" : 61,
+      "max_width" : 60,
+      "max_height" : 61
+    },
+    "content" : "<h3>Traceability </h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "title" : "Shareable Dashboards & Actionable Insights",
+    "subtitle" : "Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor.",
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/tabber-icons.svg",
+      "alt" : "Icon",
+      "loading" : "lazy",
+      "width" : 60,
+      "height" : 61,
+      "max_width" : 60,
+      "max_height" : 61
+    },
+    "content" : "<h3>Shareable Dashboards & Actionable Insights</h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "title" : "Automated Data Input",
+    "subtitle" : "Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor.",
+    "icon" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/tabber-icons.svg",
+      "alt" : "Icon",
+      "loading" : "lazy",
+      "width" : 60,
+      "height" : 61,
+      "max_width" : 60,
+      "max_height" : 61
+    },
+    "content" : "<h3>Automated Data Input</h3>\n<p>Voltaiq collects raw data from your end-of-line, quality labs, process equipment, and materials tracking equipment and harmonizes it into a common language.</p>",
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Button",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ]
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",
@@ -624,7 +940,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
       "name" : "background_color",
@@ -692,7 +1008,8 @@
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
-      "type" : "choice"
+      "type" : "choice",
+      "default" : "gradient1"
     }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",
@@ -702,7 +1019,7 @@
       "locked" : false,
       "display" : "checkbox",
       "type" : "boolean",
-      "default" : false
+      "default" : true
     } ],
     "tab" : "CONTENT",
     "expanded" : false,

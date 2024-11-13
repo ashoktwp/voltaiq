@@ -1,0 +1,104 @@
+{% set moduleName = 'splitFormWrap' %}
+{% set imageMax = 1000 %}
+{% set bgImageMax = 1920 %}
+
+{% set getName = name|replace('-','') %}
+
+{% include "../partials/u4-module-includes.html" %}
+
+
+{% require_js %}
+  <script>
+    function setheight(){
+      setTimeout(function(){
+        var formHeight = $('.form_column_inner').height();
+        var calcHeight = formHeight + 200;
+        $('.splitFormWrap').css('min-height',calcHeight);
+      })
+    }
+    $(window).on("resize", function() {
+      setheight();
+    });
+    $('.splitFormWrap').parents('body').addClass('formsec');
+  </script>
+  {% end_require_js %}
+
+  
+  
+  
+  <div class="page-center"> 
+  
+    <div class="top_sect {{ name }} dnd_padd   splitFormTop "> 
+
+    {% if module.remove_logo %}
+      {% else %}
+      <div class="top_logo_wrap {% if module.logo.override_inherited_src  %}cm_logo{% else %}siteLogo{% endif %}">
+        <div class="container {{ module.style.container.select_container_size }}"> 
+          {% if module.logo.override_inherited_src  %}
+          <a href="/" >
+            <img class="desktop-logo" src="{{ module.logo.src }}" alt="{{ module.logo.alt }}">
+          </a>
+          {% else %}
+          <a href="/" >
+            <img class="content-logo" src="{{ site_settings.logo_src }}" alt="{{ site_settings.logo_alt }}">
+          </a>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+  
+       
+      <div class="logo_spacer"></div>
+    
+
+        <div class="flex_row">
+          
+        {{macros.contentGroup(module.intro_content  )}}
+          
+  
+          {% if module.form_column.form.form_id or module.form_column.social_share %}
+          <div class="form_column">
+  
+            <div class="form_column_inner">
+              {% if module.form_column.form.form_id  and  module.form_column.remove_form == false %}              
+              <div class="form_box">
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                  hbspt.forms.create({
+                    region: "na1",
+                    portalId: "{{ hub_id }}",
+                    css: "",
+                    formId: "{{ module.form_column.form.form_id }}",
+                    onFormReady: function($form) {         
+                    setheight();
+                  }
+                  }); 
+  
+                </script>
+              </div>
+              {% endif %}
+  
+            </div>
+          </div>
+          {% endif %}
+        </div>
+     
+    </div>
+  
+    <div class=" splitFormbotom Bnrr dnd_padd bott{{name}}  {{ module.style.bottom_content.select_color }}"> 
+     
+        <div class="flex_row">
+          <div class="bottom_content left_column ">
+          {{macros.contentGroup(module.intro_content  )}}
+          </div>
+        </div> 
+  
+  </div>
+
+  <div class="logo_row">
+
+  </div>
+
+
+
+</section>

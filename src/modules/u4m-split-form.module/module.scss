@@ -1,0 +1,182 @@
+@import "../../css/module-imports";
+
+.u4m-side-tabber {
+  @include bodyContent;
+  .intro-content {
+    margin-bottom: 83px;
+  }
+
+  .tabber_wrap {
+    @include flex;
+    justify-content: space-between;
+    gap: 64px;
+  }
+
+  .tabs_nav_list {
+    width: 36%;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      width: 100%;
+
+      li {
+        margin: 0;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $cardBgColor;
+        }
+      }
+    }
+  }
+
+  .tabber_paner_list {
+    width: calc(64% - 64px);
+  }
+
+  .tabber_nav {
+    all: unset;
+    cursor: pointer;
+    padding: 24px 28px 24px 37px;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 3px;
+    transition: 0.3s all ease-in-out;
+
+    *,
+    & {
+      transition: 0.3s all ease-in-out;
+    }
+
+    > span {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+    }
+
+    &.active > span {
+      transform: rotate(180deg);
+    }
+
+    &.active {
+      background: rgba($cardBgColor, 0.1);
+      box-shadow: 2px 4px 15px rgba($backgroundColor, 0.1);
+      border-radius: 3px;
+
+      h6 {
+        color: $highlightColor;
+      }
+
+      p {
+        @include b3;
+      }
+    }
+
+    &.mobile_nav {
+      display: none;
+    }
+  }
+
+  .tabber_nav_inner {
+    width: 100%;
+
+    h6 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0;
+    }
+  }
+
+  .tabber_pane {
+    display: none;
+    background: rgba($cardBgColor, 0.1);
+    box-shadow: 2px 4px 15px rgba($backgroundColor, 0.1);
+    border-radius: 3px;
+    height: 100%;
+    padding: 65px;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .text_box {
+    p {
+      margin-top: 0;
+    }
+
+    h3 {
+      margin-bottom: 12px;
+    }
+  }
+
+  .content-spacing {
+    img {
+      margin-bottom: 17rem;
+      display: block;
+    }
+  }
+
+  .content_col {
+    .button-wrap {
+      margin-top: 40px;
+    }
+  }
+}
+
+@include tabletvert {
+  .u4m-side-tabber {
+    .tabs_nav_list {
+      width: 100%;
+      display: none;
+    }
+
+    .tabber_paner_list {
+      width: 100%;
+    }
+
+    .tabber_nav {
+      display: none;
+
+      &.mobile_nav {
+        display: block;
+      }
+
+      &.active span {
+        transform: rotate(0);
+      }
+
+      &.mobile_nav .remove {
+        display: none;
+      }
+
+      &.mobile_nav.active .remove {
+        display: block;
+      }
+
+      &.mobile_nav.active .add {
+        display: none;
+      }
+    }
+
+    .tabber_pane {
+      height: auto;
+      padding: 24px 28px 24px 37px;
+    }
+
+    .tabber_nav p {
+      margin-bottom: 0;
+    }
+
+    .tabber_nav.active {
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+}
