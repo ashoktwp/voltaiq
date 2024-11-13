@@ -1,4 +1,4 @@
-<div class="u4m-split-form-wrapper">
+<div class="u4m-split-form-wrapper splitOuter{{name}} ">
 	{% set moduleName = 'u4m-splitFormWrap' %}
 	{% set imageMax = 1000 %}
 	{% set bgImageMax = 1920 %}
@@ -99,7 +99,7 @@ if module.module_overrides.bottom_background_settings.background_type == "color"
 module.module_overrides.bottom_background_settings.background_color }} {% elif
 module.module_overrides.bottom_background_settings.background_type == "gradient" %} {{
 module.module_overrides.bottom_background_settings.background_gradient }} {% endif %} "> 
-		<div class="page-center"> 
+		<div class="page-center {% if module.module_settings.enable_shape_image %}bottom-shape-add{% endif %}"> 
 			<div class="bottom_content_inner">
 				<div class="flex_row">
 					<div class="bottom_content left_column ">
@@ -108,12 +108,14 @@ module.module_overrides.bottom_background_settings.background_gradient }} {% end
 				</div> 
 			</div>
 			{% if module.logo_slider %}
-			<div class="logo_row">
+			<div class="logo_row ">
 
-				<div class="logo_slides_list">
+				<div class="logo_slides_list splide">
+				<div class="splide__track">
+				<div class="splide__list">
 					{% for item in module.logo_slide %}
 					{% if item.item.src %}
-					<div class="logo_slide_item">
+					<div class="logo_slide_item splide__slide">
 						<div class="logo_slide_item_inner">
 							{% set loadingAttr = item.item.loading != 'disabled' ? 'loading="{{ item.item.loading|escape_attr }}"' : '' %}
 							<img src="{{ item.item.src|escape_url }}" alt="{{ item.item.alt|escape_attr }}" {{ loadingAttr }}>
@@ -121,6 +123,8 @@ module.module_overrides.bottom_background_settings.background_gradient }} {% end
 					</div>
 					{% endif %}
 					{% endfor %}
+				</div>
+				</div>
 				</div>
 			</div>
 			{% endif %}
@@ -149,3 +153,40 @@ require_css %}
 </style>
 {% end_require_css %} {% endif %}
 
+
+
+
+{% require_js %}
+	<script> 
+	  document.addEventListener( 'DOMContentLoaded', function() {
+		new Splide( '.splitOuter{{name}} .splide', {
+				   type: 'loop',
+				   easing: 'ease-in-out',
+				   pagination: false,
+				   pauseOnHover: true,
+				   arrows: false,  
+				   perPage: 7,
+				   gap: "30rem",
+				   autoScroll:{
+				   autoStart: true,
+				   speed: 1,
+				   },
+								breakpoints: {
+								1024: {
+								perPage: 5,
+								},
+		768: {
+		  perPage: 4,
+		},
+		  640: {
+			perPage: 3,
+		  },
+			480: {
+			  perPage: 2,
+			},
+	  },
+	  }).mount( window.splide.Extensions );
+	  });
+	
+	</script>
+	{% end_require_js %}

@@ -125,7 +125,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "h2"
+    "default" : "h1"
   }, {
     "id" : "66c14e53-d47e-ce5d-2d0a-084df2b9351d",
     "name" : "include_content",
@@ -310,7 +310,7 @@
     "eyebrow_text" : "Battery Quality Analytics Software",
     "include_heading" : true,
     "heading" : "Accelerate factory  ramp up by 50% or  more <span>with Voltaiq</span>.",
-    "heading_tag" : "h2",
+    "heading_tag" : "h1",
     "include_content" : true,
     "content" : "<p>See an impact in your fist month, with a full return on your investment in as little as&nbsp;3 months.</p>",
     "include_buttons" : false,
@@ -381,7 +381,7 @@
     "required" : false,
     "locked" : false,
     "type" : "richtext",
-    "default" : "<h4><span> Easily communicate</span> the issue for faster resolution.</h4>\n<p>Quickly generate reports and dashboards to share your findings with other stakeholders, without having to manually gather all of the data from various sources.</p>"
+    "default" : "<h3><span> Easily communicate</span> the issue for faster resolution.</h3>\n<p>Quickly generate reports and dashboards to share your findings with other stakeholders, without having to manually gather all of the data from various sources.</p>"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
