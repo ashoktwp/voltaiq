@@ -1,58 +1,117 @@
 @import "../../css/_module-imports";
 .u4m-quote-cards {
   position: relative;
-  .quote_slides {
-    .slick-track {
-      .quote_slide {
-        .quote_flex {
-          display: flex;
-          flex-wrap: wrap;
-          .quote_img {
-            width: 360px;
-            padding: 0 30px 30px;
-            position: relative;
-            margin-right: 68px;
-            & > img {
-              height: 300px;
-              width: 300px;
-              object-fit: cover;
-              border-radius: 10px;
-            }
-            .logo_wrap {
-              position: absolute;
-              padding: 25px 30px;
-              background: #fff;
-              border-radius: 5px;
-              left: auto;
-              right: 0;
-              bottom: 0;
-              img {
-                width: 120px;
-                display: block;
-              }
-            }
+  .quote_card_wrap {
+    padding: 50px 0;
+    .quote_slides {
+      @include largelaptop {
+        padding: 0 20px;
+      }
+      .slick-arrow {
+        width: 28px;
+        height: 51px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &.slick-next {
+          right: -15px;
+        }
+        &.slick-prev {
+          left: -15px;
+        }
+        &:before {
+          display: none;
+        }
+        @include largelaptopMin {
+          &.slick-next {
+            right: -96px;
           }
-          .quote_cnt {
-            width: calc(100% - 430px);
-            .quote_cnt_inr {
-              font-size: 24px;
-              line-height: 1.75;
-              margin-bottom: 28px;
-              p {
-                font: inherit;
+          &.slick-prev {
+            left: -96px;
+          }
+        }
+        @include largelaptop {
+          height: 40px;
+        }
+        @include tablet {
+          height: 30px;
+        }
+      }
+      .slick-track {
+        .quote_slide {
+          .quote_flex {
+            display: flex;
+            flex-wrap: wrap;
+            .quote_img {
+              width: 360px;
+              padding: 0 30px 30px;
+              position: relative;
+              margin-right: 68px;
+              @include tablet {
+                max-width: 360px;
+                width: 100%;
+                margin-bottom: 30px;
+                margin-right: 0;
+              }
+              & > img {
+                height: 300px;
+                width: 300px;
+                object-fit: cover;
+                border-radius: 10px;
+                @include phone {
+                  height: auto;
+                  width: auto;
+                }
+              }
+              .logo_wrap {
+                position: absolute;
+                padding: 25px 30px;
+                background: $white;
+                border-radius: 5px;
+                left: auto;
+                right: 0;
+                bottom: 0;
+                height: 80px;
+                display: flex;
+                align-items: center;
+                img {
+                  width: 120px;
+                  display: block;
+                }
               }
             }
-            .quote_bio {
-              .quote_ath {
-                font-size: 16px;
-                line-height: 1.5;
-                color: #00e9ba;
-                font-weight: bold;
-                margin-bottom: 3px;
+            .quote_cnt {
+              width: calc(100% - 430px);
+              @include tablet {
+                width: 100%;
               }
-              .quote_deg {
-                font-size: 14px;
-                line-height: 1.5;
+              .quote_cnt_inr {
+                @include h4;
+                line-height: 1.75;
+                margin-bottom: 28px;
+                font-weight: 400;
+                font-family: $font1;
+                @include phone {
+                  font-size: 20rem;
+                }
+                p {
+                  font: inherit;
+                }
+              }
+              .quote_bio {
+                .quote_ath {
+                  font-size: $font16;
+                  line-height: 1.5;
+                  color: $highlightColor;
+                  font-weight: bold;
+                  margin-bottom: 3px;
+                  font-family: $font2;
+                }
+                .quote_deg {
+                  @include b3;
+                  font-family: $font2;
+                  line-height: 1.5;
+                }
               }
             }
           }
@@ -68,5 +127,8 @@
     background-size: cover;
     position: absolute;
     bottom: 0;
+    @include tablet {
+      display: none;
+    }
   }
 }
