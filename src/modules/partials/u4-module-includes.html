@@ -2,11 +2,13 @@
   templateType: "none"
   isAvailableForNewContent: false
 -->
-{% import "../../macros/macros.html" as macros %} <section id="{% if
-module.module_overrides.enable_overrides and module.module_overrides.section_id
-%}{{ module.module_overrides.section_id }}{% else %}{{name}}{% endif %}"
-class="{{ moduleName }} {{ name }} module_basic dnd_padding {{ ' lazy' if
-module.module_overrides.background_image.src &&
+
+{% import "../../macros/macros.html" as macros %} {% if is_in_previewer %} {{
+require_css (get_asset_url('../../css/styles.css')) }} {% endif %} <section
+id="{% if module.module_overrides.enable_overrides and
+module.module_overrides.section_id %}{{ module.module_overrides.section_id }}{%
+else %}{{name}}{% endif %}" class="{{ moduleName }} {{ name }} module_basic
+dnd_padding {{ ' lazy' if module.module_overrides.background_image.src &&
 module.module_overrides.background_lazy }} {% if
 module.module_overrides.enable_overrides %} {{ ' {{
 module.module_overrides.top_margin }}' if

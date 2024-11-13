@@ -14,7 +14,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "25bb3695-1c5f-d1b7-577f-665c4ea33639",
     "name" : "eyebrow_text",
@@ -64,7 +64,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Highlighted <span>Heading</span>"
+    "default" : "<span>Pricing Cards</span> Headline"
   }, {
     "id" : "27cb7f6e-c34f-6a3b-f25d-c31c304f0546",
     "name" : "heading_tag",
@@ -113,7 +113,7 @@
       "access" : null
     },
     "type" : "richtext",
-    "default" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
   }, {
     "id" : "b5913995-90dc-cb05-6c8f-c30bd8b193c6",
     "name" : "include_buttons",
@@ -123,7 +123,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "90d855d4-f75a-6b74-e08c-fb1a8f8b66c3",
     "name" : "buttons",
@@ -305,7 +305,7 @@
       }
     }, {
       "type" : "std",
-      "theme" : "hs-button",
+      "theme" : "hs-sec-btn",
       "text" : "Button",
       "link" : {
         "url" : {
@@ -318,6 +318,285 @@
       }
     } ]
   }
+}, {
+  "id" : "310fe1f7-7b4e-6185-1cfa-75bb3afc92e7",
+  "name" : "plans",
+  "display_width" : null,
+  "label" : "Plans",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : 3,
+    "sorting_label_field" : "f800d834-ae94-59cf-838b-a65e9bbcb980",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "273019f0-2890-767a-b28d-f87b557ce6ac",
+    "name" : "featured_plan",
+    "display_width" : null,
+    "label" : "Featured Plan",
+    "help_text" : "Enable this field to make this plan as the popular plan.",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "f800d834-ae94-59cf-838b-a65e9bbcb980",
+    "name" : "plan_name",
+    "display_width" : null,
+    "label" : "Name",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Essential"
+  }, {
+    "id" : "ce9bb11c-346e-94d6-0109-20a4bebf131d",
+    "name" : "currency",
+    "display_width" : null,
+    "label" : "Currency",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "$"
+  }, {
+    "id" : "92101d70-ef4d-9fef-9e01-89955041f17f",
+    "name" : "price",
+    "display_width" : null,
+    "label" : "Price",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "step" : 99,
+    "type" : "number"
+  }, {
+    "id" : "10e90b16-ace4-b863-dca1-e122b54cc656",
+    "name" : "suffix",
+    "display_width" : null,
+    "label" : "Suffix",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "/mo"
+  }, {
+    "id" : "fe545f22-6d09-cc57-238a-9d53c67a64bd",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>"
+  }, {
+    "id" : "58666b70-e0cf-9cb5-ae18-8d4b3ea344e4",
+    "name" : "buttons",
+    "display_width" : null,
+    "label" : "Buttons",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "579f6d56-3f97-6c2f-1cb6-60bb28250e3f",
+      "default" : 1
+    },
+    "children" : [ {
+      "id" : "579f6d56-3f97-6c2f-1cb6-60bb28250e3f",
+      "name" : "type",
+      "display_width" : null,
+      "label" : "Type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "std", "Standard" ], [ "cta", "CTA" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "std"
+    }, {
+      "id" : "ac632014-403d-3173-0ec2-c7a2c9b5f37d",
+      "name" : "theme",
+      "display_width" : null,
+      "label" : "Theme",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "plans.buttons.type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "select",
+      "choices" : [ [ "hs-button", "Primary" ], [ "hs-sec-btn", "Secondary" ], [ "hs-arrow-btn", "Arrow" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "preset" : null,
+      "type" : "choice",
+      "default" : "hs-button"
+    }, {
+      "id" : "b7a330df-9f7d-4dca-5b23-729054d2e174",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "plans.buttons.type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Request A Demo"
+    }, {
+      "id" : "51ee8322-419a-24f8-e4a4-217ab20602f0",
+      "name" : "link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "plans.buttons.type",
+        "controlling_value_regex" : "std",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "PAYMENT" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "2b971cd9-fdc0-810d-db81-8728778dcc79",
+      "name" : "cta_button",
+      "display_width" : null,
+      "label" : "CTA Button",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "plans.buttons.type",
+        "controlling_value_regex" : "cta",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "type" : "cta"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "group_occurrence_meta" : null,
+    "type" : "group",
+    "default" : [ {
+      "type" : "std",
+      "theme" : "hs-button",
+      "text" : "Request A Demo",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "plan_name" : "Essential",
+    "currency" : "$",
+    "price" : 99,
+    "suffix" : "/mo",
+    "description" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-button",
+      "text" : "Request A Demo",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "featured_plan" : false
+  }, {
+    "plan_name" : "Professional",
+    "currency" : "$",
+    "suffix" : "/mo",
+    "price" : 200,
+    "description" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-button",
+      "text" : "Request A Demo",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "featured_plan" : true
+  }, {
+    "plan_name" : "Enterprise",
+    "currency" : "$",
+    "suffix" : "/mo",
+    "price" : 500,
+    "description" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-button",
+      "text" : "Request A Demo",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "featured_plan" : false
+  } ]
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",
