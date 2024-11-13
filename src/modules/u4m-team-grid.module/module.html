@@ -1,63 +1,156 @@
 {% set moduleName = 'u4m-team-grid' %}
-  {% set imageMax = 150 %}
-  {% set bgImageMax = 1920 %}
-  
-  
-  {% include "../partials/u4-module-includes.html" %}
-  
-  <div class="top-section">
-    {% if module.include_heading %}
-    <h2 class="heading">{{ module.heading }}</h2>
-    {% endif %}  
-    {% if module.include_sub_heading %}
-    <h3 class="sub-heading">{{ module.sub_heading }}</h3>
-    {% endif %}       
-  </div>
-  
-  
-  <div class="member-wrap">
-    {% for item in module.member_group %}
-    {% unless item.hide_from_listing_ %}
-    <div class="member {% if !item.pop_up_content %}no-bio{% endif %}">
-      <div class="inner">
-        {% if item.headshot.src %}<div class="headshot lazy" data-bg="{{ resize_image_url(item.headshot.src, 0,0,imageMax) }}"></div>{% endif %}
-  
-        <div class="inner__inner">
-          <h4>{{ item.member_name }}</h4>
-          <p>{{ item.member_position }}</p>
-          <button class="view-bio">
-            View Biography
-          </button>
-          <div class="social-links">
-            {% if item.member_twitter_link %}<a href="{{ item.member_twitter_link }}" target="_blank" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>{% endif %}
-            {% if item.member_linkedin_link %}<a href="{{ item.member_linkedin_link }}" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>{% endif %}
-          </div>
-        </div>
-      </div>
-      <div class='full-screen'>
-        <div class='circle'>
-          <div class="circle-inner">
-            <div class="inner">
-              <h3>{{ item.member_name }}</h3>
-              <h4>{{ item.member_position }}</h4>
-              <div class="social-links">
-                {% if item.member_twitter_link %}<a href="{{ item.member_twitter_link }}" target="_blank" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>{% endif %}
-                {% if item.member_linkedin_link %}<a href="{{ item.member_linkedin_link }}" target="_blank" aria-label="Twitter"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>{% endif %}
-              </div>
-              {{ item.pop_up_content }}
-            </div>
-  
-          </div>
-        </div>
-        <div class="exit-wrap">
-          <div class="exit simple-exit">
-            <!--ORIGINAL CLOSE<span></span><span></span> -->
-            <i class="fal fa-times"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endunless%}
-    {% endfor %}
-  </div>
-  </section>
+{% set imageMax = 1000 %}
+{% set bgImageMax = 1920 %}
+
+{% include "../partials/u4-module-includes.html" %}
+
+{{macros.contentGroup(module.intro_content  )}}
+<div class="page-center">
+	{# Module content goes here #}
+
+	<div class="flex_row">
+		{% for item in module.card_items %}
+		{% if loop.index == 1 %}<div class="wdt12 item"></div>{% endif %}
+		<div class="item col">
+			<div class="item-inner">
+				{% if item.team_image.src %}
+				<div class="image">
+					{% set sizeAttrs = 'width="{{ item.team_image.width|escape_attr }}" height="{{ item.team_image.height|escape_attr }}"' %}
+					{% if item.team_image.size_type == 'auto' %}
+					{% set sizeAttrs = 'width="{{ item.team_image.width|escape_attr }}" height="{{ item.team_image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+					{% elif item.team_image.size_type == 'auto_custom_max' %}
+					{% set sizeAttrs = 'width="{{ item.team_image.max_width|escape_attr }}" height="{{ item.team_image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+					{% endif %}
+					{% set loadingAttr = item.team_image.loading != 'disabled' ? 'loading="{{ item.team_image.loading|escape_attr }}"' : '' %}
+					<img src="{{ item.team_image.src|escape_url }}" alt="{{ item.team_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+				</div>
+				{% endif %}
+				<div class="content-wrap">
+					<div class="inner">
+						{% if item.member_name %}
+						<h5 class="name">
+							{{ item.member_name }}
+						</h5>
+						{% endif %}
+						{% if item.designation %}
+						<p class="designation">
+							{{ item.designation }}
+						</p>
+						{% endif %}
+						{% if item.button_text %}
+						<div class="view-bio button-wrap">
+							<a class="btn hs-arrow-btn">{{ item.button_text }} <span>&gt;</span></a>
+						</div>
+						{% endif %}
+
+					</div>
+				</div>
+			</div>
+			<div class="popup-wrapper">
+				<div class="popup-container">
+					<div class="popup-box">
+						<div class="popup-inner">
+							<div class="pop_flex">
+								<div class="media-col">
+									<div class="media-inner">
+										{% if item.team_image.src %}
+										{% set sizeAttrs = 'width="{{ item.team_image.width|escape_attr }}" height="{{ item.team_image.height|escape_attr }}"' %}
+										{% if item.team_image.size_type == 'auto' %}
+										{% set sizeAttrs = 'width="{{ item.team_image.width|escape_attr }}" height="{{ item.team_image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+										{% elif item.team_image.size_type == 'auto_custom_max' %}
+										{% set sizeAttrs = 'width="{{ item.team_image.max_width|escape_attr }}" height="{{ item.team_image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+										{% endif %}
+										{% set loadingAttr = item.team_image.loading != 'disabled' ? 'loading="{{ item.team_image.loading|escape_attr }}"' : '' %}
+										<img src="{{ item.team_image.src|escape_url }}" alt="{{ item.team_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+										{% endif %}
+									</div>
+								</div>
+								<div class="content-col">
+									<div class="content-inner">
+										<div class="top-con">
+											{% if item.designation %}
+											<p class="designation">
+												{{ item.designation }}
+											</p>
+											{% endif %}
+											<div class="pop_name_wrap">
+												{% if item.member_name %}
+												<h2 class="name">
+													{{ item.member_name }}
+												</h2>
+												{% endif %}
+												<div class="pop-social">
+													{% for item2 in item.social_icons %}
+													<div class="social-icon">
+														{% set href = item2.link_field.url.href %}
+														{% if item2.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+														{% set href = "mailto:" + href %}
+														{% endif %}
+														<a
+															 {% if item2.link_field.url.type is equalto "CALL_TO_ACTION"  %}
+															 href="{{ href }}"
+															 {% else %}
+															 href="{{ href|escape_url }}"
+															 {% endif %}
+															 {% if item2.link_field.open_in_new_tab %}
+															 target="_blank"
+															 {% endif %}
+															 {% if item2.link_field.rel %}
+															 rel="{{ item2.link_field.rel|escape_attr }}"
+															 {% endif %}
+															 >
+															{% if item2.icon_type == "icon" %}
+															<span class="icon">
+																{% icon
+			name="{{ item2.icon_field.name }}"
+			style="{{ item2.icon_field.type }}"
+			unicode="{{ item2.icon_field.unicode }}"
+			icon_set="{{ item2.icon_field.icon_set }}"
+		%}
+															</span>
+															{% elif item2.icon_type == "image" %}
+															{% if item2.icon_image.src %}
+															{% set sizeAttrs = 'width="{{ item2.icon_image.width|escape_attr }}" height="{{ item2.icon_image.height|escape_attr }}"' %}
+															{% if item2.icon_image.size_type == 'auto' %}
+															{% set sizeAttrs = 'width="{{ item2.icon_image.width|escape_attr }}" height="{{ item2.icon_image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+															{% elif item2.icon_image.size_type == 'auto_custom_max' %}
+															{% set sizeAttrs = 'width="{{ item2.icon_image.max_width|escape_attr }}" height="{{ item2.icon_image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+															{% endif %}
+															{% set loadingAttr = item2.icon_image.loading != 'disabled' ? 'loading="{{ item2.icon_image.loading|escape_attr }}"' : '' %}
+															<img src="{{ item2.icon_image.src|escape_url }}" alt="{{ item2.icon_image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+															{% endif %}
+															{% else %}
+															{% endif %}
+														</a>
+													</div>
+													{% endfor %}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+							</div>
+							{% if item.member_bio %}
+							<div class="member-bio">
+								{{ item.member_bio }}
+							</div>
+							{% endif %}
+						</div>
+						<div class="close-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+						<rect x="10.6863" y="12.1005" width="2" height="30" transform="rotate(-45 10.6863 12.1005)" fill="white"/>
+						<rect x="10.6863" y="31.8995" width="30" height="2" transform="rotate(-45 10.6863 31.8995)" fill="white"/>
+						</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% if loop.index == 3 %}<div class="wdt12 item"></div>{% endif %}
+		{% endfor %}
+	</div>
+
+</div>
+
+
+</section>
