@@ -1,0 +1,183 @@
+{% set moduleName = 'u4m-comparison-table' %}
+  {% set imageMax = 300 %}
+  {% set imageFillMax = 720 %}
+  {% set bgImageMax = 1920 %}
+  
+  {% include "../partials/u4-module-includes.html" %}
+  
+  
+  <div class="top_sctn">
+    {{macros.contentGroup(module.intro_content)}} 
+  </div>
+  
+  <div class="page-center desktop_only">
+  
+    <div class="cp_row head_row">
+      <div class="cp_col">
+        <p>
+  
+        </p>
+      </div>
+      <div class="cp_col">
+        <div class="cp_inr">
+          <div class="cp_top">
+            <h4>
+              <span>{{ module.comparison_table.plan_1 }}</span>
+            </h4>
+            <p>
+              {{ module.comparison_table.plan_1_subtitle }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="cp_col">
+        <div class="cp_inr">
+          <div class="cp_top">
+            <h4>
+              <span>{{ module.comparison_table.plan_2 }}</span>
+            </h4>
+            <p>
+              {{ module.comparison_table.plan_2_subtitle }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="cp_col">
+        <div class="cp_inr">
+          <div class="cp_top">
+            <h4>
+              <span>{{ module.comparison_table.plan_3 }}</span>
+            </h4>
+            <p>
+              {{ module.comparison_table.plan_3_subtitle }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    {% for item in module.comparison_table.features %}
+    <div class="cp_row sctn_row">
+      <div class="cp_col">
+        <div class="cp_ft">
+          <p>
+            {{ item.feature }}
+          </p>
+        </div>
+      </div>
+  
+      <div class="cp_col">
+        <div class="cp_desc">
+          <div class="hide cp_card_title">
+            <h6>
+              <span>{{ item.feature }}</span>
+            </h6>
+          </div>
+          {{ item.plan_1_content }}
+        </div>
+      </div>
+  
+      <div class="cp_col">
+        <div class="cp_desc">
+          <div class="hide cp_card_title">
+            <h6>
+              <span>{{ item.feature }}</span>
+            </h6>
+          </div>
+          {{ item.plan_2_content }}
+        </div>
+      </div>
+  
+      <div class="cp_col">
+        <div class="cp_desc">
+          <div class="hide cp_card_title">
+            <h6>
+              <span>{{ item.feature }}</span>
+            </h6>
+          </div>
+          {{ item.plan_3_content }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  
+  </div>
+  
+  
+  <div class="page-center mobile_only">
+    <div class="cp_row">
+      <div class="cp_col">
+        <div class="cp_inr">
+          <div class="cp_top">
+            <h4>
+              <span>{{ module.comparison_table.plan_1 }}</span>
+            </h4>
+            <p>
+              {{ module.comparison_table.plan_1_subtitle }}
+            </p>
+          </div>
+          {% for item in module.comparison_table.features %}
+  
+          <div class="cp_desc"> 
+            <h6>
+              <span>{{ item.feature }}</span>
+            </h6>
+            {{ item.plan_1_content }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="cp_row">
+      <div class="cp_col">
+        <div class="cp_inr">
+          <div class="cp_top">
+            <h4>
+              <span>{{ module.comparison_table.plan_2 }}</span>
+            </h4>
+            <p>
+              {{ module.comparison_table.plan_2_subtitle }}
+            </p>
+          </div>
+          {% for item in module.comparison_table.features %}
+  
+          <div class="cp_desc">
+            <h6>
+              <span>{{ item.feature }}</span>
+            </h6>
+            {{ item.plan_2_content }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="cp_row">
+      <div class="cp_col">
+        <div class="cp_inr">
+          <div class="cp_top">
+            <h4>
+              <span>{{ module.comparison_table.plan_3 }}</span>
+            </h4>
+            <p>
+              {{ module.comparison_table.plan_3_subtitle }}
+            </p>
+          </div>
+          {% for item in module.comparison_table.features %}
+  
+          <div class="cp_desc"> 
+            <h6>
+              <span>{{ item.feature }}</span>
+            </h6>
+            {{ item.plan_3_content }}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  </section>
+  
+  
+  
