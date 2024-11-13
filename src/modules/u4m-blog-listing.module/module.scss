@@ -1,7 +1,10 @@
 @import "../../css/_module-imports";
 
-$background-color_2: rgba(0, 0, 0, 0.1);
-
+$background-color: rgba($backgroundColor, 0.1);
+$blackLight: #131822;
+$DarkBlue: #00255d;
+$lightBlue: #001b44;
+$darkBluemd: #01255c;
 /* search */
 /* stylelint-disable declaration-no-important */
 /* stylelint-enable declaration-no-important */
@@ -63,12 +66,13 @@ $background-color_2: rgba(0, 0, 0, 0.1);
     display: block;
     padding: 5px 10px;
     line-height: 1.7;
+    color: inherit;
     &:hover {
-      background-color: $background-color_2;
+      background-color: $background-color;
       outline: none;
     }
     &:focus {
-      background-color: $background-color_2;
+      background-color: $background-color;
       outline: none;
     }
   }
@@ -90,6 +94,7 @@ $background-color_2: rgba(0, 0, 0, 0.1);
 .hs-search-field__suggestions-container {
   position: relative;
   flex-basis: 100%;
+  color: $blackLight;
 }
 .hs-search-field__form {
   display: flex;
@@ -162,59 +167,183 @@ input[type="search"] {
 }
 
 .blogListing {
-  .blogListing {
-    .topBnr {
+  .topBnr {
+    padding-bottom: 50px;
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(87.43deg, $lightBlue -14.67%, $backgroundColor 58.26%);
+    @include phoneMin {
       padding-top: 156px;
-      background: linear-gradient(87.43deg, #001b44 -14.67%, #000000 58.26%);
       padding-bottom: 107px;
-      .page-center {
-        max-width: 1254px;
-        > .topttl {
-          text-align: center;
-          margin-bottom: 56px;
-        }
-        .featCardsOuter {
-          .featCards {
-            position: relative;
+    }
+    .page-center {
+      max-width: 1254px;
+      position: relative;
+      z-index: 3;
+      > .topttl {
+        text-align: center;
+        margin-bottom: 56px;
+      }
+      .featCardsOuter {
+        .featCards {
+          position: relative;
+          row-gap: 40px;
+          @include phoneMin {
             display: block;
-            .featright {
+          }
+          .featright {
+            width: 100%;
+            background: linear-gradient(87.43deg, $lightBlue -14.67%, $backgroundColor 58.26%);
+            border-radius: 10px;
+            @include phoneMin {
+              padding: 87px 100px 87px 18%;
               width: calc(100% - 237px);
               margin-left: auto;
-              background: linear-gradient(87.43deg, #001b44 -14.67%, #000000 58.26%);
-              border-radius: 10px;
-              padding: 87px 100px 87px 364px;
-              .cardCont {
-                .topicTagwrap {
-                  @include eyebrow;
-                  line-height: 1;
-                  margin-bottom: 13px;
-                  * {
-                    color: $highlightColor;
-                  }
+              padding-left: 18%;
+            }
+            @include tabletvertMin {
+              padding-left: 25%;
+            }
+            @include navbreakMin {
+              padding-left: 364px;
+            }
+            .cardCont {
+              .topicTagwrap {
+                @include eyebrow;
+                line-height: 1;
+                margin-bottom: 16px;
+                * {
+                  color: $highlightColor;
                 }
-                .restitle {
-                  margin-bottom: 10px;
-                  a {
-                    color: inherit;
-                  }
+              }
+              .restitle {
+                margin-bottom: 13px;
+                a {
+                  color: inherit;
                 }
-                .desc {
-                  margin-bottom: 18px;
+              }
+              .desc {
+                margin-bottom: 34px;
+              }
+              .readMore {
+                .hs-button {
+                  margin: 0;
                 }
-                .readMore {
-                  margin-top: auto;
-                  .hs-arrow-btn {
-                    margin: 0;
-                    svg * {
-                      fill: currentColor;
-                    }
-                  }
-                }
+              }
+              @include phoneMin {
+                display: flex;
+                flex-direction: column;
+                height: calc(100% - 231px);
+              }
+            }
+          }
+          .featleft {
+            @include phoneMin {
+              position: absolute;
+              top: 50px;
+              bottom: 50px;
+              max-width: 41.2%;
+              height: calc(100% - 100px);
+            }
+            border-radius: 5px;
+            overflow: hidden;
+            width: 100%;
+            .cardImg {
+              height: 100%;
+              width: 100%;
+              a {
                 @include phoneMin {
-                  display: flex;
-                  flex-direction: column;
-                  height: calc(100% - 231px);
+                  padding-bottom: 0;
                 }
+                padding-bottom: 56.66%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    &:before {
+      left: 0;
+      content: "";
+      position: absolute;
+      width: 1369.16px;
+      height: 609.76px;
+      background: $darkBluemd;
+      filter: blur(196.21px);
+      transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+    }
+    &:after {
+      right: -40px;
+      top: 0;
+      content: "";
+      position: absolute;
+      width: 1369.16px;
+      height: 609.76px;
+      background: $darkBluemd;
+      filter: blur(196.21px);
+      transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+    }
+  }
+  .filterWrap {
+    padding: 20px 0;
+    position: relative;
+    @include phoneMin {
+      margin-top: -24px;
+      padding: 0;
+    }
+    .page-center {
+      max-width: 780px;
+      > .flex_row {
+        row-gap: 10px;
+        @include phoneMin {
+          margin: 0 -10px;
+        }
+        .col {
+          max-width: 100%;
+          @include tabletvertMin {
+            max-width: 380px;
+          }
+          @include phoneMin {
+            padding: 0 10px;
+            max-width: 50%;
+          }
+          width: 100%;
+          select {
+            padding: 10px 20px;
+            font-size: 16px;
+            line-height: 28px;
+            background: $gray1;
+            border-radius: 5px;
+            border: none;
+            appearance: none;
+            outline: none;
+            color: $blackLight;
+            padding-right: 40px;
+            background-repeat: no-repeat;
+            background-position: calc(100% - 20px);
+          }
+          .hs-search-field__form {
+            padding: 0;
+            margin: 0;
+            overflow: unset;
+            .hs-search-field__input {
+              padding: 10px 20px;
+              font-size: 16px;
+              line-height: 28px;
+              background: $gray1;
+              border-radius: 5px;
+              border: none;
+              appearance: none;
+              outline: none;
+              color: $blackLight;
+              &::placeholder {
+                color: $blackLight;
               }
             }
           }
@@ -223,30 +352,14 @@ input[type="search"] {
     }
   }
 
-  .hs-search-field__form {
-    padding: 0;
-    margin: 0;
-    overflow: unset;
-    .hs-search-field__input {
-      padding: 13px 30px;
-      font-size: 16px;
-      line-height: 34px;
-      &::placeholder {
-        color: $bodyColor;
-      }
-    }
-    .srchicon {
-      position: absolute;
-      right: 11px;
-      top: 21px;
-      line-height: 0;
-      cursor: pointer;
-      @include tabletvert {
-        top: 16px;
-      }
-    }
-  }
   .featCardsListWrap {
+    background-color: $backgroundColor;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    @include phoneMin {
+      padding-top: 84px;
+      padding-bottom: 122px;
+    }
     .blogFeedList {
       @include blogCardItem;
     }
@@ -259,11 +372,13 @@ input[type="search"] {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 5px;
       @include tabletvert {
         margin-top: 50rem;
       }
       li {
         a {
+          @include h6;
           border-radius: 100%;
           width: 50rem;
           height: 50rem;
@@ -271,6 +386,8 @@ input[type="search"] {
           align-items: center;
           justify-content: center;
           border-radius: 3px;
+          margin: 0;
+          color: #c1c7cb;
         }
         margin: 0;
         a.blogPgactive {
@@ -283,5 +400,34 @@ input[type="search"] {
         }
       }
     }
+  }
+}
+
+.hs-blog-listing {
+  .ftr_wrpp {
+    @include phoneMin {
+      padding-top: 269px;
+    }
+    padding-top: 200px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(89.41deg, $backgroundColor 5.37%, $DarkBlue 98.16%);
+      top: 0;
+      left: 0;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+    .inner_wrpp {
+      position: relative;
+    }
+  }
+  .u4m-cta-row {
+    margin-bottom: -149px;
+    position: relative;
+    z-index: 6;
+    background-color: transparent;
   }
 }
