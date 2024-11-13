@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "c2062210-973a-8fad-6bc4-85da835950ce",
-    "default" : null
+    "default" : 2
   },
   "children" : [ {
     "id" : "3555fb99-da92-ff37-cad9-cb0cfa3d560d",
@@ -628,7 +628,99 @@
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
-  "default" : [ ]
+  "default" : [ {
+    "Images" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/shutterstock_2512260483%201.png",
+      "alt" : "Product Development",
+      "loading" : "lazy",
+      "width" : 200,
+      "height" : 250,
+      "max_width" : 200,
+      "max_height" : 250
+    },
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Optional Eyebrow Text",
+    "include_heading" : true,
+    "heading" : "QC Headline",
+    "heading_tag" : "h4",
+    "include_content" : true,
+    "content" : "<p><span>Dial in materials and tolerances sooner, reach process milestones quicker, scale faster</span></p>",
+    "include_buttons" : false,
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Learn More",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Learn More",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "Images" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/shutterstock_2512260483%201.png",
+      "alt" : "Product Development",
+      "loading" : "lazy",
+      "width" : 200,
+      "height" : 250,
+      "max_width" : 200,
+      "max_height" : 250
+    },
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Optional Eyebrow Text",
+    "include_heading" : true,
+    "heading" : "QC Headline",
+    "heading_tag" : "h4",
+    "include_content" : true,
+    "content" : "<p><span>Dial in materials and tolerances sooner, reach process milestones quicker, scale faster</span></p>",
+    "include_buttons" : false,
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Learn More",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Learn More",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ]
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",
@@ -646,7 +738,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -1014,7 +1106,7 @@
       "locked" : false,
       "display" : "checkbox",
       "type" : "boolean",
-      "default" : false
+      "default" : true
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -1030,7 +1122,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
-      "include_overlay" : false
+      "include_overlay" : true
     }
   } ],
   "tab" : "CONTENT",
@@ -1038,7 +1130,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-default",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -1061,7 +1153,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
-      "include_overlay" : false
+      "include_overlay" : true
     }
   }
 } ]

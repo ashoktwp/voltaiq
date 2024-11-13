@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "1cde3494-e5f0-f508-28cf-ed24e0d34aad",
-    "default" : null
+    "default" : 4
   },
   "children" : [ {
     "id" : "1cde3494-e5f0-f508-28cf-ed24e0d34aad",
@@ -344,16 +344,64 @@
     "type" : "image",
     "default" : {
       "size_type" : "exact",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Amazon_logo%201.png",
+      "alt" : "Amazon",
+      "loading" : "lazy",
+      "width" : 150,
+      "height" : 46,
+      "max_width" : 300,
+      "max_height" : 91
     }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
-  "default" : [ ]
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Amazon_logo%201.png",
+      "alt" : "Amazon",
+      "loading" : "lazy",
+      "width" : 150,
+      "height" : 46,
+      "max_width" : 300,
+      "max_height" : 91
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Amazon_logo%201.png",
+      "alt" : "Amazon",
+      "loading" : "lazy",
+      "width" : 150,
+      "height" : 46,
+      "max_width" : 300,
+      "max_height" : 91
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Amazon_logo%201.png",
+      "alt" : "Amazon",
+      "loading" : "lazy",
+      "width" : 150,
+      "height" : 46,
+      "max_width" : 300,
+      "max_height" : 91
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Amazon_logo%201.png",
+      "alt" : "Amazon",
+      "loading" : "lazy",
+      "width" : 150,
+      "height" : 46,
+      "max_width" : 300,
+      "max_height" : 91
+    }
+  } ]
 }, {
   "id" : "a5f46da5-48a4-ff3e-60f6-139b66f1df5e",
   "name" : "module_settings",
@@ -413,7 +461,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -771,16 +819,6 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice"
-    }, {
-      "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
-      "name" : "include_overlay",
-      "display_width" : null,
-      "label" : "Include Overlay",
-      "required" : false,
-      "locked" : false,
-      "display" : "checkbox",
-      "type" : "boolean",
-      "default" : false
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -794,8 +832,7 @@
         "src" : "",
         "alt" : null,
         "loading" : "lazy"
-      },
-      "include_overlay" : false
+      }
     }
   } ],
   "tab" : "CONTENT",
@@ -803,7 +840,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-default",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -824,8 +861,7 @@
         "src" : "",
         "alt" : null,
         "loading" : "lazy"
-      },
-      "include_overlay" : false
+      }
     }
   }
 } ]

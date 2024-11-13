@@ -2,8 +2,22 @@
 
 
 .u4m-product-cards {
+    &::before {
+        /* Ellipse 31 */
+
+        background: #01255c;
+        filter: blur(196.21px);
+        height: 382px;
+        left: 30%;
+        position: absolute;
+        top: auto;
+        transform: matrix(-.64, -.77, .72, -.69, 0, 0);
+        width: 858px;
+    }
+
     .intro-content {
         margin-bottom: 63px;
+        position: relative;
     }
 
     .page-center {
@@ -58,26 +72,6 @@
                                     margin: 0;
                                 }
 
-                                h4 {
-                                    margin: 0;
-                                }
-
-                                h3 {
-                                    margin: 0;
-                                }
-
-                                h2 {
-                                    margin: 0;
-                                }
-
-                                h1 {
-                                    margin: 0;
-                                }
-
-                                h6 {
-                                    margin: 0;
-                                }
-
                                 p {
                                     @include b2;
                                     margin: 0;
@@ -120,5 +114,6 @@
         }
 
         @include centerMd;
+        position: relative;
     }
 }

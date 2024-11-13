@@ -1,11 +1,27 @@
 @import "../../css/_module-imports";
 
 .u4m-cards {
+  overflow: hidden;
+
+  &:before {
+    background: $darkBluemd;
+    filter: blur(196.21px);
+    height: 382px;
+    left: auto;
+    position: absolute;
+    top: auto;
+    transform: matrix(-.64, -.77, .72, -.69, 0, 0);
+    width: 858px;
+    right: 0%;
+  }
+
   .intro-content {
     .page-center-intro {
       @include center;
       text-align: left;
       margin-bottom: 81px;
+      position: relative;
+      z-index: 22;
 
       @include phone {
         margin-bottom: 50px;
@@ -22,6 +38,8 @@
     column-gap: 76px;
     row-gap: 50px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 22;
 
     .pd {
       .top_icon {
@@ -34,27 +52,7 @@
         }
       }
 
-      h1 {
-        margin: 0;
-      }
-
-      h2 {
-        margin: 0;
-      }
-
-      h3 {
-        margin: 0;
-      }
-
       h4 {
-        margin: 0;
-      }
-
-      h5 {
-        margin: 0;
-      }
-
-      h6 {
         margin: 0;
       }
 

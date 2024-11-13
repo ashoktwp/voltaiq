@@ -1,36 +1,39 @@
 {% set moduleName = 'u4m-cta-row' %}
-  {% set bgImageMax = 1920 %}
-    
-  {% include "../partials/u4-module-includes.html" %}
-    <div class="inner {% if module.center_content %}centered{% endif %}">
-      <div class="copy">
-        {% if module.include_heading %}<h2 class="heading">{{ module.cta_row_heading }}</h2>{% endif %}
-        {% if module.include_text %}
-          <p class="text">{{ module.text }}</p>
-        {% endif %}
-        <div class="cta">
-          {% if module.use_normal_link %}
-            {% set href = module.link_field.url.href %}
-            {% if module.link_field.url.type is equalto "EMAIL_ADDRESS" %}
-              {% set href = "mailto:" + href %}
-            {% endif %}
-            <a href="{{ href }}"
-              {% if module.link_field.open_in_new_tab %}target="_blank"{% endif %}
-              {% if module.link_field.rel %}rel="{{ module.link_field.rel }}"{% endif %}
-              >
-              {{ module.link_text }}
-            </a>
-          {% else %}
-            {% cta guid="{{ module.call_to_action }}" %}
-          {% endif %}        
-        </div>
-      </div>
-  
-      {% if module.include_image %}
-          <div class="image">
-            <img loading="lazy" src="{{ module.image.src }}" width="400" alt="{{ module.image.alt }}">
-          </div>
-      {% endif %}
-  
-    </div>
-  </section>
+{% set imageMax = 1000 %}
+{% set bgImageMax = 1920 %}
+
+{% include "../partials/u4-module-includes.html" %}
+
+<div class="page-center">
+	<div class="main_cta {% if  module.module_overrides.card_background_settings.background_type == "color" %}{{ module.module_overrides.card_background_settings.background_color  == "custom" ? "custom_bg_color" : module.module_overrides.card_background_settings.background_color  }}{% endif %} {% if  module.module_overrides.card_background_settings.background_type == "gradient" %} {{ module.module_overrides.card_background_settings.background_gradient }}{% endif %}" 		   
+			 {% if module.module_overrides.card_background_settings.background_type == "image" %} style="background-image:url({{module.module_overrides.card_background_settings.background_image.src }})"{% endif %} >
+		<div class="inner_wrpp">
+			<div class="flex_row {{ module.module_settings.image_alignment }}">
+				<div class="left_sec">
+					{{macros.contentGroup(module.intro_content  )}}
+					{% if module.intro_content.include_form %}
+					<div class="form_sec">
+						{% form
+	form_to_use="{{ module.intro_content.select_form.form_id }}"
+	response_response_type="{{ module.intro_content.select_form.response_type }}"
+	response_message="{{ module.intro_content.select_form.message }}"
+	response_redirect_id="{{ module.intro_content.select_form.redirect_id }}"
+	response_redirect_url="{{module.intro_content.select_form.redirect_url}}"
+	gotowebinar_webinar_key="{{ module.intro_content.select_form.gotowebinar_webinar_key }}"
+%}
+
+					</div>
+					{% endif %}
+				</div>
+				<div class="right_sec">
+					<div class="bg" style="background-image:url({{ module.media_section.image.src|escape_url }})"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</section>
+
+

@@ -369,14 +369,14 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "right"
+    "default" : ""
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "image_alignment" : "right"
+    "image_alignment" : ""
   }
 }, {
   "id" : "module_overrides",
