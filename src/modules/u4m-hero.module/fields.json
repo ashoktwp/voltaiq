@@ -338,7 +338,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/heroBanner2.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/heroBanner2.png",
       "alt" : "Hero Banner",
       "loading" : "lazy",
       "width" : 1140,
@@ -354,7 +354,7 @@
   "default" : {
     "image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/heroBanner2.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/heroBanner2.png",
       "alt" : "Hero Banner",
       "loading" : "lazy",
       "width" : 1140,
@@ -401,7 +401,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto_custom_max",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/ShapeImageNew.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/ShapeImageNew.png",
       "alt" : "Shape Image",
       "loading" : "lazy",
       "width" : 3024,
@@ -418,7 +418,7 @@
     "enable_shape_image" : false,
     "shape_image" : {
       "size_type" : "auto_custom_max",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/ShapeImageNew.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/ShapeImageNew.png",
       "alt" : "Shape Image",
       "loading" : "lazy",
       "width" : 3024,
@@ -777,7 +777,7 @@
       "type" : "image",
       "default" : {
         "size_type" : "auto_custom_max",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/bannerBg.png",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/bannerBg.png",
         "alt" : "Banner Bg",
         "loading" : "lazy",
         "width" : 3024,
@@ -881,7 +881,7 @@
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto_custom_max",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/bannerBg.png",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/bannerBg.png",
         "alt" : "Banner Bg",
         "loading" : "lazy",
         "width" : 3024,
@@ -918,7 +918,7 @@
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto_custom_max",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/bannerBg.png",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/bannerBg.png",
         "alt" : "Banner Bg",
         "loading" : "lazy",
         "width" : 3024,

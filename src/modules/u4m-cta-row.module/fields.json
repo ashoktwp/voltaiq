@@ -382,7 +382,7 @@
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/CtaRowBg.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/CtaRowBg.png",
       "alt" : "CtaRowBg",
       "width" : 545,
       "height" : 449,
@@ -396,7 +396,7 @@
   "type" : "group",
   "default" : {
     "image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/CtaRowBg.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/CtaRowBg.png",
       "alt" : "CtaRowBg",
       "width" : 545,
       "height" : 449,
