@@ -35,6 +35,12 @@
         }
         @include tablet {
           height: 30px;
+          &.slick-next {
+            right: -10px;
+          }
+          &.slick-prev {
+            left: -10px;
+          }
         }
       }
       .slick-track {
@@ -42,6 +48,10 @@
           .quote_flex {
             display: flex;
             flex-wrap: wrap;
+            @include tablet {
+              justify-content: center;
+              text-align: center;
+            }
             .quote_img {
               width: 360px;
               padding: 0 30px 30px;

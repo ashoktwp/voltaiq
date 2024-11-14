@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "dedf0f2f-0cc9-c444-35ef-f2d8e6b4afdb",
-    "default" : 1
+    "default" : 3
   },
   "children" : [ {
     "id" : "38981e8a-1b2a-3d1d-104a-e26b95c83f80",
@@ -435,6 +435,54 @@
       "max_width" : 120,
       "max_height" : 29
     }
+  }, {
+    "content" : "<p>“Voltaiq completely changed our battery defect detection process, allowing us to catch defects within hours of production and quickly pinpoint the upstream issue. <span>This saved us months in scaling up production.</span> I can’t believe how many weeks wasted and batteries we had to scrap before.”</p>",
+    "author_name" : "Robert Kaminski",
+    "designation" : "Co-Founder & Partner, Fletch PMM",
+    "author_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/AuthorImage.png",
+      "alt" : "Author Image",
+      "loading" : "lazy",
+      "width" : 600,
+      "height" : 600,
+      "max_width" : 600,
+      "max_height" : 600
+    },
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/logo-img.png",
+      "alt" : "Fletch",
+      "loading" : "lazy",
+      "width" : 120,
+      "height" : 29,
+      "max_width" : 120,
+      "max_height" : 29
+    }
+  }, {
+    "content" : "<p>“Voltaiq completely changed our battery defect detection process, allowing us to catch defects within hours of production and quickly pinpoint the upstream issue. <span>This saved us months in scaling up production.</span> I can’t believe how many weeks wasted and batteries we had to scrap before.”</p>",
+    "author_name" : "Robert Kaminski",
+    "designation" : "Co-Founder & Partner, Fletch PMM",
+    "author_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/AuthorImage.png",
+      "alt" : "Author Image",
+      "loading" : "lazy",
+      "width" : 600,
+      "height" : 600,
+      "max_width" : 600,
+      "max_height" : 600
+    },
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/logo-img.png",
+      "alt" : "Fletch",
+      "loading" : "lazy",
+      "width" : 120,
+      "height" : 29,
+      "max_width" : 120,
+      "max_height" : 29
+    }
   } ]
 }, {
   "id" : "8b8466b2-f980-df9c-7d11-7fd735e62210",
@@ -456,9 +504,13 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/ShapeImage.png",
+      "alt" : "ShapeImage",
+      "loading" : "lazy",
+      "width" : 1512,
+      "height" : 109,
+      "max_width" : 1512,
+      "max_height" : 109
     }
   } ],
   "tab" : "CONTENT",
@@ -468,9 +520,13 @@
   "default" : {
     "shape_image" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/ShapeImage.png",
+      "alt" : "ShapeImage",
+      "loading" : "lazy",
+      "width" : 1512,
+      "height" : 109,
+      "max_width" : 1512,
+      "max_height" : 109
     }
   }
 }, {
@@ -490,7 +546,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -779,7 +835,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
       "name" : "background_color",
@@ -843,11 +899,12 @@
         "access" : null
       },
       "display" : "select",
-      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ] ],
+      "choices" : [ [ "gradient1", "Gradient 1" ], [ "gradient2", "Gradient 2" ], [ "gradient3", "Gradient 3" ] ],
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
-      "type" : "choice"
+      "type" : "choice",
+      "default" : "gradient3"
     }, {
       "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
       "name" : "reverse_gradient",
@@ -882,7 +939,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -890,6 +947,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "background_gradient" : "gradient3",
       "reverse_gradient" : false,
       "include_overlay" : false
     }
@@ -899,7 +957,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-default",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -913,7 +971,7 @@
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "background" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -921,6 +979,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "background_gradient" : "gradient3",
       "reverse_gradient" : false,
       "include_overlay" : false
     }

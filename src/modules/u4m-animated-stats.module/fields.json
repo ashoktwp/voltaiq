@@ -327,7 +327,7 @@
   "locked" : false,
   "occurrence" : {
     "min" : 1,
-    "max" : 8,
+    "max" : null,
     "sorting_label_field" : "bb5b1e25-24e7-64c2-993f-cc571fe569c2",
     "default" : 4
   },
@@ -547,6 +547,19 @@
     "bottom_caption" : "Of Users",
     "bottom_content" : " love your company and content",
     "show_content" : true
+  }, {
+    "disable_animation" : false,
+    "show_top_caption" : true,
+    "top_caption" : "More Than",
+    "numeric_stat" : "98",
+    "show_currency_label" : false,
+    "currency_label" : "$",
+    "show_stat_unit" : true,
+    "stat_unit" : "%",
+    "show_bottom_caption" : true,
+    "bottom_caption" : "Of Users",
+    "show_content" : true,
+    "bottom_content" : " love your company and content"
   } ]
 }, {
   "id" : "60830c96-0f33-975f-e085-5a44c565300b",
@@ -979,6 +992,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "reverse_gradient" : false,
       "include_overlay" : false
     }
   } ],
@@ -1009,6 +1023,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "reverse_gradient" : false,
       "include_overlay" : false
     }
   }

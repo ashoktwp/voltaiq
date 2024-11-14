@@ -123,7 +123,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "90d855d4-f75a-6b74-e08c-fb1a8f8b66c3",
     "name" : "buttons",
@@ -289,7 +289,7 @@
     "heading_tag" : "h2",
     "include_content" : false,
     "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
-    "include_buttons" : true,
+    "include_buttons" : false,
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-button",
@@ -456,7 +456,7 @@
         "allow_new_line" : false,
         "show_emoji_picker" : false,
         "type" : "text",
-        "default" : "Button"
+        "default" : "Secondary CTA Here"
       }, {
         "id" : "bfb0e47e-da27-423a-eff0-fc766d6be8e1",
         "name" : "link",
@@ -508,7 +508,7 @@
       "default" : [ {
         "type" : "std",
         "theme" : "hs-arrow-btn",
-        "text" : "Button",
+        "text" : "Secondary CTA Here",
         "link" : {
           "url" : {
             "content_id" : null,
@@ -539,7 +539,7 @@
       "buttons" : [ {
         "type" : "std",
         "theme" : "hs-arrow-btn",
-        "text" : "Button",
+        "text" : "Secondary CTA Here",
         "link" : {
           "url" : {
             "content_id" : null,
@@ -573,7 +573,7 @@
       "buttons" : [ {
         "type" : "std",
         "theme" : "hs-arrow-btn",
-        "text" : "Button",
+        "text" : "Secondary CTA Here",
         "link" : {
           "url" : {
             "content_id" : null,
@@ -602,7 +602,7 @@
       "buttons" : [ {
         "type" : "std",
         "theme" : "hs-arrow-btn",
-        "text" : "Button",
+        "text" : "Secondary CTA Here",
         "link" : {
           "url" : {
             "content_id" : null,
@@ -631,7 +631,7 @@
       "buttons" : [ {
         "type" : "std",
         "theme" : "hs-arrow-btn",
-        "text" : "Button",
+        "text" : "Secondary CTA Here",
         "link" : {
           "url" : {
             "content_id" : null,

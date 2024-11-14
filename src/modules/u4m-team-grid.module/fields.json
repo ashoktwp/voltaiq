@@ -14,7 +14,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "25bb3695-1c5f-d1b7-577f-665c4ea33639",
     "name" : "eyebrow_text",
@@ -282,7 +282,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "include_eyebrow_text" : true,
+    "include_eyebrow_text" : false,
     "eyebrow_text" : "Optional Eyebrow Text",
     "include_heading" : true,
     "heading" : "<span>Voltaiq’s</span> Values",
@@ -1207,6 +1207,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "reverse_gradient" : false,
       "include_overlay" : false
     }
   } ],
@@ -1237,6 +1238,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "reverse_gradient" : false,
       "include_overlay" : false
     }
   }
