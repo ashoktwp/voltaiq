@@ -1,32 +1,43 @@
 @import "../../css/_module-imports";
 
-
 .u4m-product-cards {
-    &::before {
-        /* Ellipse 31 */
-
-        background: #01255c;
+    &::before,
+    &:after {
+        position: absolute;
         filter: blur(196.21px);
+        background: $darkBluemd;
+        border-radius: 100%;
+    }
+    &::before {
         height: 382px;
         left: 30%;
         position: absolute;
         top: auto;
-        transform: matrix(-.64, -.77, .72, -.69, 0, 0);
+        transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
         width: 858px;
+    }
+
+    &:after {
+        width: 1272.84px;
+        height: 566.86px;
+        left: 10%;
+        top: 20%;
+        transform: matrix(-1, -0.03, -0.04, -1, 0, 0);
     }
 
     .intro-content {
         margin-bottom: 63px;
         position: relative;
+        z-index: 2;
     }
 
     .page-center {
         .product-cards_wrpp {
             .inner_cnt {
                 .items {
-                    background: hsla(204, 4%, 73%, .1);
+                    background: hsla(204, 4%, 73%, 0.1);
                     border-radius: 3px;
-                    box-shadow: 2px 4px 15px rgba(0, 0, 0, .1);
+                    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
                     width: calc(50% - 27px);
 
                     .pd {
@@ -115,5 +126,6 @@
 
         @include centerMd;
         position: relative;
+        z-index: 2;
     }
 }

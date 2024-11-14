@@ -1,10 +1,25 @@
 @import "../../css/_module-imports";
 section.u4m-bottom-pane {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 1272.84px;
+    height: 566.86px;
+    left: 10%;
+    background: $darkBluemd;
+    filter: blur(196.21px);
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+    right: 10%;
+  }
   &.reverse-text {
     color: $headingColor;
   }
   .intro-content {
     margin-bottom: 0;
+  }
+  .page-center {
+    position: relative;
   }
   .bp_wrap {
     padding: 57px;
