@@ -1183,16 +1183,6 @@
       "display" : "checkbox",
       "type" : "boolean",
       "default" : false
-    }, {
-      "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
-      "name" : "include_overlay",
-      "display_width" : null,
-      "label" : "Include Overlay",
-      "required" : false,
-      "locked" : false,
-      "display" : "checkbox",
-      "type" : "boolean",
-      "default" : false
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -1207,8 +1197,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "reverse_gradient" : false,
-      "include_overlay" : false
+      "reverse_gradient" : false
     }
   } ],
   "tab" : "CONTENT",
@@ -1238,8 +1227,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "reverse_gradient" : false,
-      "include_overlay" : false
+      "reverse_gradient" : false
     }
   }
 } ]

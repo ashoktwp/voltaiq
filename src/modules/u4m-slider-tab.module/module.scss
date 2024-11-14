@@ -3,17 +3,15 @@
   position: relative;
   overflow: hidden;
   &::before {
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 0;
-    height: 858px;
-    left: 22%;
+    content: "";
+    height: 382.13px;
+    background: $darkBluemd;
+    left: 20%;
     position: absolute;
-    right: 0;
-    top: auto;
-    transform: rotate(10deg);
-    width: 600px;
+    top: 41%;
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+    width: 858.04px;
+    filter: blur(196.21px);
   }
   @include tabletvert {
     &::before {
@@ -22,11 +20,13 @@
   }
   .intro-content {
     margin-bottom: 57rem;
+    position: relative;
     .page-center-intro {
       max-width: 867px;
     }
   }
   .tabber_wrap {
+    position: relative;
     padding-bottom: 60px;
     position: relative;
     z-index: 1;

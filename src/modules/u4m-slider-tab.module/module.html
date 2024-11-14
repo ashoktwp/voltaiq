@@ -175,18 +175,6 @@
  
 </section>
 
-{% require_css %}
-{% if module.module_overrides.enable_overrides %}
-<style>
-{% if module.module_overrides.background.include_overlay %}
-	.u4m-slider-tab:before{
-		content:"";
-		background-image:url({{ get_asset_url('../../templates/images/blue_layer.png') }})
-	}
-{% endif %}
-</style>
-{% endif %}
-{% end_require_css %}
 
 {% require_js %}
 <script>

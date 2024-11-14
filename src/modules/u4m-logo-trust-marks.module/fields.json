@@ -77,7 +77,7 @@
       "controlling_field_path" : "intro_content.heading",
       "controlling_value_regex" : null,
       "property" : null,
-      "operator" : null,
+      "operator" : "NOT_EMPTY",
       "access" : null
     },
     "display" : "select",
@@ -86,7 +86,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "h2"
+    "default" : "h4"
   }, {
     "id" : "66c14e53-d47e-ce5d-2d0a-084df2b9351d",
     "name" : "include_content",
@@ -286,7 +286,7 @@
     "eyebrow_text" : "Optional Eyebrow Text",
     "include_heading" : true,
     "heading" : "Trusted by Leading Battery Manufacturers and OEMs",
-    "heading_tag" : "h2",
+    "heading_tag" : "h4",
     "include_content" : false,
     "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
     "include_buttons" : false,
@@ -850,7 +850,8 @@
         "src" : "",
         "alt" : null,
         "loading" : "lazy"
-      }
+      },
+      "reverse_gradient" : false
     }
   } ],
   "tab" : "CONTENT",
@@ -879,7 +880,8 @@
         "src" : "",
         "alt" : null,
         "loading" : "lazy"
-      }
+      },
+      "reverse_gradient" : false
     }
   }
 } ]
