@@ -834,13 +834,28 @@
     "preset" : null,
     "type" : "choice",
     "default" : "three_col"
+  }, {
+    "id" : "c35bf562-8aeb-e140-ae33-b798222d56ff",
+    "name" : "intro_content_alignment",
+    "display_width" : null,
+    "label" : "Intro Content Alignment",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "left"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "column_count" : "three_col"
+    "column_count" : "three_col",
+    "intro_content_alignment" : "left"
   }
 }, {
   "id" : "module_overrides",
@@ -1235,7 +1250,7 @@
       },
       "display" : "checkbox",
       "type" : "boolean",
-      "default" : false
+      "default" : true
     }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",
@@ -1261,6 +1276,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : true,
       "include_overlay" : true
     }
   } ],
@@ -1292,6 +1308,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : true,
       "include_overlay" : true
     }
   }

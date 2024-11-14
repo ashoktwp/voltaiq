@@ -179,5 +179,15 @@
   
   </section>
   
-  
+  {% require_css %}
+    {% if module.module_overrides.enable_overrides %}
+    <style>
+    {% if module.module_overrides.background.include_overlay %}
+      .u4m-comparison-table:before{
+        content:"";
+      }
+    {% endif %}
+    </style>
+    {% endif %}
+    {% end_require_css %}
   

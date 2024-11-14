@@ -1,6 +1,7 @@
 @import "../../css/_module-imports";
 
 .u4m-comparison-table {
+  position: relative;
   @include phone {
     .desktop_only {
       display: none;
@@ -178,6 +179,19 @@
         }
       }
     }
+  }
+  &:before {
+    position: absolute;
+    width: 858.04px;
+    height: 382.13px;
+    top: 40%;
+    left: 40%;
+    background: $darkBluemd;
+    filter: blur(196.21px);
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+  }
+  > * {
+    position: relative;
   }
 }
 

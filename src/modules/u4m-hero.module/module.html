@@ -22,6 +22,8 @@
 {% endif %}
 
 </section>
+{% if module.module_overrides.enable_overrides %}
+{% if module.module_overrides.background.include_overlay %}
 {% if module.module_overrides.background.image_top || module.module_overrides.background.image_bottom  %}
 {% require_css %}
 <style>
@@ -32,14 +34,6 @@
 	.u4m-hero:before,
 	.u4m-hero:after{
 		content:"";
-		position:absolute;
-		background: #01255C;
-		filter: blur(196.21px);
-		transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
-		width: 1369.16px;
-		height: 609.76px;
-		right: -110px;
-		border-radius: 100%;
 	}
 
 	{% if module.module_overrides.background.image_top %}
@@ -55,4 +49,6 @@
 	{% end_scope_css %}
 </style>
 {% end_require_css %}
+{% endif %}
+{% endif %}
 {% endif %}

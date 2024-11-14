@@ -3,7 +3,9 @@
 {% set bgImageMax = 1920 %}
 
 {% include "../partials/u4-module-includes.html" %}
-{{macros.contentGroup(module.intro_content)}}
+<div class='cntnt_{{ module.module_settings.intro_content_alignment }}'>
+	{{macros.contentGroup(module.intro_content)}}
+</div>
 <div class="page-center">
 	{# Module content goes here #}
 	<div class="cards_wrpp">

@@ -3,6 +3,17 @@
 .u4m-hero {
   position: relative;
   overflow: hidden;
+  &:before,
+  &:after {
+    position: absolute;
+    background: $darkBluemd;
+    filter: blur(196.21px);
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+    width: 1369.16px;
+    height: 609.76px;
+    right: -110px;
+    border-radius: 100%;
+  }
   .page-center {
     position: relative;
     z-index: 3;
