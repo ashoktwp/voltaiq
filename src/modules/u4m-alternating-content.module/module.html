@@ -4,6 +4,24 @@
 
 {% include "../partials/u4-module-includes.html" %}
 
+{% if module.module_overrides.background.background_type == "color"%}
+
+	{% if module.module_overrides.background.include_overlay_image %}
+	
+{% if module.module_overrides.background.overlay_image.background_image.src %}
+
+
+<div class="overlay_image {{module.module_overrides.background.overlay_image.image_size}}" {% if module.module_overrides.background.overlay_image.image_size == "full"%}
+		 style="background-image:url({{ module.module_overrides.background.overlay_image.background_image.src|escape_url }})"
+		 {% endif %}>
+	{% if module.module_overrides.background.overlay_image.image_size == "auto"%}
+	<img src="{{ module.module_overrides.background.overlay_image.background_image.src|escape_url }}" alt="{{ module.module_overrides.background.overlay_image.background_image.alt|escape_attr }}">
+	{% endif %}
+</div>
+{% endif %}
+{% endif %}
+{% endif %}
+
 <div class="page-center">
 	<div class="flex_row {{ module.module_settings.image_alignment }}">
 		<div class="left_sec">
