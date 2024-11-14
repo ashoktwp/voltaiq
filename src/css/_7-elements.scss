@@ -430,6 +430,15 @@ section[class*="u4m-"] {
 .gradient2 {
   background-image: $secondaryGradientColor;
 }
+
+.gradient1.reverse {
+  background-image: $primaryGradientreverseColor;
+}
+
+.gradient2.reverse {
+  background-image: $secondaryGradientreverseColor;
+}
+
 .gradientObsidian {
   background-image: $gradientObsidian;
 }

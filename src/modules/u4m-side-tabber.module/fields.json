@@ -249,74 +249,22 @@
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
-    "default" : [ {
-      "type" : "std",
-      "theme" : "hs-button",
-      "text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "type" : "std",
-      "theme" : "hs-sec-btn",
-      "text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ]
+    "default" : [ ]
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "include_eyebrow_text" : true,
+    "include_eyebrow_text" : false,
     "eyebrow_text" : "Optional Eyebrow Text",
     "include_heading" : true,
-    "heading" : "Highlighted <span>Heading</span>",
+    "heading" : "How <span>Voltaiq</span> Works",
     "heading_tag" : "h2",
     "include_content" : true,
-    "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
-    "include_buttons" : true,
-    "buttons" : [ {
-      "type" : "std",
-      "theme" : "hs-button",
-      "text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "type" : "std",
-      "theme" : "hs-sec-btn",
-      "text" : "Button",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ]
+    "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+    "include_buttons" : false,
+    "buttons" : [ ]
   }
 }, {
   "id" : "ef48c019-147e-ef01-fa70-5197061eec53",
@@ -651,7 +599,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -1011,6 +959,24 @@
       "type" : "choice",
       "default" : "gradient1"
     }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",
       "display_width" : null,
@@ -1026,7 +992,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -1034,7 +1000,9 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : true,
+      "include_overlay" : true
     }
   } ],
   "tab" : "CONTENT",
@@ -1042,7 +1010,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-default",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -1056,7 +1024,7 @@
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "background" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -1064,7 +1032,9 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : true,
+      "include_overlay" : true
     }
   }
 } ]

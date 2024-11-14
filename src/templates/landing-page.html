@@ -6,17 +6,23 @@
 -->
 {% extends './base.html' %}
 {% block header %}
-{% global_partial path='./partials/header-no-navigation.html' %}
 {% endblock header %}
 
 {% block body %}
-<main id="main-content" class="body-container-wrapper">
-    {% widget_container "flexible_column" %}
-      {% module 'u4m-landing-page-overlap' path='../modules/u4m-landing-page-overlap', label='Landing Page Overlap' %}
-    {% end_widget_container %} 
-</main>
+  <main id="main-content" class="body-container-wrapper">
+  {% dnd_area "voltaiq_dnd_area" %}
+    {% dnd_section full_width=true %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='../modules/u4m-split-form', label='Split Form' width="12" %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}  
+  </main>
 {% endblock body %}
 
 {% block footer %}
-{% global_partial path='./partials/footer-no-navigation.html' %}
+{% global_partial path='./partials/u4m-footer-no-navigation.html' %}
 {% endblock footer %}

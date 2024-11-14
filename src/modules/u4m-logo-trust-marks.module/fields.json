@@ -819,6 +819,24 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice"
+    }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
     } ],
     "tab" : "CONTENT",
     "expanded" : false,

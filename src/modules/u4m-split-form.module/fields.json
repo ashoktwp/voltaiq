@@ -103,7 +103,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Accelerate factory  ramp up by 50% or  more <span>with Voltaiq</span>."
+    "default" : "Accelerate factory ramp up by 50% or more <span>with Voltaiq</span>."
   }, {
     "id" : "27cb7f6e-c34f-6a3b-f25d-c31c304f0546",
     "name" : "heading_tag",
@@ -309,7 +309,7 @@
     "include_eyebrow_text" : true,
     "eyebrow_text" : "Battery Quality Analytics Software",
     "include_heading" : true,
-    "heading" : "Accelerate factory  ramp up by 50% or  more <span>with Voltaiq</span>.",
+    "heading" : "Accelerate factory ramp up by 50% or more <span>with Voltaiq</span>.",
     "heading_tag" : "h1",
     "include_content" : true,
     "content" : "<p>See an impact in your fist month, with a full return on your investment in as little as&nbsp;3 months.</p>",
@@ -965,6 +965,24 @@
       "preset" : null,
       "type" : "choice",
       "default" : "gradient1"
+    }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
     }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",

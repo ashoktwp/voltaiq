@@ -135,7 +135,7 @@
       "min" : null,
       "max" : null,
       "sorting_label_field" : "a15621f0-befc-a350-d1dc-4074c000c2eb",
-      "default" : 2
+      "default" : 1
     },
     "visibility" : {
       "controlling_field" : null,
@@ -262,19 +262,6 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    }, {
-      "type" : "std",
-      "theme" : "hs-sec-btn",
-      "text" : "Request A Demo",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
     } ]
   } ],
   "tab" : "CONTENT",
@@ -293,19 +280,6 @@
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-button",
-      "text" : "Request A Demo",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "type" : "std",
-      "theme" : "hs-sec-btn",
       "text" : "Request A Demo",
       "link" : {
         "url" : {
@@ -758,6 +732,24 @@
       "preset" : null,
       "type" : "choice",
       "default" : "gradient1"
+    }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -776,7 +768,8 @@
         "max_width" : 2000,
         "max_height" : 942.8359317000743
       },
-      "background_gradient" : "gradient1"
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : false
     }
   } ],
   "tab" : "CONTENT",
@@ -810,7 +803,8 @@
         "max_width" : 2000,
         "max_height" : 942.8359317000743
       },
-      "background_gradient" : "gradient1"
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : false
     }
   }
 } ]

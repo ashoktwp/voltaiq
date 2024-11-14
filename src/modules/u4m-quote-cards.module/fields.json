@@ -14,7 +14,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "25bb3695-1c5f-d1b7-577f-665c4ea33639",
     "name" : "eyebrow_text",
@@ -44,7 +44,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "287456c6-4f51-8cb9-5005-d6312fcbd502",
     "name" : "heading",
@@ -96,7 +96,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "9e7002c2-314b-3767-5c39-ec4c3a65a0ec",
     "name" : "content",
@@ -123,7 +123,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "90d855d4-f75a-6b74-e08c-fb1a8f8b66c3",
     "name" : "buttons",
@@ -282,14 +282,14 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "include_eyebrow_text" : true,
+    "include_eyebrow_text" : false,
     "eyebrow_text" : "Optional Eyebrow Text",
-    "include_heading" : true,
+    "include_heading" : false,
     "heading" : "Highlighted <span>Heading</span>",
     "heading_tag" : "h2",
-    "include_content" : true,
+    "include_content" : false,
     "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
-    "include_buttons" : true,
+    "include_buttons" : false,
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-button",
@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "dedf0f2f-0cc9-c444-35ef-f2d8e6b4afdb",
-    "default" : null
+    "default" : 1
   },
   "children" : [ {
     "id" : "38981e8a-1b2a-3d1d-104a-e26b95c83f80",
@@ -377,9 +377,13 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/AuthorImage.png",
+      "alt" : "Author Image",
+      "loading" : "lazy",
+      "width" : 600,
+      "height" : 600,
+      "max_width" : 600,
+      "max_height" : 600
     }
   }, {
     "id" : "f9a10a72-d747-8d77-4768-fcfd903c3bea",
@@ -394,16 +398,44 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "",
-      "alt" : null,
-      "loading" : "lazy"
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/logo-img.png",
+      "alt" : "Fletch",
+      "loading" : "lazy",
+      "width" : 120,
+      "height" : 29,
+      "max_width" : 120,
+      "max_height" : 29
     }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
-  "default" : [ ]
+  "default" : [ {
+    "content" : "<p>“Voltaiq completely changed our battery defect detection process, allowing us to catch defects within hours of production and quickly pinpoint the upstream issue. <span>This saved us months in scaling up production.</span> I can’t believe how many weeks wasted and batteries we had to scrap before.”</p>",
+    "author_name" : "Robert Kaminski",
+    "designation" : "Co-Founder & Partner, Fletch PMM",
+    "author_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/AuthorImage.png",
+      "alt" : "Author Image",
+      "loading" : "lazy",
+      "width" : 600,
+      "height" : 600,
+      "max_width" : 600,
+      "max_height" : 600
+    },
+    "logo_image" : {
+      "size_type" : "auto",
+      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/logo-img.png",
+      "alt" : "Fletch",
+      "loading" : "lazy",
+      "width" : 120,
+      "height" : 29,
+      "max_width" : 120,
+      "max_height" : 29
+    }
+  } ]
 }, {
   "id" : "8b8466b2-f980-df9c-7d11-7fd735e62210",
   "name" : "module_settings",
@@ -817,6 +849,24 @@
       "preset" : null,
       "type" : "choice"
     }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",
       "display_width" : null,
@@ -840,6 +890,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "reverse_gradient" : false,
       "include_overlay" : false
     }
   } ],
@@ -870,6 +921,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
+      "reverse_gradient" : false,
       "include_overlay" : false
     }
   }

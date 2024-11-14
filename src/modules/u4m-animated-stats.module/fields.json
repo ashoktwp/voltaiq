@@ -329,7 +329,7 @@
     "min" : 1,
     "max" : 8,
     "sorting_label_field" : "bb5b1e25-24e7-64c2-993f-cc571fe569c2",
-    "default" : 4 
+    "default" : 4
   },
   "children" : [ {
     "id" : "05b080b6-8a28-4b11-7cec-8960c0c296f1",
@@ -937,6 +937,24 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice"
+    }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
     }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",

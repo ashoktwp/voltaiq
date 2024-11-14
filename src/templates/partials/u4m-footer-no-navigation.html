@@ -1,20 +1,11 @@
 <!--
 templateType: global_partial
-label: Footer
+label: Footer no navigation
 -->
 
-<div class="ftr_wrpp lp_hdr">
+<footer class="ftr_wrpp lp_hdr">
 	<div class="inner_wrpp">
 		<div class="page-center">
-			<div class="top_sec">
-				<div class="flex_row">
-					<div class="left_logo">
-						<div class="custom_logo">
-							{% module "ftr_logo" path="@hubspot/logo", label="Footer Logo",  img={src= "{{ get_asset_url('../../templates/images/logo.png') }}", width=180, override_inherited_src= true, alt="Voltaiq" } , link="/" %}
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="btm_sec">
 				<div class="flex_row">
 					<div class="left_wrpp">
@@ -29,12 +20,9 @@ label: Footer
 						</div>
 					</div>
 					<div class="right_wrpp">
-						<div class="inner_Cnt">
-							{% module "u4m-footer-social-share" path="../../modules/u4m-footer-social-share", label="Footer Social Share" %}
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</footer>

@@ -49,9 +49,10 @@
         display: none;
         height: 100%;
         z-index: 9;
-        background-image: $primaryGradientColor;
+        background-image: $teamPopup;
         overflow: hidden auto;
         padding: 70px 0;
+        opacity: 0.97;
         .popup-container {
           max-width: 815px;
           margin: auto;
