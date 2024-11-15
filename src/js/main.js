@@ -34,7 +34,7 @@ window.addEventListener('scroll', function() {
 
 
 
-var banner = document.querySelector('.u4m-hero');
+var banner = document.querySelector('.u4m-hero,.banner_is_here,.blog_post_hero');
 
 if (banner) {
   document.body.classList.remove("no-banner");

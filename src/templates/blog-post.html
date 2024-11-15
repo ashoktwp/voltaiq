@@ -14,12 +14,13 @@ label: Unified 4 - Blog Post
         <div class="flex_row">
           <div class="hero_content">
             <div class="post_herotag">
-              {% for topic in content.topic_list %}
+              {% for topic in content.topic_list %} {% if topic.name=="Featured"
+              || topic.name=="featured" %} {% else %}
               <a
                 class="topic-link"
                 href="{{ blog_tag_url(group.id, topic.slug) }}"
                 >{{ topic.name }}</a
-              >{% if not loop.last %},{% endif %} {% endfor %}
+              >{% endif %}{% endfor %}
             </div>
             <h1 class="post_hero_titlw">{{content.name}}</h1>
 
@@ -55,11 +56,12 @@ label: Unified 4 - Blog Post
             <div class="content">{{ content.post_body }}</div>
             <div class="topics">
               <span class="label">Tag(s):</span>
-              {% for topic in content.topic_list %}
+              {% for topic in content.topic_list %} {% if topic.name=="Featured"
+              || topic.name=="featured" %} {% else %}
               <a class="link" href="{{ blog_tag_url(group.id, topic.slug) }}"
                 >{{ topic.name }}</a
               >
-              {% if not loop.last %}, {% endif %} {% endfor %}
+              {% endif %}{% endfor %}
             </div>
 
             <div class="social_share_wrap">

@@ -125,3 +125,49 @@ section.u4m-subscriptions-confirmation {
     font-weight: bold;
   }
 }
+
+.systems-page .hs-form-field p {
+  color: $backgroundColor;
+}
+
+section.u4m-membership-register {
+  form {
+    [type="checkbox"],
+    [type="radio"] {
+      width: auto !important;
+      margin-bottom: 0;
+      display: inline-block;
+      margin-right: 4px;
+    }
+    [type="checkbox"] + label,
+    [type="radio"] + label {
+      display: inline;
+    }
+  }
+}
+
+section.u4m-membership-login {
+  form {
+    [type="checkbox"],
+    [type="radio"] {
+      width: auto !important;
+      margin-bottom: 0;
+      display: inline-block;
+      margin-right: 4px;
+    }
+    [type="checkbox"] + label,
+    [type="radio"] + label {
+      display: inline;
+    }
+  }
+}
+
+section.u4m-membership-reset-password form .hs-form-field.form-input-validation-message ul.hs-error-msgs li {
+  position: relative;
+}
+
+.systems-page .hs-form-field ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
