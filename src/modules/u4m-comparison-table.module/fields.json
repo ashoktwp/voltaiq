@@ -498,25 +498,25 @@
       "plan_2_content" : "<ul>\n<li>Fully automated cycler file stitching</li>\n<li>Automated custom metric configuration with cycle type identification</li>\n</ul>",
       "plan_3_content" : "<ul>\n<li>Includes Professional Tier*</li>\n</ul>"
     }, {
-      "feature" : "Data Automation",
-      "plan_1_content" : "<ul>\n<li>Cycler (test / formation) data import, harmonization, metric extraction</li>\n<li>Data sorting, labeling (tags, projects)</li>\n<li>Traceability, linking (materials, process)</li>\n</ul>",
-      "plan_2_content" : "<ul>\n<li>Fully automated cycler file stitching</li>\n<li>Automated custom metric configuration with cycle type identification</li>\n</ul>",
+      "feature" : "Data Analysis",
+      "plan_1_content" : "<ul>\n<li>Visualization: Time-series, cycle, metadata</li>\n<li>Basic statistical views</li>\n<li>Results segmentation by metadata</li>\n<li>Shareable, no-code dashboards</li>\n</ul>",
+      "plan_2_content" : "<ul>\n<li>Custom, advanced in Workspaces (Pulse, HPPC, dQ/dV, module / pack, EIS, C-rate & more)</li>\n<li>Advanced statistics**</li>\n</ul>",
       "plan_3_content" : "<ul>\n<li>Includes Professional Tier*</li>\n</ul>"
     }, {
-      "feature" : "Data Automation",
-      "plan_1_content" : "<ul>\n<li>Cycler (test / formation) data import, harmonization, metric extraction</li>\n<li>Data sorting, labeling (tags, projects)</li>\n<li>Traceability, linking (materials, process)</li>\n</ul>",
-      "plan_2_content" : "<ul>\n<li>Fully automated cycler file stitching</li>\n<li>Automated custom metric configuration with cycle type identification</li>\n</ul>",
+      "feature" : "Analytics Studio",
+      "plan_1_content" : "<ul>\n<li>Comprehensive search</li>\n<li>Configurable “Device Record” metadata</li>\n<li>Cycler file “stitching” in browser app</li>\n</ul>",
+      "plan_2_content" : "<ul>\n<li>Bulk management of materials, build, process data**</li>\n</ul>",
       "plan_3_content" : "<ul>\n<li>Includes Professional Tier*</li>\n</ul>"
     }, {
-      "feature" : "Data Automation",
-      "plan_1_content" : "<ul>\n<li>Cycler (test / formation) data import, harmonization, metric extraction</li>\n<li>Data sorting, labeling (tags, projects)</li>\n<li>Traceability, linking (materials, process)</li>\n</ul>",
-      "plan_2_content" : "<ul>\n<li>Fully automated cycler file stitching</li>\n<li>Automated custom metric configuration with cycle type identification</li>\n</ul>",
-      "plan_3_content" : "<ul>\n<li>Includes Professional Tier*</li>\n</ul>"
+      "feature" : "Data Management",
+      "plan_1_content" : "<ul>\n<li>In-app Python data science environment</li>\n<li>Full access to harmonized data, metadata</li>\n</ul>",
+      "plan_2_content" : "<ul>\n<li>Integrated Python libraries for battery-specific data analysis</li>\n</ul>",
+      "plan_3_content" : "<ul>\n<li>Enhanced, Enterprise-tier data science environment</li>\n</ul>"
     }, {
-      "feature" : "Data Automation",
-      "plan_1_content" : "<ul>\n<li>Cycler (test / formation) data import, harmonization, metric extraction</li>\n<li>Data sorting, labeling (tags, projects)</li>\n<li>Traceability, linking (materials, process)</li>\n</ul>",
-      "plan_2_content" : "<ul>\n<li>Fully automated cycler file stitching</li>\n<li>Automated custom metric configuration with cycle type identification</li>\n</ul>",
-      "plan_3_content" : "<ul>\n<li>Includes Professional Tier*</li>\n</ul>"
+      "feature" : "Alerting",
+      "plan_1_content" : "<ul>\n<li>Basic alerting: Cycle statistics</li>\n</ul>",
+      "plan_2_content" : "<ul>\n<li>Formation and end-of-line anomaly detection and alerting</li>\n</ul>",
+      "plan_3_content" : "<ul>\n<li>Enhanced, Enterprise-tier data science environment</li>\n</ul>"
     } ]
   }
 }, {
@@ -536,7 +536,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -825,7 +825,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "gradient"
+      "default" : ""
     }, {
       "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
       "name" : "background_color",
@@ -929,7 +929,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "gradient",
+      "background_type" : "",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -938,6 +938,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : false,
       "include_overlay" : true
     }
   } ],
@@ -946,7 +947,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-default",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -960,7 +961,7 @@
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "background" : {
-      "background_type" : "gradient",
+      "background_type" : "",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -969,6 +970,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : false,
       "include_overlay" : true
     }
   }

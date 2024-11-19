@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "c2062210-973a-8fad-6bc4-85da835950ce",
-    "default" : 4
+    "default" : 3
   },
   "children" : [ {
     "id" : "3555fb99-da92-ff37-cad9-cb0cfa3d560d",
@@ -629,52 +629,6 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
-    "Images" : {
-      "size_type" : "auto",
-      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Group%2017.png",
-      "alt" : "QC Headline",
-      "loading" : "lazy",
-      "width" : 58,
-      "height" : 58,
-      "max_width" : 58,
-      "max_height" : 58
-    },
-    "include_eyebrow_text" : false,
-    "eyebrow_text" : "Optional Eyebrow Text",
-    "include_heading" : true,
-    "heading" : "QC Headline",
-    "heading_tag" : "h4",
-    "include_content" : true,
-    "content" : "<p><span>End-of-line QC take days or weeks after production to spot defective cells, and they often don’t catch all the problems.</span></p>",
-    "include_buttons" : false,
-    "buttons" : [ {
-      "type" : "std",
-      "theme" : "hs-arrow-btn",
-      "text" : "Secondary CTA Here",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "type" : "std",
-      "theme" : "hs-arrow-btn",
-      "text" : "Secondary CTA Here",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ]
-  }, {
     "Images" : {
       "size_type" : "auto",
       "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Group%2017.png",

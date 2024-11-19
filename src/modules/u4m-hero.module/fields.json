@@ -338,13 +338,13 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/heroBanner2.png",
-      "alt" : "Hero Banner",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/heroBanner.png",
+      "alt" : "heroBanner",
       "loading" : "lazy",
-      "width" : 1140,
-      "height" : 766,
-      "max_width" : 1140,
-      "max_height" : 766
+      "width" : 570,
+      "height" : 383,
+      "max_width" : 570,
+      "max_height" : 383
     }
   } ],
   "tab" : "CONTENT",
@@ -354,13 +354,13 @@
   "default" : {
     "image" : {
       "size_type" : "auto",
-      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/heroBanner2.png",
-      "alt" : "Hero Banner",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/heroBanner.png",
+      "alt" : "heroBanner",
       "loading" : "lazy",
-      "width" : 1140,
-      "height" : 766,
-      "max_width" : 1140,
-      "max_height" : 766
+      "width" : 570,
+      "height" : 383,
+      "max_width" : 570,
+      "max_height" : 383
     }
   }
 }, {
@@ -505,7 +505,7 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
-    "default" : 100
+    "default" : 241
   }, {
     "id" : "custom_top_margin_mobile",
     "name" : "custom_top_margin_mobile",
@@ -524,7 +524,7 @@
     "display" : "text",
     "step" : 1,
     "type" : "number",
-    "default" : 50
+    "default" : 100
   }, {
     "id" : "module_overrides.bottom_margin",
     "name" : "bottom_margin",
@@ -606,7 +606,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "top-padding-default"
+    "default" : "top-padding-custom"
   }, {
     "id" : "custom_top_padding",
     "name" : "custom_top_padding",
@@ -666,7 +666,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "bottom-padding-default"
+    "default" : "bottom-padding-custom"
   }, {
     "id" : "custom_bottom_padding",
     "name" : "custom_bottom_padding",
@@ -834,7 +834,7 @@
       "locked" : false,
       "display" : "checkbox",
       "type" : "boolean",
-      "default" : false
+      "default" : true
     }, {
       "id" : "54a97afa-04f5-c027-c8e0-a9e86fea0e0b",
       "name" : "image_top",
@@ -852,7 +852,7 @@
       },
       "display" : "checkbox",
       "type" : "boolean",
-      "default" : false
+      "default" : true
     }, {
       "id" : "dda19a88-f67b-d970-60ca-ab2024715516",
       "name" : "image_bottom",
@@ -870,7 +870,7 @@
       },
       "display" : "checkbox",
       "type" : "boolean",
-      "default" : false
+      "default" : true
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -890,9 +890,10 @@
         "max_height" : 969.5767195767196
       },
       "background_gradient" : "gradient1",
-      "include_overlay" : false,
-      "image_top" : false,
-      "image_bottom" : false
+      "reverse_gradient" : false,
+      "include_overlay" : true,
+      "image_top" : true,
+      "image_bottom" : true
     }
   } ],
   "tab" : "CONTENT",
@@ -902,15 +903,15 @@
   "default" : {
     "enable_overrides" : true,
     "top_margin" : "top-margin-default",
-    "custom_top_margin" : 100,
-    "custom_top_margin_mobile" : 50,
+    "custom_top_margin" : 241,
+    "custom_top_margin_mobile" : 100,
     "bottom_margin" : "bottom-margin-default",
     "custom_bottom_margin" : 100,
     "custom_bottom_margin_mobile" : 50,
-    "top_padding" : "top-padding-default",
+    "top_padding" : "top-padding-custom",
     "custom_top_padding" : 241,
     "custom_top_padding_mobile" : 100,
-    "bottom_padding" : "bottom-padding-default",
+    "bottom_padding" : "bottom-padding-custom",
     "custom_bottom_padding" : 152,
     "custom_bottom_padding_mobile" : 50,
     "background" : {
@@ -927,9 +928,10 @@
         "max_height" : 969.5767195767196
       },
       "background_gradient" : "gradient1",
-      "include_overlay" : false,
-      "image_top" : false,
-      "image_bottom" : false
+      "reverse_gradient" : false,
+      "include_overlay" : true,
+      "image_top" : true,
+      "image_bottom" : true
     }
   }
 } ]

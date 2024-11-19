@@ -341,7 +341,7 @@
     "locked" : false,
     "type" : "form",
     "default" : {
-      "form_id" : "d0525a24-75b6-4c8e-80fa-5f0637a3e5a8",
+      "form_id" : "e81033d6-2283-4b85-b8a1-cc07dc450e96",
       "response_type" : "inline",
       "message" : "Thanks for submitting the form.",
       "gotowebinar_webinar_key" : null,
@@ -357,7 +357,7 @@
   "default" : {
     "content" : "<h3>Form Headline Here</h3>",
     "select_form" : {
-      "form_id" : "d0525a24-75b6-4c8e-80fa-5f0637a3e5a8",
+      "form_id" : "e81033d6-2283-4b85-b8a1-cc07dc450e96",
       "response_type" : "inline",
       "message" : "Thanks for submitting the form.",
       "gotowebinar_webinar_key" : null,
@@ -388,7 +388,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "content" : "<h4><span> Easily communicate</span> the issue for faster resolution.</h4>\n<p>Quickly generate reports and dashboards to share your findings with other stakeholders, without having to manually gather all of the data from various sources.</p>"
+    "content" : "<h3><span> Easily communicate</span> the issue for faster resolution.</h3>\n<p>Quickly generate reports and dashboards to share your findings with other stakeholders, without having to manually gather all of the data from various sources.</p>"
   }
 }, {
   "id" : "9ffadb23-e714-ff2f-97e6-63704dac8959",
@@ -1008,6 +1008,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : false,
       "include_overlay" : true
     }
   }, {
@@ -1164,6 +1165,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : false,
       "include_overlay" : true
     },
     "bottom_background_settings" : {

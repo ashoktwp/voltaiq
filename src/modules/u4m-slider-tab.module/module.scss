@@ -2,7 +2,7 @@
 .u4m-slider-tab {
   position: relative;
   overflow: hidden;
-  &::before {
+  &.bg_overlay:before {
     content: "";
     height: 382.13px;
     background: $darkBluemd;
@@ -14,7 +14,7 @@
     filter: blur(196.21px);
   }
   @include tabletvert {
-    &::before {
+    &.bg_overlay:before {
       display: none;
     }
   }
