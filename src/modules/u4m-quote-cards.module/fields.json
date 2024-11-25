@@ -524,7 +524,7 @@
       "controlling_field_path" : "module_settings.shape_image",
       "controlling_value_regex" : null,
       "property" : "src",
-      "operator" : null,
+      "operator" : "NOT_EMPTY",
       "access" : null
     },
     "display" : "checkbox",
