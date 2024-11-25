@@ -1,131 +1,133 @@
 @import "../../css/_module-imports";
 
 .u4m-product-cards {
-    &::before,
-    &:after {
-        position: absolute;
-        filter: blur(196.21px);
-        background: $darkBluemd;
-        border-radius: 100%;
-    }
-    &::before {
-        height: 382px;
-        left: 30%;
-        position: absolute;
-        top: auto;
-        transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
-        width: 858px;
-    }
+  &::before,
+  &:after {
+    position: absolute;
+    filter: blur(196.21px);
+    background: $darkBluemd;
+    border-radius: 100%;
+  }
+  &::before {
+    height: 382px;
+    left: 30%;
+    position: absolute;
+    top: auto;
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+    width: 858px;
+  }
 
-    &:after {
-        width: 1272.84px;
-        height: 566.86px;
-        left: 10%;
-        top: 20%;
-        transform: matrix(-1, -0.03, -0.04, -1, 0, 0);
-    }
+  &:after {
+    width: 1272.84px;
+    height: 566.86px;
+    left: 10%;
+    top: 20%;
+    transform: matrix(-1, -0.03, -0.04, -1, 0, 0);
+  }
 
-    .intro-content {
-        margin-bottom: 63px;
-        position: relative;
-        z-index: 2;
-    }
+  .intro-content {
+    margin-bottom: 63px;
+    position: relative;
+    z-index: 2;
+  }
 
-    .page-center {
-        .product-cards_wrpp {
-            .inner_cnt {
-                .items {
-                    background: hsla(204, 4%, 73%, 0.1);
-                    border-radius: 3px;
-                    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
-                    width: calc(50% - 27px);
+  .page-center {
+    .product-cards_wrpp {
+      .inner_cnt {
+        .items {
+          background: hsla(204, 4%, 73%, 0.1);
+          border-radius: 5px;
+          box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+          width: calc(50% - 27px);
+          overflow: hidden;
 
-                    .pd {
-                        display: flex;
-                        flex-wrap: wrap;
-                        height: auto;
-                        height: 100%;
+          .pd {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            height: 100%;
 
-                        .top_icon {
-                            width: 34.5%;
+            .top_icon {
+              width: 34.5%;
 
-                            .bg {
-                                height: 100%;
-                                width: 100%;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                background-position: right;
+              .bg {
+                height: 100%;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: right;
 
-                                @include xs-phone {
-                                    padding-bottom: 56%;
-                                }
-                            }
+                @include xs-phone {
+                  padding-bottom: 56%;
+                }
+              }
 
-                            @include navbreak {
-                                width: 50%;
-                            }
+              @include navbreak {
+                width: 50%;
+              }
 
-                            @include xs-phone {
-                                width: 100%;
-                            }
-                        }
+              @include xs-phone {
+                width: 100%;
+              }
+            }
 
-                        .cnt {
-                            width: 65.5%;
+            .cnt {
+              width: 65.5%;
 
-                            .inner_cntt {
-                                padding: 49px 40px;
-                                height: 100%;
-                                display: flex;
-                                flex-direction: column;
+              .inner_cntt {
+                padding: 49px 40px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
 
-                                h5 {
-                                    margin: 0;
-                                }
-
-                                p {
-                                    @include b2;
-                                    margin: 0;
-                                    color: $white;
-                                }
-
-                                .content-section {
-                                    margin-bottom: 19px;
-                                }
-
-                                .button-wrap {
-                                    margin-top: auto;
-                                }
-                            }
-
-                            @include navbreak {
-                                width: 50%;
-                            }
-
-                            @include xs-phone {
-                                width: 100%;
-                            }
-                        }
-                    }
-
-                    @include phone {
-                        width: 50%;
-                    }
-
-                    @include tablet {
-                        width: 100%;
-                    }
+                h5 {
+                  margin: 0;
+                  margin-bottom: 5rem;
                 }
 
-                display: flex;
-                column-gap: 54px;
-                row-gap: 50px;
-                flex-wrap: wrap;
+                p {
+                  @include b2;
+                  margin: 0;
+                  color: $bodyColor;
+                }
+
+                .content-section {
+                  margin-bottom: 19px;
+                }
+
+                .button-wrap {
+                  margin-top: auto;
+                }
+              }
+
+              @include navbreak {
+                width: 50%;
+              }
+
+              @include xs-phone {
+                width: 100%;
+              }
             }
+          }
+
+          @include phone {
+            width: 50%;
+          }
+
+          @include tablet {
+            width: 100%;
+          }
         }
 
-        @include centerMd;
-        position: relative;
-        z-index: 2;
+        display: flex;
+        column-gap: 54px;
+        row-gap: 50px;
+        flex-wrap: wrap;
+      }
     }
+
+    @include centerMd;
+    position: relative;
+    z-index: 2;
+  }
 }

@@ -433,7 +433,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "h4"
+    "default" : "h5" 
   }, {
     "id" : "3fe5aebb-8dea-fc48-c663-542bdc9a2e0d",
     "name" : "include_content",
