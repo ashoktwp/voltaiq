@@ -6,7 +6,7 @@
 {{macros.contentGroup(module.intro_content)}}
 <div class="page-center">
 	{# Module content goes here #}
-	<div class="quote_card_wrap">
+	<div class="quote_card_wrap ">
 		<div class="quote_slides ">
 			{% for item in module.cards %}
 			<div class="quote_slide">
@@ -41,7 +41,7 @@
 	</div>
 </div>
 {% if module.module_settings.shape_image.src %} 
-<div class="shape_img" style="background-image:url({{ module.module_settings.shape_image.src }})"></div>
+<div class="shape_img {% if module.module_settings.add_reverse_shape_style %}shaperev{% endif %}" style="background-image:url({{ module.module_settings.shape_image.src }})"></div>
 {% endif %}
 </section>
 

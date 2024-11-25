@@ -503,15 +503,33 @@
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "size_type" : "auto",
-      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/ShapeImage.png",
-      "alt" : "ShapeImage",
+      "size_type" : "auto_custom_max",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/rev_shape.png",
+      "alt" : "shape",
       "loading" : "lazy",
-      "width" : 1512,
-      "height" : 109,
-      "max_width" : 1512,
-      "max_height" : 109
+      "width" : 3024,
+      "height" : 218,
+      "max_width" : 2000,
+      "max_height" : 144.17989417989418
     }
+  }, {
+    "id" : "e2665d82-8524-0d32-32e5-ad75b586e8c4",
+    "name" : "add_reverse_shape_style",
+    "display_width" : null,
+    "label" : "Add Reverse Shape Style",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "module_settings.shape_image",
+      "controlling_value_regex" : null,
+      "property" : "src",
+      "operator" : null,
+      "access" : null
+    },
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -519,15 +537,16 @@
   "type" : "group",
   "default" : {
     "shape_image" : {
-      "size_type" : "auto",
-      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/ShapeImage.png",
-      "alt" : "ShapeImage",
+      "size_type" : "auto_custom_max",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/rev_shape.png",
+      "alt" : "shape",
       "loading" : "lazy",
-      "width" : 1512,
-      "height" : 109,
-      "max_width" : 1512,
-      "max_height" : 109
-    }
+      "width" : 3024,
+      "height" : 218,
+      "max_width" : 2000,
+      "max_height" : 144.17989417989418
+    },
+    "add_reverse_shape_style" : true
   }
 }, {
   "id" : "module_overrides",
@@ -835,7 +854,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "gradient"
+      "default" : "color"
     }, {
       "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
       "name" : "background_color",
@@ -929,7 +948,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "gradient",
+      "background_type" : "color",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -960,7 +979,7 @@
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "background" : {
-      "background_type" : "gradient",
+      "background_type" : "color",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",

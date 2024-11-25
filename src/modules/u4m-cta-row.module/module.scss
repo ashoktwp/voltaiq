@@ -1,7 +1,5 @@
 @import "../../css/_module-imports";
 
-
-
 .u4m-cta-row {
   .page-center {
     .main_cta {
@@ -17,9 +15,9 @@
                 max-width: 100%;
                 padding: 0;
 
-                >h2 {
+                > h2 {
                   margin-bottom: 8px;
-                  line-height: 1.12500;
+                  line-height: 1.125;
                 }
 
                 .content-section {
@@ -53,11 +51,14 @@
               width: 100%;
 
               .hs-fieldtype-text {
-                >label {
+                > label {
                   font-size: 12px;
-                  line-height: 15px;
+                  line-height: 1.25;
                   margin-bottom: 9px;
                   display: block;
+                  letter-spacing: 2px;
+                  font-weight: 700;
+                  font-family: $font1;
                 }
               }
 
@@ -203,7 +204,6 @@
           }
 
           position: relative;
-
 
           .intro-content {
             margin-bottom: 20px;

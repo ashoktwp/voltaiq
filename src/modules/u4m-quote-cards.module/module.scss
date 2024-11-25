@@ -92,6 +92,7 @@
             }
             .quote_cnt {
               width: calc(100% - 430px);
+              max-width: 680px;
               @include tablet {
                 width: 100%;
               }
@@ -137,6 +138,9 @@
     background-size: cover;
     position: absolute;
     bottom: 0;
+    &.shaperev {
+      bottom: -100px;
+    }
     @include tablet {
       display: none;
     }
