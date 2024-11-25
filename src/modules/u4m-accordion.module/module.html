@@ -6,27 +6,27 @@
 
 {{macros.contentGroup(module.intro_content  )}}
 <div class="page-center">
-	{# Module content goes here #}
-	<div class="accordion_group">
-		{% for item in module.accordion %}
-		<div class="accordion_item">
-			<h6 class="accordion_title">
-				<span class="text">{{ item.title }}</span>
-				<span class="icon">
-					<svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none">
-						<path d="M5 6.4319L0 1.4319L0.931903 0.5L5 4.5681L9.0681 0.5L10 1.4319L5 6.4319Z" fill="white"/>
-					</svg>
-				</span>
-			</h6>
-			<div class="accorion_text">
-				<div class="inner_spacing">
-					{{ item.content }}
-				</div>
-			</div>
-		</div>
-		{% endfor %}
+  {# Module content goes here #}
+  <div class="accordion_group">
+    {% for item in module.accordion %}
+    <div class="accordion_item">
+      <h6 class="accordion_title">
+        <span class="text">{{ item.title }}</span>
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewBox="0 0 10 7" fill="none">
+            <path d="M5 6.4319L0 1.4319L0.931903 0.5L5 4.5681L9.0681 0.5L10 1.4319L5 6.4319Z" fill="white"/>
+          </svg>
+        </span>
+      </h6>
+      <div class="accorion_text">
+        <div class="inner_spacing">
+          {{ item.content }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
 
-	</div>
+  </div>
 </div>
 
 
@@ -36,16 +36,27 @@
 {% require_js %}
 
 <script>
-	$(".{{ moduleName }} .accordion_item").click(function () {
-		$(this).siblings().removeClass("active");
-	$(this).siblings().find(".accorion_text").slideUp();
-	$(this).children(".accorion_text").slideToggle();
-	$(this).toggleClass("active");
-	});
+ 
 
-	$(".{{ moduleName }} .accordion_item .accorion_text").click(function (e) {
-		e.stopPropagation();
-	});
+  $(".accordion_item").click(function () {
+    $(this).siblings().each(function () {
+      $(this).prev().removeClass("acactive");
+    });
+    $(this).siblings().removeClass("active");
+    $(this).siblings().find(".accorion_text").slideUp();
+    $(this).children(".accorion_text").slideToggle();
+    $(this).toggleClass("active");
+    const prevElement = $(this).prev();
+    if (prevElement.hasClass("acactive")) {
+      prevElement.removeClass("acactive");
+    } else {
+      prevElement.addClass("acactive");
+    }
+  });
+
+  $(".{{ moduleName }} .accordion_item .accorion_text").click(function (e) {
+    e.stopPropagation();
+  });
 
 </script>
 {% end_require_js %}

@@ -789,6 +789,20 @@
     "type" : "choice",
     "default" : "three_col"
   }, {
+    "id" : "e1647f75-8154-5c45-0746-0119bd032d33",
+    "name" : "container_width",
+    "display_width" : null,
+    "label" : "Container Width",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "page-center", "Theme" ], [ "page-center-sm", "Small" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "page-center-sm"
+  }, {
     "id" : "c35bf562-8aeb-e140-ae33-b798222d56ff",
     "name" : "intro_content_alignment",
     "display_width" : null,
@@ -809,6 +823,7 @@
   "type" : "group",
   "default" : {
     "column_count" : "three_col",
+    "container_width" : "page-center-sm",
     "intro_content_alignment" : "left"
   }
 }, {

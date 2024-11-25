@@ -77,6 +77,11 @@
 
       .cp_ft {
         padding: 25px 40px;
+        p {
+          font-family: $font2;
+          font-size: $baseFontSize;
+          font-weight: 700;
+        }
       }
 
       .cp_desc {
@@ -131,12 +136,13 @@
         .cp_top {
           @include flex;
           background-color: $cardHighlightColor;
-          padding: 35px;
+          padding: 33px 35px 23px;
           justify-content: center;
           align-items: center;
           text-align: center;
           min-height: 100%;
           align-content: center;
+          min-height: 114px;
           @include laptop {
             padding: 20px;
           }
@@ -175,6 +181,16 @@
           @include phone {
             padding: 20px;
             padding-top: 0;
+          }
+        }
+      }
+    }
+    &.head_row {
+      align-items: end;
+      .cp_col:nth-child(3) {
+        .cp_inr {
+          .cp_top {
+            padding: 47px 35px 37px;
           }
         }
       }

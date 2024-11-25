@@ -17,6 +17,7 @@ body {
   color: $bodyColor;
   font-weight: normal;
   background-color: $backgroundColor;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Set default text size */

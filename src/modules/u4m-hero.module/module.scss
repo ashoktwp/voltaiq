@@ -109,4 +109,12 @@
       display: none;
     }
   }
+
+  .intro-content {
+    .eyebrow {
+      & + * {
+        margin-left: -2px;
+      }
+    }
+  }
 }

@@ -1,7 +1,11 @@
 header.header {
-  padding: 20px 0;
-  position: relative;
-  z-index: 4;
+  padding: 57px 0;
+  position: fixed;
+  z-index: 30;
+  transition: $animation2;
+  left: 0;
+  right: 0;
+  top: 0;
   .page-center {
     > .flex_row {
       .logoSec {
@@ -42,6 +46,9 @@ header.header {
                   display: flex;
                   gap: 5px;
                   position: relative;
+                  font-family: $font2;
+                  color: $white;
+                  font-weight: 500;
                   svg {
                     transition: 0.2s all ease-in;
                   }
@@ -206,6 +213,7 @@ header.header {
       .rightSec.flex_row {
         @include tabletvertMin {
           justify-content: end;
+          display: flex !important;
         }
       }
       .mobileTrigger {
@@ -262,12 +270,23 @@ header.header {
       display: none !important;
     }
   }
+  @include tabletvert {
+    padding: 30px 0;
+  }
 }
 
-body:not(.no-banner) {
+.page-scrolled {
   header.header {
-    position: absolute;
-    left: 0;
-    right: 0;
+    padding: 30px 0;
+    background-color: $black;
+    box-shadow: $shadow4;
+  }
+}
+.no-banner {
+  .body-container-wrapper {
+    padding-top: 162px;
+    @include tabletvert {
+      padding-top: 90px;
+    }
   }
 }

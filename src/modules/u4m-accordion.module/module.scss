@@ -9,6 +9,7 @@
         cursor: pointer;
         border-bottom: 1px solid rgba($grey5, 0.3);
         position: relative;
+        transition: $animation2;
         h6.accordion_title {
           margin: 0;
           display: flex;
@@ -48,12 +49,16 @@
           border-color: transparent;
           border-radius: 3px;
         }
+        &.acactive {
+          border-bottom: transparent;
+        }
       }
       .accordion_item.active {
+        padding: 30px 40px;
         background: rgba($grey5, 0.1);
         box-shadow: $shadow1;
-        border-color: transparent;
         border-radius: 3px;
+        border-color: transparent;
         h6.accordion_title {
           span.icon {
             transform: rotate(180deg);

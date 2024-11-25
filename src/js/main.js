@@ -24,7 +24,7 @@ window.addEventListener('load', function() {
 window.addEventListener('scroll', function() {
   const html = document.documentElement;
   const top = html.scrollTop;
-  if (top > 100) {
+  if (top > 20) {
     document.body.classList.add('page-scrolled');
   } else {
     document.body.classList.remove('page-scrolled');
