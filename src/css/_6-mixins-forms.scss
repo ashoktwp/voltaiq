@@ -46,7 +46,7 @@
         li {
           margin-bottom: 0;
           label {
-            color: red;
+            color: $errorRed;
             font-size: 18rem;
             padding: 10rem 0 0;
             margin: 10rem 0;
@@ -81,7 +81,7 @@
         li {
           position: relative;
           text-align: center;
-          background: $error;
+          background: $errorRed;
           display: inline-block;
           color: $white;
           border-radius: 5rem;
@@ -165,7 +165,7 @@
         color: $black;
         &.error,
         &.invalid {
-          border: 1rem solid red;
+          border: 1rem solid $errorRed;
         }
         &::placeholder {
           color: rgba($gray3, 0.5);
@@ -187,8 +187,7 @@
       select {
         -webkit-appearance: none;
         -moz-appearance: none;
-        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png")
-          no-repeat;
+        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
         background-size: 13rem 8rem;
         background-position: 97% 51%;
         cursor: pointer;
@@ -203,7 +202,7 @@
           display: block;
           line-height: 1.2;
           margin-bottom: 0;
-          color: red;
+          color: $errorRed;
           label {
             font-size: 12rem;
             font-family: $font1;
@@ -214,7 +213,7 @@
             line-height: 1.4;
             margin-bottom: 0;
             margin-top: 1rem;
-            color: red;
+            color: $errorRed;
             @include phone {
               font-size: 12rem;
             }
@@ -230,7 +229,7 @@
 
       width: 100%;
       &.invalid {
-        border: 1px solid red;
+        border: 1px solid $errorRed;
       }
     }
     ul {
@@ -358,5 +357,92 @@
 
   .legal-consent-container {
     margin-bottom: 20rem;
+  }
+}
+
+@mixin formSub {
+  @include form;
+  margin: 0;
+  padding-bottom: 0px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 543px;
+  width: 100%;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  overflow: unset;
+
+  .hs-fieldtype-text {
+    > label {
+      display: block;
+      line-height: 1.25;
+      margin-bottom: 9px;
+      color: $white;
+    }
+  }
+
+  @include phone {
+    .hs_submit.hs-submit {
+      width: 100%;
+    }
+  }
+
+  input {
+    min-height: 48px;
+    border-radius: 5px;
+    border: 0;
+  }
+
+  input.hs-button.primary.large {
+    margin: 0;
+    margin-top: 28px;
+    min-width: auto;
+
+    @include phone {
+      margin: 0;
+    }
+  }
+
+  .hs-form-field {
+    max-width: calc(100% - 183px);
+    width: 100%;
+    margin: 0;
+
+    @include phone {
+      max-width: 100%;
+    }
+  }
+
+  ul.hs-error-msgs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+    li:before {
+      border-color: transparent transparent $errorRed;
+    }
+
+    li {
+      background: $errorRed;
+      color: $white;
+    }
+  }
+
+  .hs_error_rollup {
+    display: none;
+  }
+
+  @include tabletvert {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  @include phone {
+    flex-direction: column;
   }
 }

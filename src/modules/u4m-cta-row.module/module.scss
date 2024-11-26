@@ -39,7 +39,6 @@
             max-width: calc(100% - 578px);
             padding: 0;
             padding: 73px 35px 85px 100px;
-
             form {
               margin: 0;
               padding-bottom: 0px;
@@ -59,6 +58,8 @@
                   letter-spacing: 2px;
                   font-weight: 700;
                   font-family: $font1;
+                  text-transform: uppercase;
+                  color: $white;
                 }
               }
 

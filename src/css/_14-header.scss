@@ -85,6 +85,18 @@ header.header {
                   }
                   > li {
                     width: calc(50% - 16.5px);
+                    > a:hover {
+                      .flex_row {
+                        .menuContent {
+                          h6 {
+                            color: $highlightColor;
+                          }
+                          p {
+                            color: $white;
+                          }
+                        }
+                      }
+                    }
                     .flex_row {
                       .menuimg {
                         width: 100px;
@@ -102,11 +114,13 @@ header.header {
                         h6 {
                           margin: 0 0 4px;
                           font-size: 15px;
+                          transition: $animation1;
                         }
                         p {
                           margin: 0;
                           font-size: 14px;
                           line-height: 1.4285714285714286;
+                          transition: $animation1;
                         }
                       }
                       gap: 19px;
