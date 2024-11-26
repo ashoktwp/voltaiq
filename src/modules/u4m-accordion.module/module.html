@@ -38,25 +38,18 @@
 <script>
  
 
-  $(".accordion_item").click(function () {
-    $(this).siblings().each(function () {
-      $(this).prev().removeClass("acactive");
-    });
-    $(this).siblings().removeClass("active");
+  $(".{{ moduleName }} .accordion_item").click(function () {
+    $(this).siblings().removeClass("active acactive");
     $(this).siblings().find(".accorion_text").slideUp();
     $(this).children(".accorion_text").slideToggle();
-    $(this).toggleClass("active");
-    const prevElement = $(this).prev();
-    if (prevElement.hasClass("acactive")) {
-      prevElement.removeClass("acactive");
-    } else {
-      prevElement.addClass("acactive");
-    }
+    $(this).prev().addClass("acactive")
+    $(this).toggleClass("active").removeClass('acactive');
   });
 
   $(".{{ moduleName }} .accordion_item .accorion_text").click(function (e) {
     e.stopPropagation();
   });
+  
 
 </script>
 {% end_require_js %}
