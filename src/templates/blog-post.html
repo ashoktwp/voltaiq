@@ -38,7 +38,11 @@ label: Unified 4 - Blog Post
             </div>
           </div>
 
-          <div class="post_hero_image">
+          <div
+            class="post_hero_image desktop"
+            style="background-image:url({{ content.post_list_summary_featured_image }})"
+          ></div>
+          <div class="post_hero_image mobile">
             <img
               src="{{ content.post_list_summary_featured_image }}"
               alt="{{ content.name|striptags}}"
