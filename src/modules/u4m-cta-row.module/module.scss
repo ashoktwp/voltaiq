@@ -178,8 +178,11 @@
                 background-position: center;
                 width: 100%;
                 max-width: 100%;
+                margin-bottom: -150px;
               }
-
+              @include xs-phone {
+                margin-bottom: -100px;
+              }
               @include phone {
                 height: auto;
                 padding-bottom: 85%;
@@ -198,7 +201,8 @@
             @include tabletvert {
               width: 100%;
               max-width: 100%;
-              padding-bottom: 50px;
+              padding-bottom: 0;
+              overflow: hidden;
               padding-left: 10px;
               padding-right: 10px;
             }

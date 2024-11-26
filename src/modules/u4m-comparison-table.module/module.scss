@@ -89,7 +89,9 @@
         gap: 0;
         background-color: $cardBgColor;
         height: 100%;
-
+        h6 span {
+          color: $white;
+        }
         @include laptop {
           padding: 20px 30px;
         }

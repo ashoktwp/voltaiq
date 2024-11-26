@@ -64,6 +64,10 @@ section.u4m-animated-stats {
           align-items: center;
           margin-bottom: 2px;
           font-weight: bold;
+
+          @include tablet {
+            @include size50;
+          }
         }
         .bt_cnt {
           display: block;

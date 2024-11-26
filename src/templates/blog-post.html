@@ -17,10 +17,10 @@ label: Unified 4 - Blog Post
               {% for topic in content.topic_list %} {% if topic.name=="Featured"
               || topic.name=="featured" %} {% else %}
               <a
-                class="topic-link"
-                href="{{ blog_tag_url(group.id, topic.slug) }}"
-                >{{ topic.name }}</a
-              >{% endif %}{% endfor %}
+                 class="topic-link"
+                 href="{{ blog_tag_url(group.id, topic.slug) }}"
+                 >{{ topic.name }}</a
+                >{% endif %}{% endfor %}
             </div>
             <h1 class="post_hero_titlw">{{content.name}}</h1>
 
@@ -28,25 +28,19 @@ label: Unified 4 - Blog Post
               <div class="author-link">
                 by
                 <a
-                  href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}"
-                  >{{ content.blog_post_author.display_name }}</a
-                >
+                   href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}"
+                   >{{ content.blog_post_author.display_name }}</a
+                  >
               </div>
               <span class="date"
-                >{{ content.publish_date|datetimeformat('%B %e, %Y') }}</span
-              >
+                    >{{ content.publish_date|datetimeformat('%B %e, %Y') }}</span
+                >
             </div>
           </div>
 
-          <div
-            class="post_hero_image desktop"
-            style="background-image:url({{ content.post_list_summary_featured_image }})"
-          ></div>
+          <div class="post_hero_image desktop" style="background-image:url({{ content.post_list_summary_featured_image }})"> </div>
           <div class="post_hero_image mobile">
-            <img
-              src="{{ content.post_list_summary_featured_image }}"
-              alt="{{ content.name|striptags}}"
-            />
+            <img src="{{ content.post_list_summary_featured_image }}" alt="{{ content.name|striptags}}">
           </div>
         </div>
       </div>
@@ -65,8 +59,8 @@ label: Unified 4 - Blog Post
               {% for topic in content.topic_list %} {% if topic.name=="Featured"
               || topic.name=="featured" %} {% else %}
               <a class="link" href="{{ blog_tag_url(group.id, topic.slug) }}"
-                >{{ topic.name }}</a
-              >
+                 >{{ topic.name }}</a
+                >
               {% endif %}{% endfor %}
             </div>
 
@@ -75,60 +69,60 @@ label: Unified 4 - Blog Post
                 <span class="text">SHARE</span>
                 <div class="share_icon">
                   <a
-                    href="https://twitter.com/intent/tweet?original_referer={{ content.absolute_url }}&amp;url={{ content.absolute_url }}&amp;source=tweetbutton"
-                    target="_blank"
-                    aria-label="Twitter"
-                  >
+                     href="https://twitter.com/intent/tweet?original_referer={{ content.absolute_url }}&amp;url={{ content.absolute_url }}&amp;source=tweetbutton"
+                     target="_blank"
+                     aria-label="Twitter"
+                     >
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="24"
+                         height="24"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         >
                       <path
-                        d="M18.2434 2.25H21.5527L14.3246 10.5094L22.8277 21.75H16.1715L10.9543 14.9344L4.9918 21.75H1.67773L9.40742 12.9141L1.25586 2.25H8.08086L12.7918 8.47969L18.2434 2.25ZM17.0809 19.7719H18.9137L7.08242 4.125H5.11367L17.0809 19.7719Z"
-                        fill="white"
-                      />
+                            d="M18.2434 2.25H21.5527L14.3246 10.5094L22.8277 21.75H16.1715L10.9543 14.9344L4.9918 21.75H1.67773L9.40742 12.9141L1.25586 2.25H8.08086L12.7918 8.47969L18.2434 2.25ZM17.0809 19.7719H18.9137L7.08242 4.125H5.11367L17.0809 19.7719Z"
+                            fill="white"
+                            />
                     </svg>
                   </a>
 
                   <a
-                    href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ content.absolute_url }}"
-                    target="_blank"
-                    aria-label="LinkedIn"
-                  >
+                     href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ content.absolute_url }}"
+                     target="_blank"
+                     aria-label="LinkedIn"
+                     >
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="21"
-                      height="24"
-                      viewBox="0 0 21 24"
-                      fill="none"
-                    >
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="21"
+                         height="24"
+                         viewBox="0 0 21 24"
+                         fill="none"
+                         >
                       <path
-                        d="M4.70156 21H0.346875V6.97969H4.70156V21ZM2.52187 5.06719C1.12969 5.06719 0 3.91406 0 2.52187C0 1.85303 0.265697 1.21158 0.73864 0.73864C1.21158 0.265697 1.85303 0 2.52187 0C3.19072 0 3.83217 0.265697 4.30511 0.73864C4.77805 1.21158 5.04375 1.85303 5.04375 2.52187C5.04375 3.91406 3.91406 5.06719 2.52187 5.06719ZM20.9953 21H16.65V14.175C16.65 12.5484 16.6172 10.4625 14.3859 10.4625C12.1219 10.4625 11.775 12.2297 11.775 14.0578V21H7.425V6.97969H11.6016V8.89219H11.6625C12.2438 7.79062 13.6641 6.62812 15.7828 6.62812C20.1891 6.62812 21 9.52969 21 13.2984V21H20.9953Z"
-                        fill="white"
-                      />
+                            d="M4.70156 21H0.346875V6.97969H4.70156V21ZM2.52187 5.06719C1.12969 5.06719 0 3.91406 0 2.52187C0 1.85303 0.265697 1.21158 0.73864 0.73864C1.21158 0.265697 1.85303 0 2.52187 0C3.19072 0 3.83217 0.265697 4.30511 0.73864C4.77805 1.21158 5.04375 1.85303 5.04375 2.52187C5.04375 3.91406 3.91406 5.06719 2.52187 5.06719ZM20.9953 21H16.65V14.175C16.65 12.5484 16.6172 10.4625 14.3859 10.4625C12.1219 10.4625 11.775 12.2297 11.775 14.0578V21H7.425V6.97969H11.6016V8.89219H11.6625C12.2438 7.79062 13.6641 6.62812 15.7828 6.62812C20.1891 6.62812 21 9.52969 21 13.2984V21H20.9953Z"
+                            fill="white"
+                            />
                     </svg>
                   </a>
 
                   <a
-                    href="http://www.facebook.com/share.php?u={{ content.absolute_url }}"
-                    target="_blank"
-                    aria-label="Facebook"
-                  >
+                     href="http://www.facebook.com/share.php?u={{ content.absolute_url }}"
+                     target="_blank"
+                     aria-label="Facebook"
+                     >
                     <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="13"
-                      height="21"
-                      viewBox="0 0 13 21"
-                      fill="none"
-                    >
+                         xmlns="http://www.w3.org/2000/svg"
+                         width="13"
+                         height="21"
+                         viewBox="0 0 13 21"
+                         fill="none"
+                         >
                       <g clip-path="url(#clip0_202_5363)">
                         <path
-                          d="M3.24961 12.276V21H7.96211V12.276H11.4762L12.2074 8.26465H7.96211V6.84551C7.96211 4.725 8.7868 3.91289 10.9155 3.91289C11.5777 3.91289 12.1099 3.9293 12.4187 3.96211V0.324023C11.8377 0.164062 10.4159 0 9.59523 0C5.25242 0 3.24961 2.07129 3.24961 6.53789V8.26465H0.568359V12.276H3.24961Z"
-                          fill="white"
-                        />
+                              d="M3.24961 12.276V21H7.96211V12.276H11.4762L12.2074 8.26465H7.96211V6.84551C7.96211 4.725 8.7868 3.91289 10.9155 3.91289C11.5777 3.91289 12.1099 3.9293 12.4187 3.96211V0.324023C11.8377 0.164062 10.4159 0 9.59523 0C5.25242 0 3.24961 2.07129 3.24961 6.53789V8.26465H0.568359V12.276H3.24961Z"
+                              fill="white"
+                              />
                       </g>
                       <defs>
                         <clipPath id="clip0_202_5363">
@@ -138,27 +132,26 @@ label: Unified 4 - Blog Post
                     </svg>
                   </a>
 
-                  <a href="javascript:;" class="copy_text" aria-label="email">
-                    <span class="prmpcopy_text"
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="29"
-                        height="23"
-                        viewBox="0 0 29 23"
-                        fill="none"
-                      >
-                        <g clip-path="url(#clip0_202_5365)">
-                          <path
-                            d="M26.2722 12.0255C28.8324 9.48739 28.8324 5.37704 26.2722 2.83895C24.0066 0.592859 20.436 0.300867 17.8305 2.14716L17.758 2.19657C17.1055 2.65927 16.956 3.5577 17.4227 4.20009C17.8894 4.84247 18.7957 4.9952 19.4436 4.53251L19.5161 4.48309C20.9707 3.45438 22.9599 3.6161 24.2196 4.86942C25.6469 6.28446 25.6469 8.57548 24.2196 9.99052L19.1355 15.0397C17.7082 16.4548 15.3972 16.4548 13.9699 15.0397C12.7057 13.7864 12.5425 11.8143 13.5802 10.3768L13.63 10.305C14.0968 9.65809 13.9427 8.75966 13.2947 8.30145C12.6468 7.84325 11.736 7.99149 11.2738 8.63388L11.224 8.70575C9.35708 11.2843 9.65161 14.8241 11.9172 17.0702C14.4774 19.6083 18.6235 19.6083 21.1836 17.0702L26.2722 12.0255ZM2.72786 10.9743C0.1677 13.5124 0.1677 17.6227 2.72786 20.1608C4.99348 22.4069 8.56411 22.6989 11.1696 20.8526L11.2421 20.8032C11.8946 20.3405 12.0441 19.4421 11.5774 18.7997C11.1107 18.1573 10.2044 18.0046 9.55645 18.4673L9.48395 18.5167C8.02942 19.5454 6.0402 19.3837 4.78051 18.1304C3.35317 16.7108 3.35317 14.4198 4.78051 13.0048L9.86458 7.96005C11.2919 6.54501 13.6029 6.54501 15.0302 7.96005C16.2944 9.21337 16.4575 11.1854 15.4199 12.6274L15.37 12.6993C14.9033 13.3462 15.0574 14.2446 15.7054 14.7028C16.3533 15.161 17.2641 15.0128 17.7263 14.3704L17.7761 14.2985C19.643 11.7155 19.3485 8.17567 17.0829 5.92958C14.5227 3.39149 10.3766 3.39149 7.81645 5.92958L2.72786 10.9743Z"
-                            fill="white"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_202_5365">
-                            <rect width="29" height="23" fill="white" />
-                          </clipPath>
-                        </defs></svg
-                    ></span>
+                  <a href="javascript:;" class="copy_text " aria-label="email">
+                    <span class="prmpcopy_text"><svg
+                                                     xmlns="http://www.w3.org/2000/svg"
+                                                     width="29"
+                                                     height="23"
+                                                     viewBox="0 0 29 23"
+                                                     fill="none"
+                                                     >
+                      <g clip-path="url(#clip0_202_5365)">
+                        <path
+                              d="M26.2722 12.0255C28.8324 9.48739 28.8324 5.37704 26.2722 2.83895C24.0066 0.592859 20.436 0.300867 17.8305 2.14716L17.758 2.19657C17.1055 2.65927 16.956 3.5577 17.4227 4.20009C17.8894 4.84247 18.7957 4.9952 19.4436 4.53251L19.5161 4.48309C20.9707 3.45438 22.9599 3.6161 24.2196 4.86942C25.6469 6.28446 25.6469 8.57548 24.2196 9.99052L19.1355 15.0397C17.7082 16.4548 15.3972 16.4548 13.9699 15.0397C12.7057 13.7864 12.5425 11.8143 13.5802 10.3768L13.63 10.305C14.0968 9.65809 13.9427 8.75966 13.2947 8.30145C12.6468 7.84325 11.736 7.99149 11.2738 8.63388L11.224 8.70575C9.35708 11.2843 9.65161 14.8241 11.9172 17.0702C14.4774 19.6083 18.6235 19.6083 21.1836 17.0702L26.2722 12.0255ZM2.72786 10.9743C0.1677 13.5124 0.1677 17.6227 2.72786 20.1608C4.99348 22.4069 8.56411 22.6989 11.1696 20.8526L11.2421 20.8032C11.8946 20.3405 12.0441 19.4421 11.5774 18.7997C11.1107 18.1573 10.2044 18.0046 9.55645 18.4673L9.48395 18.5167C8.02942 19.5454 6.0402 19.3837 4.78051 18.1304C3.35317 16.7108 3.35317 14.4198 4.78051 13.0048L9.86458 7.96005C11.2919 6.54501 13.6029 6.54501 15.0302 7.96005C16.2944 9.21337 16.4575 11.1854 15.4199 12.6274L15.37 12.6993C14.9033 13.3462 15.0574 14.2446 15.7054 14.7028C16.3533 15.161 17.2641 15.0128 17.7263 14.3704L17.7761 14.2985C19.643 11.7155 19.3485 8.17567 17.0829 5.92958C14.5227 3.39149 10.3766 3.39149 7.81645 5.92958L2.72786 10.9743Z"
+                              fill="white"
+                              />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_202_5365">
+                          <rect width="29" height="23" fill="white" />
+                        </clipPath>
+                      </defs>
+                      </svg></span>
                     <span id="tooltipPropmt" class="tooltipPropmt"></span>
                   </a>
                 </div>
@@ -206,12 +199,7 @@ label: Unified 4 - Blog Post
     "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/logo-img.png",
     "width" : 120 } } ], intro_content={ "buttons" : [ ], "include_buttons" :
     false, "include_content" : false, "include_eyebrow_text" : false,
-    "include_heading" : false }, module_settings={ "shape_image" : { "alt" :
-    "ShapeImageNew", "height" : 218, "loading" : "lazy", "max_height" :
-    144.17989417989418, "max_width" : 2000, "size_type" : "auto_custom_max",
-    "src" :
-    "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/ShapeImageNew.png",
-    "width" : 3024 } }, module_overrides={ "background" : {
+    "include_heading" : false }, module_settings={ "add_bottom_shape" : true }, module_overrides={ "background" : {
     "background_gradient" : "gradient3", "background_type" : "gradient" },
     "enable_overrides" : true } %}
   </div>
@@ -228,29 +216,29 @@ label: Unified 4 - Blog Post
 </main>
 {% endblock body %} {% require_js %}
 
+
 <script>
   function generateText() {
     return "link copied";
   }
-  $(".prmpcopy_text").click(function (e) {
+  $('.prmpcopy_text').click(function(e) {
     var temp = $(".input_copy input");
     temp.focus();
     temp.select();
-    document.execCommand("copy");
+    document.execCommand('copy');
 
-    const tooltipPropmt = $(this).next("#tooltipPropmt");
+    const tooltipPropmt = $(this).next('#tooltipPropmt');
     const copiedText = generateText();
-    tooltipPropmt
-      .text(copiedText) // Set the tooltipPropmt text
+    tooltipPropmt.text(copiedText)  // Set the tooltipPropmt text
       .css({
-        display: "block",
-        left: event.pageX + 10, // Position to the right of the button
-        top: event.pageY,
-      });
+      display: 'block',
+      left: event.pageX + 10, // Position to the right of the button
+      top: event.pageY
+    });
 
     // Hide the tooltipPropmt after a few seconds
     setTimeout(() => {
-      tooltipPropmt.css("display", "none");
+      tooltipPropmt.css('display', 'none');
     }, 2000);
 
     e.stopPropagation();

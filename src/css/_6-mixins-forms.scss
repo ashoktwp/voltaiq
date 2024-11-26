@@ -79,40 +79,11 @@
 
       ul.hs-error-msgs {
         li {
-          position: relative;
-          text-align: center;
-          background: $errorRed;
-          display: inline-block;
-          color: $white;
-          border-radius: 5rem;
-          padding: 5rem 8rem;
-          line-height: 1.2;
-          position: absolute;
-          top: 0;
-
-          top: calc(100% + 7px);
-          left: 0;
-          z-index: 2;
-
-          &:before {
-            border-style: solid;
-            border-width: 0 8rem 8rem 8rem;
-            bottom: 100%;
-            border-color: transparent transparent $error transparent;
-            position: absolute;
-            height: 8rem;
-            width: 0rem;
-            content: "";
-            left: 0;
-            right: 0;
-            margin: auto;
-            right: auto;
-            left: 20px;
-          }
-
+          color: $errorRed;
+          text-transform: none;
           label {
             font-size: 12rem;
-            text-transform: uppercase;
+            text-transform: none;
             letter-spacing: 1rem;
             display: inline-block;
             font-weight: bold;
@@ -120,6 +91,7 @@
             margin-bottom: 0;
             margin-top: 1rem;
             color: $white;
+            color: $errorRed;
             font-family: $font1;
             @include phone {
               font-size: 12rem;
@@ -187,7 +159,8 @@
       select {
         -webkit-appearance: none;
         -moz-appearance: none;
-        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png") no-repeat;
+        background: url("//cdn2.hubspot.net/hubfs/302335/select-arrow.png")
+          no-repeat;
         background-size: 13rem 8rem;
         background-position: 97% 51%;
         cursor: pointer;
@@ -356,7 +329,7 @@
   }
 
   .legal-consent-container {
-    margin-bottom: 20rem;
+    margin-bottom: 10rem;
   }
 }
 
