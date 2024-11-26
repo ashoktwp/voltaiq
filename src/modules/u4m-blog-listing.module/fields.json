@@ -163,13 +163,24 @@
       "show_emoji_picker" : false,
       "type" : "text",
       "default" : "Search..."
+    }, {
+      "id" : "b3e2499e-0b97-1852-384e-793b446cf5ad",
+      "name" : "include_search_button",
+      "display_width" : null,
+      "label" : "Include Search Button",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "placeholder" : "Search..."
+      "placeholder" : "Search...",
+      "include_search_button" : true
     }
   }, {
     "id" : "b2f33b44-1d6c-560c-4dbd-a44d13b8f849",
@@ -430,7 +441,8 @@
   "type" : "group",
   "default" : {
     "input" : {
-      "placeholder" : "Search..."
+      "placeholder" : "Search...",
+      "include_search_button" : true
     },
     "results" : {
       "use_custom_search_results_template" : false,

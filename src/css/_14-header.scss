@@ -62,7 +62,7 @@ header.header {
                     height: 20px;
                     transform: rotate(45deg);
                     left: 35%;
-                    transition: 0.3s all ease-in;
+                    transition: 0.2s all ease-in;
                     opacity: 0;
                     visibility: hidden;
                   }
@@ -144,6 +144,7 @@ header.header {
                     &:after {
                       opacity: 1;
                       visibility: visible;
+                      transition: all 0.5s ease-in;
                     }
                     &:before {
                       content: "";

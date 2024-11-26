@@ -76,6 +76,13 @@
   }
 }
 
+@mixin desktop1850 {
+  @media (max-width: 1850px) {
+    @content;
+  }
+}
+
+
 @mixin desktop {
   @media (max-width: 1920px) {
     @content;

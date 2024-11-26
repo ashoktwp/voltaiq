@@ -38,10 +38,12 @@ label: Unified 4 - Blog Post
             </div>
           </div>
 
-          <div
-            class="post_hero_image"
-            style="background-image: url({{ content.post_list_summary_featured_image }})"
-          ></div>
+          <div class="post_hero_image">
+            <img
+              src="{{ content.post_list_summary_featured_image }}"
+              alt="{{ content.name|striptags}}"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -133,25 +135,27 @@ label: Unified 4 - Blog Post
                   </a>
 
                   <a href="javascript:;" class="copy_text" aria-label="email">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="29"
-                      height="23"
-                      viewBox="0 0 29 23"
-                      fill="none"
-                    >
-                      <g clip-path="url(#clip0_202_5365)">
-                        <path
-                          d="M26.2722 12.0255C28.8324 9.48739 28.8324 5.37704 26.2722 2.83895C24.0066 0.592859 20.436 0.300867 17.8305 2.14716L17.758 2.19657C17.1055 2.65927 16.956 3.5577 17.4227 4.20009C17.8894 4.84247 18.7957 4.9952 19.4436 4.53251L19.5161 4.48309C20.9707 3.45438 22.9599 3.6161 24.2196 4.86942C25.6469 6.28446 25.6469 8.57548 24.2196 9.99052L19.1355 15.0397C17.7082 16.4548 15.3972 16.4548 13.9699 15.0397C12.7057 13.7864 12.5425 11.8143 13.5802 10.3768L13.63 10.305C14.0968 9.65809 13.9427 8.75966 13.2947 8.30145C12.6468 7.84325 11.736 7.99149 11.2738 8.63388L11.224 8.70575C9.35708 11.2843 9.65161 14.8241 11.9172 17.0702C14.4774 19.6083 18.6235 19.6083 21.1836 17.0702L26.2722 12.0255ZM2.72786 10.9743C0.1677 13.5124 0.1677 17.6227 2.72786 20.1608C4.99348 22.4069 8.56411 22.6989 11.1696 20.8526L11.2421 20.8032C11.8946 20.3405 12.0441 19.4421 11.5774 18.7997C11.1107 18.1573 10.2044 18.0046 9.55645 18.4673L9.48395 18.5167C8.02942 19.5454 6.0402 19.3837 4.78051 18.1304C3.35317 16.7108 3.35317 14.4198 4.78051 13.0048L9.86458 7.96005C11.2919 6.54501 13.6029 6.54501 15.0302 7.96005C16.2944 9.21337 16.4575 11.1854 15.4199 12.6274L15.37 12.6993C14.9033 13.3462 15.0574 14.2446 15.7054 14.7028C16.3533 15.161 17.2641 15.0128 17.7263 14.3704L17.7761 14.2985C19.643 11.7155 19.3485 8.17567 17.0829 5.92958C14.5227 3.39149 10.3766 3.39149 7.81645 5.92958L2.72786 10.9743Z"
-                          fill="white"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_202_5365">
-                          <rect width="29" height="23" fill="white" />
-                        </clipPath>
-                      </defs>
-                    </svg>
+                    <span class="prmpcopy_text"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="29"
+                        height="23"
+                        viewBox="0 0 29 23"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_202_5365)">
+                          <path
+                            d="M26.2722 12.0255C28.8324 9.48739 28.8324 5.37704 26.2722 2.83895C24.0066 0.592859 20.436 0.300867 17.8305 2.14716L17.758 2.19657C17.1055 2.65927 16.956 3.5577 17.4227 4.20009C17.8894 4.84247 18.7957 4.9952 19.4436 4.53251L19.5161 4.48309C20.9707 3.45438 22.9599 3.6161 24.2196 4.86942C25.6469 6.28446 25.6469 8.57548 24.2196 9.99052L19.1355 15.0397C17.7082 16.4548 15.3972 16.4548 13.9699 15.0397C12.7057 13.7864 12.5425 11.8143 13.5802 10.3768L13.63 10.305C14.0968 9.65809 13.9427 8.75966 13.2947 8.30145C12.6468 7.84325 11.736 7.99149 11.2738 8.63388L11.224 8.70575C9.35708 11.2843 9.65161 14.8241 11.9172 17.0702C14.4774 19.6083 18.6235 19.6083 21.1836 17.0702L26.2722 12.0255ZM2.72786 10.9743C0.1677 13.5124 0.1677 17.6227 2.72786 20.1608C4.99348 22.4069 8.56411 22.6989 11.1696 20.8526L11.2421 20.8032C11.8946 20.3405 12.0441 19.4421 11.5774 18.7997C11.1107 18.1573 10.2044 18.0046 9.55645 18.4673L9.48395 18.5167C8.02942 19.5454 6.0402 19.3837 4.78051 18.1304C3.35317 16.7108 3.35317 14.4198 4.78051 13.0048L9.86458 7.96005C11.2919 6.54501 13.6029 6.54501 15.0302 7.96005C16.2944 9.21337 16.4575 11.1854 15.4199 12.6274L15.37 12.6993C14.9033 13.3462 15.0574 14.2446 15.7054 14.7028C16.3533 15.161 17.2641 15.0128 17.7263 14.3704L17.7761 14.2985C19.643 11.7155 19.3485 8.17567 17.0829 5.92958C14.5227 3.39149 10.3766 3.39149 7.81645 5.92958L2.72786 10.9743Z"
+                            fill="white"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_202_5365">
+                            <rect width="29" height="23" fill="white" />
+                          </clipPath>
+                        </defs></svg
+                    ></span>
+                    <span id="tooltipPropmt" class="tooltipPropmt"></span>
                   </a>
                 </div>
               </div>
@@ -219,18 +223,34 @@ label: Unified 4 - Blog Post
   </div>
 </main>
 {% endblock body %} {% require_js %}
+
 <script>
-  // Stick sharing
-  document.addEventListener("DOMContentLoaded", function () {
-    $(".copy_text").click(function (e) {
-      e.preventDefault();
-      console.time("time1");
-      var temp = $(".input_copy input");
-      temp.val();
-      temp.select();
-      document.execCommand("copy");
-      console.timeEnd("time1");
-    });
+  function generateText() {
+    return "link copied";
+  }
+  $(".prmpcopy_text").click(function (e) {
+    var temp = $(".input_copy input");
+    temp.focus();
+    temp.select();
+    document.execCommand("copy");
+
+    const tooltipPropmt = $(this).next("#tooltipPropmt");
+    const copiedText = generateText();
+    tooltipPropmt
+      .text(copiedText) // Set the tooltipPropmt text
+      .css({
+        display: "block",
+        left: event.pageX + 10, // Position to the right of the button
+        top: event.pageY,
+      });
+
+    // Hide the tooltipPropmt after a few seconds
+    setTimeout(() => {
+      tooltipPropmt.css("display", "none");
+    }, 2000);
+
+    e.stopPropagation();
+    e.preventDefault();
   });
 </script>
 {% end_require_js %}

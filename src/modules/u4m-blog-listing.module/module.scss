@@ -83,7 +83,7 @@ $background-color: rgba($backgroundColor, 0.1);
     box-shadow: 1px 10px 16px -9px rgba(122, 122, 122, 0.75);
     top: 100%;
     margin-top: 5px;
-    z-index: 3;
+    z-index: 4;
     border-radius: 10px;
     padding: 10px;
   }
@@ -185,7 +185,6 @@ input[type="search"] {
       .featCardsOuter {
         .featCards {
           position: relative;
-          row-gap: 40px;
           @include phoneMin {
             display: block;
           }
@@ -198,12 +197,18 @@ input[type="search"] {
               padding: 87px 100px 87px 18%;
               width: calc(100% - 237px);
               margin-left: auto;
+              display: flex;
+              align-items: center;
+              min-height: 475px;
             }
             @include tabletvertMin {
               padding-left: 25%;
             }
             @include navbreakMin {
               padding-left: 364px;
+            }
+            @include phone {
+              border-radius: 0 0 10px 10px;
             }
             .cardCont {
               .topicTagwrap {
@@ -241,7 +246,10 @@ input[type="search"] {
               top: 50px;
               bottom: 50px;
               max-width: 41.2%;
-              height: calc(100% - 100px);
+              height: 375px;
+            }
+            @include phone {
+              border-radius: 5px 5px 0 0;
             }
             border-radius: 5px;
             overflow: hidden;
@@ -288,7 +296,7 @@ input[type="search"] {
     }
   }
   .filterWrap {
-    padding: 20px 0;
+    padding: 50px 0 0;
     position: relative;
     @include phoneMin {
       margin-top: -24px;
@@ -339,9 +347,20 @@ input[type="search"] {
               appearance: none;
               outline: none;
               color: $blackLight;
+              padding-right: 40px;
               &::placeholder {
                 color: $blackLight;
               }
+            }
+            button.srchBtn {
+              position: absolute;
+              right: 0;
+              background: no-repeat;
+              border: none;
+              height: 48px;
+              display: flex;
+              align-items: center;
+              padding: 8px;
             }
           }
         }

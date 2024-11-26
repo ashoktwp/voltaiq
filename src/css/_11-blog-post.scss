@@ -27,9 +27,6 @@ section.u4m-blog-post {
       max-width: 1000rem;
       padding: 50rem 20rem 40rem 20rem;
       max-width: 800rem;
-      //margin: 50rem auto 50rem auto;
-      span.date {
-      }
       h1.title {
         @include h1;
         margin: 0;
@@ -100,8 +97,9 @@ section.u4m-blog-post {
       }
       a {
         font-weight: bold;
+        color: $linkBlog;
         &:hover {
-          color: $backgroundColor;
+          color: $linkBlog;
         }
       }
     }
@@ -194,6 +192,10 @@ section.u4m-blog-post {
 .blog_post_hero {
   padding-top: 180px;
   padding-bottom: 92px;
+  @include phone {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
 
   .post_herotag {
     margin-bottom: 18px;
@@ -224,29 +226,52 @@ section.u4m-blog-post {
     }
   }
 
-  .post_hero_image {
-    max-width: 700px;
-    height: 350px;
-    width: 100%;
-    border-radius: 5px;
-    background-size: cover;
-    background-position: center;
+  .post_quote_card {
+    .u4m-quote-cards {
+      .intro-content {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .post_hero_image {
-    /* max-width: 700px; */
-    height: 350px;
+    max-width: 700px;
     width: 100%;
     border-radius: 5px;
-    background-size: cover;
-    background-position: center;
     width: 53%;
-
+    &.desktop {
+      display: none;
+    }
+    @include largelaptopMin {
+      &.desktop {
+        display: block;
+      }
+      &.mobile {
+        display: none;
+      }
+    }
+    img {
+      overflow: hidden;
+      border-radius: 5px;
+    }
     @include tablet {
+      height: auto;
       width: 100%;
       padding-right: 0;
       padding-right: 0;
       max-width: 100%;
+    }
+    @include largelaptopMin {
+      height: 350px;
+      background-size: cover;
+      background-position: center;
+
+      .mobile {
+        display: none;
+      }
+      .desktop {
+        display: block;
+      }
     }
   }
 
@@ -267,47 +292,48 @@ section.u4m-blog-post {
     filter: blur(196.21px);
     height: 609.76px;
     position: absolute;
-    transform: matrix(-.64, -.77, .72, -.69, 0, 0);
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
     width: 1369.16px;
-    content: '';
+    content: "";
     left: -2%;
-}
+  }
 
-&:after {
-    content: '';
+  &:after {
+    content: "";
     background: #01255c;
     border-radius: 100%;
     filter: blur(196.21px);
     height: 609.76px;
     position: absolute;
     right: -110px;
-    transform: matrix(-.64, -.77, .72, -.69, 0, 0);
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
     width: 1369.16px;
-}
+  }
 
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
 
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
-
-
-&:before {
+  &:before {
     bottom: 0;
-}
+  }
 
-&:after {
+  &:after {
     top: 0;
-}
+  }
 
- .page-center {
+  .page-center {
     position: relative;
     z-index: 3;
-}
-
+  }
 }
 .blog_post_body_wrap {
   padding-top: 100px;
   padding-bottom: 124px;
+  @include phone {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   .blog_post_body_inner_wrap {
     @include b1;
@@ -336,7 +362,7 @@ section.u4m-blog-post {
     div#share {
       @include tabletMin {
         position: sticky;
-        top: 100px;
+        top: 120px;
       }
       .share_icon {
         display: flex;
@@ -346,6 +372,36 @@ section.u4m-blog-post {
 
         .copy_text {
           cursor: pointer;
+          position: relative;
+          .tooltipPropmt {
+            background-color: $DarkBlue;
+            border-radius: 4px;
+            color: $white;
+            display: none;
+            font-size: 10px;
+            left: 50% !important;
+            line-height: 1;
+            padding: 5px;
+            pointer-events: none;
+            position: absolute;
+            top: -30px !important;
+            transform: translateX(-50%);
+            width: 81px;
+            z-index: 1;
+            text-align: center;
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -5px;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 5px solid $DarkBlue;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              width: 5px;
+            }
+          }
         }
 
         @include tabletMin {
@@ -355,6 +411,18 @@ section.u4m-blog-post {
         }
         svg {
           display: block;
+        }
+        a {
+          svg {
+            * {
+              transition: 0.3s all ease-in;
+            }
+          }
+          &:hover svg {
+            * {
+              fill: $highlightColor;
+            }
+          }
         }
       }
 
@@ -385,7 +453,26 @@ section.u4m-blog-post {
 }
 
 // ========
-
+@mixin ctaRow {
+  @include tabletvertMin {
+    .page-center {
+      .main_cta {
+        .inner_wrpp {
+          .flex_row {
+            .right_sec {
+              .bg {
+                top: 45px;
+              }
+            }
+            .left_sec {
+              padding: 59px 35px 63px 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .hs-blog-listing {
   .ftr_wrpp {
     @include phoneMin {
@@ -398,11 +485,7 @@ section.u4m-blog-post {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        89.41deg,
-        $backgroundColor 5.37%,
-        $DarkBlue 98.16%
-      );
+      background: linear-gradient(89.41deg, $backgroundColor 5.37%, $DarkBlue 98.16%);
       top: 0;
       left: 0;
       transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -417,6 +500,7 @@ section.u4m-blog-post {
     z-index: 6;
     padding-bottom: 0;
     background: transparent;
+    @include ctaRow;
   }
 }
 
@@ -432,11 +516,7 @@ section.u4m-blog-post {
       position: absolute;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        89.41deg,
-        $backgroundColor 5.37%,
-        $DarkBlue 98.16%
-      );
+      background: linear-gradient(89.41deg, $backgroundColor 5.37%, $DarkBlue 98.16%);
       top: 0;
       left: 0;
       transform: matrix(1, 0, 0, 1, 0, 0);
@@ -451,5 +531,6 @@ section.u4m-blog-post {
     z-index: 6;
     padding-bottom: 0;
     background: transparent;
+    @include ctaRow;
   }
 }

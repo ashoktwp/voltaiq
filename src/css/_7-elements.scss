@@ -499,3 +499,35 @@ section[class*="u4m-"] {
     @include b1;
   }
 }
+
+// shape_img
+
+.shape_img {
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: -1px;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    width: 85%;
+    left: 0;
+    height: 29px;
+    bottom: 0;
+    content: "";
+    background-color: $black;
+    @include desktop1850 {
+      width: 80%;
+    }
+  }
+  svg {
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  @include tablet {
+    display: none;
+  }
+}
