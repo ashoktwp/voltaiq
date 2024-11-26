@@ -17,6 +17,11 @@ section.u4m-bottom-pane {
   }
   .intro-content {
     margin-bottom: 0;
+    @include phone {
+      .content-section {
+        margin-bottom: 20rem;
+      }
+    }
   }
   .page-center {
     position: relative;
@@ -27,7 +32,7 @@ section.u4m-bottom-pane {
     border-radius: $border2;
 
     @include phone {
-      padding: 30px 0;
+      padding: 50px;
     }
 
     .image {

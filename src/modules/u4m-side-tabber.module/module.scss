@@ -14,6 +14,7 @@
       width: 100%;
       left: 0;
       right: 0;
+
       &::before {
         content: "";
         left: 0;
@@ -23,11 +24,21 @@
         top: 0;
         right: auto;
         position: absolute;
+        @include desktop1850 {
+          width: 80%;
+        }
       }
       svg {
         display: block;
         margin-right: 200px;
         margin-left: auto;
+      }
+      @include laptop {
+        right: 150px;
+        left: auto;
+        &::before {
+          display: none;
+        }
       }
     }
   }
@@ -85,10 +96,6 @@
     border-radius: 3px;
     transition: 0.3s all ease-in-out;
 
-    *,
-    & {
-      transition: 0.3s all ease-in-out;
-    }
     &:hover .tabber_nav_inner h6 {
       color: $white;
     }
@@ -208,9 +215,13 @@
 
     .tabber_nav {
       display: none;
+      padding-right: 50px;
 
       &.mobile_nav {
         display: block;
+        & {
+          border-bottom: 1px solid $cardBgColor;
+        }
       }
 
       &.active span {
