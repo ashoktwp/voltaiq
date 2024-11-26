@@ -18,6 +18,7 @@
             width: 181px;
             margin: 0 auto 15rem;
             display: block;
+            cursor: pointer;
           }
         }
         .content-wrap {
@@ -54,7 +55,7 @@
         padding: 70px 0;
         opacity: 0.97;
         .popup-container {
-          max-width: 815px;
+          max-width: 930px;
           margin: auto;
           padding: 0 15px;
           .popup-box {
@@ -147,6 +148,9 @@
       .social-icon {
         width: 36px;
         height: 36px;
+        &:hover svg path {
+          fill: $highlightColor;
+        }
         svg {
           height: 36px;
           width: 36px;
