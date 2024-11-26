@@ -1,0 +1,1 @@
+$('.top_shape').parents('.u4m-side-tabber').addClass('topshape_wrap');

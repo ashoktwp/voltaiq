@@ -583,6 +583,31 @@
     } ]
   } ]
 }, {
+  "id" : "3b9ced2a-a79c-4921-a720-e229d79b8fe9",
+  "name" : "module_settings",
+  "display_width" : null,
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "77396320-dc7a-5db3-fce6-3b13b37d8325",
+    "name" : "add_top_shape",
+    "display_width" : null,
+    "label" : "Add Top Shape",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : {
+    "add_top_shape" : true
+  }
+}, {
   "id" : "module_overrides",
   "name" : "module_overrides",
   "display_width" : null,

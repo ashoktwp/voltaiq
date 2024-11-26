@@ -17,8 +17,14 @@
 	</div>
 </div>
 
-{% if module.module_settings.enable_shape_image %}
-<div class="shape_img" style="background-image:url({{ module.module_settings.shape_image.src }})"></div>
+{% if module.module_settings.enable_shape %}
+<div class="shape_img bottom_shape">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1512" height="109" viewBox="0 0 1512 109" fill="none">
+    <rect y="80" width="1204" height="29" fill="black"/>
+    <path d="M1204 109V80L1223.5 33.5H1233.5L1262 109H1271.5L1312 0V109H1204Z" fill="black"/>
+    <rect x="1311" width="200" height="109" fill="black"/>
+  </svg>
+</div>
 {% endif %}
 
 </section>

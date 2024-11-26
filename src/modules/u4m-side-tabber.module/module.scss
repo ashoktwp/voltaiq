@@ -3,6 +3,39 @@
 .u4m-side-tabber {
   position: relative;
   overflow: hidden;
+  @include tabletMin {
+    &.topshape_wrap {
+      padding-top: 200rem;
+    }
+    .top_shape {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      left: 0;
+      right: 0;
+      &::before {
+        content: "";
+        left: 0;
+        width: 83%;
+        height: 81px;
+        background: $black;
+        top: 0;
+        right: auto;
+        position: absolute;
+      }
+      svg {
+        display: block;
+        margin-right: 200px;
+        margin-left: auto;
+      }
+    }
+  }
+  @include tablet {
+    .top_shape {
+      display: none;
+    }
+  }
   .intro-content {
     margin-bottom: 83px;
     position: relative;

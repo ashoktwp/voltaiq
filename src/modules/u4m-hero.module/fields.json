@@ -372,60 +372,21 @@
   "locked" : false,
   "children" : [ {
     "id" : "eb1a138a-fcb8-00dd-45ba-214d0c7ebd89",
-    "name" : "enable_shape_image",
+    "name" : "enable_shape",
     "display_width" : null,
-    "label" : "Enable Shape Image",
+    "label" : "Enable Shape",
     "required" : false,
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
     "default" : false
-  }, {
-    "id" : "ae09d559-f9c1-b22b-c298-c9bbf0a3759e",
-    "name" : "shape_image",
-    "display_width" : null,
-    "label" : "Shape Image",
-    "required" : false,
-    "locked" : false,
-    "visibility" : {
-      "controlling_field" : null,
-      "controlling_field_path" : "module_settings.enable_shape_image",
-      "controlling_value_regex" : "true",
-      "property" : null,
-      "operator" : "EQUAL",
-      "access" : null
-    },
-    "responsive" : true,
-    "resizable" : false,
-    "show_loading" : false,
-    "type" : "image",
-    "default" : {
-      "size_type" : "auto_custom_max",
-      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/ShapeImageNew.png",
-      "alt" : "Shape Image",
-      "loading" : "lazy",
-      "width" : 3024,
-      "height" : 218,
-      "max_width" : 2000,
-      "max_height" : 144.17989417989418
-    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_shape_image" : false,
-    "shape_image" : {
-      "size_type" : "auto_custom_max",
-      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/ShapeImageNew.png",
-      "alt" : "Shape Image",
-      "loading" : "lazy",
-      "width" : 3024,
-      "height" : 218,
-      "max_width" : 2000,
-      "max_height" : 144.17989417989418
-    }
+    "enable_shape" : false
   }
 }, {
   "id" : "module_overrides",

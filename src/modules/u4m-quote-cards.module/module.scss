@@ -130,20 +130,4 @@
       }
     }
   }
-  .shape_img {
-    width: 100%;
-    height: 100px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
-    &.shaperev {
-      bottom: -100px;
-    }
-    @include tablet {
-      display: none;
-    }
-  }
 }
