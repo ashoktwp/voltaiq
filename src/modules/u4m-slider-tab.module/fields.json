@@ -393,14 +393,6 @@
         "sorting_label_field" : "a15621f0-befc-a350-d1dc-4074c000c2eb",
         "default" : 1
       },
-      "visibility" : {
-        "controlling_field" : null,
-        "controlling_field_path" : "intro_content.include_buttons",
-        "controlling_value_regex" : "true",
-        "property" : null,
-        "operator" : "EQUAL",
-        "access" : null
-      },
       "children" : [ {
         "id" : "f1bd6b2a-25d7-0d52-5056-0c196d7c839d",
         "name" : "type",

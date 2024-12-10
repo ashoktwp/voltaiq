@@ -16,15 +16,27 @@
       <div class="plan_item {% if item.featured_plan %} featured_plan {% endif %}">
         <div class="plan_item_inr">
           <div class="plan_top {% if item.featured_plan %} featured_plan_top {% endif %}">
+            
             {% if item.plan_name %}
             <h4>
               <span>{{ item.plan_name }}</span>
             </h4>
             {% endif %}
+            {% if item.top_content %}
+            <div class="top_text">
+              {{ item.top_content }}
+            </div>
+            {% endif %}
             {% if item.price %}
             <h3>
               {{ item.currency }}{{ item.price }}{{ item.suffix }}
             </h3>
+            {% else %}
+            {% if item.no_pricing_text  %}
+            <h3>
+              {{ item.no_pricing_text }}
+            </h3>
+            {% endif %}
             {% endif %}
           </div>
   

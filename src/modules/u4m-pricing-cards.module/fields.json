@@ -355,6 +355,15 @@
     "type" : "text",
     "default" : "Essential"
   }, {
+    "id" : "ac2489df-d689-f3d4-fa70-07873e5c3e0f",
+    "name" : "top_content",
+    "display_width" : null,
+    "label" : "Top Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : " "
+  }, {
     "id" : "ce9bb11c-346e-94d6-0109-20a4bebf131d",
     "name" : "currency",
     "display_width" : null,
@@ -388,6 +397,26 @@
     "show_emoji_picker" : false,
     "type" : "text",
     "default" : "/mo"
+  }, {
+    "id" : "85061a16-232b-2a69-566c-cb100eee10fd",
+    "name" : "no_pricing_text",
+    "display_width" : null,
+    "label" : "No Pricing Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "plans.price",
+      "controlling_value_regex" : null,
+      "property" : null,
+      "operator" : "EMPTY",
+      "access" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "No Pricing"
   }, {
     "id" : "fe545f22-6d09-cc57-238a-9d53c67a64bd",
     "name" : "description",
@@ -534,11 +563,14 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : [ {
+    "featured_plan" : false,
     "plan_name" : "Essential",
     "currency" : "$",
     "price" : 99,
     "suffix" : "/mo",
+    "no_pricing_text" : "No Pricing",
     "description" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
+    "description_copy" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-button",
@@ -552,14 +584,16 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ],
-    "featured_plan" : false
+    } ]
   }, {
+    "featured_plan" : true,
     "plan_name" : "Professional",
     "currency" : "$",
-    "suffix" : "/mo",
     "price" : 200,
+    "suffix" : "/mo",
+    "no_pricing_text" : "No Pricing",
     "description" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
+    "description_copy" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-button",
@@ -573,14 +607,16 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ],
-    "featured_plan" : true
+    } ]
   }, {
+    "featured_plan" : false,
     "plan_name" : "Enterprise",
     "currency" : "$",
-    "suffix" : "/mo",
     "price" : 500,
+    "suffix" : "/mo",
+    "no_pricing_text" : "No Pricing",
     "description" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
+    "description_copy" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>",
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-button",
@@ -594,8 +630,7 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    } ],
-    "featured_plan" : false
+    } ]
   } ]
 }, {
   "id" : "module_overrides",

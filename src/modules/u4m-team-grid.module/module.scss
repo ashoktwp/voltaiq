@@ -35,9 +35,6 @@
             text-transform: uppercase;
             letter-spacing: 2rem;
             color: $highlightColor;
-            @include tabletMin {
-              line-height: 1;
-            }
           }
         }
       }
@@ -105,6 +102,12 @@
                   border-radius: 50%;
                 }
                 .content-col {
+                  .top-con {
+                    max-width: 350px;
+                    @include xs-phone {
+                      max-width: 100%;
+                    }
+                  }
                   .pop_name_wrap {
                     display: flex;
                     flex-wrap: wrap;
@@ -125,9 +128,6 @@
                     text-transform: uppercase;
                     letter-spacing: 2rem;
                     color: $highlightColor;
-                    @include tabletMin {
-                      line-height: 1;
-                    }
                   }
                 }
               }

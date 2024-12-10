@@ -9,6 +9,14 @@
     z-index: 3;
 
     > .flex_row {
+      &.no_imgcnt .left_sec {
+        width: 100%;
+        max-width: 100% !important;
+        text-align: center;
+        .intro-content {
+          text-align: center !important;
+        }
+      }
       .left_sec {
         max-width: 100%;
 
@@ -193,7 +201,12 @@
       right: 0;
       img {
         @include phoneMin {
-          mask: linear-gradient(89.6deg, rgba(217, 217, 217, 0) 0.35%, #737373 49.01%, rgba(115, 115, 115, 0) 99.66%);
+          mask: linear-gradient(
+            89.6deg,
+            rgba(217, 217, 217, 0) 0.35%,
+            #737373 49.01%,
+            rgba(115, 115, 115, 0) 99.66%
+          );
           -webkit-mask: linear-gradient(
             89.6deg,
             rgba(217, 217, 217, 0) 0.35%,
