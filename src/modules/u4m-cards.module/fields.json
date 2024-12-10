@@ -453,7 +453,7 @@
     "locked" : false,
     "visibility" : {
       "controlling_field" : null,
-      "controlling_field_path" : "intro_content.include_content",
+      "controlling_field_path" : "items.include_content",
       "controlling_value_regex" : "true",
       "property" : null,
       "operator" : "EQUAL",

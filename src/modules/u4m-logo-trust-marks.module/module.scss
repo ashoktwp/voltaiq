@@ -1,6 +1,8 @@
 @import "../../css/_module-imports";
 
 .u4m-logo-trust-marks {
+  position: relative;
+  z-index: 99;
   .logoSlider {
     margin-top: 40px;
 
@@ -17,9 +19,6 @@
         justify-content: center;
         text-align: center;
         img {
-          width: 150px;
-          height: 50px;
-          max-height: 50px;
           object-fit: contain;
         }
       }
