@@ -5,9 +5,17 @@
 {% set getName = name|replace('-','') %}
 
 {% include "../partials/u4-module-includes.html" %}
+{% if module.module_settings.add_top_shape %}
+<div class="top_shape">
+  <svg xmlns="http://www.w3.org/2000/svg" width="1313" height="109" viewBox="0 0 1313 109" fill="none">
+    <path d="M1205 81L1224.5 33.5H1234.5L1263 109H1272.5L1313 0H1205V81Z" fill="black"/>
+    <rect width="1205" height="81" fill="black"/>
+  </svg>
+</div>
+{% endif %}
 
-  {{macros.contentGroup(module.intro_content  )}}
-  
+{{macros.contentGroup(module.intro_content  )}}
+
 <div class="page-center-sm">
   <div class="tabber_wrap">
 
@@ -16,15 +24,15 @@
         {% for item in module.tabber %}
         <li>
           <button class="tabber_nav desktop_tabber_nav {{loop.first ? "active" : ""}}" data-index="tab{{getName}}_{{loop.index}}">
-              <div class="tabber_nav_inner">
+            <div class="tabber_nav_inner">
               <h6>{{ item.title }}</h6> 
               {% if item.subtitle %}
               <p>
                 {{ item.subtitle }}
               </p>
               {% endif %} 
-              </div>
-              <span class="material-symbols-outlined">
+            </div>
+            <span class="material-symbols-outlined">
               keyboard_arrow_down
             </span>
           </button>
@@ -36,14 +44,14 @@
     <div class="tabber_paner_list">
       {% for item in module.tabber %}
       <div class="tabber_nav mobile_nav {{loop.first ? "active" : ""}}" data-index="tab{{getName}}_{{loop.index}}">
-      <div class="tabber_nav_inner">
-      <h6>{{ item.title }}</h6> 
-      {% if item.subtitle %}
-      <p>
-        {{ item.subtitle }}
-      </p>
-      {% endif %} 
-      </div>
+        <div class="tabber_nav_inner">
+          <h6>{{ item.title }}</h6> 
+          {% if item.subtitle %}
+          <p>
+            {{ item.subtitle }}
+          </p>
+          {% endif %} 
+        </div>
         <span class="acc_icon">
           <span class="material-symbols-outlined add">add</span>
           <span class="material-symbols-outlined remove">remove</span>
@@ -73,7 +81,7 @@
                 {% endif %}
 
                 {{ macros.buttonGroup(item.buttons) }}
-              
+
               </div>
             </div>
 
@@ -86,9 +94,17 @@
   </div>
 
 </div>
-
-
-
+{% if module.module_overrides.background.include_overlay %}
+<div class="overlay"></div>
+{% require_css %}
+<style>
+  .u4m-side-tabber:before,
+  .u4m-side-tabber:after{
+    content:"";
+  }
+</style>
+{% end_require_css %}
+{% endif %}
 
 {% require_js %}
 <script>

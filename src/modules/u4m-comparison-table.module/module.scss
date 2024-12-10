@@ -1,6 +1,7 @@
 @import "../../css/_module-imports";
 
 .u4m-comparison-table {
+  position: relative;
   @include phone {
     .desktop_only {
       display: none;
@@ -76,6 +77,11 @@
 
       .cp_ft {
         padding: 25px 40px;
+        p {
+          font-family: $font2;
+          font-size: $baseFontSize;
+          font-weight: 700;
+        }
       }
 
       .cp_desc {
@@ -83,7 +89,9 @@
         gap: 0;
         background-color: $cardBgColor;
         height: 100%;
-
+        h6 span {
+          color: $white;
+        }
         @include laptop {
           padding: 20px 30px;
         }
@@ -130,12 +138,13 @@
         .cp_top {
           @include flex;
           background-color: $cardHighlightColor;
-          padding: 35px;
+          padding: 33px 35px 23px;
           justify-content: center;
           align-items: center;
           text-align: center;
           min-height: 100%;
           align-content: center;
+          min-height: 114px;
           @include laptop {
             padding: 20px;
           }
@@ -178,6 +187,29 @@
         }
       }
     }
+    &.head_row {
+      align-items: end;
+      .cp_col:nth-child(3) {
+        .cp_inr {
+          .cp_top {
+            padding: 47px 35px 37px;
+          }
+        }
+      }
+    }
+  }
+  &.bg_overlay:before {
+    position: absolute;
+    width: 858.04px;
+    height: 382.13px;
+    top: 40%;
+    left: 40%;
+    background: $darkBluemd;
+    filter: blur(196.21px);
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+  }
+  > * {
+    position: relative;
   }
 }
 

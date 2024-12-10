@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "c2062210-973a-8fad-6bc4-85da835950ce",
-    "default" : 2
+    "default" : 6
   },
   "children" : [ {
     "id" : "3555fb99-da92-ff37-cad9-cb0cfa3d560d",
@@ -344,7 +344,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/shutterstock_2512260483%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/shutterstock_2512260483%201.png",
       "alt" : "Product Development",
       "loading" : "lazy",
       "width" : 200,
@@ -433,7 +433,7 @@
     "reordering_enabled" : true,
     "preset" : null,
     "type" : "choice",
-    "default" : "h4"
+    "default" : "h5" 
   }, {
     "id" : "3fe5aebb-8dea-fc48-c663-542bdc9a2e0d",
     "name" : "include_content",
@@ -470,7 +470,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "29533447-b53c-af2f-7287-714a57449b12",
     "name" : "buttons",
@@ -482,7 +482,7 @@
       "min" : null,
       "max" : null,
       "sorting_label_field" : "a15621f0-befc-a350-d1dc-4074c000c2eb",
-      "default" : 2
+      "default" : 1
     },
     "visibility" : {
       "controlling_field" : null,
@@ -609,19 +609,6 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    }, {
-      "type" : "std",
-      "theme" : "hs-arrow-btn",
-      "text" : "Learn More",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
     } ]
   } ],
   "tab" : "CONTENT",
@@ -631,7 +618,7 @@
   "default" : [ {
     "Images" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/shutterstock_2512260483%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/shutterstock_2512260483%201.png",
       "alt" : "Product Development",
       "loading" : "lazy",
       "width" : 200,
@@ -646,21 +633,8 @@
     "heading_tag" : "h4",
     "include_content" : true,
     "content" : "<p><span>Dial in materials and tolerances sooner, reach process milestones quicker, scale faster</span></p>",
-    "include_buttons" : false,
+    "include_buttons" : true,
     "buttons" : [ {
-      "type" : "std",
-      "theme" : "hs-arrow-btn",
-      "text" : "Learn More",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
       "type" : "std",
       "theme" : "hs-arrow-btn",
       "text" : "Learn More",
@@ -677,7 +651,7 @@
   }, {
     "Images" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/shutterstock_2512260483%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/shutterstock_2512260483%201.png",
       "alt" : "Product Development",
       "loading" : "lazy",
       "width" : 200,
@@ -692,7 +666,7 @@
     "heading_tag" : "h4",
     "include_content" : true,
     "content" : "<p><span>Dial in materials and tolerances sooner, reach process milestones quicker, scale faster</span></p>",
-    "include_buttons" : false,
+    "include_buttons" : true,
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-arrow-btn",
@@ -706,7 +680,126 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    }, {
+    } ]
+  }, {
+    "Images" : {
+      "size_type" : "auto",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/shutterstock_2512260483%201.png",
+      "alt" : "Product Development",
+      "loading" : "lazy",
+      "width" : 200,
+      "height" : 250,
+      "max_width" : 200,
+      "max_height" : 250
+    },
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Optional Eyebrow Text",
+    "include_heading" : true,
+    "heading" : "QC Headline",
+    "heading_tag" : "h4",
+    "include_content" : true,
+    "content" : "<p><span>Dial in materials and tolerances sooner, reach process milestones quicker, scale faster</span></p>",
+    "include_buttons" : true,
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Learn More",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "Images" : {
+      "size_type" : "auto",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/shutterstock_2512260483%201.png",
+      "alt" : "Product Development",
+      "loading" : "lazy",
+      "width" : 200,
+      "height" : 250,
+      "max_width" : 200,
+      "max_height" : 250
+    },
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Optional Eyebrow Text",
+    "include_heading" : true,
+    "heading" : "QC Headline",
+    "heading_tag" : "h4",
+    "include_content" : true,
+    "content" : "<p><span>Dial in materials and tolerances sooner, reach process milestones quicker, scale faster</span></p>",
+    "include_buttons" : true,
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Learn More",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "Images" : {
+      "size_type" : "auto",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/shutterstock_2512260483%201.png",
+      "alt" : "Product Development",
+      "loading" : "lazy",
+      "width" : 200,
+      "height" : 250,
+      "max_width" : 200,
+      "max_height" : 250
+    },
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Optional Eyebrow Text",
+    "include_heading" : true,
+    "heading" : "QC Headline",
+    "heading_tag" : "h4",
+    "include_content" : true,
+    "content" : "<p><span>Dial in materials and tolerances sooner, reach process milestones quicker, scale faster</span></p>",
+    "include_buttons" : true,
+    "buttons" : [ {
+      "type" : "std",
+      "theme" : "hs-arrow-btn",
+      "text" : "Learn More",
+      "link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "Images" : {
+      "size_type" : "auto",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/shutterstock_2512260483%201.png",
+      "alt" : "Product Development",
+      "loading" : "lazy",
+      "width" : 200,
+      "height" : 250,
+      "max_width" : 200,
+      "max_height" : 250
+    },
+    "include_eyebrow_text" : false,
+    "eyebrow_text" : "Optional Eyebrow Text",
+    "include_heading" : true,
+    "heading" : "QC Headline",
+    "heading_tag" : "h4",
+    "include_content" : true,
+    "content" : "<p><span>Dial in materials and tolerances sooner, reach process milestones quicker, scale faster</span></p>",
+    "include_buttons" : true,
+    "buttons" : [ {
       "type" : "std",
       "theme" : "hs-arrow-btn",
       "text" : "Learn More",
@@ -1098,6 +1191,24 @@
       "type" : "choice",
       "default" : "gradient1"
     }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",
       "display_width" : null,
@@ -1122,6 +1233,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : false,
       "include_overlay" : true
     }
   } ],
@@ -1153,6 +1265,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : false,
       "include_overlay" : true
     }
   }

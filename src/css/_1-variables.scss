@@ -5,6 +5,7 @@ $gray2: #ebeff3;
 $gray3: #cacaca;
 $white: #ffffff;
 $black: #000;
+$errorRed: #ff0000;
 
 // New brand colors
 $highlightColor: #00e9ba;
@@ -15,43 +16,30 @@ $themeColor: #0066ff;
 $cardBgColor: rgba(183, 186, 188, 0.1);
 $cardHighlightColor: #011432;
 $borderDark: rgba(183, 186, 188, 0.3);
+$blackLight: #131822;
+$DarkBlue: #00255d;
+$lightBlue: #001b44;
+$darkBluemd: #01255c;
+$skyBlue: #003b94;
+$skyBlueLight: #003b94;
 
-$primaryGradientColor: linear-gradient(
-  87.43deg,
-  #001b44 -14.67%,
-  $backgroundColor 58.26%
-);
-$secondaryGradientColor: linear-gradient(
-  106.91deg,
-  #003b94 4.96%,
-  $themeColor 27.56%,
-  $highlightColor 89.86%
-);
+$grey4: #c1c7cb;
+$grey5: #b7babc;
+$primaryGradientColor: linear-gradient(87.43deg, $lightBlue -14.67%, $backgroundColor 58.26%);
+$secondaryGradientColor: linear-gradient(106.91deg, $skyBlue 4.96%, $themeColor 27.56%, $highlightColor 89.86%);
 
-$gradientObsidian: linear-gradient(
-  87.43deg,
-  #001b44 -14.67%,
-  $backgroundColor 58.26%
-);
+$primaryGradientreverseColor: linear-gradient(261deg, $lightBlue -14.67%, $backgroundColor 58.26%);
+$secondaryGradientreverseColor: linear-gradient(255deg, $skyBlue 4.96%, $themeColor 27.56%, $highlightColor 89.86%);
+$teamPopupreverse: linear-gradient(270deg, $backgroundColor 5.37%, $DarkBlue 98.16%);
 
-$gradientMidnight: linear-gradient(
-  106.42deg,
-  $backgroundColor 7.89%,
-  #003788 69.38%,
-  $themeColor 101.3%
-);
-$gradientDeepSea: linear-gradient(
-  107.56deg,
-  $backgroundColor -28.56%,
-  $themeColor 38.12%,
-  $highlightColor 112.85%
-);
-$gradientTropicalSea: linear-gradient(
-  93.03deg,
-  $themeColor -44.88%,
-  $highlightColor 109.68%
-);
-$gradientSky: linear-gradient(102.98deg, $themeColor -12.29%, #dbe2e9 124.42%);
+$gradientObsidian: linear-gradient(87.43deg, $lightBlue -14.67%, $backgroundColor 58.26%);
+
+$gradientMidnight: linear-gradient(106.42deg, $backgroundColor 7.89%, $skyBlueLight 69.38%, $themeColor 101.3%);
+$gradientDeepSea: linear-gradient(107.56deg, $backgroundColor -28.56%, $themeColor 38.12%, $highlightColor 112.85%);
+$gradientTropicalSea: linear-gradient(93.03deg, $themeColor -44.88%, $highlightColor 109.68%);
+$gradientSky: linear-gradient(102.98deg, $themeColor -12.29%, $bodyColor 124.42%);
+
+$teamPopup: linear-gradient(89.41deg, $backgroundColor 5.37%, $DarkBlue 98.16%);
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap");
 
@@ -69,17 +57,11 @@ $shadow1: 2px 4px 15px rgba($backgroundColor, 0.1);
 $shadow2: 0 5rem 25rem 0 rgba($backgroundColor, 0.2);
 $shadow3: 0 10rem 50rem 0 rgba($backgroundColor, 0.3);
 $textShadow1: 0 0 4rem rgba($backgroundColor, 0.3);
+$shadow4: 2px 4px 15px rgba($white, 0.1);
 // Animation
 $animation1: 0.1s ease-in;
 $animation2: 0.25s ease-in;
 $animation3: 1s ease-in;
 
 $font16: 16rem;
-
-$blackLight: #131822;
-$DarkBlue: #00255d;
-$lightBlue: #001b44;
-$darkBluemd: #01255c;
-
-$grey4: #c1c7cb;
-$grey5: #b7babc;
+$linkBlog: #7db2ff;

@@ -1,0 +1,14 @@
+<!--
+templateType: global_partial
+label: Header no navigation
+-->
+
+<header class="header">
+	<div class="page-center">
+		<div class="flex_row">
+			<div class="logoSec">
+				{% module "header_logo" path="@hubspot/logo",no_wrapper="true", label="Header Logo", link="#" img={src= "{{ get_asset_url('./../images/logo.png') }}", width= 180,alt="Voltaiq", override_inherited_src= true} %}
+			</div>
+		</div>
+	</div>
+</header>

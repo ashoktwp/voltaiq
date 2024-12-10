@@ -1,8 +1,5 @@
 @import "../../css/_module-imports";
 
-
-
-
 .u4m-logo-trust-marks {
   .logoSlider {
     margin-top: 40px;
@@ -14,6 +11,17 @@
         padding: 14.64px;
         text-align: center;
         border-radius: 5px;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        img {
+          width: 150px;
+          height: 50px;
+          max-height: 50px;
+          object-fit: contain;
+        }
       }
     }
   }

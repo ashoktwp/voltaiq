@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "c2062210-973a-8fad-6bc4-85da835950ce",
-    "default" : 4
+    "default" : 3
   },
   "children" : [ {
     "id" : "3555fb99-da92-ff37-cad9-cb0cfa3d560d",
@@ -344,7 +344,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Group%2017.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Group%2017.png",
       "alt" : "QC Headline",
       "loading" : "lazy",
       "width" : 58,
@@ -631,7 +631,7 @@
   "default" : [ {
     "Images" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Group%2017.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Group%2017.png",
       "alt" : "QC Headline",
       "loading" : "lazy",
       "width" : 58,
@@ -677,7 +677,7 @@
   }, {
     "Images" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Group%2017.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Group%2017.png",
       "alt" : "QC Headline",
       "loading" : "lazy",
       "width" : 58,
@@ -723,53 +723,7 @@
   }, {
     "Images" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Group%2017.png",
-      "alt" : "QC Headline",
-      "loading" : "lazy",
-      "width" : 58,
-      "height" : 58,
-      "max_width" : 58,
-      "max_height" : 58
-    },
-    "include_eyebrow_text" : false,
-    "eyebrow_text" : "Optional Eyebrow Text",
-    "include_heading" : true,
-    "heading" : "QC Headline",
-    "heading_tag" : "h4",
-    "include_content" : true,
-    "content" : "<p><span>End-of-line QC take days or weeks after production to spot defective cells, and they often don’t catch all the problems.</span></p>",
-    "include_buttons" : false,
-    "buttons" : [ {
-      "type" : "std",
-      "theme" : "hs-arrow-btn",
-      "text" : "Secondary CTA Here",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "type" : "std",
-      "theme" : "hs-arrow-btn",
-      "text" : "Secondary CTA Here",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    } ]
-  }, {
-    "Images" : {
-      "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Group%2017.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Group%2017.png",
       "alt" : "QC Headline",
       "loading" : "lazy",
       "width" : 58,
@@ -834,13 +788,43 @@
     "preset" : null,
     "type" : "choice",
     "default" : "three_col"
+  }, {
+    "id" : "e1647f75-8154-5c45-0746-0119bd032d33",
+    "name" : "container_width",
+    "display_width" : null,
+    "label" : "Container Width",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "page-center", "Theme" ], [ "page-center-sm", "Small" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "page-center-sm"
+  }, {
+    "id" : "c35bf562-8aeb-e140-ae33-b798222d56ff",
+    "name" : "intro_content_alignment",
+    "display_width" : null,
+    "label" : "Intro Content Alignment",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "left"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "column_count" : "three_col"
+    "column_count" : "three_col",
+    "container_width" : "page-center-sm",
+    "intro_content_alignment" : "left"
   }
 }, {
   "id" : "module_overrides",
@@ -1219,6 +1203,24 @@
       "type" : "choice",
       "default" : "gradient1"
     }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",
       "display_width" : null,
@@ -1243,6 +1245,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : true,
       "include_overlay" : true
     }
   } ],
@@ -1274,6 +1277,7 @@
         "loading" : "lazy"
       },
       "background_gradient" : "gradient1",
+      "reverse_gradient" : true,
       "include_overlay" : true
     }
   }

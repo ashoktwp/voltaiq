@@ -1,1 +1,0 @@
-$('.shape_img').parents('.u4m-quote-cards').addClass('shape_wrap');

@@ -36,7 +36,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Group%2082.svg",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Group%2082.svg",
       "alt" : "Icon",
       "loading" : "lazy",
       "width" : 404,
@@ -184,8 +184,7 @@
       "operator" : "EQUAL",
       "access" : null
     },
-    "children" : [
-       {
+    "children" : [ {
       "id" : "a15621f0-befc-a350-d1dc-4074c000c2eb",
       "name" : "type",
       "display_width" : null,
@@ -312,7 +311,7 @@
     "include_image" : true,
     "image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Group%2082.svg",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Group%2082.svg",
       "alt" : "Icon",
       "loading" : "lazy",
       "width" : 404,
@@ -729,6 +728,24 @@
       "preset" : null,
       "type" : "choice",
       "default" : "gradient1"
+    }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
     } ],
     "tab" : "CONTENT",
     "expanded" : false,

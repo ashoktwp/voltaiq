@@ -303,7 +303,7 @@
     },
     "type" : "form",
     "default" : {
-      "form_id" : "1c4299ff-1476-4001-be3f-6039c4510da4",
+      "form_id" : "98101a8e-d184-4147-a181-88feb5934eca",
       "response_type" : "inline",
       "message" : "Thanks for submitting the form.",
       "gotowebinar_webinar_key" : null,
@@ -354,7 +354,7 @@
     } ],
     "include_form" : true,
     "select_form" : {
-      "form_id" : "1c4299ff-1476-4001-be3f-6039c4510da4",
+      "form_id" : "98101a8e-d184-4147-a181-88feb5934eca",
       "response_type" : "inline",
       "message" : "Thanks for submitting the form.",
       "gotowebinar_webinar_key" : null,
@@ -382,7 +382,7 @@
     "show_loading" : false,
     "type" : "image",
     "default" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/CtaRowBg.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/CtaRowBg.png",
       "alt" : "CtaRowBg",
       "width" : 545,
       "height" : 449,
@@ -396,7 +396,7 @@
   "type" : "group",
   "default" : {
     "image" : {
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/CtaRowBg.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/CtaRowBg.png",
       "alt" : "CtaRowBg",
       "width" : 545,
       "height" : 449,
@@ -777,6 +777,24 @@
       "preset" : null,
       "type" : "choice",
       "default" : ""
+    }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
@@ -788,7 +806,8 @@
       "background_image" : {
         "src" : ""
       },
-      "background_gradient" : ""
+      "background_gradient" : "",
+      "reverse_gradient" : false
     }
   }, {
     "id" : "0fa96ebb-8563-0512-8b60-8cc2ca68d257",
@@ -923,7 +942,8 @@
       "background_image" : {
         "src" : ""
       },
-      "background_gradient" : ""
+      "background_gradient" : "",
+      "reverse_gradient" : false
     },
     "card_background_settings" : {
       "background_type" : "gradient",

@@ -123,7 +123,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "90d855d4-f75a-6b74-e08c-fb1a8f8b66c3",
     "name" : "buttons",
@@ -289,7 +289,7 @@
     "heading_tag" : "h2",
     "include_content" : false,
     "content" : "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>",
-    "include_buttons" : true,
+    "include_buttons" : false,
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-button",
@@ -329,7 +329,7 @@
     "min" : null,
     "max" : null,
     "sorting_label_field" : "99cae411-e3dc-e6ed-e3a6-141e0ae704d9",
-    "default" : null
+    "default" : 3
   },
   "children" : [ {
     "id" : "99cae411-e3dc-e6ed-e3a6-141e0ae704d9",
@@ -351,6 +351,27 @@
     "required" : false,
     "locked" : false,
     "children" : [ {
+      "id" : "24d88c21-fc32-acfb-ca51-78f3f87be77d",
+      "name" : "select_image",
+      "display_width" : null,
+      "label" : "Select Image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/tabber-img.png",
+        "alt" : "tabber-img",
+        "loading" : "lazy",
+        "width" : 558,
+        "height" : 376,
+        "max_width" : 558,
+        "max_height" : 376
+      }
+    }, {
       "id" : "a6f4dd62-3d79-4a6e-8451-e030055890fe",
       "name" : "content",
       "display_width" : null,
@@ -370,7 +391,7 @@
         "min" : null,
         "max" : null,
         "sorting_label_field" : "a15621f0-befc-a350-d1dc-4074c000c2eb",
-        "default" : 2
+        "default" : 1
       },
       "visibility" : {
         "controlling_field" : null,
@@ -415,7 +436,7 @@
         "reordering_enabled" : true,
         "preset" : null,
         "type" : "choice",
-        "default" : "hs-button"
+        "default" : "hs-arrow-btn"
       }, {
         "id" : "f33e97e5-b310-4da2-d9aa-2297a564666d",
         "name" : "text",
@@ -435,7 +456,7 @@
         "allow_new_line" : false,
         "show_emoji_picker" : false,
         "type" : "text",
-        "default" : "Button"
+        "default" : "Secondary CTA Here"
       }, {
         "id" : "bfb0e47e-da27-423a-eff0-fc766d6be8e1",
         "name" : "link",
@@ -486,21 +507,8 @@
       "type" : "group",
       "default" : [ {
         "type" : "std",
-        "theme" : "hs-button",
-        "text" : "Button",
-        "link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
-          "open_in_new_tab" : false,
-          "no_follow" : false
-        }
-      }, {
-        "type" : "std",
-        "theme" : "hs-button",
-        "text" : "Button",
+        "theme" : "hs-arrow-btn",
+        "text" : "Secondary CTA Here",
         "link" : {
           "url" : {
             "content_id" : null,
@@ -511,34 +519,27 @@
           "no_follow" : false
         }
       } ]
-    }, {
-      "id" : "24d88c21-fc32-acfb-ca51-78f3f87be77d",
-      "name" : "select_image",
-      "display_width" : null,
-      "label" : "Select Image",
-      "required" : false,
-      "locked" : false,
-      "responsive" : true,
-      "resizable" : false,
-      "show_loading" : false,
-      "type" : "image",
-      "default" : {
-        "size_type" : "auto",
-        "src" : "",
-        "alt" : null,
-        "loading" : "lazy"
-      }
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
+      "select_image" : {
+        "size_type" : "auto",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/tabber-img.png",
+        "alt" : "tabber-img",
+        "loading" : "lazy",
+        "width" : 558,
+        "height" : 376,
+        "max_width" : 558,
+        "max_height" : 376
+      },
       "content" : "<h3><span>Easily communicate</span> the issue for faster resolution.</h3>\n<p>Quickly generate reports and dashboards to share your findings with other stakeholders, without having to manually gather all of the data from various sources.</p>",
       "buttons" : [ {
         "type" : "std",
-        "theme" : "hs-button",
-        "text" : "Button",
+        "theme" : "hs-arrow-btn",
+        "text" : "Secondary CTA Here",
         "link" : {
           "url" : {
             "content_id" : null,
@@ -548,33 +549,101 @@
           "open_in_new_tab" : false,
           "no_follow" : false
         }
-      }, {
-        "type" : "std",
-        "theme" : "hs-button",
-        "text" : "Button",
-        "link" : {
-          "url" : {
-            "content_id" : null,
-            "type" : "EXTERNAL",
-            "href" : ""
-          },
-          "open_in_new_tab" : false,
-          "no_follow" : false
-        }
-      } ],
-      "select_image" : {
-        "size_type" : "auto",
-        "src" : "",
-        "alt" : null,
-        "loading" : "lazy"
-      }
+      } ]
     }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
-  "default" : [ ]
+  "default" : [ {
+    "tab" : "Alerts",
+    "tab_content" : {
+      "select_image" : {
+        "size_type" : "auto",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/tabber-img.png",
+        "alt" : "tabber-img",
+        "loading" : "lazy",
+        "width" : 558,
+        "height" : 376,
+        "max_width" : 558,
+        "max_height" : 376
+      },
+      "content" : "<h3><span>Easily communicate</span> the issue for faster resolution.</h3>\n<p>Quickly generate reports and dashboards to share your findings with other stakeholders, without having to manually gather all of the data from various sources.</p>",
+      "buttons" : [ {
+        "type" : "std",
+        "theme" : "hs-arrow-btn",
+        "text" : "Secondary CTA Here",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "tab" : "Alerts",
+    "tab_content" : {
+      "select_image" : {
+        "size_type" : "auto",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/tabber-img.png",
+        "alt" : "tabber-img",
+        "loading" : "lazy",
+        "width" : 558,
+        "height" : 376,
+        "max_width" : 558,
+        "max_height" : 376
+      },
+      "content" : "<h3><span>Easily communicate</span> the issue for faster resolution.</h3>\n<p>Quickly generate reports and dashboards to share your findings with other stakeholders, without having to manually gather all of the data from various sources.</p>",
+      "buttons" : [ {
+        "type" : "std",
+        "theme" : "hs-arrow-btn",
+        "text" : "Secondary CTA Here",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  }, {
+    "tab" : "Alerts",
+    "tab_content" : {
+      "select_image" : {
+        "size_type" : "auto",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/tabber-img.png",
+        "alt" : "tabber-img",
+        "loading" : "lazy",
+        "width" : 558,
+        "height" : 376,
+        "max_width" : 558,
+        "max_height" : 376
+      },
+      "content" : "<h3><span>Easily communicate</span> the issue for faster resolution.</h3>\n<p>Quickly generate reports and dashboards to share your findings with other stakeholders, without having to manually gather all of the data from various sources.</p>",
+      "buttons" : [ {
+        "type" : "std",
+        "theme" : "hs-arrow-btn",
+        "text" : "Secondary CTA Here",
+        "link" : {
+          "url" : {
+            "content_id" : null,
+            "type" : "EXTERNAL",
+            "href" : ""
+          },
+          "open_in_new_tab" : false,
+          "no_follow" : false
+        }
+      } ]
+    }
+  } ]
 }, {
   "id" : "module_overrides",
   "name" : "module_overrides",
@@ -592,7 +661,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -881,7 +950,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
       "name" : "background_color",
@@ -949,7 +1018,26 @@
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
-      "type" : "choice"
+      "type" : "choice",
+      "default" : "gradient1"
+    }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
     }, {
       "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
       "name" : "include_overlay",
@@ -959,14 +1047,14 @@
       "locked" : false,
       "display" : "checkbox",
       "type" : "boolean",
-      "default" : false
+      "default" : true
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -974,7 +1062,9 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : true,
+      "include_overlay" : true
     }
   } ],
   "tab" : "CONTENT",
@@ -982,7 +1072,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-default",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -996,7 +1086,7 @@
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "background" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -1004,7 +1094,9 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : true,
+      "include_overlay" : true
     }
   }
 } ]

@@ -221,3 +221,7 @@
   color: $white;
   letter-spacing: 2px;
 }
+
+@mixin size50 {
+  font-size: 50rem;
+}

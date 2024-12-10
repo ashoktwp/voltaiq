@@ -1,4 +1,4 @@
-$(".u4m-team-grid .view-bio a.btn").click(function () {
+$(".u4m-team-grid .view-bio a.btn, .item-inner .image img").click(function () {
   $(this).parents(".item").toggleClass("active");
   $("body").toggleClass("popup-open");
 });

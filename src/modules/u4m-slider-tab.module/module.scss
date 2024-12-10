@@ -2,31 +2,31 @@
 .u4m-slider-tab {
   position: relative;
   overflow: hidden;
-  &::before {
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 0;
-    height: 858px;
-    left: 22%;
+  &.bg_overlay:before {
+    content: "";
+    height: 382.13px;
+    background: $darkBluemd;
+    left: 20%;
     position: absolute;
-    right: 0;
-    top: auto;
-    transform: rotate(10deg);
-    width: 600px;
+    top: 41%;
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+    width: 858.04px;
+    filter: blur(196.21px);
   }
   @include tabletvert {
-    &::before {
+    &.bg_overlay:before {
       display: none;
     }
   }
   .intro-content {
     margin-bottom: 57rem;
+    position: relative;
     .page-center-intro {
       max-width: 867px;
     }
   }
   .tabber_wrap {
+    position: relative;
     padding-bottom: 60px;
     position: relative;
     z-index: 1;
@@ -39,6 +39,7 @@
           justify-content: center;
           transform: NONE !important;
           .tab_ttl {
+            border-radius: 3px;
             .tab_txt {
               padding: 17px 30px;
               cursor: pointer;
@@ -65,9 +66,14 @@
           .tabber_flex.flex_row {
             margin: 0 -15px;
             align-items: center;
+            user-select: initial;
+            justify-content: space-between;
             .tabber_col {
               width: 50%;
               padding: 0 15px;
+              &.cnt {
+                max-width: 500px;
+              }
               h3 {
                 margin-bottom: 8px;
               }
@@ -87,11 +93,25 @@
         &.mobile_tab .tabs {
           .tab {
             .tab_acc_item {
+              &:not(:last-child) {
+                border-bottom: 1px solid $cardBgColor;
+              }
               &.active {
                 .tab_txt {
                   background-color: $cardBgColor;
                   color: $highlightColor;
                 }
+                .acc_icon {
+                  .add {
+                    display: none;
+                  }
+                  .remove {
+                    display: block;
+                  }
+                }
+              }
+              .tab_ttl {
+                position: relative;
               }
               .tab_txt {
                 padding: 20px;
@@ -99,6 +119,17 @@
                 font-size: $font16;
                 font-weight: bold;
                 line-height: 1.5;
+                border-radius: 3px;
+                padding-right: 50px;
+              }
+              .acc_icon {
+                position: absolute;
+                right: 20px;
+                cursor: pointer;
+                top: 19px;
+                .remove {
+                  display: none;
+                }
               }
               .tabber_cnt {
                 display: none;

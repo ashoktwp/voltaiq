@@ -319,6 +319,61 @@
     } ]
   }
 }, {
+  "id" : "72fef25b-640a-6c35-d4e0-7f7d754847a8",
+  "name" : "accordion",
+  "display_width" : null,
+  "label" : "Accordion",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "f0408578-379b-da10-ceb8-f4c5a9aa40e8",
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "f0408578-379b-da10-ceb8-f4c5a9aa40e8",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Automated Data Input"
+  }, {
+    "id" : "3777e4f1-4e0f-3df7-dfbe-60df995bcba6",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Automated Data Input",
+    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
+  }, {
+    "title" : "Automated Data Input",
+    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
+  }, {
+    "title" : "Automated Data Input",
+    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
+  }, {
+    "title" : "Automated Data Input",
+    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
+  }, {
+    "title" : "Automated Data Input",
+    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
+  } ]
+}, {
   "id" : "module_overrides",
   "name" : "module_overrides",
   "display_width" : null,
@@ -335,7 +390,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : false
+    "default" : true
   }, {
     "id" : "module_overrides.section_id",
     "name" : "section_id",
@@ -624,7 +679,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "color"
+      "default" : "gradient"
     }, {
       "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
       "name" : "background_color",
@@ -692,14 +747,23 @@
       "multiple" : false,
       "reordering_enabled" : true,
       "preset" : null,
-      "type" : "choice"
+      "type" : "choice",
+      "default" : "gradient1"
     }, {
-      "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
-      "name" : "include_overlay",
+      "id" : "a23d584c-b0f0-07a1-8407-489bfd95f384",
+      "name" : "reverse_gradient",
       "display_width" : null,
-      "label" : "Include Overlay",
+      "label" : "Reverse Gradient",
       "required" : false,
       "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
       "display" : "checkbox",
       "type" : "boolean",
       "default" : false
@@ -709,7 +773,7 @@
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -717,7 +781,8 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : false
     }
   } ],
   "tab" : "CONTENT",
@@ -725,7 +790,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "enable_overrides" : false,
+    "enable_overrides" : true,
     "top_margin" : "top-margin-default",
     "custom_top_margin" : 100,
     "custom_top_margin_mobile" : 50,
@@ -739,7 +804,7 @@
     "custom_bottom_padding" : 100,
     "custom_bottom_padding_mobile" : 50,
     "background" : {
-      "background_type" : "color",
+      "background_type" : "gradient",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto",
@@ -747,62 +812,8 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : false
     }
   }
-}, {
-  "id" : "72fef25b-640a-6c35-d4e0-7f7d754847a8",
-  "name" : "accordion",
-  "display_width" : null,
-  "label" : "Accordion",
-  "required" : false,
-  "locked" : false,
-  "occurrence" : {
-    "min" : null,
-    "max" : null,
-    "sorting_label_field" : "f0408578-379b-da10-ceb8-f4c5a9aa40e8",
-    "default" : 5
-  },
-  "children" : [ {
-    "id" : "f0408578-379b-da10-ceb8-f4c5a9aa40e8",
-    "name" : "title",
-    "display_width" : null,
-    "label" : "Title",
-    "required" : false,
-    "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Automated Data Input"
-  }, {
-    "id" : "3777e4f1-4e0f-3df7-dfbe-60df995bcba6",
-    "name" : "content",
-    "display_width" : null,
-    "label" : "Content",
-    "required" : false,
-    "locked" : false,
-    "type" : "richtext",
-    "default" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
-  } ],
-  "tab" : "CONTENT",
-  "expanded" : false,
-  "group_occurrence_meta" : null,
-  "type" : "group",
-  "default" : [ {
-    "title" : "Automated Data Input",
-    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
-  }, {
-    "title" : "Automated Data Input",
-    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
-  }, {
-    "title" : "Automated Data Input",
-    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
-  }, {
-    "title" : "Automated Data Input",
-    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
-  }, {
-    "title" : "Automated Data Input",
-    "content" : "<p>Vestibulum sodales commodo augue, bibendum maximus lectus tincidunt vel. In sollicitudin justo id vehicula feugiat. Pellentesque vitae fringilla neque, a facilisis enim. Vivamus maximus erat a ipsum viverra ultrices.</p>"
-  } ]
 } ]

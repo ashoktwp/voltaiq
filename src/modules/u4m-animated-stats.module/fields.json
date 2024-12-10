@@ -327,9 +327,9 @@
   "locked" : false,
   "occurrence" : {
     "min" : 1,
-    "max" : 8,
+    "max" : null,
     "sorting_label_field" : "bb5b1e25-24e7-64c2-993f-cc571fe569c2",
-    "default" : 4 
+    "default" : 4
   },
   "children" : [ {
     "id" : "05b080b6-8a28-4b11-7cec-8960c0c296f1",
@@ -547,6 +547,19 @@
     "bottom_caption" : "Of Users",
     "bottom_content" : " love your company and content",
     "show_content" : true
+  }, {
+    "disable_animation" : false,
+    "show_top_caption" : true,
+    "top_caption" : "More Than",
+    "numeric_stat" : "98",
+    "show_currency_label" : false,
+    "currency_label" : "$",
+    "show_stat_unit" : true,
+    "stat_unit" : "%",
+    "show_bottom_caption" : true,
+    "bottom_caption" : "Of Users",
+    "show_content" : true,
+    "bottom_content" : " love your company and content"
   } ]
 }, {
   "id" : "60830c96-0f33-975f-e085-5a44c565300b",
@@ -938,12 +951,20 @@
       "preset" : null,
       "type" : "choice"
     }, {
-      "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
-      "name" : "include_overlay",
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
       "display_width" : null,
-      "label" : "Include Overlay",
+      "label" : "Reverse Gradient",
       "required" : false,
       "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
       "display" : "checkbox",
       "type" : "boolean",
       "default" : false
@@ -961,7 +982,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "reverse_gradient" : false
     }
   } ],
   "tab" : "CONTENT",
@@ -991,7 +1012,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "reverse_gradient" : false
     }
   }
 } ]

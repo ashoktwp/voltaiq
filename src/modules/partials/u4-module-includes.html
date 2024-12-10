@@ -32,7 +32,9 @@ reverse-text' if (module.module_overrides.enable_overrides) and
 module.module_overrides.background.include_overlay %} bg_overlay {% endif %} {%
 if module.module_overrides.background.background_type == "color" %} {{
 module.module_overrides.background.background_color }} {% elif
-module.module_overrides.background.background_type == "gradient" %} {{
+module.module_overrides.background.background_type == "gradient" %}
+	{% if module.module_overrides.background.reverse_gradient %}reverse{% endif %}
+	{{
 module.module_overrides.background.background_gradient }} {% endif %} " {% if
 module.module_overrides.background_image.src &&
 module.module_overrides.background_lazy %} data-bg="{{

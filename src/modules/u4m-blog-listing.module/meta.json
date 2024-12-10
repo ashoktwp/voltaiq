@@ -3,7 +3,7 @@
   "content_types" : [ "BLOG_LISTING", "BLOG_POST" ],
   "inline_help_text" : "This is a simple <strong>Blog Listing</strong> module. ",
   "host_template_types" : [ "BLOG_POST", "BLOG_LISTING" ],
-  "module_id" : 182653878201,
+  "module_id" : 182793622920,
   "label" : "Blog Listing",
   "is_available_for_new_content" : false
 }

@@ -135,7 +135,7 @@
       "min" : null,
       "max" : null,
       "sorting_label_field" : "a15621f0-befc-a350-d1dc-4074c000c2eb",
-      "default" : 2
+      "default" : 1
     },
     "visibility" : {
       "controlling_field" : null,
@@ -262,19 +262,6 @@
         "open_in_new_tab" : false,
         "no_follow" : false
       }
-    }, {
-      "type" : "std",
-      "theme" : "hs-sec-btn",
-      "text" : "Request A Demo",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
     } ]
   } ],
   "tab" : "CONTENT",
@@ -293,19 +280,6 @@
     "buttons" : [ {
       "type" : "std",
       "theme" : "hs-button",
-      "text" : "Request A Demo",
-      "link" : {
-        "url" : {
-          "content_id" : null,
-          "type" : "EXTERNAL",
-          "href" : ""
-        },
-        "open_in_new_tab" : false,
-        "no_follow" : false
-      }
-    }, {
-      "type" : "std",
-      "theme" : "hs-sec-btn",
       "text" : "Request A Demo",
       "link" : {
         "url" : {
@@ -684,7 +658,7 @@
       "reordering_enabled" : true,
       "preset" : null,
       "type" : "choice",
-      "default" : "image"
+      "default" : "color"
     }, {
       "id" : "397cdd2e-d4bf-a329-2802-9b48c9d3102d",
       "name" : "background_color",
@@ -728,7 +702,7 @@
       "type" : "image",
       "default" : {
         "size_type" : "auto_custom_max",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
         "alt" : "Background",
         "loading" : "lazy",
         "width" : 2694,
@@ -758,17 +732,121 @@
       "preset" : null,
       "type" : "choice",
       "default" : "gradient1"
+    }, {
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
+      "display_width" : null,
+      "label" : "Reverse Gradient",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "42439b8e-3d74-aa0b-1f55-f099c80e8ddb",
+      "name" : "include_overlay_image",
+      "display_width" : null,
+      "label" : "Include Overlay Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "color",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "1d4dac9f-54ae-5459-f419-267334c4cf14",
+      "name" : "overlay_image",
+      "display_width" : null,
+      "label" : "Overlay Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.include_overlay_image",
+        "controlling_value_regex" : "true",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
+      "children" : [ {
+        "id" : "1c157905-c58f-ddf3-8ca6-43dac93d41db",
+        "name" : "image_size",
+        "display_width" : null,
+        "label" : "Image Size",
+        "required" : true,
+        "locked" : false,
+        "display" : "select",
+        "choices" : [ [ "full", "Full Size" ], [ "auto", "Auto" ] ],
+        "multiple" : false,
+        "reordering_enabled" : true,
+        "preset" : null,
+        "type" : "choice",
+        "default" : "auto"
+      }, {
+        "id" : "fe87ac72-95dd-d7a1-b0db-82ebf816ca4e",
+        "name" : "background_image",
+        "display_width" : null,
+        "label" : "Background Image",
+        "required" : false,
+        "locked" : false,
+        "responsive" : true,
+        "resizable" : false,
+        "show_loading" : false,
+        "type" : "image",
+        "default" : {
+          "size_type" : "auto_custom_max",
+          "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
+          "alt" : "Screenshot 2024-10-25 at 11.21.43 AM 1",
+          "loading" : "lazy",
+          "width" : 2694,
+          "height" : 1270,
+          "max_width" : 2000,
+          "max_height" : 942.8359317000743
+        }
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "group_occurrence_meta" : null,
+      "type" : "group",
+      "default" : {
+        "image_size" : "auto",
+        "background_image" : {
+          "size_type" : "auto_custom_max",
+          "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
+          "alt" : "Screenshot 2024-10-25 at 11.21.43 AM 1",
+          "loading" : "lazy",
+          "width" : 2694,
+          "height" : 1270,
+          "max_width" : 2000,
+          "max_height" : 942.8359317000743
+        }
+      }
     } ],
     "tab" : "CONTENT",
     "expanded" : false,
     "group_occurrence_meta" : null,
     "type" : "group",
     "default" : {
-      "background_type" : "image",
+      "background_type" : "color",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto_custom_max",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
         "alt" : "Background",
         "loading" : "lazy",
         "width" : 2694,
@@ -776,7 +854,22 @@
         "max_width" : 2000,
         "max_height" : 942.8359317000743
       },
-      "background_gradient" : "gradient1"
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : false,
+      "include_overlay_image" : true,
+      "overlay_image" : {
+        "image_size" : "auto",
+        "background_image" : {
+          "size_type" : "auto_custom_max",
+          "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
+          "alt" : "Screenshot 2024-10-25 at 11.21.43 AM 1",
+          "loading" : "lazy",
+          "width" : 2694,
+          "height" : 1270,
+          "max_width" : 2000,
+          "max_height" : 942.8359317000743
+        }
+      }
     }
   } ],
   "tab" : "CONTENT",
@@ -798,11 +891,11 @@
     "custom_bottom_padding" : 152,
     "custom_bottom_padding_mobile" : 50,
     "background" : {
-      "background_type" : "image",
+      "background_type" : "color",
       "background_color" : "black_bg",
       "background_image" : {
         "size_type" : "auto_custom_max",
-        "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
+        "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
         "alt" : "Background",
         "loading" : "lazy",
         "width" : 2694,
@@ -810,7 +903,22 @@
         "max_width" : 2000,
         "max_height" : 942.8359317000743
       },
-      "background_gradient" : "gradient1"
+      "background_gradient" : "gradient1",
+      "reverse_gradient" : false,
+      "include_overlay_image" : true,
+      "overlay_image" : {
+        "image_size" : "auto",
+        "background_image" : {
+          "size_type" : "auto_custom_max",
+          "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Screenshot%202024-10-25%20at%2011.21.43%20AM%201.png",
+          "alt" : "Screenshot 2024-10-25 at 11.21.43 AM 1",
+          "loading" : "lazy",
+          "width" : 2694,
+          "height" : 1270,
+          "max_width" : 2000,
+          "max_height" : 942.8359317000743
+        }
+      }
     }
   }
 } ]

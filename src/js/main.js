@@ -24,7 +24,7 @@ window.addEventListener('load', function() {
 window.addEventListener('scroll', function() {
   const html = document.documentElement;
   const top = html.scrollTop;
-  if (top > 100) {
+  if (top > 20) {
     document.body.classList.add('page-scrolled');
   } else {
     document.body.classList.remove('page-scrolled');
@@ -34,7 +34,7 @@ window.addEventListener('scroll', function() {
 
 
 
-var banner = document.querySelector('.u4m-hero');
+var banner = document.querySelector('.u4m-hero,.banner_is_here,.blog_post_hero,.u4m-splitFormWrap');
 
 if (banner) {
   document.body.classList.remove("no-banner");

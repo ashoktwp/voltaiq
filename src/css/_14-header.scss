@@ -1,7 +1,11 @@
 header.header {
-  padding: 20px 0;
-  position: relative;
-  z-index: 4;
+  padding: 57px 0;
+  position: fixed;
+  z-index: 30;
+  transition: $animation2;
+  left: 0;
+  right: 0;
+  top: 0;
   .page-center {
     > .flex_row {
       .logoSec {
@@ -14,7 +18,7 @@ header.header {
         }
         @include tabletvert {
           width: calc(100% + 40px);
-          background: #000;
+          background: $black;
           margin-left: -20px;
           margin-right: -20px;
           display: none;
@@ -42,8 +46,25 @@ header.header {
                   display: flex;
                   gap: 5px;
                   position: relative;
+                  font-family: $font2;
+                  color: $white;
+                  font-weight: 500;
                   svg {
                     transition: 0.2s all ease-in;
+                  }
+                  &:after {
+                    content: "";
+                    position: absolute;
+                    top: calc(100% + 22px);
+                    border: 0;
+                    background: $backgroundColor;
+                    width: 20px;
+                    height: 20px;
+                    transform: rotate(45deg);
+                    left: 35%;
+                    transition: 0.2s all ease-in;
+                    opacity: 0;
+                    visibility: hidden;
                   }
                 }
                 ul {
@@ -64,6 +85,18 @@ header.header {
                   }
                   > li {
                     width: calc(50% - 16.5px);
+                    > a:hover {
+                      .flex_row {
+                        .menuContent {
+                          h6 {
+                            color: $highlightColor;
+                          }
+                          p {
+                            color: $white;
+                          }
+                        }
+                      }
+                    }
                     .flex_row {
                       .menuimg {
                         width: 100px;
@@ -81,11 +114,13 @@ header.header {
                         h6 {
                           margin: 0 0 4px;
                           font-size: 15px;
+                          transition: $animation1;
                         }
                         p {
                           margin: 0;
                           font-size: 14px;
                           line-height: 1.4285714285714286;
+                          transition: $animation1;
                         }
                       }
                       gap: 19px;
@@ -93,7 +128,7 @@ header.header {
                     &:not(:nth-last-of-type(2), :nth-last-of-type(1)) {
                       padding-bottom: 30px;
                       margin-bottom: 30px;
-                      border-bottom: 1px solid rgba(183, 186, 188, 0.3);
+                      border-bottom: 1px solid $borderDark;
                     }
                   }
                 }
@@ -107,16 +142,9 @@ header.header {
                       transform: rotate(180deg);
                     }
                     &:after {
-                      content: "";
-                      position: absolute;
-                      top: calc(100% + 22px);
-                      border: 0;
-                      background: $backgroundColor;
-                      width: 20px;
-                      height: 20px;
-                      transform: rotate(45deg);
-                      left: 50%;
-                      transition: 0.3s all ease-in;
+                      opacity: 1;
+                      visibility: visible;
+                      transition: all 0.5s ease-in;
                     }
                     &:before {
                       content: "";
@@ -135,7 +163,6 @@ header.header {
               }
             }
             line-height: 1.5;
-
             ul.deskHide {
               li {
                 margin: 0;
@@ -206,6 +233,7 @@ header.header {
       .rightSec.flex_row {
         @include tabletvertMin {
           justify-content: end;
+          display: flex !important;
         }
       }
       .mobileTrigger {
@@ -262,12 +290,23 @@ header.header {
       display: none !important;
     }
   }
+  @include tabletvert {
+    padding: 30px 0;
+  }
 }
 
-body:not(.no-banner) {
+.page-scrolled {
   header.header {
-    position: absolute;
-    left: 0;
-    right: 0;
+    padding: 30px 0;
+    background-color: $black;
+    box-shadow: $shadow4;
+  }
+}
+.no-banner {
+  .body-container-wrapper {
+    padding-top: 162px;
+    @include tabletvert {
+      padding-top: 90px;
+    }
   }
 }

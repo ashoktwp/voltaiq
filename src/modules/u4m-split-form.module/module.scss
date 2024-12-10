@@ -120,6 +120,16 @@
     border-radius: 5px;
     padding: 14.64px;
     text-align: center;
+    height: 80px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      object-fit: contain;
+      height: 36px;
+      width: 100px;
+    }
   }
 
   // form
@@ -138,6 +148,9 @@
         @include form;
         max-width: 100%;
         margin-bottom: 0;
+        .hs-button {
+          margin-top: 10rem;
+        }
         h3 {
           @include h3;
         }
@@ -154,18 +167,5 @@
         }
       }
     }
-  }
-
-  // shape image
-
-  .shape_img {
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    bottom: 0;
-    height: 100px;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
   }
 }

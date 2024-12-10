@@ -14,7 +14,7 @@
     "locked" : false,
     "display" : "checkbox",
     "type" : "boolean",
-    "default" : true
+    "default" : false
   }, {
     "id" : "25bb3695-1c5f-d1b7-577f-665c4ea33639",
     "name" : "eyebrow_text",
@@ -282,7 +282,7 @@
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "include_eyebrow_text" : true,
+    "include_eyebrow_text" : false,
     "eyebrow_text" : "Optional Eyebrow Text",
     "include_heading" : true,
     "heading" : "<span>Voltaiq’s</span> Values",
@@ -344,7 +344,7 @@
     "type" : "image",
     "default" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Blake.png%201.png",
       "alt" : "Blake Hawley",
       "loading" : "lazy",
       "width" : 362,
@@ -526,7 +526,7 @@
   "default" : [ {
     "team_image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Blake.png%201.png",
       "alt" : "Blake Hawley",
       "loading" : "lazy",
       "width" : 362,
@@ -564,7 +564,7 @@
   }, {
     "team_image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Blake.png%201.png",
       "alt" : "Blake Hawley",
       "loading" : "lazy",
       "width" : 362,
@@ -602,7 +602,7 @@
   }, {
     "team_image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Blake.png%201.png",
       "alt" : "Blake Hawley",
       "loading" : "lazy",
       "width" : 362,
@@ -640,7 +640,7 @@
   }, {
     "team_image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Blake.png%201.png",
       "alt" : "Blake Hawley",
       "loading" : "lazy",
       "width" : 362,
@@ -678,7 +678,7 @@
   }, {
     "team_image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Blake.png%201.png",
       "alt" : "Blake Hawley",
       "loading" : "lazy",
       "width" : 362,
@@ -716,7 +716,7 @@
   }, {
     "team_image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Blake.png%201.png",
       "alt" : "Blake Hawley",
       "loading" : "lazy",
       "width" : 362,
@@ -754,7 +754,7 @@
   }, {
     "team_image" : {
       "size_type" : "auto",
-      "src" : "https://23543895.fs1.hubspotusercontent-na1.net/hubfs/23543895/Voltaiq/Images/Blake.png%201.png",
+      "src" : "https://1913583.fs1.hubspotusercontent-na1.net/hubfs/1913583/Voltaiq-u4m/Images/Blake.png%201.png",
       "alt" : "Blake Hawley",
       "loading" : "lazy",
       "width" : 362,
@@ -1166,12 +1166,20 @@
       "preset" : null,
       "type" : "choice"
     }, {
-      "id" : "f437ca31-91c5-8770-b620-2816fae75f4c",
-      "name" : "include_overlay",
+      "id" : "599295b9-25c1-197b-f95a-5dc4ca0832bf",
+      "name" : "reverse_gradient",
       "display_width" : null,
-      "label" : "Include Overlay",
+      "label" : "Reverse Gradient",
       "required" : false,
       "locked" : false,
+      "visibility" : {
+        "controlling_field" : null,
+        "controlling_field_path" : "module_overrides.background.background_type",
+        "controlling_value_regex" : "gradient",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null
+      },
       "display" : "checkbox",
       "type" : "boolean",
       "default" : false
@@ -1189,7 +1197,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "reverse_gradient" : false
     }
   } ],
   "tab" : "CONTENT",
@@ -1219,7 +1227,7 @@
         "alt" : null,
         "loading" : "lazy"
       },
-      "include_overlay" : false
+      "reverse_gradient" : false
     }
   }
 } ]

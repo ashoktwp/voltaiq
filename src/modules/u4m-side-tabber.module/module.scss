@@ -1,10 +1,61 @@
 @import "../../css/module-imports";
 
 .u4m-side-tabber {
+  position: relative;
+  overflow: hidden;
+  @include tabletMin {
+    &.topshape_wrap {
+      padding-top: 200rem;
+    }
+    .top_shape {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      left: 0;
+      right: 0;
+
+      &::before {
+        content: "";
+        left: 0;
+        width: 83%;
+        height: 81px;
+        background: $black;
+        top: 0;
+        right: auto;
+        position: absolute;
+        @include desktop1850 {
+          width: 80%;
+        }
+      }
+      svg {
+        display: block;
+        margin-right: 200px;
+        margin-left: auto;
+      }
+      @include laptop {
+        right: 150px;
+        left: auto;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+  @include tablet {
+    .top_shape {
+      display: none;
+    }
+  }
   .intro-content {
     margin-bottom: 83px;
+    position: relative;
+    z-index: 3;
   }
-
+  .page-center-sm {
+    position: relative;
+    z-index: 3;
+  }
   .tabber_wrap {
     @include flex;
     justify-content: space-between;
@@ -45,11 +96,9 @@
     border-radius: 3px;
     transition: 0.3s all ease-in-out;
 
-    *,
-    & {
-      transition: 0.3s all ease-in-out;
+    &:hover .tabber_nav_inner h6 {
+      color: $white;
     }
-
     > span {
       position: absolute;
       top: 24px;
@@ -65,7 +114,7 @@
       box-shadow: 2px 4px 15px rgba($backgroundColor, 0.1);
       border-radius: 3px;
 
-      h6 {
+      .tabber_nav_inner h6 {
         color: $highlightColor;
       }
 
@@ -84,6 +133,7 @@
 
     h6 {
       margin-bottom: 8px;
+      color: $grey4;
     }
 
     p {
@@ -127,6 +177,29 @@
       margin-top: 40px;
     }
   }
+  &:before,
+  &:after,
+  .overlay {
+    position: absolute;
+    width: 858.04px;
+    height: 382.13px;
+    background: $darkBluemd;
+    filter: blur(196.21px);
+  }
+  &:before {
+    right: -10%;
+    top: -10%;
+    transform: matrix(0.77, -0.64, 0.69, 0.72, 0, 0);
+  }
+  &:after {
+    top: 30%;
+    left: 25%;
+    transform: matrix(0.77, -0.64, 0.69, 0.72, 0, 0);
+  }
+  .overlay {
+    left: 50%;
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
+  }
 }
 
 @include tabletvert {
@@ -142,9 +215,13 @@
 
     .tabber_nav {
       display: none;
+      padding-right: 50px;
 
       &.mobile_nav {
         display: block;
+        & {
+          border-bottom: 1px solid $cardBgColor;
+        }
       }
 
       &.active span {

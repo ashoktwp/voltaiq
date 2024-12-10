@@ -7,11 +7,11 @@
 		<div class="page-center">  
 			<div class="topttl {% if current_page_num  == 1 %}{% else %}noftrmg{% endif %}"  {% if blog_author || topic %} style="margin-bottom: 0;" {% endif %}>
 				{% if blog_author %}
-				<h2>{{ blog_author.display_name }}</h2>
+				<h1>{{ blog_author.display_name }}</h1>
 				{% elif topic %}
-				<h2>{{ topic|replace('-',' ')|capitalize }}</h2>
+				<h1>{{ topic|replace('-',' ')|capitalize }}</h1>
 				{% else %}
-				<h2>{{ group.public_title }}</h2>
+				<h1>{{ group.public_title }}</h1>
 				{% endif %}	
 
 			</div> 
@@ -113,6 +113,9 @@
 									{% if module.search.results.group_id %}
 									<input type="hidden" name="groupId" value="{{ module.search.results.group_id }}">
 									{% endif %}
+                  {% if module.search.input.include_search_button %}
+                <button class="srchBtn" aria-label="Search"><span class="material-symbols-outlined">search</span></button>
+                {% endif %}
 									<div class="hs-search-field__suggestions-container {% if is_in_editor %} hs-editor-hide-until-active {% endif %}">
 										<ul
 												id="autocomplete-results"

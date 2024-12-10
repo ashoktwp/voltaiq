@@ -1,6 +1,5 @@
 @import "../../css/_module-imports";
 
-
 .u4m-alternating-content {
   position: relative;
   overflow: hidden;
@@ -9,7 +8,7 @@
     position: relative;
     z-index: 3;
 
-    >.flex_row {
+    > .flex_row {
       .left_sec {
         max-width: 100%;
 
@@ -164,4 +163,47 @@
     background-position: center;
     background-size: cover;
   }
+
+  //
+
+  //
+
+  .overlay_image {
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    @include phoneMin {
+      position: absolute;
+    }
+    @include phone {
+      padding: 0 20rem 20rem;
+    }
+
+    &.full {
+      width: 100%;
+    }
+
+    &:not(.full) {
+      @include phoneMin {
+        width: calc(100% - 19%);
+      }
+      left: auto;
+      right: 0;
+      img {
+        @include phoneMin {
+          mask: linear-gradient(89.6deg, rgba(217, 217, 217, 0) 0.35%, #737373 49.01%, rgba(115, 115, 115, 0) 99.66%);
+          -webkit-mask: linear-gradient(
+            89.6deg,
+            rgba(217, 217, 217, 0) 0.35%,
+            #737373 49.01%,
+            rgba(115, 115, 115, 0) 99.66%
+          );
+        }
+      }
+    }
+  }
+
+  //
 }

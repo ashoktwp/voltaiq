@@ -38,7 +38,7 @@
         .plan_top {
           @include flex;
           background-color: $cardHighlightColor;
-          padding: 35px;
+          padding: 26px 35px;
           justify-content: center;
           align-items: center;
           text-align: center;
@@ -50,7 +50,7 @@
           }
           &.featured_plan_top {
             min-height: 180px;
-            padding: 57px 35px;
+            padding: 47px 35px;
             @include phone {
               padding: 30px 20px;
               min-height: auto;
@@ -67,7 +67,7 @@
 
         .plan_btm {
           text-align: center;
-          padding: 33px 45px;
+          padding: 33px 45px 40px;
           @include flex;
           gap: 40px;
           justify-content: center;
@@ -81,8 +81,7 @@
         .button-wrap {
           justify-content: center;
           margin-top: auto;
-          padding: 33px 45px;
-          padding-top: 0;
+          padding: 0 45px 54px;
           @include phone {
             padding: 20px;
             padding-top: 0;

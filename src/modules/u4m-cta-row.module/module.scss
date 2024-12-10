@@ -1,7 +1,5 @@
 @import "../../css/_module-imports";
 
-
-
 .u4m-cta-row {
   .page-center {
     .main_cta {
@@ -17,9 +15,9 @@
                 max-width: 100%;
                 padding: 0;
 
-                >h2 {
+                > h2 {
                   margin-bottom: 8px;
-                  line-height: 1.12500;
+                  line-height: 1.125;
                 }
 
                 .content-section {
@@ -41,7 +39,6 @@
             max-width: calc(100% - 578px);
             padding: 0;
             padding: 73px 35px 85px 100px;
-
             form {
               margin: 0;
               padding-bottom: 0px;
@@ -53,11 +50,16 @@
               width: 100%;
 
               .hs-fieldtype-text {
-                >label {
+                > label {
                   font-size: 12px;
-                  line-height: 15px;
+                  line-height: 1.25;
                   margin-bottom: 9px;
                   display: block;
+                  letter-spacing: 2px;
+                  font-weight: 700;
+                  font-family: $font1;
+                  text-transform: uppercase;
+                  color: $white;
                 }
               }
 
@@ -176,8 +178,11 @@
                 background-position: center;
                 width: 100%;
                 max-width: 100%;
+                margin-bottom: -150px;
               }
-
+              @include xs-phone {
+                margin-bottom: -100px;
+              }
               @include phone {
                 height: auto;
                 padding-bottom: 85%;
@@ -196,14 +201,14 @@
             @include tabletvert {
               width: 100%;
               max-width: 100%;
-              padding-bottom: 50px;
+              padding-bottom: 0;
+              overflow: hidden;
               padding-left: 10px;
               padding-right: 10px;
             }
           }
 
           position: relative;
-
 
           .intro-content {
             margin-bottom: 20px;

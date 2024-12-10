@@ -10,15 +10,27 @@
     left: auto;
     position: absolute;
     top: auto;
-    transform: matrix(-.64, -.77, .72, -.69, 0, 0);
+    transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
     width: 858px;
     right: 0%;
   }
-
+  .cntnt_left {
+    .intro-content {
+      .page-center-intro {
+        text-align: left;
+      }
+    }
+  }
+  .cntnt_right {
+    .intro-content {
+      .page-center-intro {
+        text-align: right;
+      }
+    }
+  }
   .intro-content {
     .page-center-intro {
       @include center;
-      text-align: left;
       margin-bottom: 81px;
       position: relative;
       z-index: 22;
@@ -61,7 +73,6 @@
 
         p {
           @include b2;
-          color: $white;
         }
       }
 
@@ -153,5 +164,4 @@
       gap: 40px;
     }
   }
-
 }
