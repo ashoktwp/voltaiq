@@ -1,7 +1,7 @@
 header.header {
   padding: 57px 0;
   position: fixed;
-  z-index: 30;
+  z-index: 999;
   transition: $animation2;
   left: 0;
   right: 0;
@@ -298,7 +298,7 @@ header.header {
 .page-scrolled {
   header.header {
     padding: 30px 0;
-    background-color: $black;
+    background: $primaryGradientreverseColor;
     box-shadow: $shadow4;
   }
 }

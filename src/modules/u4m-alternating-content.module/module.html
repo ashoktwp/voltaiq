@@ -23,8 +23,8 @@
 {% endif %}
 
 <div class="page-center">
-	<div class="flex_row {{ module.module_settings.image_alignment }} {% if not module.media_section.image.src %}no_imgcnt{% endif %}">
-		<div class="left_sec">
+	<div class="flex_row {{ module.module_settings.image_alignment }} {% if not module.media_section.image.src %}no_imgcnt{% endif %}" style="">
+		<div class="left_sec {% if not module.media_section.image.src %}left{{ module.module_settings.content_alignment }}{% endif %}" >
 			{{macros.contentGroup(module.intro_content  )}}
 		</div>
     {% if module.media_section.image.src %}
