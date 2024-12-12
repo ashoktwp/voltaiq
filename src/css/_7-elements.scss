@@ -536,3 +536,8 @@ section[class*="u4m-"] {
   position: relative;
   overflow: hidden;
 }
+.page-center,
+.intro-content {
+  position: relative;
+  z-index: 1;
+}
