@@ -10,6 +10,14 @@
       .inner_wrpp {
         .flex_row {
           .left_sec {
+            form input[type="checkbox"] {
+              min-height: 25px !important;
+            }
+            ul.inputs-list {
+              padding: 0;
+              list-style: none;
+              margin: 0;
+            }
             .intro-content {
               .page-center-intro {
                 max-width: 100%;

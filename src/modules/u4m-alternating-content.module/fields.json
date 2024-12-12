@@ -337,6 +337,14 @@
     "label" : "Image Alignment",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "media_section.image",
+      "controlling_value_regex" : null,
+      "property" : "src",
+      "operator" : null,
+      "access" : null
+    },
     "display" : "select",
     "choices" : [ [ "left", "Left" ], [ "right", "Right" ] ],
     "multiple" : false,
@@ -344,13 +352,36 @@
     "preset" : null,
     "type" : "choice",
     "default" : ""
+  }, {
+    "id" : "d94fbe2f-39fb-4600-c76e-a6cf8a4338df",
+    "name" : "content_alignment",
+    "display_width" : null,
+    "label" : "Content Alignment",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : null,
+      "controlling_field_path" : "media_section.image",
+      "controlling_value_regex" : null,
+      "property" : "src",
+      "operator" : "EMPTY",
+      "access" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "preset" : null,
+    "type" : "choice",
+    "default" : "center"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
   "group_occurrence_meta" : null,
   "type" : "group",
   "default" : {
-    "image_alignment" : ""
+    "image_alignment" : "",
+    "content_alignment" : "center"
   }
 }, {
   "id" : "module_overrides",

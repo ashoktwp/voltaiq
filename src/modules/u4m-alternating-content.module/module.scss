@@ -13,13 +13,21 @@
         width: 100%;
         max-width: 100% !important;
         text-align: center;
-        .intro-content {
-          text-align: center !important;
-        }
       }
       .left_sec {
         max-width: 100%;
-
+        &.leftright .intro-content {
+          text-align: right !important;
+          .button-wrap {
+            justify-content: flex-end !important;
+          }
+        }
+        &.leftcenter .intro-content {
+          text-align: center !important;
+          .button-wrap {
+            justify-content: center !important;
+          }
+        }
         .intro-content {
           margin: 0;
 

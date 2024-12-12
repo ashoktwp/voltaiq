@@ -6,7 +6,7 @@
 {{macros.contentGroup(module.intro_content)}}
 <div class="page-center {{ module.module_settings.page_center_group }}">
 {# Module content goes here #}
-<div class="splide logoSlider {{ moduleName }}">
+<div class="splide logoSlider {{ moduleName }} {{ name }}">
 	<div class="splide__track">
 		<div class="splide__list">
 			{% for item in module.logo_item_group %}
@@ -36,7 +36,7 @@
 {% require_js %}
 	<script> 
 	  document.addEventListener( 'DOMContentLoaded', function() {
-		new Splide( '.{{ moduleName }}.splide', {
+		new Splide( '.{{ name }}.{{ moduleName }}.splide', {
 				   type: 'loop',
 				   easing: 'ease-in-out',
 				   pagination: false,
