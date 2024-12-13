@@ -494,6 +494,7 @@ section[class*="u4m-"] {
   .eyebrow {
     @include eyebrow;
   }
+
   .content-section {
     margin-bottom: 40rem;
     @include b1;
@@ -540,4 +541,15 @@ section[class*="u4m-"] {
 .intro-content {
   position: relative;
   z-index: 1;
+}
+.intro-content {
+  .page-center-intro {
+    @include desktop {
+      max-width: 100% !important;
+      .content-section p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+  }
 }
