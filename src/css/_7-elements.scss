@@ -542,10 +542,14 @@ section[class*="u4m-"] {
   position: relative;
   z-index: 1;
 }
-
-.page-center-intro {
-  display: block;
-  @include desktop {
-    max-width: 100% !important;
+.intro-content {
+  .page-center-intro {
+    @include desktop {
+      max-width: 100% !important;
+      .content-section p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
   }
 }
