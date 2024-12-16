@@ -9,6 +9,17 @@
     z-index: 3;
 
     > .flex_row {
+      &.cntcenter {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px !important;
+        .left_sec {
+          max-width: 900px !important;
+        }
+      }
+      &.right.cntcenter {
+        flex-direction: column-reverse !important;
+      }
       &.no_imgcnt .left_sec {
         width: 100%;
         max-width: 100% !important;
@@ -50,7 +61,7 @@
 
       .right_sec {
         max-width: 100%;
-
+        width: 50%;
         @include tabletvertMin {
           max-width: 50%;
           padding-left: 20px;
