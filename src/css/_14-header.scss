@@ -308,3 +308,26 @@ header.header {
     }
   }
 }
+
+#hs-eu-cookie-confirmation {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: $black;
+  text-align: center;
+  padding: 20px;
+  #hs-eu-cookie-confirmation-inner {
+    @include center;
+  }
+  #hs-en-cookie-confirmation-buttons-area a {
+    @include primaryBtn;
+  }
+  #hs-eu-cookie-disclaimer {
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    font-family: inherit;
+  }
+}
