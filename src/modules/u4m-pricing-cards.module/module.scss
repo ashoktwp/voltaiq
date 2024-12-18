@@ -55,17 +55,6 @@
           &.featured_plan_top {
             @include tabletvertMin {
               position: relative;
-              padding-bottom: 50px;
-              align-items: flex-start;
-              &:before {
-                position: absolute;
-                content: "";
-                width: 100%;
-                height: 50px;
-                top: -50px;
-                background-color: $cardHighlightColor;
-                left: 0;
-              }
             }
           }
 

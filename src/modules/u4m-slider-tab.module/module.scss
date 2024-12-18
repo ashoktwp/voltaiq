@@ -23,11 +23,16 @@
     position: relative;
     .page-center-intro {
       max-width: 867px;
+      @include phone {
+        h2 br {
+          display: none;
+        }
+      }
     }
   }
   .tabber_wrap {
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 0;
     position: relative;
     z-index: 1;
     .tabber_inr {
@@ -40,6 +45,9 @@
           transform: NONE !important;
           .tab_ttl {
             border-radius: 3px;
+            &:hover .tab_txt {
+              color: $white;
+            }
             .tab_txt {
               padding: 17px 30px;
               cursor: pointer;
@@ -51,6 +59,9 @@
             &.slick-current {
               background-color: $cardBgColor;
               color: $highlightColor;
+              .tab_txt {
+                color: $highlightColor;
+              }
             }
           }
         }
@@ -62,7 +73,7 @@
         }
       }
       .tabber_cnt {
-        padding: 63px 0;
+        padding: 63px 0 20px;
         .tabber_cnt_inr {
           .tabber_flex.flex_row {
             margin: 0 -15px;

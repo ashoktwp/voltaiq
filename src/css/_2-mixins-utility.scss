@@ -82,7 +82,6 @@
   }
 }
 
-
 @mixin desktop {
   @media (max-width: 1920px) {
     @content;
@@ -172,7 +171,7 @@
 
 @mixin center811 {
   @include center;
-  max-width: 811rem;
+  max-width: 840rem;
 }
 
 @mixin centerXs {

@@ -30,7 +30,7 @@
   }
   .intro-content {
     .page-center-intro {
-      @include center;
+      @include centerSmall;
       margin-bottom: 81px;
       position: relative;
       z-index: 22;
