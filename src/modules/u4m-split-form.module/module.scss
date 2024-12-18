@@ -68,6 +68,7 @@
     }
     overflow: hidden;
     position: relative;
+    z-index: 1;
     @include tabletMin {
       padding-bottom: 73px;
       padding-top: 96px;
@@ -166,6 +167,10 @@
           }
         }
       }
+    }
+    .hs-richtext a {
+      color: inherit;
+      text-decoration: underline;
     }
   }
 }

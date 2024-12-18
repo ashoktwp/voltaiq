@@ -540,16 +540,5 @@ section[class*="u4m-"] {
 .page-center,
 .intro-content {
   position: relative;
-  z-index: 1;
-}
-.intro-content {
-  .page-center-intro {
-    @include desktop {
-      max-width: 100% !important;
-      .content-section p {
-        font-size: 16px;
-        line-height: 1.5;
-      }
-    }
-  }
+  z-index: 9;
 }

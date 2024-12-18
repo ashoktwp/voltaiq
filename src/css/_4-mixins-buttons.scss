@@ -64,6 +64,7 @@
     background-color: $themeColor;
     color: $white;
     padding: 0;
+    transition: 0.4s ease-in-out all;
     @include flex;
     align-items: center;
     justify-content: center;

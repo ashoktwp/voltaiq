@@ -39,9 +39,7 @@
 
     > .flex_row.noImg {
       justify-content: center;
-      .page-center-intro {
-        max-width: 714rem;
-      }
+       
     }
     > .flex_row:not(.noImg) {
       @include tabletvertMin {

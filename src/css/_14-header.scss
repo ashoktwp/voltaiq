@@ -78,6 +78,7 @@ header.header {
                   column-gap: 33px;
                   left: 0;
                   right: 0;
+                  box-shadow: $dropdownshadow;
                   @include navbreak {
                     padding: 20px;
                   }
