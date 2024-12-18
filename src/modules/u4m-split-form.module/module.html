@@ -53,7 +53,7 @@
                   region: "na1",
                   portalId: "{{ hub_id }}",
                   css: "",
-                  target: ".form_column_inner",
+                  target: ".form_box",
                   formId: "{{ module.form_column.select_form.form_id }}",
                   onFormReady: function($form) {
                   $('.form_column .hs-button').click(function(){
@@ -62,7 +62,6 @@
                       var calcHeight = formHeight + 200;
                       $('.u4m-split-form-wrapper.formAdded').css('min-height', calcHeight);
                     }, 200);
-                    console.log('form_column call')
                   });    }
                 }); 
 
@@ -199,7 +198,6 @@ require_css %}
       var formHeight = $('.form_column_inner').outerHeight();
       var calcHeight = formHeight + 200;
       $('.u4m-split-form-wrapper.formAdded').css('min-height',calcHeight);
-      console.log('checkHeight call')
     }
     $(window).on("load resize", function() {
       setTimeout(function(){

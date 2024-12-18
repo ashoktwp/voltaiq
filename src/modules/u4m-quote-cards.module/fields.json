@@ -1,10 +1,28 @@
 [ {
+  "id" : "6af04cef-03f1-d216-3c39-fe2f12ca02fe",
+  "name" : "disable_card",
+  "display_width" : null,
+  "label" : "Disable Card",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
   "id" : "75b3a912-91be-45f1-e76f-bbb283bb3c38",
   "name" : "intro_content",
   "display_width" : null,
   "label" : "Intro Content",
   "required" : false,
   "locked" : false,
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "disable_card",
+    "controlling_value_regex" : "false",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
+  },
   "children" : [ {
     "id" : "7e94b2a5-c6f6-dd0f-85b9-4b37adb12585",
     "name" : "include_eyebrow_text",
@@ -330,6 +348,14 @@
     "max" : null,
     "sorting_label_field" : "dedf0f2f-0cc9-c444-35ef-f2d8e6b4afdb",
     "default" : 3
+  },
+  "visibility" : {
+    "controlling_field" : null,
+    "controlling_field_path" : "disable_card",
+    "controlling_value_regex" : "false",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null
   },
   "children" : [ {
     "id" : "38981e8a-1b2a-3d1d-104a-e26b95c83f80",

@@ -1,8 +1,11 @@
+
+
 {% set moduleName = 'u4m-quote-cards' %}
 {% set imageMax = 1000 %}
 {% set bgImageMax = 1920 %}
-
+{% if module.disable_card == 'false' %}
 {% include "../partials/u4-module-includes.html" %}
+	
 {{ macros.contentGroup(module.intro_content) }}
 <div class="page-center">
   {# Module content goes here #}
@@ -49,6 +52,7 @@
     <rect x="1311" width="200" height="109" fill="black"/>
   </svg>
 </div>
+{% endif %}
 {% endif %}
 
 </section>
