@@ -32,6 +32,25 @@
       "max_width" : 47,
       "max_height" : 42
     }
+  }, {
+    "id" : "701c80be-7f1a-a097-80ed-cb73cd391e01",
+    "name" : "link_field",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -47,6 +66,15 @@
       "height" : 42,
       "max_width" : 47,
       "max_height" : 42
+    },
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
     }
   }, {
     "image_field" : {
@@ -58,6 +86,15 @@
       "height" : 42,
       "max_width" : 47,
       "max_height" : 42
+    },
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
     }
   }, {
     "image_field" : {
@@ -69,6 +106,15 @@
       "height" : 42,
       "max_width" : 47,
       "max_height" : 42
+    },
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
     }
   } ]
 } ]

@@ -18,7 +18,7 @@
             flex-wrap: wrap;
             column-gap: 20px;
 
-            .items {
+            .items a {
               width: auto;
               height: 21px;
             }
@@ -209,7 +209,7 @@
 
   .page-center {
     .top_sec {
-      padding-bottom: 10px;
+      padding-bottom: 30px;
     }
   }
 }
