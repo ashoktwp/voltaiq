@@ -26,8 +26,26 @@
           {% if module.intro_content.include_logo %}
           <div class="logo_wrap">
             {% if module.intro_content.logo.src %}
+            {% set href = module.intro_content.logo_link.url.href %}
+{% if module.intro_content.logo_link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" + href %}
+{% endif %}
+<a
+  {% if module.intro_content.logo_link.url.type is equalto "CALL_TO_ACTION"  %}
+    href="{{ href }}" {# The href here is not escaped as it is not editable and functions as a JavaScript call to the associated CTA #}
+  {% else %}
+    href="{{ href|escape_url }}"
+  {% endif %}
+  {% if module.intro_content.logo_link.open_in_new_tab %}
+    target="_blank"
+  {% endif %}
+  {% if module.intro_content.logo_link.rel %}
+    rel="{{ module.intro_content.logo_link.rel|escape_attr }}"
+  {% endif %}
+  >
             {% set loadingAttr = module.intro_content.logo.loading != 'disabled' ? 'loading="{{ module.intro_content.logo.loading|escape_attr }}"' : '' %}
             <img src="{{ module.intro_content.logo.src|escape_url }}" alt="{{ module.intro_content.logo.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            </a>
             {% endif %}
           </div>
           {% endif %}

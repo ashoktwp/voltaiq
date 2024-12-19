@@ -1,6 +1,8 @@
 @import "../../css/_module-imports";
+
 section.u4m-bottom-pane {
   position: relative;
+
   &:before {
     content: "";
     position: absolute;
@@ -12,20 +14,29 @@ section.u4m-bottom-pane {
     transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
     right: 10%;
   }
+
   &.reverse-text {
     color: $headingColor;
   }
+
   .intro-content {
     margin-bottom: 0;
+
+    .page-center-intro {
+      max-width: 860rem;
+    }
+
     @include phone {
       .content-section {
         margin-bottom: 20rem;
       }
     }
   }
+
   .page-center {
     position: relative;
   }
+
   .bp_wrap {
     padding: 57px;
     overflow: hidden;
@@ -46,44 +57,56 @@ section.u4m-bottom-pane {
     display: flex;
     justify-content: center;
     align-items: center;
+
     @include phone {
       display: block;
     }
+
     &.centered {
       display: block;
+
       div.copy,
       div.image {
         width: 100%;
         text-align: center;
       }
+
       div.image {
         margin-top: 50rem;
       }
     }
+
     div.copy {
       width: 50%;
+
       .heading {
         @include h2;
       }
+
       div.cta {
         a {
           @include primaryBtn;
         }
       }
+
       @include phone {
         width: 100%;
         text-align: center;
       }
     }
+
     div.image {
       width: 50%;
       text-align: right;
+
       img {
         max-width: 400rem;
+
         @include tabletvert {
           max-width: 100%;
         }
       }
+
       @include phone {
         margin: 20rem auto 0 auto;
       }
