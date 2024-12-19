@@ -97,7 +97,7 @@
     &:after {
       content: "";
       position: absolute;
-      background: #01255c;
+      background: $darkBluemd;
       filter: blur(196.21px);
       transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0) rotate(90deg);
       width: 609px;
