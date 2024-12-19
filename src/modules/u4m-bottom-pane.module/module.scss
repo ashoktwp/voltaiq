@@ -43,7 +43,7 @@ section.u4m-bottom-pane {
     border-radius: $border2;
 
     @include phone {
-      padding: 50px;
+      padding: 50px 20px;
     }
 
     .image {
