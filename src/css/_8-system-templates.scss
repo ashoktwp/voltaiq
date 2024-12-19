@@ -116,13 +116,58 @@ section.u4m-search-results {
     a {
       font-size: 20rem;
       @include h4;
+      font-weight: 700;
+      line-height: 1.25;
     }
   }
 }
 
-section.u4m-search-results ul.hs-search-results__listing a {
-  @include h4;
+.hs-search-results__pagination {
+  gap: 10px;
+  flex-wrap: wrap;
+  a.hs-search-results__pagination__link {
+    @include h6;
+    border-radius: 100%;
+    width: 50rem;
+    height: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    margin: 0;
+    color: $grey4;
+    &:hover {
+      background-color: hsla(204, 4%, 73%, 0.1);
+      color: $highlightColor;
+    }
+    &.hs-search-results__pagination__link--active {
+      background-color: hsla(204, 4%, 73%, 0.1);
+      color: $highlightColor;
+    }
+  }
 }
+
+#hs_cos_wrapper_search_results .hs-search-results__pagination__link--first,
+#hs_cos_wrapper_search_results .hs-search-results__pagination__link--last {
+  display: none;
+}
+
+#hs_cos_wrapper_search_results .hs-search-results__pagination__link--prev,
+#hs_cos_wrapper_search_results .hs-search-results__pagination__link--next {
+  display: none;
+}
+
+.hs-search-results__listing__item {
+  gap: 20px;
+}
+.hs-search-results__listing__item {
+  gap: 20px;
+  margin-bottom: 50px !important;
+}
+
+// section.u4m-search-results ul.hs-search-results__listing a {
+//   @include h4;
+// }
 
 section.u4m-subscription-preferences {
   @include center;
@@ -165,7 +210,6 @@ section.u4m-subscriptions-confirmation {
 
 section.u4m-membership-register {
   form {
-
     [type="checkbox"],
     [type="radio"] {
       width: auto !important;
@@ -174,8 +218,8 @@ section.u4m-membership-register {
       margin-right: 4px;
     }
 
-    [type="checkbox"]+label,
-    [type="radio"]+label {
+    [type="checkbox"] + label,
+    [type="radio"] + label {
       display: inline;
     }
   }
@@ -183,7 +227,6 @@ section.u4m-membership-register {
 
 section.u4m-membership-login {
   form {
-
     [type="checkbox"],
     [type="radio"] {
       width: auto !important;
@@ -192,8 +235,8 @@ section.u4m-membership-login {
       margin-right: 4px;
     }
 
-    [type="checkbox"]+label,
-    [type="radio"]+label {
+    [type="checkbox"] + label,
+    [type="radio"] + label {
       display: inline;
     }
   }

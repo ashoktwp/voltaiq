@@ -43,11 +43,16 @@
         &:last-child {
           border: none;
         }
-        &:hover {
-          background: rgba($grey5, 0.1);
-          box-shadow: $shadow1;
-          border-color: transparent;
-          border-radius: 3px;
+        &:not(.active):hover {
+          h6.accordion_title {
+            span.text {
+              color: $white;
+            }
+          }
+          // background: rgba($grey5, 0.1);
+          // box-shadow: $shadow1;
+
+          // border-radius: 3px;
         }
         &.acactive {
           border-bottom: transparent;
