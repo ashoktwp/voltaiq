@@ -42,15 +42,9 @@ header.header {
                 letter-spacing: 0;
               }
               > li {
-                > a {
-                  display: flex;
-                  gap: 5px;
-                  position: relative;
-                  color: $white;
-                  svg {
-                    transition: 0.2s all ease-in;
-                  }
-                  &:after {
+                &.hs-subMenu {
+                  > a {
+                    &:after {
                     content: "";
                     position: absolute;
                     top: calc(100% + 22px);
@@ -64,6 +58,17 @@ header.header {
                     opacity: 0;
                     visibility: hidden;
                   }
+                  }
+                }
+                > a {
+                  display: flex;
+                  gap: 5px;
+                  position: relative;
+                  color: $white;
+                  svg {
+                    transition: 0.2s all ease-in;
+                  }
+                  
                 }
                 ul {
                   position: absolute;
