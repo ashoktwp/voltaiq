@@ -179,7 +179,10 @@
               right: -75px;
               top: 75px;
               background-repeat: no-repeat;
-
+              @include laptop {
+                top: unset;
+                bottom: -210px;
+              }
               @include tabletvert {
                 position: unset;
                 height: 500px;
