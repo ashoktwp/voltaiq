@@ -14,6 +14,7 @@
     width: 858px;
     right: 0%;
   }
+
   .cntnt_left {
     .intro-content {
       .page-center-intro {
@@ -21,6 +22,7 @@
       }
     }
   }
+
   .cntnt_right {
     .intro-content {
       .page-center-intro {
@@ -28,6 +30,7 @@
       }
     }
   }
+
   .intro-content {
     .page-center-intro {
       @include centerSmall;
@@ -53,9 +56,11 @@
     position: relative;
     z-index: 22;
     justify-content: center;
+
     &.five_col {
-    column-gap: 20px;
+      column-gap: 20px;
     }
+
     .pd {
       .top_icon {
         margin-bottom: 20px;
