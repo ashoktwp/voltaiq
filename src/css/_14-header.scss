@@ -34,9 +34,13 @@ header.header {
             > ul.mobileHide {
               display: flex;
               gap: 50px;
+              @include laptop {
+                gap: 20px;
+              }
               @include navbreak {
                 gap: 20px;
               }
+
               li {
                 margin: 0;
                 letter-spacing: 0;
@@ -216,6 +220,9 @@ header.header {
           .headerbtn {
             a {
               margin: 0;
+              @include laptop { 
+                padding: 10rem 20rem;
+              }
             }
           }
           @include tabletvertMin {

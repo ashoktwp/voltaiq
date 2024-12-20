@@ -3,6 +3,9 @@
 .u4m-logo-trust-marks {
   position: relative;
   z-index: 99;
+  @include tabbreakpoint(992px, 1440px) {
+    margin-top: 0;
+  }
   .logoSlider {
     margin-top: 40px;
 

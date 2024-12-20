@@ -6,6 +6,9 @@
     max-width: 1143px;
     padding: 0 15px;
     margin: 0 auto;
+    @include laptop {
+      @include centerlgMidScreen;
+    }
 
     .btm_sec {
       .flex_row {

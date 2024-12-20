@@ -6,6 +6,9 @@
   }
   .page-center {
     @include center;
+    @include laptop {
+      @include centerlgMidScreen;
+    }
     position: static;
     .flex_row {
       row-gap: 68px;

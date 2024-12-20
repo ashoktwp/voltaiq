@@ -69,6 +69,9 @@
           padding-left: 0;
           padding-right: 0;
         }
+        @include tabbreakpoint(992px, 1440px) {
+          max-width: 50%;
+        }
         max-width: 100%;
         .intro-content {
           margin: 0;
@@ -91,6 +94,9 @@
           padding-top: 21px;
           padding-left: 0;
           padding-right: 0;
+        }
+        @include tabbreakpoint(992px, 1440px) {
+          max-width: 50%;
         }
       }
     }

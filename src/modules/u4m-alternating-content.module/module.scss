@@ -84,6 +84,9 @@
           padding-left: 0;
           padding-right: 0;
         }
+        @include tabbreakpoint(992px, 1440px) {
+          max-width: 50%;
+        }
 
         @include tabletvert {
           padding: 0;
@@ -142,6 +145,9 @@
             max-width: 611px;
             padding-left: 0;
             padding-right: 0;
+          }
+          @include tabbreakpoint(992px, 1440px) {
+            max-width: 50%;
           }
         }
       }

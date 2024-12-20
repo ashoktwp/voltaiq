@@ -47,6 +47,9 @@
             max-width: calc(100% - 578px);
             padding: 0;
             padding: 73px 35px 85px 100px;
+            @include tabbreakpoint(992px, 1440px) {
+              padding: 73px 35px 85px 35px !important;
+            }
             form {
               margin: 0;
               padding-bottom: 0px;

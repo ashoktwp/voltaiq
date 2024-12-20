@@ -4,7 +4,7 @@
 
 {% include "../partials/u4-module-includes.html" %}
 
-<div class="page-center">
+<div class="page-center updated">
 	<div class="flex_row {% if module.media_section.image.src %}{% else %}noImg{% endif %}">
 		<div class="left_sec">
 			{{macros.contentGroup(module.intro_content  )}}
@@ -51,6 +51,13 @@
 	.u4m-hero:after{
     top: 0;
 	}
+	{% endif %}
+	{% if module.module_overrides.bottom_padding == 'bottom-padding-custom' %}
+		@media (max-width: 1440px) and (min-width: 992px) {
+			section.{{ moduleName}}{
+				padding-bottom: 70rem;
+			}
+		}
 	{% endif %}
 	{% end_scope_css %}
 </style>

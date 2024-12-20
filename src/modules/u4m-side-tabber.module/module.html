@@ -17,7 +17,7 @@
 {{macros.contentGroup(module.intro_content  )}}
 
 <div class="page-center-sm">
-  <div class="tabber_wrap">
+  <div class="tabber_wrap updated">
 
     <div class="tabs_nav_list">
       <ul>
@@ -108,66 +108,52 @@
 
 {% require_js %}
 <script>
-  document.querySelectorAll('.{{name}} .desktop_tabber_nav').forEach(function(tab) {
-                            tab.addEventListener('click', function() {
-    var tab_id = this.getAttribute('data-index');
+$(document).ready(function() {
+$('.{{name}} .desktop_tabber_nav').on('click', function() {
+  var tab_id = $(this).data('index');
 
-    document.querySelectorAll('.{{name}} .desktop_tabber_nav').forEach(function(tabs) {
-                              tabs.classList.remove('active');
-  });
+  $('.{{name}} .desktop_tabber_nav').removeClass('active');
+  $('.{{name}} .tabber_pane').removeClass('active');
+  $('.{{name}} .mobile_nav').removeClass('active');
 
-  document.querySelectorAll('.{{name}}  .tabber_pane').forEach(function(content) {
-                            content.classList.remove('active');
-  }); 
-  document.querySelectorAll('.{{name}}  .mobile_nav').forEach(function(content) {
-                            content.classList.remove('active');
-  }); 
+  $(this).addClass('active');
+  $('#' + tab_id).addClass('active');
+  $('div[data-index="' + tab_id + '"]').addClass('active');
+  $('div[data-tab="' + tab_id + '"]').addClass('active');
+});
 
+const $tabTitles = $('.{{name}} .mobile_nav');
+const $tabContents = $('.{{name}} .tabber_pane');
 
-  this.classList.add('active');
-  document.getElementById(tab_id).classList.add('active'); 
-  document.querySelector('div[data-index='+tab_id+']').classList.add('active'); 
-  document.querySelector('div[data-tab='+tab_id+']').classList.add('active'); 
+function handleResize() {
+  if ($(window).width() < 992) {
+    // Enable accordion functionality
+    $tabTitles.off('click').on('click', handleTabClick);
+  } else {
+    $tabTitles.off('click');
+  }
+}
 
-  });
-  });
+function handleTabClick(event) {
+  var $this = $(this);
+  var isActive = $this.hasClass('active');
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const tabTitles = document.querySelectorAll(".{{name}} .mobile_nav");
-                                                const tabContents = document.querySelectorAll(".{{name}} .tabber_pane");
+  $tabTitles.removeClass('active');
+  $tabContents.removeClass('active').hide();
 
-                                                function handleResize() {
-      if (window.innerWidth < 992) {
-        // Enable accordion functionality
-        tabTitles.forEach(title => {
-          title.addEventListener("click", handleTabClick);
-        });
+  if (!isActive) {
+    $this.addClass('active');
+    var tabId = $this.data('index');
+    $('#' + tabId).addClass('active').show();
+  }
+}
 
-      }
-    }
+// Initial check and setup
+handleResize();
 
-    function handleTabClick(event) {
-      const isActive = this.classList.contains("active");
-
-      tabTitles.forEach(t => t.classList.remove("active"));
-      tabContents.forEach(c => c.classList.remove("active"));
-      tabContents.forEach(content => content.style.display = "none");
-
-      if (!isActive) {
-        this.classList.add("active");
-        const tabId = this.getAttribute("data-index");
-        document.getElementById(tabId).style.display = "block";
-        document.getElementById(tabId).classList.add("active");
-      }
-    }
-
-    // Initial check and setup
-    handleResize();
-
-    // Attach resize event listener
-    window.addEventListener("resize", handleResize);
-  });
-
+// Attach resize event listener
+$(window).on('resize', handleResize);
+});
 </script>
 {% end_require_js %}
 
