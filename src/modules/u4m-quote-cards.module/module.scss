@@ -48,6 +48,7 @@
           .quote_flex {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             @include tablet {
               justify-content: center;
               text-align: center;

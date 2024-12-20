@@ -1,130 +1,130 @@
 {% set moduleName = 'u4m-blog-cards' %}
-{% set imageMax = 1000 %}
-{% set bgImageMax = 1920 %}
-
-{% include "../partials/u4-module-includes.html" %}
-
-
-{% if module.blog_feed.feed_type == 'recent' %}
-{% set posts = blog_recent_posts(module.blog_feed.select_blog, module.blog_feed.number_of_posts) %} 
-{% elif module.blog_feed.feed_type == 'tag' %}
-{% set posts = blog_recent_tag_posts(module.blog_feed.select_blog, module.blog_feed.select_tag, module.blog_feed.number_of_posts ) %}  
-{% endif %}
-
-{{macros.contentGroup(module.intro_content  )}}
-
-<div class="page-center">
-	<div class="blogFeedList">
-		<div class="blogFeedListRow CardItems flex_row">
-			{% if module.blog_feed.feed_type == 'recent' or module.blog_feed.feed_type == 'tag' %}
-			{% for item in posts %}
-			<div class="blogItem CardItem"> 
-				<div class="CardItemIn"> 
-					{% if item.featured_image %}
-					<div class="bIItmimg" style="background-image:url({{ item.featured_image  }});">
-						<a href="{{ item.absolute_url }}" class="absLink"></a>
-					</div>
-					{% endif %}
-					<div class="cardCont">
-						<div class="topicTagwrap"> 
-							{% if item.tag_list %}
-							{% for tag in item.tag_list %}
-							{% if tag.name=="Featured" %}
-							{% else %}
-							{% if loop.first %}
-							<a class="topicTag" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
-							{% endif %}
-							{% endif %}
-							{% endfor %}{% endif %}
+	{% set imageMax = 1000 %}
+	{% set bgImageMax = 1920 %}
+	
+	{% include "../partials/u4-module-includes.html" %}
+	
+	
+	{% if module.blog_feed.feed_type == 'recent' %}
+	{% set posts = blog_recent_posts(module.blog_feed.select_blog, module.blog_feed.number_of_posts) %} 
+	{% elif module.blog_feed.feed_type == 'tag' %}
+	{% set posts = blog_recent_tag_posts(module.blog_feed.select_blog, module.blog_feed.select_tag, module.blog_feed.number_of_posts ) %}  
+	{% endif %}
+	
+	{{macros.contentGroup(module.intro_content  )}}
+	
+	<div class="page-center">
+		<div class="blogFeedList">
+			<div class="blogFeedListRow CardItems flex_row">
+				{% if module.blog_feed.feed_type == 'recent' or module.blog_feed.feed_type == 'tag' %}
+				{% for item in posts %}
+				<div class="blogItem CardItem"> 
+					<div class="CardItemIn"> 
+						{% if item.featured_image %}
+						<div class="bIItmimg" style="background-image:url({{ item.featured_image  }});">
+							<a href="{{ item.absolute_url }}" class="absLink"></a>
 						</div>
-						<h4 class="h4 restitle"><a href="{{ item.absolute_url }}">{{ item.name|striptags}}</a></h4>  
-						<div class="desc">{{ item.post_list_content|striptags|safe|truncatehtml(100, '.' , false) }}</div>  
-						<div class="readMore"><a href="#" class="hs-arrow-btn">Continue Reading <span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-<path d="M0 1.07901V0.000234218L7.11964 2.5911C7.36037 2.67837 7.52286 2.91007 7.52286 3.16736V4.07311C7.52286 4.33039 7.36037 4.5621 7.11964 4.64937L0 7.24023V6.16146L6.50878 3.79176V3.4472L0 1.07901Z" fill="white"/>
-</svg></span></a></div>  
+						{% endif %}
+						<div class="cardCont">
+							<div class="topicTagwrap"> 
+								{% if item.tag_list %}
+								{% for tag in item.tag_list %}
+								{% if tag.name=="Featured" %}
+								{% else %}
+								{% if loop.first %}
+								<a class="topicTag" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
+								{% endif %}
+								{% endif %}
+								{% endfor %}{% endif %}
+							</div>
+							<h4 class="h4 restitle"><a href="{{ item.absolute_url }}">{{ item.name|striptags}}</a></h4>  
+							<div class="desc">{{ item.post_list_content|striptags|safe|truncatehtml(100, '.' , false) }}</div>  
+							<div class="readMore"><a href="{{ item.absolute_url }}" class="hs-arrow-btn">Continue Reading <span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+	<path d="M0 1.07901V0.000234218L7.11964 2.5911C7.36037 2.67837 7.52286 2.91007 7.52286 3.16736V4.07311C7.52286 4.33039 7.36037 4.5621 7.11964 4.64937L0 7.24023V6.16146L6.50878 3.79176V3.4472L0 1.07901Z" fill="white"/>
+	</svg></span></a></div>  
+						</div> 
 					</div> 
-				</div> 
-			</div>
-			{% endfor %}
-			{% elif module.blog_feed.feed_type == 'postbytitle' %}
-			{% for item in module.blog_feed.blog_post %}
-			{% set item = content_by_id(item.select_post) %}
-			{% if item %}
-			<div class="blogItem CardItem"> 
-				<div class="CardItemIn"> 
-					{% if item.featured_image %}
-					<div class="bIItmimg" style="background-image:url({{ item.featured_image  }});">
-						<a href="{{ item.absolute_url }}" class="absLink"></a>
-					</div>
-					{% endif %}
-					<div class="cardCont">
-						<div class="topicTagwrap"> 
-							{% if item.tag_list %}
-							{% for tag in item.tag_list %}
-							{% if tag.name=="Featured" %}
-							{% else %}
-							{% if loop.first %}
-							<a class="topicTag" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
-							{% endif %}
-							{% endif %}
-							{% endfor %}{% endif %}
+				</div>
+				{% endfor %}
+				{% elif module.blog_feed.feed_type == 'postbytitle' %}
+				{% for item in module.blog_feed.blog_post %}
+				{% set item = content_by_id(item.select_post) %}
+				{% if item %}
+				<div class="blogItem CardItem"> 
+					<div class="CardItemIn"> 
+						{% if item.featured_image %}
+						<div class="bIItmimg" style="background-image:url({{ item.featured_image  }});">
+							<a href="{{ item.absolute_url }}" class="absLink"></a>
 						</div>
-						<h4 class="h4 restitle"><a href="{{ item.absolute_url }}">{{ item.name|striptags}}</a></h4>  
-						<div class="desc">{{ item.post_list_content|striptags|safe|truncatehtml(100, '.' , false) }}</div>  
-						<div class="readMore"><a href="#" class="hs-arrow-btn">Continue Reading <span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-<path d="M0 1.07901V0.000234218L7.11964 2.5911C7.36037 2.67837 7.52286 2.91007 7.52286 3.16736V4.07311C7.52286 4.33039 7.36037 4.5621 7.11964 4.64937L0 7.24023V6.16146L6.50878 3.79176V3.4472L0 1.07901Z" fill="white"/>
-</svg></span></a></div>  
+						{% endif %}
+						<div class="cardCont">
+							<div class="topicTagwrap"> 
+								{% if item.tag_list %}
+								{% for tag in item.tag_list %}
+								{% if tag.name=="Featured" %}
+								{% else %}
+								{% if loop.first %}
+								<a class="topicTag" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
+								{% endif %}
+								{% endif %}
+								{% endfor %}{% endif %}
+							</div>
+							<h4 class="h4 restitle"><a href="{{ item.absolute_url }}">{{ item.name|striptags}}</a></h4>  
+							<div class="desc">{{ item.post_list_content|striptags|safe|truncatehtml(100, '.' , false) }}</div>  
+							<div class="readMore"><a href="{{ item.absolute_url }}" class="hs-arrow-btn">Continue Reading <span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+	<path d="M0 1.07901V0.000234218L7.11964 2.5911C7.36037 2.67837 7.52286 2.91007 7.52286 3.16736V4.07311C7.52286 4.33039 7.36037 4.5621 7.11964 4.64937L0 7.24023V6.16146L6.50878 3.79176V3.4472L0 1.07901Z" fill="white"/>
+	</svg></span></a></div>  
+						</div> 
 					</div> 
-				</div> 
-			</div>
-			{% endif %}
-			{% endfor %}
-			{% endif %}
-			{% elif module.blog_feed.feed_type == 'related' and content.topic_list  %}
-			{% set max_posts = module.blog_feed.number_of_posts %}
-			{% set post_list = [] %}
-			{% for topic in content.topic_list %}
-			{% set post_list = post_list + blog_recent_topic_posts(group.id, topic.slug, max_posts + 1 ) %}
-			{% if loop.last %}
-			{% set post_list = post_list|sort(true, false, 'publish_date')|unique('name') %}
-			{% set i = 0 %}
-			{% for item in post_list %}
-			{% if content.absolute_url != item.absolute_url and i < max_posts %}
-			<div class="blogItem CardItem"> 
-				<div class="CardItemIn"> 
-					{% if item.featured_image %}
-					<div class="bIItmimg" style="background-image:url({{ item.featured_image  }});">
-						<a href="{{ item.absolute_url }}" class="absLink"></a>
-					</div>
-					{% endif %}
-					<div class="cardCont">
-						<div class="topicTagwrap"> 
-							{% if item.tag_list %}
-							{% for tag in item.tag_list %}
-							{% if tag.name=="Featured" %}
-							{% else %}
-							{% if loop.first %}
-							<a class="topicTag" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
-							{% endif %}
-							{% endif %}
-							{% endfor %}{% endif %}
+				</div>
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% elif module.blog_feed.feed_type == 'related' and content.topic_list  %}
+				{% set max_posts = module.blog_feed.number_of_posts %}
+				{% set post_list = [] %}
+				{% for topic in content.topic_list %}
+				{% set post_list = post_list + blog_recent_topic_posts(group.id, topic.slug, max_posts + 1 ) %}
+				{% if loop.last %}
+				{% set post_list = post_list|sort(true, false, 'publish_date')|unique('name') %}
+				{% set i = 0 %}
+				{% for item in post_list %}
+				{% if content.absolute_url != item.absolute_url and i < max_posts %}
+				<div class="blogItem CardItem"> 
+					<div class="CardItemIn"> 
+						{% if item.featured_image %}
+						<div class="bIItmimg" style="background-image:url({{ item.featured_image  }});">
+							<a href="{{ item.absolute_url }}" class="absLink"></a>
 						</div>
-						<h4 class="h4 restitle"><a href="{{ item.absolute_url }}">{{ item.name|striptags}}</a></h4>  
-						<div class="desc">{{ item.post_list_content|striptags|safe|truncatehtml(100, '.' , false) }}</div>  
-						<div class="readMore"><a href="#" class="hs-arrow-btn">Continue Reading <span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-<path d="M0 1.07901V0.000234218L7.11964 2.5911C7.36037 2.67837 7.52286 2.91007 7.52286 3.16736V4.07311C7.52286 4.33039 7.36037 4.5621 7.11964 4.64937L0 7.24023V6.16146L6.50878 3.79176V3.4472L0 1.07901Z" fill="white"/>
-</svg></span></a></div>  
+						{% endif %}
+						<div class="cardCont">
+							<div class="topicTagwrap"> 
+								{% if item.tag_list %}
+								{% for tag in item.tag_list %}
+								{% if tag.name=="Featured" %}
+								{% else %}
+								{% if loop.first %}
+								<a class="topicTag" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
+								{% endif %}
+								{% endif %}
+								{% endfor %}{% endif %}
+							</div>
+							<h4 class="h4 restitle"><a href="{{ item.absolute_url }}">{{ item.name|striptags}}</a></h4>  
+							<div class="desc">{{ item.post_list_content|striptags|safe|truncatehtml(100, '.' , false) }}</div>  
+							<div class="readMore"><a href="{{ item.absolute_url }}" class="hs-arrow-btn">Continue Reading <span><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+	<path d="M0 1.07901V0.000234218L7.11964 2.5911C7.36037 2.67837 7.52286 2.91007 7.52286 3.16736V4.07311C7.52286 4.33039 7.36037 4.5621 7.11964 4.64937L0 7.24023V6.16146L6.50878 3.79176V3.4472L0 1.07901Z" fill="white"/>
+	</svg></span></a></div>  
+						</div> 
 					</div> 
-				</div> 
+				</div>
+				{% set i = i + 1 %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
+				{% endfor %}
+				{% endif %}
 			</div>
-			{% set i = i + 1 %}
-			{% endif %}
-			{% endfor %}
-			{% endif %}
-			{% endfor %}
-			{% endif %}
 		</div>
 	</div>
-</div>
-
-</section>
+	
+	</section>

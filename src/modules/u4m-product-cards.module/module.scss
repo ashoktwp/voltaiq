@@ -129,5 +129,8 @@
     @include centerMd;
     position: relative;
     z-index: 2;
+    @include laptop {
+      @include centerlgMidScreen;
+    }
   }
 }

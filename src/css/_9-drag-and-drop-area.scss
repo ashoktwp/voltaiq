@@ -10,6 +10,10 @@ section.u4m-drag-and-drop-area {
 .dnd-section {
   padding: 100rem 0;
 
+  @include laptop {
+    padding: 70rem 0;
+  }
+
   @include tablet {
     padding: 60rem 0;
   }
@@ -33,16 +37,25 @@ section.u4m-drag-and-drop-area {
 .dnd-section > .row-fluid {
   @include center;
   margin: 0 auto;
+  @include laptop {
+    @include centerlgMidScreen;
+  }
 }
 
 .page-center-md {
   @include centerMd;
   margin: 0 auto;
+  @include laptop {
+    @include centerlgMidScreen;
+  }
 }
 
 .page-center-sm {
   @include centerSmall;
   margin: 0 auto;
+  @include laptop {
+    @include centerlgMidScreen;
+  }
 }
 
 .page-center-xs {

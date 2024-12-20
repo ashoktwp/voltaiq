@@ -97,7 +97,7 @@
     &:after {
       content: "";
       position: absolute;
-      background: #01255c;
+      background: $darkBluemd;
       filter: blur(196.21px);
       transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0) rotate(90deg);
       width: 609px;
@@ -139,6 +139,26 @@
     .form_column {
       position: relative;
       .form_column_inner {
+        .legal-consent-container {
+          label {
+            color: $black !important;
+            font-family: inherit !important;
+    font-size: inherit !important;
+            span {
+              margin-left: 0 !important;
+              font-size: 12rem !important;
+          }
+        }
+      }
+        .form_content {
+          padding-bottom: 20px;
+          p { 
+            color: inherit;
+            font-size: 16rem;
+          }
+          
+        }
+       
         @include tabletMin {
           position: absolute;
           top: 0;

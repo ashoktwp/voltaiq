@@ -13,32 +13,41 @@
         flex-direction: column;
         align-items: center;
         gap: 40px !important;
+
         .left_sec {
           max-width: 900px !important;
         }
       }
+
       &.right.cntcenter {
         flex-direction: column-reverse !important;
       }
+
       &.no_imgcnt .left_sec {
         width: 100%;
         max-width: 100% !important;
         text-align: center;
       }
+
       .left_sec {
         max-width: 100%;
+
         &.leftright .intro-content {
           text-align: right !important;
+
           .button-wrap {
             justify-content: flex-end !important;
           }
         }
+
         &.leftcenter .intro-content {
           text-align: center !important;
+
           .button-wrap {
             justify-content: center !important;
           }
         }
+
         .intro-content {
           margin: 0;
 
@@ -62,6 +71,7 @@
       .right_sec {
         max-width: 100%;
         width: 50%;
+
         @include tabletvertMin {
           max-width: 50%;
           padding-left: 20px;
@@ -74,9 +84,13 @@
           padding-left: 0;
           padding-right: 0;
         }
+        @include tabbreakpoint(992px, 1440px) {
+          max-width: 50%;
+        }
 
         @include tabletvert {
           padding: 0;
+          width: 100%;
         }
       }
 
@@ -131,6 +145,9 @@
             max-width: 611px;
             padding-left: 0;
             padding-right: 0;
+          }
+          @include tabbreakpoint(992px, 1440px) {
+            max-width: 50%;
           }
         }
       }
@@ -201,9 +218,11 @@
     height: 100%;
     background-size: cover;
     background-position: center;
+
     @include phoneMin {
       position: absolute;
     }
+
     @include phone {
       padding: 0 20rem 20rem;
     }
@@ -216,22 +235,21 @@
       @include phoneMin {
         width: calc(100% - 19%);
       }
+
       left: auto;
       right: 0;
+
       img {
         @include phoneMin {
-          mask: linear-gradient(
-            89.6deg,
-            rgba(217, 217, 217, 0) 0.35%,
-            #737373 49.01%,
-            rgba(115, 115, 115, 0) 99.66%
-          );
+          mask: linear-gradient(89.6deg, rgba(217, 217, 217, 0) 0.35%, #737373 49.01%, rgba(115, 115, 115, 0) 99.66%);
           -webkit-mask: linear-gradient(
             89.6deg,
             rgba(217, 217, 217, 0) 0.35%,
             #737373 49.01%,
             rgba(115, 115, 115, 0) 99.66%
           );
+          height: 100%;
+          object-fit: cover;
         }
       }
     }

@@ -34,9 +34,13 @@ header.header {
             > ul.mobileHide {
               display: flex;
               gap: 50px;
+              @include laptop {
+                gap: 20px;
+              }
               @include navbreak {
                 gap: 20px;
               }
+
               li {
                 margin: 0;
                 letter-spacing: 0;
@@ -45,19 +49,19 @@ header.header {
                 &.hs-subMenu {
                   > a {
                     &:after {
-                    content: "";
-                    position: absolute;
-                    top: calc(100% + 22px);
-                    border: 0;
-                    background: $backgroundColor;
-                    width: 20px;
-                    height: 20px;
-                    transform: rotate(45deg);
-                    left: 35%;
-                    transition: 0.2s all ease-in;
-                    opacity: 0;
-                    visibility: hidden;
-                  }
+                      content: "";
+                      position: absolute;
+                      top: calc(100% + 22px);
+                      border: 0;
+                      background: $backgroundColor;
+                      width: 20px;
+                      height: 20px;
+                      transform: rotate(45deg);
+                      left: 35%;
+                      transition: 0.2s all ease-in;
+                      opacity: 0;
+                      visibility: hidden;
+                    }
                   }
                 }
                 > a {
@@ -68,7 +72,6 @@ header.header {
                   svg {
                     transition: 0.2s all ease-in;
                   }
-                  
                 }
                 ul {
                   position: absolute;
@@ -217,6 +220,9 @@ header.header {
           .headerbtn {
             a {
               margin: 0;
+              @include laptop { 
+                padding: 10rem 20rem;
+              }
             }
           }
           @include tabletvertMin {
@@ -323,7 +329,7 @@ header.header {
   z-index: 1000;
   background-color: $black;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   #hs-eu-cookie-confirmation-inner {
     @include center;
   }
@@ -335,5 +341,19 @@ header.header {
     color: inherit;
     line-height: inherit;
     font-family: inherit;
+
+    margin-bottom: 0;
+  }
+}
+#hs-eu-cookie-confirmation {
+  #hs-eu-cookie-confirmation-inner {
+    #hs-en-cookie-confirmation-buttons-area {
+      & a#hs-eu-confirmation-button {
+        margin: 9rem 20px 0rem 0 !important;
+      }
+      & a#hs-eu-decline-button {
+        margin: 9rem 20px 0rem 0 !important;
+      }
+    }
   }
 }

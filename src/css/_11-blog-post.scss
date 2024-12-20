@@ -1,4 +1,5 @@
 section.u4m-blog-post {
+
   /*****************************************/
   /* .hero                                 */
   /*****************************************/
@@ -7,34 +8,42 @@ section.u4m-blog-post {
     margin-bottom: 50rem;
     position: relative;
     padding-top: 105px;
+
     div.share {
       position: absolute;
       max-width: 50rem;
       left: 50rem;
+
       a {
         font-size: 26rem;
         margin: 5rem;
+
         &:hover {
           color: $backgroundColor;
         }
       }
+
       @include tablet {
         display: none;
       }
     }
+
     div.content {
       @include center;
       max-width: 1000rem;
       padding: 50rem 20rem 40rem 20rem;
       max-width: 800rem;
+
       h1.title {
         @include h1;
         margin: 0;
       }
+
       div.author-wrap {
         display: flex;
         align-items: center;
         margin-top: 10rem;
+
         div.avatar {
           height: 50rem;
           width: 50rem;
@@ -44,9 +53,11 @@ section.u4m-blog-post {
           margin: 5rem 10rem 0 0;
           background-image: url("https://f.hubspotusercontent30.net/hubfs/302335/default-avatar.png");
         }
+
         div.author-link {
           a {
             font-weight: bold;
+
             &:hover {
               color: $backgroundColor;
             }
@@ -55,6 +66,7 @@ section.u4m-blog-post {
       }
     }
   }
+
   /*****************************************/
   /* .body                                 */
   /*****************************************/
@@ -65,47 +77,60 @@ section.u4m-blog-post {
     @include phone {
       padding: 0;
     }
+
     div.content {
+
       p,
       ul,
       ol {
         @include b1;
       }
+
       h1 {
         @include h1;
       }
+
       h2 {
         @include h2;
       }
+
       h3 {
         @include h3;
       }
+
       h4 {
         @include h4;
       }
+
       h5 {
         @include h5;
       }
+
       h6 {
         @include h6;
       }
+
       blockquote {
         @include blockquote;
+
         p {
           @include blockquote;
         }
       }
+
       a {
         font-weight: bold;
         color: $linkBlog;
+
         &:hover {
           color: $linkBlog;
         }
       }
     }
-    div.topics {
-    }
+
+    div.topics {}
   }
+
   /*****************************************/
   /* .author                               */
   /*****************************************/
@@ -116,12 +141,15 @@ section.u4m-blog-post {
     display: flex;
     margin-bottom: 50rem;
     align-items: center;
+
     @include phone {
       display: block;
     }
+
     div.meta {
       flex: 0 0 170rem;
       text-align: center;
+
       div.avatar {
         width: 100rem;
         height: 100rem;
@@ -130,30 +158,37 @@ section.u4m-blog-post {
         background-position: 50%;
         border-radius: 50%;
         margin: 0 auto;
+
         @include phone {
           margin-bottom: 30rem;
         }
       }
     }
+
     div.bio {
       .name {
         @include h5;
         margin: 0;
       }
+
       p {
         @include b2;
         margin-top: 20px;
       }
+
       .social {
         .label {
           @include b1;
+
           @include phone {
             @include b3;
           }
         }
+
         a {
           font-size: 20rem;
           margin-left: 10rem;
+
           @include phone {
             font-size: 18rem;
             margin-left: 8rem;
@@ -162,23 +197,28 @@ section.u4m-blog-post {
       }
     }
   }
+
   /*****************************************/
   /* .comments                             */
   /*****************************************/
   div.comments {
     margin-bottom: 100rem;
+
     h2.heading {
       @include h3;
       @include center;
       text-align: center;
       margin: 100rem auto 0 auto;
     }
+
     div.content {
       @include center;
       max-width: 800rem;
       margin-top: 50rem;
+
       form {
         @include form;
+
         .hs-button {
           @include primaryBtn;
         }
@@ -192,6 +232,7 @@ section.u4m-blog-post {
 .blog_post_hero {
   padding-top: 180px;
   padding-bottom: 92px;
+
   @include phone {
     padding-top: 100px;
     padding-bottom: 60px;
@@ -199,6 +240,7 @@ section.u4m-blog-post {
 
   .post_herotag {
     margin-bottom: 18px;
+
     a {
       @include eyebrow;
       color: $highlightColor;
@@ -210,6 +252,7 @@ section.u4m-blog-post {
   .post_hero_titlw {
     color: $white;
     margin-bottom: 25px;
+
     & * {
       color: inherit;
     }
@@ -239,21 +282,26 @@ section.u4m-blog-post {
     width: 100%;
     border-radius: 5px;
     width: 53%;
+
     &.desktop {
       display: none;
     }
+
     @include largelaptopMin {
       &.desktop {
         display: block;
       }
+
       &.mobile {
         display: none;
       }
     }
+
     img {
       overflow: hidden;
       border-radius: 5px;
     }
+
     @include tablet {
       height: auto;
       width: 100%;
@@ -261,6 +309,7 @@ section.u4m-blog-post {
       padding-right: 0;
       max-width: 100%;
     }
+
     @include largelaptopMin {
       height: 350px;
       background-size: cover;
@@ -269,6 +318,7 @@ section.u4m-blog-post {
       .mobile {
         display: none;
       }
+
       .desktop {
         display: block;
       }
@@ -327,12 +377,22 @@ section.u4m-blog-post {
     z-index: 3;
   }
 }
+
 .blog_post_body_wrap {
   padding-top: 100px;
   padding-bottom: 124px;
+
   @include phone {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .wp-caption {
+    max-width: 100%;
   }
 
   .blog_post_body_inner_wrap {
@@ -364,6 +424,7 @@ section.u4m-blog-post {
         position: sticky;
         top: 120px;
       }
+
       .share_icon {
         display: flex;
         flex-wrap: wrap;
@@ -373,6 +434,7 @@ section.u4m-blog-post {
         .copy_text {
           cursor: pointer;
           position: relative;
+
           .tooltipPropmt {
             background-color: $DarkBlue;
             border-radius: 4px;
@@ -389,6 +451,7 @@ section.u4m-blog-post {
             width: 81px;
             z-index: 1;
             text-align: center;
+
             &:after {
               content: "";
               position: absolute;
@@ -409,15 +472,18 @@ section.u4m-blog-post {
           justify-content: center;
           align-items: center;
         }
+
         svg {
           display: block;
         }
+
         a {
           svg {
             * {
               transition: 0.3s all ease-in;
             }
           }
+
           &:hover svg {
             * {
               fill: $highlightColor;
@@ -445,6 +511,7 @@ section.u4m-blog-post {
   position: absolute;
   width: 40px;
   top: 100%;
+
   input {
     display: block;
     width: 100%;
@@ -464,6 +531,7 @@ section.u4m-blog-post {
                 top: 45px;
               }
             }
+
             .left_sec {
               padding: 59px 35px 63px 100px;
             }
@@ -473,13 +541,16 @@ section.u4m-blog-post {
     }
   }
 }
+
 .hs-blog-listing {
   .ftr_wrpp {
     @include phoneMin {
       padding-top: 269px;
     }
+
     padding-top: 200px;
     position: relative;
+
     &:before {
       content: "";
       position: absolute;
@@ -490,10 +561,12 @@ section.u4m-blog-post {
       left: 0;
       transform: matrix(-1, 0, 0, 1, 0, 0);
     }
+
     .inner_wrpp {
       position: relative;
     }
   }
+
   .u4m-cta-row {
     margin-bottom: -150px;
     position: relative;
@@ -509,8 +582,10 @@ section.u4m-blog-post {
     @include phoneMin {
       padding-top: 269px;
     }
+
     padding-top: 200px;
     position: relative;
+
     &:before {
       content: "";
       position: absolute;
@@ -521,10 +596,12 @@ section.u4m-blog-post {
       left: 0;
       transform: matrix(1, 0, 0, 1, 0, 0);
     }
+
     .inner_wrpp {
       position: relative;
     }
   }
+
   .u4m-cta-row {
     margin-bottom: -150px;
     position: relative;
@@ -533,4 +610,9 @@ section.u4m-blog-post {
     background: transparent;
     @include ctaRow;
   }
+}
+
+.blog_post_hero.noImg .hero_content {
+  width: 100%;
+  max-width: 800px;
 }

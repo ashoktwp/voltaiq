@@ -154,6 +154,11 @@
   padding-right: 20rem;
 }
 
+@mixin centerlgMidScreen {
+  @include center;
+  max-width: 1080rem;
+}
+
 @mixin centerlg {
   @include center;
   max-width: 1050rem;
@@ -198,6 +203,12 @@
 
 @mixin maxHeight900 {
   @media (max-height: 900px) {
+    @content;
+  }
+}
+
+@mixin tabbreakpoint($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
     @content;
   }
 }

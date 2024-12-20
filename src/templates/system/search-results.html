@@ -3,16 +3,15 @@
   isAvailableForNewContent: true
   label: Unified 4 - Search Results
 -->
-{% extends '../base.html' %}
-
-{% block body %}
+{% extends '../base.html' %} {% block body %}
 <main id="main-content" class="body-container-wrapper">
   <section class="u4m-search-results">
     <div class="systems-page">
-      <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
-      {% module 'search_results'
-        path='@hubspot/search_results'
-      %}
+      <h1>
+        Results for "{{ request.query_dict.term ? request.query_dict.term|escape
+        : request.query_dict.q|escape }}"
+      </h1>
+      {% module 'search_results' path='@hubspot/search_results' %}
     </div>
   </section>
 </main>

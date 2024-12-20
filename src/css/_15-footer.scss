@@ -6,6 +6,9 @@
     max-width: 1143px;
     padding: 0 15px;
     margin: 0 auto;
+    @include laptop {
+      @include centerlgMidScreen;
+    }
 
     .btm_sec {
       .flex_row {
@@ -19,12 +22,12 @@
             column-gap: 20px;
 
             .items a {
-              width: auto;
+              width: 21px;
               height: 21px;
             }
 
             img {
-              height: inherit !important;
+              height: 21px !important;
               width: auto;
               vertical-align: baseline;
             }

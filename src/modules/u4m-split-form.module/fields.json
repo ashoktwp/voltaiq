@@ -45,6 +45,25 @@
       "max_height" : 29
     }
   }, {
+    "id" : "ed65ad96-454c-22ad-e331-f8d843e9246d",
+    "name" : "logo_link",
+    "display_width" : null,
+    "label" : "Logo Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION", "PHONE_NUMBER", "WHATSAPP_NUMBER", "PAYMENT" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
     "id" : "7e94b2a5-c6f6-dd0f-85b9-4b37adb12585",
     "name" : "include_eyebrow_text",
     "display_width" : null,
@@ -305,6 +324,15 @@
       "height" : 29,
       "max_width" : 180,
       "max_height" : 29
+    },
+    "logo_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
     },
     "include_eyebrow_text" : true,
     "eyebrow_text" : "Battery Quality Analytics Software",

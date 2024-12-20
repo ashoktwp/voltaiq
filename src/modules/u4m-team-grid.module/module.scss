@@ -6,6 +6,9 @@
   }
   .page-center {
     @include center;
+    @include laptop {
+      @include centerlgMidScreen;
+    }
     position: static;
     .flex_row {
       row-gap: 68px;
@@ -126,6 +129,7 @@
                     .name {
                       margin-bottom: 0;
                       line-height: 1;
+                      white-space: nowrap;
                     }
                   }
                   .designation {
