@@ -8,7 +8,7 @@
     position: relative;
     z-index: 3;
 
-    > .flex_row {
+    >.flex_row {
       &.cntcenter {
         flex-direction: column;
         align-items: center;
@@ -24,8 +24,6 @@
       }
 
       &.no_imgcnt .left_sec {
-        width: 100%;
-        max-width: 100% !important;
         text-align: center;
       }
 
@@ -84,6 +82,7 @@
           padding-left: 0;
           padding-right: 0;
         }
+
         @include tabbreakpoint(992px, 1440px) {
           max-width: 50%;
         }
@@ -146,6 +145,7 @@
             padding-left: 0;
             padding-right: 0;
           }
+
           @include tabbreakpoint(992px, 1440px) {
             max-width: 50%;
           }
@@ -242,12 +242,10 @@
       img {
         @include phoneMin {
           mask: linear-gradient(89.6deg, rgba(217, 217, 217, 0) 0.35%, #737373 49.01%, rgba(115, 115, 115, 0) 99.66%);
-          -webkit-mask: linear-gradient(
-            89.6deg,
-            rgba(217, 217, 217, 0) 0.35%,
-            #737373 49.01%,
-            rgba(115, 115, 115, 0) 99.66%
-          );
+          -webkit-mask: linear-gradient(89.6deg,
+              rgba(217, 217, 217, 0) 0.35%,
+              #737373 49.01%,
+              rgba(115, 115, 115, 0) 99.66%);
           height: 100%;
           object-fit: cover;
         }

@@ -3,10 +3,12 @@
 .u4m-side-tabber {
   position: relative;
   overflow: hidden;
+
   @include tabletMin {
     &.topshape_wrap {
       padding-top: 200rem;
     }
+
     .top_shape {
       position: absolute;
       top: 0;
@@ -24,38 +26,46 @@
         top: 0;
         right: auto;
         position: absolute;
+
         @include desktop1850 {
           width: 80%;
         }
       }
+
       svg {
         display: block;
         margin-right: 200px;
         margin-left: auto;
       }
+
       @include laptop {
         right: 150px;
         left: auto;
+
         &::before {
           display: none;
         }
       }
     }
   }
+
   @include tablet {
     .top_shape {
       display: none;
     }
   }
+
   .intro-content {
     margin-bottom: 83px;
     position: relative;
     z-index: 3;
   }
+
   .page-center-sm {
     position: relative;
     z-index: 3;
   }
+
   .tabber_wrap {
     @include flex;
     justify-content: space-between;
@@ -95,20 +105,22 @@
     width: 100%;
     border-radius: 3px;
     transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-transform: translateZ(0);
-      -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    padding-right: 50px;
 
     &:hover .tabber_nav_inner h6 {
       color: $white;
     }
-    > span {
+
+    >span {
       position: absolute;
       top: 24px;
       right: 24px;
     }
 
-    &.active > span {
+    &.active>span {
       transform: rotate(180deg);
     }
 
@@ -120,17 +132,17 @@
       .tabber_nav_inner h6 {
         color: $highlightColor;
         transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-transform: translateZ(0);
-      -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
       }
 
       p {
         @include b3;
         transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-transform: translateZ(0);
-      -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
       }
     }
 
@@ -196,6 +208,7 @@
       margin-top: 40px;
     }
   }
+
   &:before,
   &:after,
   .overlay {
@@ -205,16 +218,19 @@
     background: $darkBluemd;
     filter: blur(196.21px);
   }
+
   &:before {
     right: -10%;
     top: -10%;
     transform: matrix(0.77, -0.64, 0.69, 0.72, 0, 0);
   }
+
   &:after {
     top: 30%;
     left: 25%;
     transform: matrix(0.77, -0.64, 0.69, 0.72, 0, 0);
   }
+
   .overlay {
     left: 50%;
     transform: matrix(-0.64, -0.77, 0.72, -0.69, 0, 0);
@@ -234,10 +250,11 @@
 
     .tabber_nav {
       display: none;
-      padding-right: 50px;
+      padding-right: 55px;
 
       &.mobile_nav {
         display: block;
+
         & {
           border-bottom: 1px solid $cardBgColor;
         }
